@@ -1,0 +1,227 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script src="jQueryAssets/jquery-1.11.1.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rochester&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">		
+<link rel="stylesheet" href="cssspeaknow.css"/>		
+
+
+<script>
+
+
+
+	$(document).ready(function(){   
+				$("#mensaje_frase0").hide();
+				$("#frase0").hover(mensaje_on0, mensaje_off0);
+				eligeIdioma();
+			});
+		
+			
+			function mensaje_on0(){
+				$("#mensaje_frase0").show();    
+			}
+			
+			function mensaje_off0(){
+				$("#mensaje_frase0").hide();
+			}   
+	
+	
+	
+	
+			$(document).ready(function(){   
+				$("#mensaje_frase1").hide();
+				$("#frase1").hover(mensaje_on1, mensaje_off1);
+				
+			});
+		
+			
+			function mensaje_on1(){
+				$("#mensaje_frase1").show();    
+			}
+			
+			function mensaje_off1(){
+				$("#mensaje_frase1").hide();
+			}   
+	
+	
+			
+	
+			/* Idioma */
+			var idioma = 0 ; // 0=es, 1=en, ...
+			var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+			var texto = [  
+						 ["",""],
+						 ["Desde el comienzo de su carrera Taylor Swift incluye mensajes secretos en cada canción, lo cual dejó de hacer en su álbum Reputation.<br><br><hr><br> Para su album Speak Now las letras de las canciones en los booklets (libritos) estan en minusculas, y cada letra del mensaje secreto esta en mayuscula.",
+							"Taylor Swift includes hidden messages in each song, which stopped at Reputation.<br><br><hr><br> For her album Speak Now the lyrics of the songs in the booklets are in lowerecased letters, and each letter of the hidden message is capitalized."
+						 ]
+						];
+						function eligeIdioma(){
+						 IDidioma.innerHTML=idiomas[idioma];
+		
+							 for (let frase=0; frase<texto.length; frase++){         /*inicio con frase=0 -- Continúo hasta el lenght del "texto" (osea continúo 2 veces porque el lenght es 2. sson 2 arrays) -- le sumo uno a "frase", asi pasa de frase 0 a frase 1.*/ 
+							 document.getElementById("mensaje_frase"+frase).innerHTML=texto[frase][idioma];
+							 }
+							}
+						function modificaIdioma(){
+						idioma++;
+						if (idioma < 0 || idioma > 1) idioma = 0;
+						eligeIdioma();
+						}	
+
+
+
+</script>
+
+</head>
+
+<style>	
+	
+body
+{
+	background:url("../imagenes/speaknow/sparks.jpg"); /*La foto*/
+	background-repeat:repeat-y;
+	background-position:600px 0%;
+		
+}	
+	
+
+
+#frase1{
+    
+    font-size: 25px;
+    padding: 10px 10px 10px, 15px;
+    font-style: italic;
+    margin-left: 20px;
+    margin-top: 1px;
+}
+
+
+#mensaje_frase1{
+		position: fixed;  /*queda en donde lo pusimos aunque cambiemos de posicion con la barra de desplazamiento*/
+		left: 730px;
+		top: 100px;   /*el espacio entre el cuadro y el tope VISIBLE de arriba*/
+		width: 450px;  /*el ancho del cuadro. (el texto se acomoda adentro)*/
+		height: 310px;
+		background-color: #D7CFDA;
+		font-size: 22px;
+		padding: 45px 40px 20px 40px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+        box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+
+
+</style>		
+	
+<body>
+	
+	
+<div id="mensaje_frase0"></div>
+<div id="mensaje_frase1"></div>   
+
+
+	<div class="contenido">	
+
+		<div class="izq">
+		
+			<div class="home">	
+				<button id="IDidioma" onclick="modificaIdioma()"></button>
+				<button class="HomeButton" onclick="location.href='../index.html';">
+					<span>Home</span>
+					<svg>
+						<rect x="0" y="0" fill="none"></rect>
+					</svg>
+					
+					</button>		
+			</div>
+	
+	
+			<div class="previousnext">
+				<button id="PreviousButton" onclick="location.href='../paginas/mine.html';" class="float-left submit-button" >←Previous track</button>	
+				<button id="NextButton" onclick="location.href='../paginas/backtodecember.html';" class="float-left submit-button" >Next track →</button>		
+			</div>
+
+			<span class="titulo">2. Sparks Fly</span>
+
+			
+<div class="song">
+
+<p>The way you move is like a full on rainstorm<br>
+And I'm a house of cards<br>
+You're the kind of reckless that should send me running<br>
+But I kinda know that I won't get far</p>
+	
+<p>And you stood there in front of me just<br>
+Close enough to touch<br>
+Close enough to hope you couldn't see<br>
+What I was thinking of</p>
+	
+<p>Drop everything now<br>
+Meet me in the pouring rain<br>
+Kiss me on the sidewalk<br>
+Take away the pain<br>
+'Cause I see, sparks fly, whenever you smile</p>
+	
+<p>Get me with those green eyes, baby<br>
+As the lights go down<br>
+Gimme something that'll haunt me whenever you're not around<br>
+'Cause I see, sparks fly, when you smile</p>
+	
+<p>My mind forgets to remind me, you'r a bad idea<br>
+You touch me once and it's really something<br>
+You find I'm even better than you, imagined I would be<br>
+I'm on my guard for the rest of the world<br>
+But with you I know its no good<br>
+And I could wait patiently<br>
+But I really wish you would</p>
+	
+<p>Drop everything now<br>
+Meet me in the pouring rain<br>
+Kiss me on the sidewalk<br>
+Take away the pain<br>
+'Cause I see, sparks fly, whenever you smile<br>
+Get me with those green eyes, baby<br>
+As the lights go down<br>
+Gimme something that'll haunt me when you're not around<br>
+'Cause I see, sparks fly, whenever you smile</p>
+	
+<p>I run my fingers through your hair<br>
+And watch the lights go wild<br>
+Just keep on keeping your eyes on me<br>
+Its just wrong enough to make it feel right<br>
+And lead me up the staircase<br>
+Won't you whisper soft and slow<br>
+And I'm captivated by you baby<br>
+Like a fireworks show</p>
+	
+<p>Drop everything now<br>
+Meet me in the pouring rain<br>
+Kiss me on the sidewalk<br>
+Take away the pain<br>
+'Cause I see, sparks fly whenever you smile</p>
+	
+<p>Get me with those green eyes, baby<br>
+As the lights go down<br>
+Gimme something that'll haunt me when you're not around<br>
+'Cause I see, sparks fly, whenever you smile</p>
+
+<p>When sparks fly oh baby smile<br>
+When sparks fly</p>
+
+</div>
+<div id="frase1"><a href="#">
+    <ul style="list-style-image:url(../imagenes/fotosINFO/purpledress.jpg);">
+     <li><pre><h3>Mensaje Secreto:</h3>             "Portland, Oregon"</pre></li> 
+    </ul>
+</a></div>			
+</div> 
+
+
+
+</body>
+</html>

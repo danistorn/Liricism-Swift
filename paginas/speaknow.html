@@ -1,0 +1,228 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script src="jQueryAssets/jquery-1.11.1.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rochester&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">		
+<link rel="stylesheet" href="cssspeaknow.css"/>	
+
+
+<script>
+
+$(document).ready(function(){   
+				$("#mensaje_frase0").hide();
+				$("#frase0").hover(mensaje_on0, mensaje_off0);
+				eligeIdioma();
+			});
+		
+			
+			function mensaje_on0(){
+				$("#mensaje_frase0").show();    
+			}
+			
+			function mensaje_off0(){
+				$("#mensaje_frase0").hide();
+			}   
+	
+	
+	
+	
+			$(document).ready(function(){   
+				$("#mensaje_frase1").hide();
+				$("#frase1").hover(mensaje_on1, mensaje_off1);
+				
+			});
+		
+			
+			function mensaje_on1(){
+				$("#mensaje_frase1").show();    
+			}
+			
+			function mensaje_off1(){
+				$("#mensaje_frase1").hide();
+			}   
+	
+	
+			
+	
+			/* Idioma */
+			var idioma = 0 ; // 0=es, 1=en, ...
+			var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+			var texto = [  
+						 ["",""],
+						 ["Desde el comienzo de su carrera Taylor Swift incluye mensajes secretos en cada canción, lo cual dejó de hacer en su álbum Reputation.<br><br><hr><br> Para su album Speak Now las letras de las canciones en los booklets (libritos) estan en minusculas, y cada letra del mensaje secreto esta en mayuscula.",
+							"Taylor Swift includes hidden messages in each song, which stopped at Reputation.<br><br><hr><br> For her album Speak Now the lyrics of the songs in the booklets are in lowerecased letters, and each letter of the hidden message is capitalized."
+						 ]
+						];
+						function eligeIdioma(){
+						 IDidioma.innerHTML=idiomas[idioma];
+		
+							 for (let frase=0; frase<texto.length; frase++){         /*inicio con frase=0 -- Continúo hasta el lenght del "texto" (osea continúo 2 veces porque el lenght es 2. sson 2 arrays) -- le sumo uno a "frase", asi pasa de frase 0 a frase 1.*/ 
+							 document.getElementById("mensaje_frase"+frase).innerHTML=texto[frase][idioma];
+							 }
+							}
+						function modificaIdioma(){
+						idioma++;
+						if (idioma < 0 || idioma > 1) idioma = 0;
+						eligeIdioma();
+						}	
+
+
+
+    
+    
+</script>
+
+
+</head>
+	
+<style>	
+	
+body
+{
+	background:url("../imagenes/speaknow/speak.jpg"); /*La foto*/
+	background-repeat:repeat-y;
+	background-position:600px 0%;
+		
+}	
+
+
+#frase1{
+    
+    font-size: 25px;
+    padding: 10px 10px 10px, 15px;
+    font-style: italic;
+    margin-left: 20px;
+    margin-top: 1px;
+}
+
+
+#mensaje_frase1{
+		position: fixed;  /*queda en donde lo pusimos aunque cambiemos de posicion con la barra de desplazamiento*/
+		left: 730px;
+		top: 100px;   /*el espacio entre el cuadro y el tope VISIBLE de arriba*/
+		width: 450px;  /*el ancho del cuadro. (el texto se acomoda adentro)*/
+		height: 310px;
+		background-color: #D7CFDA;
+		font-size: 22px;
+		padding: 45px 40px 20px 40px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+        box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+
+
+</style>	
+
+<body>
+
+<div id="mensaje_frase0"></div>
+<div id="mensaje_frase1"></div>
+
+	
+	<div class="contenido">	
+
+		<div class="izq">
+		
+			<div class="home">
+				<button id="IDidioma" onclick="modificaIdioma()"></button>	
+				<button class="HomeButton" onclick="location.href='../index.html';">
+					<span>Home</span>
+					<svg>
+						<rect x="0" y="0" fill="none"></rect>
+					</svg>
+					
+					</button>	
+			</div>
+	
+	
+			<div class="previousnext">
+				<button id="PreviousButton" onclick="location.href='../paginas/backtodecember.html';" class="float-left submit-button" >←Previous track</button>	
+				<button id="NextButton" onclick="location.href='../paginas/dearjohn.html';" class="float-left submit-button" >Next track →</button>		
+			</div>
+
+
+
+			<span class="titulo" id="frase0">4. Speak Now</span>
+	
+<div class="song">
+
+<p>I am not the kind of girl<br>
+Who should be rudely barging in on a white veil occasion<br>
+But you are not the kind of boy<br>
+Who should be marrying the wrong girl</p>
+	
+<p>I sneak in and see your friends<br>
+And her snotty little family all dressed in pastel<br>
+And she is yelling at a bridesmaid<br>
+Somewhere back inside a room</p>
+	
+<p>Wearing a gown shaped like a pastry<br>
+This is surely not what you thought it would be<br>
+I lose myself in a daydream</p>
+	
+<p>Where I stand and say<br>
+Don't say yes, run away now<br>
+I'll meet you when you're out of the church at the back door<br>
+Don't wait, or say a single vow<br>
+You need to hear me out<br>
+And they said speak now<br>
+Fond gestures are exchanged<br>
+And the organ starts to play<br>
+A song that sounds like a death march</p>
+	
+<p>And I am hiding in the curtains<br>
+It seems that I was uninvited by your lovely bride to be<br>
+She floats down the aisle like a pageant queen<br>
+But I know you wish it was me</p>
+	
+<p>You wish it was me<br>
+Don't you?<br>
+Don't say yes, run away now<br>
+I'll meet you when you're out of the church at the back door<br>
+Don't wait, or say a single vow</p>
+	
+<p>You need to hear me out<br>
+And they said speak now<br>
+Don't say yes, run away now<br>
+I'll meet you when you're out of the church at the back door<br>
+Don't wait, or say a single vow</p>
+	
+<p>Your time is running out<br>
+And they said speak now<br>
+I hear the preacher say speak now or forever hold your peace<br>
+There's the silence, there's my last chance</p>
+	
+<p>I stand up with shaky hands, all eyes on me<br>
+Horrified looks from everyone in the room<br>
+But I'm only looking at you<br>
+I am not the kind of girl</p>
+	
+<p>Who should be rudely barging in on a white veil occasion<br>
+But you are not the kind of boy<br>
+Who should be marrying the wrong girl<br>
+So don't say yes, run away now<br>
+I'll meet you when you're out of the church at the back door<br>
+Don't wait, or say a single vow<br>
+You need to hear me out<br>
+And they said speak now<br>
+And you'll say let's run away now<br>
+I'll meet you when I'm out of my tux at the back door<br>
+Baby, I didn't say my vows<br>
+So glad you were around<br>
+When they said speak now</p>
+
+</div>
+<div id="frase1"><a href="#">
+    <ul style="list-style-image:url(../imagenes/fotosINFO/purpledress.jpg);">
+     <li><pre><h3>Mensaje Secreto:</h3>	"You always regret <br>                what you don't say"</pre></li> 
+    </ul>
+</a></div>			
+</div> 
+
+</body>
+</html>

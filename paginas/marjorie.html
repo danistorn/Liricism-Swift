@@ -1,0 +1,252 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IM+Fell+DW+Pica:ital@1&family=Rochester&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="cssevermore.css"/>		
+<script src="jQueryAssets/jquery-1.11.1.min.js"></script>
+	
+	
+<script>
+
+$(document).ready(function(){	
+		$("#mensaje_frase0").hide();
+		$("#frase0").hover(mensaje_on0, mensaje_off0);
+		eligeIdioma();
+	});
+
+	
+	function mensaje_on0(){
+		$("#mensaje_frase0").show();
+	}
+	
+	function mensaje_off0(){
+		$("#mensaje_frase0").hide();
+	}
+	
+
+	
+	
+	
+	$(document).ready(function(){	
+		$("#mensaje_frase1").hide();
+		$("#frase1").hover(mensaje_on1, mensaje_off1);
+		
+	});
+
+	
+	function mensaje_on1(){
+		$("#mensaje_frase1").show();	
+	}
+	
+	function mensaje_off1(){
+		$("#mensaje_frase1").hide();
+	}
+	
+
+	
+	
+	
+
+
+			        /* Idioma */
+					var idioma = 0 ; // 0=es, 1=en, ...
+        var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+        var texto = [                                           /*El largo de "texto" es dos. ya que hay 2 arrays dentro*/
+                    ["Marjorie era la abuela materna de Taylor. Murió en 2003, cuando Taylor tenía 13 años. Fue cantante de opera e insentivó e inspiró a Taylor a seguir una carrera musical.<br> El video musical oficial con letra muestra imágenes de Marjorie en videos y fotos caseras.<br><br> Así como el track 13 de este album esta dedicado a su abuela, el track 13 del que fue su siguiente album \"Evermore\" esta, en parte, dedicado a su abuelo. (el 13 es el número de la suerte de Taylor)",
+                     "Marjorie is the maternal grandmother of Taylor. She died in 2003, when Taylor was 13 years old. She was an opera singer and encouraged Taylor to follow her musical career.<br> The Official Lyric Music Video shows images of Marjorie in homemade videos and pictures.<br><br> Just like track 13 of this album is dedicated to her grandmother, track 13 of her next album \"Evermore\" is partly dedicated to her grandfather. (13 is Taylor's lucky number)" 
+                    ],
+					["Cuando Taylor termina de decir esta frase \"Creería que estas cantando para mí ahora\" se escucha una grabación de su abuela cantando.",
+					 "When Taylor finishes saying phrase \"I'd think you were singing to me now\" a recording of her grandmother singing can be heard in the background."
+					]
+                      ];         
+                         
+                      
+                      
+                      
+                      function eligeIdioma(){
+                     IDidioma.innerHTML=idiomas[idioma];
+    
+                         for (let frase=0; frase<texto.length; frase++){         /*inicio con frase=0 -- Continúo hasta el lenght del "texto" (osea continúo 2 veces porque el lenght es 2. sson 2 arrays) -- le sumo uno a "frase", asi pasa de frase 0 a frase 1.*/ 
+                         document.getElementById("mensaje_frase"+frase).innerHTML=texto[frase][idioma];
+                         }
+                        }
+                    function modificaIdioma(){
+                    idioma++;
+                    if (idioma < 0 || idioma > 1) idioma = 0;
+                    eligeIdioma();
+                    }   				
+
+	
+</script>
+	
+	
+</head>
+
+
+<style>
+	
+		#mensaje_frase0{
+		position: fixed;
+		left: 700px;
+		top: 70px;   /*el espacio entre el cuadro y el tope VISIBLE de arriba*/
+		width: 500px;
+		height: 410px;
+		background-color: #D7CFDA;
+		font-size: 23px;
+		padding: 60px 25px 25px 25px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}
+	
+	#mensaje_frase1{
+		position: fixed;
+		left: 670px;
+		top: 70px; 
+		width: 580px;
+		height: 440px;
+		background-color: #D7CFDA;
+		font-size: 24px;
+		padding: 40px 25px 25px 25px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+	
+	body
+	{
+	background:url("../imagenes/evermore/marjorieopera.jpg");
+	background-repeat:repeat-y;
+	background-position: 600px 0px;
+	}
+
+	.titulo{
+	text-decoration: none;
+    color:red;
+}
+
+
+.hover_img a { position:relative; }
+.hover_img a span { position:absolute; display:none; z-index:99; }
+.hover_img a:hover span { display:block; }
+
+.img{
+    top:50px;
+    left:-100px;
+
+}
+
+
+	
+</style>	
+	
+
+<body>
+	
+<div id="mensaje_frase0"></div>	
+<div id="mensaje_frase1"></div>	
+	
+
+<div class="contenido">	
+
+	<div class="izq">
+	
+		<div class="home">	
+			<button id="IDidioma" onclick="modificaIdioma()"></button>
+			<button class="HomeButton" onclick="location.href='../index.html';">
+				<span>Home</span>
+				<svg>
+					<rect x="0" y="0" fill="none"></rect>
+				</svg>
+				
+				</button>		
+		</div>
+
+
+		<div class=previousnext>	
+			<button id="PreviousButton" onclick="location.href='../paginas/Long Story Short.html';" class="float-left submit-button" >←Previous track</button>		
+			<button id="NextButton" onclick="location.href='../paginas/Closure.html';" class="float-left submit-button" >Next track →</button>		
+		</div>	
+
+
+	<span class="titulo" id="frase0">13. Marjorie</span>
+
+<div class="song">		
+	
+<p>Never be so kind, you forget to be clever<br>
+Never be so clever, you forget to be kind</p>
+
+<p>And if I didn't know better<br>
+I'd think you were talking to me now<br>
+If I didn't know better<br>
+I'd think you were still around<br>
+What died didn't stay dead<br>
+What died didn't stay dead<br>
+You're alive, you're alive in my head<br>
+What died didn't stay dead<br>
+What died didn't stay dead<br>
+You're alive, so alive</p>
+
+<p>Never be so polite, you forget your power<br>
+Never wield such power, you forget to be polite</p>
+
+<p>And if I didn't know better<br>
+I'd think you were listening to me now<br>
+If I didn't know better<br>
+I'd think you were still around<br>
+What died didn't stay dead<br>
+What died didn't stay dead<br>
+You're alive, you're alive in my head<br>
+What died didn't stay dead<br>
+What died didn't stay dead<br>
+You're alive, so alive</p>
+	
+<p>The autumn chill that wakes me up<br>
+You loved the amber skies so much<br>
+Long limbs and frozen swims<br>
+You'd always go past where our feet could touch<br>
+And I complained the whole way there<br>
+The car ride back and up the stairs<br>
+I should've asked you questions<br>
+I should've asked you how to be<br>
+Asked you to write it down for me<br>
+Should've kept every grocery store receipt<br>
+'Cause every scrap of you would be taken from me<br>
+Watched as you signed your name Marjorie<br>
+All your closets of backlogged dreams<br>
+And how you left them all to me</p>
+
+<p>What died didn't stay dead<br>
+What died didn't stay dead<br>
+You're alive, you're alive in my head<br>
+What died didn't stay dead<br>
+What died didn't stay dead<br>
+You're alive, so alive<br>
+And if I didn't know better<br>
+<span class="hover_img" id="frase1"><a href="#">I'd think you were singing to me now<span><img src="../imagenes/fotosINFO/marjorievocals.jpg" alt="image2"  style="position: fixed; left:700px; top:230px" />    
+</span></a></span><br>
+If I didn't know better<br>
+I'd think you were still around<br>
+I know better<br>
+But I still feel you all around<br>
+I know better<br>
+But you're still around</p>
+	
+
+</div>
+
+<div id="div2">
+&nbsp;
+</div>
+		
+</div>
+
+
+</body>
+</html>

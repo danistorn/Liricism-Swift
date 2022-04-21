@@ -1,0 +1,87 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{position:absolute;
+	text-align:center;
+	padding:20px;
+}
+
+#HomeButton{
+	height:35px;
+	width: auto;
+	background-color:  rgb(247, 239, 213);
+	font-family: kepler Display SemiCond;
+	font-size: 22px;
+	cursor: pointer;
+}
+
+#HomeButton:hover{
+	background: rgb(231, 226, 205);
+}
+
+
+#PreviousButton{
+	cursor: pointer;
+}
+
+#NextButton{
+	cursor:pointer;
+}
+
+
+p {font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+
+}
+
+p span {color:red;   /*a estos me falta ponerles el div y la explicacion de la letra*/
+	
+	position: relative;
+}
+
+span{
+	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+}
+
+
+
+.tooltip_hover{
+	position: relative;
+}
+
+.tooltip_text{
+	position: absolute;
+  	left: 50%;
+	bottom: 100%;
+	transform: translateX(-50%);
+	white-space: nowrap;
+	background: grey;
+	padding: 5px 8px;
+	border-radius: 3px;
+	margin-bottom: 5px;
+	opacity:0;
+	transition: all 0.3s ease-in-out;
+}
+
+.tooltip_text:after{
+	content: "";
+	position: absolute;
+	transition: all 0.3s ease-in-out;
+	top: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	border-top: 5px solid gray;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+}
+
+#frase0{
+	color:#791F21;
+	font-size:50px;
+}
+
+
+#frase1, #frase2, #frase3, #frase4{
+	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	color:red;
+}
+

@@ -1,0 +1,309 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="cssreputation.css"/>
+
+
+<script>
+
+
+		$(document).ready(function(){   
+            $("#mensaje_frase0").hide();
+            $("#frase0").hover(mensaje_on0, mensaje_off0);
+            eligeIdioma();
+        });
+    
+        
+        function mensaje_on0(){
+            $("#mensaje_frase0").show();    
+        }
+        
+        function mensaje_off0(){
+            $("#mensaje_frase0").hide();
+        }   
+
+
+		
+
+	
+		$(document).ready(function(){	
+		$("#mensaje_frase1").hide();
+		$("#frase1").hover(mensaje_on1, mensaje_off1);
+		
+	});
+
+	
+	function mensaje_on1(){
+		$("#mensaje_frase1").show();	
+	}
+	
+	function mensaje_off1(){
+		$("#mensaje_frase1").hide();
+	}	
+	
+	
+
+	
+	$(document).ready(function(){	
+		$("#mensaje_frase2").hide();
+		$("#frase2").hover(mensaje_on2, mensaje_off2);
+		
+	});	
+	
+		
+	function mensaje_on2(){
+		$("#mensaje_frase2").show();
+	}
+	
+	function mensaje_off2(){
+		$("#mensaje_frase2").hide();
+	}	
+
+        
+        /* Idioma */
+        var idioma = 0 ; // 0=es, 1=en, ...
+        var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+        var texto = [   
+					 ["",""],	
+					 ["En 2016 Kanye West lanza su canción \"Famous\" en la que canta: \"I feel like me and Taylor might still have sex/ Why? I made that bitch famous.\"<br>Taylor sale a repudiar la canción, y Kanye la acusa de hacerse la victima, incriminandola falsamente de haber dado su consentimiento publicando un fragmento de la conversación telefonica que tuvieron y que él grabó secretamente. Ésto llevó a que se produzca un repudio masivo hacia ella, perjudicando gravemente su reputación.<br><br> Años más tarde, en 2020, saldría a la luz el audio completo de la llamada y quedaría al descubrierto que Taylor había dicho la verdad y que nunca dió su consentimiento, ya que Kanye nunca le reveló la letra completa.",
+                      "<br>In 2016 Kanye releases his song \"Famous\" where he sings: \"I feel like me and Taylor might still have sex, why? I made that bitch famous.\"<br> She repudiates the song and Kanye accuses her of playing the victim, accusing her of having given her consent by publishing a fragmet of the phone call he had secretely recorded. This leads to a masive repudiation towards her, damiging her reputation.<br><br> Years later, in 2020, it came to light the full audio of the phone call, and the public realized Taylor was telling the truth and never gave concent, because Kanye never shared with her the whole lyrics."
+                     ],
+					 ["Taylor menciona en varias canciónes este bar que fue muy significativo en su relación con Joe Alwyn. Algunos fans teorizan con que la primer noche que pasaron juntos (a fines de Agosto) comenzó con ellos encontrandose en este bar de NYC y yendo luego a Cornelia Street (Departamento que rentó Taylor en Junio de 2016 y que se encuentra al este -East Side- de la ciudad de NY).<br><br>Vuelve a mencionarlo en:<br>-So it goes (Reputation),<br> -Getaway Car (Reputation),<br> -Cruel Summer (Lover),<br> -Cornelia Street (Lover), <br>-Invisible String (Folklore).",
+                      "Taylor mentions in several songs this bar that was very significant in her relationship with Joe Alwyn. Some fans theorize that it was the first night they spent together (in late August) started with them meeting at the bar in NYC and going then to Cornelia Street (Department that Taylor rent in June 2006 and that its located to the East Side of NYC). <br><br>She mentions it again in:<br>-So it goes (Reputation),<br> -Getaway Car (Reputation),<br> -Cruel Summer (Lover),<br> -Cornelia Street (Lover), <br>-Invisible String (Folklore)."
+                    ]
+					];
+					function eligeIdioma(){
+                     IDidioma.innerHTML=idiomas[idioma];
+    
+                         for (let frase=0; frase<texto.length; frase++){         /*inicio con frase=0 -- Continúo hasta el lenght del "texto" (osea continúo 2 veces porque el lenght es 2. sson 2 arrays) -- le sumo uno a "frase", asi pasa de frase 0 a frase 1.*/ 
+                         document.getElementById("mensaje_frase"+frase).innerHTML=texto[frase][idioma];
+                         }
+                        }
+                    function modificaIdioma(){
+                    idioma++;
+                    if (idioma < 0 || idioma > 1) idioma = 0;
+                    eligeIdioma();
+                    }   		
+		
+    
+    
+    </script>
+
+
+</head>
+	
+<style>
+	
+	body{
+	background:url("../imagenes/Reputation/delicate2.jpg"); /*La foto*/
+	background-repeat:repeat-y;	
+	background-position:600px 0%;
+	}	
+
+
+.hover_img a { position:relative; }
+.hover_img a span { position:absolute; display:none; z-index:99; }
+.hover_img a:hover span { display:block; }
+
+.img{
+    top:50px;
+    left:-100px;
+
+}
+
+a{  /* Para sacarle el subrayado y el color azul, así no se ve como un link */
+    text-decoration: none;
+    color:red;
+}
+
+
+
+#mensaje_frase1{
+		position: fixed;  /*queda en donde lo pusimos aunque cambiemos de posicion con la barra de desplazamiento*/
+		left: 490px;
+		top: 30px;   /*el espacio entre el cuadro y el tope VISIBLE de arriba*/
+		width: 440px;  /*el ancho del cuadro. (el texto se acomoda adentro)*/
+		height: 500px;
+		background-color: #D7CFDA;
+		font-size: 21px;
+		padding: 30px 25px 15px 370px;   /*El margen entre el texto y los bordes del cuadro*/
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+	
+
+	#mensaje_frase2{
+		position: fixed;  /*o absolute?*/
+		left: 650px;
+		top: 50px;   /*originalmente tenia 392px*/
+		width: 570px;
+		height: 455px;
+		background-color: #D7CFDA;
+		font-size: 23px;
+		padding: 40px 30px 30px 40px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}		
+
+
+</style>	
+
+<body>
+
+<div id="mensaje_frase0"></div>
+<div id="mensaje_frase1"></div>
+<div id="mensaje_frase2"></div>
+
+
+	<div class="contenido">	
+
+		<div class="izq">
+		
+			<div class="home">	
+				<button id="IDidioma" onclick="modificaIdioma()"></button>
+				<button class="HomeButton" onclick="location.href='../index.html';">
+					<span>Home</span>
+					<svg>
+						<rect x="0" y="0" fill="none"></rect>
+					</svg>
+					
+					</button>		
+			</div>	
+
+
+	<div class="previousnext">	
+		<button id="PreviousButton" onclick="location.href='../paginas/dontblameme.html';" class="float-left submit-button" >←Previous track</button>	
+		<button id="NextButton" onclick="location.href='../paginas/look what you made me do.html';" class="float-left submit-button" >Next track →</button>		
+	</div>	
+	
+
+
+
+	<div class="titulo" id="frase0">5. Delicate</div>
+	
+<dic class="song">
+
+	<p class="hover_img" id="frase1">
+		<a id= tytle href="#">This ain't for the best<br>
+My reputation's never been worse, so<br>
+You must like me for me<span><img src="../imagenes/fotosINFO/rep.jpg" alt=""  style="position: fixed; left:510px; top:80px;" />    
+</span></a></p>
+	
+<p>We can't make any promises<br>
+Now can we, babe?<br>
+But you can make me a drink</p>
+	
+<p><span class="hover_img" id="frase2"><a href="#">Dive bar on the East Side, where you at?<span><img src="../imagenes/fotosINFO/" alt=""  style="position: fixed; left:510px; top:80px;" />    
+</span></a></span><br>
+Phone lights up my nightstand in the black<br>
+Come here; you can meet me in the back</p>
+	
+<p>Dark jeans and your Nikes, look at you<br>
+Oh, damn, never seen that color blue<br>
+Just think of the fun things we could do<br>
+'Cause I like you</p>
+	
+<p>This ain't for the best<br>
+My reputation's never been worse, so<br>
+You must like me for me<br>
+Yeah, I want you</p>
+	
+<p>We can't make any promises<br>
+Now can we, babe?<br>
+But you can make me a drink</p>
+	
+<p>Is it cool that I said all that?<br>
+Is it chill that you're in my head?<br>
+'Cause I know that it's delicate (Delicate)</p>
+	
+<p>Is it cool that I said all that?<br>
+Is it too soon to do this yet?<br>
+'Cause I know that it's delicate</p>
+	
+<p>Isn't it, isn't it, isn't it?<br>
+Isn't it?<br>
+Isn't it, isn't it, isn't it?<br>
+Isn't it delicate?</p>
+	
+<p>Third floor on the West Side, me and you<br>
+Handsome, you're a mansion with a view<br>
+Do the girls back home touch you like I do?</p>
+	
+<p>Long night with your hands up in my hair<br>
+Echoes of your footsteps on the stairs<br>
+Stay here, honey, I don't want to share<br>
+'Cause I like you</p>
+	
+<p>This ain't for the best<br>
+My reputation's never been worse, so<br>
+You must like me for me<br>
+Yeah, I want you</p>
+	
+<p>We can't make any promises<br>
+Now can we, babe?<br>
+But you can make me a drink</p>
+	
+<p>Is it cool that I said all that?<br>
+Is it chill that you're in my head?<br>
+'Cause I know that it's delicate (Delicate)</p>
+	
+<p>Is it cool that I said all that?<br>
+Is it too soon to do this yet?<br>
+'Cause I know that it's delicate</p>
+	
+<p>Isn't it, isn't it, isn't it?<br>
+Isn't it?<br>
+Isn't it, isn't it, isn't it?<br>
+Isn't it delicate?</p>
+	
+<p>Sometimes I wonder; when you sleep<br>
+Are you ever dreaming of me?<br>
+Sometimes when I look into your eyes<br>
+I pretend you're mine, all the damn time<br>
+'Cause I like you</p>
+
+<p>Is it cool that I said all that?<br>
+Is it chill that you're in my head?<br>
+'Cause I know that it's delicate (Delicate)<br>
+Yeah, I want you</p>
+
+<p>Is it cool that I said all that?<br>
+Is it too soon to do this yet?<br>
+'Cause I know that it's delicate (Delicate)<br>
+'Cause I like you</p>
+
+<p>Is it cool that I said all that? (Isn't it?)<br>
+Is it chill that you're in my head? (Isn't it, isn't it?)<br>
+'Cause I know that it's delicate<br>
+Isn't it delicate?<br>
+Yeah, I want you</p>
+
+<p>Is it cool that I said all that (Isn't it?)<br>
+Is it too soon to do this yet? (Isn't it, isn't it?)<br>
+'Cause I know that it's delicate<br>
+Isn't it delicate?</p>
+
+
+</div>
+
+
+<div id="div2">
+	&nbsp;
+</div>			
+
+
+</div> 
+
+	
+</body>
+</html>

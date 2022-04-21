@@ -1,0 +1,247 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script src="jQueryAssets/jquery-1.11.1.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="cssred.css"/>	
+
+
+<script>
+
+
+
+	$(document).ready(function(){   
+				$("#mensaje_frase0").hide();
+				$("#frase0").hover(mensaje_on0, mensaje_off0);
+				eligeIdioma();
+			});
+		
+			
+			function mensaje_on0(){
+				$("#mensaje_frase0").show();    
+			}
+			
+			function mensaje_off0(){
+				$("#mensaje_frase0").hide();
+			}   
+	
+	
+	
+	
+			$(document).ready(function(){   
+				$("#mensaje_frase1").hide();
+				$("#frase1").hover(mensaje_on1, mensaje_off1);
+				
+			});
+		
+			
+			function mensaje_on1(){
+				$("#mensaje_frase1").show();    
+			}
+			
+			function mensaje_off1(){
+				$("#mensaje_frase1").hide();
+			}   
+	
+	
+			
+	
+			/* Idioma */
+			var idioma = 0 ; // 0=es, 1=en, ...
+			var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+			var texto = [  
+						 ["",""],
+						 ["Desde el comienzo de su carrera Taylor Swift incluye mensajes secretos en cada canción, lo cual dejó de hacer en su álbum Reputation.<br><br><hr><br> Para su album RED las letras de las canciones en los booklets (libritos) estan en minusculas, y cada letra del mensaje secreto esta en mayuscula.",
+						  "Taylor Swift includes hidden messages in each song, which stopped at Reputation.<br><br><hr><br> For her album RED the lyrics of the songs in the booklets are in lowerecased letters, and each letter of the hidden message is capitalized."
+						 ]
+						];
+						function eligeIdioma(){
+						 IDidioma.innerHTML=idiomas[idioma];
+		
+							 for (let frase=0; frase<texto.length; frase++){         /*inicio con frase=0 -- Continúo hasta el lenght del "texto" (osea continúo 2 veces porque el lenght es 2. sson 2 arrays) -- le sumo uno a "frase", asi pasa de frase 0 a frase 1.*/ 
+							 document.getElementById("mensaje_frase"+frase).innerHTML=texto[frase][idioma];
+							 }
+							}
+						function modificaIdioma(){
+						idioma++;
+						if (idioma < 0 || idioma > 1) idioma = 0;
+						eligeIdioma();
+						}	
+
+
+
+</script>
+
+
+</head>
+
+<style>	
+	
+body
+{
+	background:url("../imagenes/red/trouble2.jpg"); /*La foto*/
+	background-repeat:repeat-y;
+	background-position:600px 0%;
+		
+}	
+	
+#div1 {
+  	width: 50%;
+	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	text-align:center;
+	justify-content: 25px;
+	width:500px; 
+	margin:0 auto;
+}		
+
+
+#frase1{
+    
+    font-size: 25px;
+    padding: 10px 10px 10px, 15px;
+    font-style: italic;
+    margin-left: 30px;
+    margin-top: 1px;
+}
+
+
+#mensaje_frase1{
+		position: fixed;  /*queda en donde lo pusimos aunque cambiemos de posicion con la barra de desplazamiento*/
+		left: 730px;
+		top: 100px;   /*el espacio entre el cuadro y el tope VISIBLE de arriba*/
+		width: 450px;  /*el ancho del cuadro. (el texto se acomoda adentro)*/
+		height: 310px;
+		background-color: #D7CFDA;
+		font-size: 22px;
+		padding: 45px 40px 20px 40px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+        box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+
+	
+</style>	
+	
+<body>
+
+<div id="mensaje_frase0"></div>	
+<div id="mensaje_frase1"></div>  
+
+	
+	<div class="contenido">	
+
+		<div class="izq">
+		
+			<div class="home">	
+				<button id="IDidioma" onclick="modificaIdioma()"></button>
+				<button class="HomeButton" onclick="location.href='../index.html';">
+					<span>Home</span>
+					<svg>
+						<rect x="0" y="0" fill="none"></rect>
+					</svg>
+					
+					</button>			
+			</div>
+	
+	
+			<div class=previousnext>	
+				<button id="PreviousButton" onclick="location.href='../paginas/treacherous.html';" class="float-left submit-button" >←Previous track</button>		
+				<button id="NextButton" onclick="location.href='../paginas/alltoowell.html';" class="float-left submit-button" >Next track →</button>		
+			</div>	
+	
+			<span class="titulo" id="frase0">4. I Knew You Were Trouble</span>
+
+<div class="song">			
+	
+<p>Once upon time, a few mistakes ago<br>
+I was in your sights<br>
+You got me alone, you found me<br>
+You found me, you found me</p>
+
+<p>I guess you didn't care<br>
+And I guess I liked that<br>
+And when I fell hard<br>
+You took a step back<br>
+Without me, without me, without me</p>
+
+<p>And he's long gone<br>
+When he's next to me<br>
+And I realize the blame is on me</p>
+
+<p>Because I knew you were trouble when you walked in<br>
+So shame on me now<br>
+Pull me to places I'd never been<br>
+So you put me down oh<br>
+I knew you were trouble when you walked in<br>
+So shame on me now<br>
+Pull me to places I'd never been<br>
+Now I'm lying on a cold hard ground<br>
+Oh, trouble, trouble, trouble<br>
+Oh, trouble, trouble, trouble</p>
+
+<p>No apologies<br>
+He'll never see you cry<br>
+Pretend he doesn't know<br>
+That he's the reason why<br>
+You're drowning, you're drowning, you're drowning</p>
+
+<p>And I heard you moved on<br>
+From whispers on the street<br>
+A new notch in your belt<br>
+Is all I'll ever be<br>
+And now I see, now I see, now I see</p>
+
+<p>He was long gone<br>
+When he met me<br>
+And I realize the joke is on me</p>
+
+<p>I knew you were trouble when you walked in<br>
+So shame on me now<br>
+Pull me to places I'd never been<br>
+So you put me down oh<br>
+I knew you were trouble when you walked in<br>
+So shame on me now<br>
+Pull me to places I'd never been<br>
+Now I'm lying on the cold hard ground<br>
+Oh, trouble, trouble, trouble<br>
+Oh, trouble, trouble, trouble</p>
+
+<p>When your saddest fear comes creeping in<br>
+That you never loved me<br>
+Or her or anyone or anything</p>
+
+<p>I knew you were trouble when you walked in<br>
+So shame on me now<br>
+Pull me to places I'd never been<br>
+So you put me down oh<br>
+I knew you were trouble when you walked in<br>
+So shame on me now<br>
+Pull me to places I'd never been<br>
+Now I'm lying on the cold hard ground<br>
+Oh, trouble, trouble, trouble<br>
+Oh, trouble, trouble, trouble</p>
+
+<p>I knew you were trouble when you walked in<br>
+Trouble, trouble, trouble<br>
+I knew you were trouble when you walked in<br>
+Trouble, trouble, trouble</p>
+
+<p>I don't know if you know who you are<br>
+untill you lose who you are</p>
+	
+
+</div>
+<div id="frase1"><a href="#">
+    <ul style="list-style-image:url(../imagenes/fotosINFO/autumnleaves.png);">
+     <li><pre><h3>Mensaje Secreto:</h3>        "When you saw me dancing"</pre></li> 
+    </ul>
+</a></div>			
+</div> 	
+	
+</body>
+</html>

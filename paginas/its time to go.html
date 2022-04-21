@@ -1,0 +1,330 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script src="jQueryAssets/jquery-1.11.1.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IM+Fell+DW+Pica:ital@1&family=Rochester&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="cssevermore.css"/>	
+<script src="jQueryAssets/jquery-1.11.1.min.js"></script>	
+	
+	
+	
+<script>
+	
+
+
+	$(document).ready(function(){	
+		$("#mensaje_frase0").hide();
+		$("#frase0").hover(mensaje_on0, mensaje_off0);
+		eligeIdioma();
+	});
+
+	
+	function mensaje_on0(){
+		$("#mensaje_frase0").show();	
+	}
+	
+	function mensaje_off0(){
+		$("#mensaje_frase0").hide();
+	}	
+
+
+	
+
+	
+	
+	$(document).ready(function(){	
+		$("#mensaje_frase1").hide();
+		$("#frase1").hover(mensaje_on1, mensaje_off1);
+		
+	});
+
+	
+	function mensaje_on1(){
+		$("#mensaje_frase1").show();	
+	}
+	
+	function mensaje_off1(){
+		$("#mensaje_frase1").hide();
+	}	
+	
+
+
+
+	
+	$(document).ready(function(){	
+		$("#mensaje_frase2").hide();
+		$("#frase2").hover(mensaje_on2, mensaje_off2);
+		
+	});
+
+	
+	function mensaje_on2(){
+		$("#mensaje_frase2").show();	
+	}
+	
+	function mensaje_off2(){
+		$("#mensaje_frase2").hide();
+	}	
+	
+
+
+
+
+	
+	$(document).ready(function(){	
+		$("#mensaje_frase3").hide();
+		$("#frase3").hover(mensaje_on3, mensaje_off3);
+		
+	});
+
+	
+	function mensaje_on3(){
+		$("#mensaje_frase3").show();	
+	}
+	
+	function mensaje_off3(){
+		$("#mensaje_frase3").hide();
+	}	
+	
+
+
+
+        /* Idioma */
+        var idioma = 0 ; // 0=es, 1=en, ...
+        var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+        var texto = [ 
+
+					 ["",""],	
+					 ["Fans de Taylor estan convencidos de que en éste parrafo habla de Karlie Kloss (modelo), quien fue una de sus mejores amigas en una época.<br> Los medios las llamaban \"hermanas\" y \"gemelas\"	(\"Cuando las palabras de una hermana...\", \"No la gemela de tus sueños\") por el parecido de ambas y lo cercanas que eran.<br><br> Amigos cercanos a Taylor habrían confirmado que el motivo del distanciamiento fue que Karlie le habría contado secretos de Taylor a Scooter Braun, manager de la modelo, de quién además se volvió muy amiga aún luego de todo el hostigando que Taylor recibió de él.",
+					  "Taylor's fans are convinced that in this pararaph she talks about Karlie Kloss (model), who was one of her best friends in a time.<br> The media would call them \"sisters\" and \"twins\" (\"When the words of a sister...\", \"Not a twin of your dreams\") because of the resemblance of the both and how close they were.<br><br> Close friends to Taylor would have confirmed that the reason for the estrangement was that Karlie would have told some secrets of Taylor to Scooter Braun, manager of the model, to whom she became very close friends with even after all the harassment Taylor received from him."
+					 ],
+					 ["Hace referencia a la lucha jurídica de Taylor Swift por los derechos de sus éxitos musicales escritos en los primeros 10 años de su carrera (sus 6 primeros discos). Taylor le pidió a Scott Borchetta (director del sello discográfico Big Machine) que le vendiera sus canciónes, pero éste se los vendió a Scooter Braun, quien comenzó a agredir y hostigar a Taylor desde que ésta se negó a aceptarlo como su manager. Taylor se sintió traicionada (ya que consideraba a Brochetta un amigo y había hablado con él sobre el hostigamiento de Braun) y acabó dejando Big Machine Records y firmando un contrato con otra discográfica (Public Records) con la que acordó que sería dueña de todos sus futuros discos (de Lover, 7mo disco, en adelante)",
+					  "It reffers to the legal fight of Taylor Swift for the rights of her musical hits written in the first 10 years of her career (her first 6 records). Taylor asked Scott Brochetta (director of the record label Big Machine) to sell her her songs, but he sold them to Scooter Braun, who started to insult and harass Taylor ever since she refused to accept him as her manager. Taylor felt betrayed (as she considered Brochetta a friend and had talked with him about the harassment of Braun) and ended up leaving Big Machine Records and signing up a contract with another label record (Republic Records) with whom resolved she would be the owner of her future albums (from Lover, 7th album, onwards)"
+					 ],
+					 ["Una vez que compró sus dicos, Scotter Braun le prohibió a Taylor hacer uso de sus canciones que por contrato pertenecen a él, prohibiendole entre otras cosas cantarlas en televisión o utilizarlas en su documental.<br> (\"he's got my past behind glass\" = \"él tiene mi pasado detrás de un cristal\") <br><br> Pero lo que Scooter Braun tiene son sólo los derechos de las copias de sus trabajos discográficos (las grabaciónes de los discos). Taylor aún tiene todos los derechos de las letras y composiciones de sus canciones. Por eso, de acuerdo con la ley, puede regrabarlas después de 10 años de su primer lanzamiento.",
+					  "Once he bought her records, Scooter Braun prohibited Taylor to make use of her songs that belong to him by contract, forbidding her between other things, to sing them on television or use them in her documentary.<br> (\"he's got my past behind glass\") <br><br> But what Scooter Braun has is the rights to the copies of her record works (the recordings of the albums that were first published). Taylor still has all the rights to the lyrics and compositions of her songs. Therefore, by law, she can re-record them after 10 years of its first release."
+					 ]
+                    ];
+					function eligeIdioma(){
+                     IDidioma.innerHTML=idiomas[idioma];
+    
+                         for (let frase=0; frase<texto.length; frase++){         /*inicio con frase=0 -- Continúo hasta el lenght del "texto" (osea continúo 2 veces porque el lenght es 2. sson 2 arrays) -- le sumo uno a "frase", asi pasa de frase 0 a frase 1.*/ 
+                         document.getElementById("mensaje_frase"+frase).innerHTML=texto[frase][idioma];
+                         }
+                        }
+                    function modificaIdioma(){
+                    idioma++;
+                    if (idioma < 0 || idioma > 1) idioma = 0;
+                    eligeIdioma();
+                    }   	
+
+	
+	
+	
+</script>
+	
+	
+</head>
+	
+	
+	
+<style>
+	
+	
+	body{
+	background:url("../imagenes/evermore/time.jpg"); /*La foto*/
+	background-repeat:repeat-y;	
+	background-position:595px 0%;
+	}
+
+		
+	a{  /* Para sacarle el subrayado y el color azul, así no se ve como un link */
+    text-decoration: none;
+    color:red;
+}
+
+
+.hover_img a { position:relative; }
+.hover_img a span { position:absolute; display:none; z-index:99; }
+.hover_img a:hover span { display:block; }
+
+.img{
+    top:50px;
+    left:-100px;
+
+}
+
+
+
+
+	#mensaje_frase1{
+		position: fixed;
+		left: 640px;
+		top: 50px;  
+		width: 620px;
+		height: 500px;
+		background-color: #D7CFDA;
+		font-size: 19px;
+		padding: 20px 25px 25px 25px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}
+	
+	#mensaje_frase2{
+		position: fixed;
+		left: 620px;
+		top: 25px;  
+		width: 650px;
+		height: 530px;
+		background-color: #D7CFDA;
+		font-size: 20px;
+		padding: 20px 25px 25px 25px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}
+	
+	#mensaje_frase3{
+		position: fixed;
+		left: 630px;
+		top: 50px;  
+		width: 635px;
+		height: 480px;
+		background-color: #D7CFDA;
+		font-size: 19px;
+		padding: 20px 25px 25px 25px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}
+	
+	
+
+	
+	
+</style>	
+	
+<body>
+	
+<div id="mensaje_frase0"></div>	
+<div id="mensaje_frase1"></div>
+<div id="mensaje_frase2"></div>
+<div id="mensaje_frase3"></div>
+	
+	
+<div class="contenido">	
+
+	<div class="izq">
+	
+		<div class="home">	
+			<button id="IDidioma" onclick="modificaIdioma()"></button>
+			<button class="HomeButton" onclick="location.href='../index.html';">
+				<span>Home</span>
+				<svg>
+					<rect x="0" y="0" fill="none"></rect>
+				</svg>
+				
+				</button>	
+		</div>
+
+
+		<div class=previousnext>	
+			<button id="PreviousButton" onclick="location.href='../paginas/rwylm.html';" class="float-left submit-button" >←Previous track</button>	
+		</div>	
+
+
+
+		<span class="titulo" id="frase0">17. It's Time To Go</span>
+
+<div class="song">
+
+	
+<p>When your dinner is cold and the chatter gets old<br>
+You ask for the tab<br>
+Or that moment again, he's insisting that friends<br>
+Look at each other like that</p>
+
+<span class="hover_img" id="frase1"><a href="#">When the words of a sister come back in whispers<br>
+That prove she was not in fact what she seemed<br>
+Not a twin from your dreams<br>
+She's a crook who was caught<span><img src="../imagenes/fotosINFO/karliekloss.jpg" alt="image2"  style="position: fixed; left:820px; top:350px" />    
+</span></a></span>
+
+<p>That old familiar body ache<br>
+The snaps from the same little breaks in your soul<br>
+You know when it's time to go</p>
+
+<p>20 years at your job<br>
+Then the son of the boss gets the spot that was yours<br>
+Or trying to stay for the kids<br>
+When keeping it how it is will only break their hearts worse</p>
+
+<p>That old familiar body ache<br>
+The snaps from the same little breaks in your soul<br>
+You know when it's time to go</p>
+
+<p>Sometimes giving up is the strong thing<br>
+Sometimes to run is the brave thing<br>
+Sometimes walking out is the one thing<br>
+That will find you the right thing</p>
+
+<p>Sometimes giving up is the strong thing<br>
+Sometimes to run is the brave thing<br>
+Sometimes walking out is the one thing<br>
+That will find you the right thing</p>
+
+<span class="hover_img" id="frase2"><a href="#">15 years, 15 million tears<br>
+Begging 'til my knees bled<br>
+I gave it my all, he gave me nothing at all<br>
+Then wondered why I left<span><img src="../imagenes/fotosINFO/stolenlullabies.jpg" alt="image2"  style="position: fixed; left:770px; top:355px" />    
+</span></a></span>
+
+<p><span class="hover_img" id="frase3"><a href="#">Now he sits on his throne, in his palace of bones<br>
+Praying to his greed<br>
+He's got my past frozen behind glass<br>
+But I've got me<span><img src="../imagenes/fotosINFO/scooter.jpg" alt="image2"  style="position: fixed; left:790px; top:330px" />    
+</span></a></span></p>
+
+<p>That old familiar body ache<br>
+The snaps from the same little breaks in my soul<br>
+I know when it's time to go</p>
+
+<p>Sometimes giving up is the strong thing<br>
+Sometimes to run is the brave thing<br>
+Sometimes walking out is the one thing<br>
+That will find you the right thing</p>
+
+<p>Sometimes giving up is the strong thing<br>
+Sometimes to run is the brave thing<br>
+Sometimes walking out is the one thing<br>
+That will find you the right thing</p>
+
+<p>That will find you the right thing<br>
+And you know in your soul<br>
+And you know in your soul<br>
+When it's time to go<br>
+You know, you know, you know, you know<br>
+When it's time to go<br>
+So then you go<br>
+Then you go<br>
+You just go</p>
+	
+
+</div>
+
+<div id="div2">
+&nbsp;
+</div>
+		
+</div>
+	
+</body>
+</html>

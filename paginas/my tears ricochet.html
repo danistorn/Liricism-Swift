@@ -1,0 +1,242 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script src="jQueryAssets/jquery-1.11.1.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IM+Fell+DW+Pica:ital@1&family=Rochester&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="cssfolklore.css"/>	
+
+
+<script>
+
+
+$(document).ready(function(){	
+		$("#mensaje_frase0").hide();
+		$("#frase0").hover(mensaje_on0, mensaje_off0);
+		eligeIdioma();
+	});	
+	
+		
+	function mensaje_on0(){
+		$("#mensaje_frase0").show();
+	}
+	
+	function mensaje_off0(){
+		$("#mensaje_frase0").hide();
+	}
+
+
+
+
+	$(document).ready(function(){	
+		$("#mensaje_frase1").hide();
+		$("#frase1").hover(mensaje_on1, mensaje_off1);
+		
+	});	
+	
+		
+	function mensaje_on1(){
+		$("#mensaje_frase1").show();
+	}
+	
+	function mensaje_off1(){
+		$("#mensaje_frase1").hide();
+	}	
+	
+
+
+
+			        /* Idioma */
+					var idioma = 0 ; // 0=es, 1=en, ...
+        var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+        var texto = [
+					["Taylor comenzó a escribir frases de la canción luego de ver la película \"Historia de un Matrimonio\". Particularmente buscó también inspiración en historias en las que matrimonios no funcionaban y terminaban de manera catastrófica.<br>A pesar de nunca haberse divorciado, Taylor sintió una gran conexión con esas historias y su experiencia con Scott Brochetta (fundador de la discográfica Big Machine Label Group) con quien tuvo una excelente relación de negocios por años pero quien luego le vendió el derecho de sus canciones a Scooter Braun, un viejo enemigo de Taylor que la hostigó y difamó por años luego de que ella lo rechazara como manager.",
+					 "<br><br>Taylor started writing words of the song after a viewing of \"Marriage Story\". She also looked at stories in particular of when marriages go wrong and end in such a catastrophic way.<br> Even though she never went through a divorse, Taylor felt triggered with these stories because of her experience with Scott Brochetta (founder of the Big Machine Label Group) with whom she had an excelent business relationship for years until he sold all the rights of her songs to Scooter Braun, an old enemy of Taylor who harassed and defamed her for years after she turned him down as her manager.", 
+					],                                           /*El largo de "texto" es dos. ya que hay 2 arrays dentro*/
+                    
+					["Con \"canciones de cuna robadas\" hace referencia a las canciones que compuso y escribió en los primeros 10 años de su carrera, y que Scooter Brown compró a Scott Brochetta en 2019.<br> Taylor inició una batalla jurídica por los derechos de sus álbums escritos desde 2006 hasta 2017 a Braun, quien le prohibió a ella cantarlas en televisión y a Netflix usarlas en su documental sobre Taylor \"Miss Americana\", entre otras cosas.<br>Aún así, lo que Scooter Braun tiene en sus manos son sólo los derechos de las copias de sus trabajos discográficos; La artista tiene todos los derechos de las letras y composiciones de sus canciones por lo que, de acuerdo con la ley, puede regrabarlas después de 10 años de su primer lanzamiento.",
+					 "With \"stolen lullabies\ she makes a reference to the songs she comprosed and wrote between the first 10 years of her career, and that Scooter Brown bought to Scott Brochetta in 2019.<br> Taylor started a legal battle for the rights of her albums written between 2006 and 2017 to Braun, who bought the right of her songs to the label and prohibited her to sing them in television and Netflix from using them in the documentary about Taylor \"Miss Americana\", among other things. Even so, what Scooter Braun has in his hands are just the rights of the copies of her record works; the artist has all the rights of the lyrics and compositions, so by law, she can re-record her songs after 10 years of their first release." 
+                    ]
+                    ];         
+                         
+                      
+                      
+                      
+                      function eligeIdioma(){
+                     IDidioma.innerHTML=idiomas[idioma];
+    
+                         for (let frase=0; frase<texto.length; frase++){         /*inicio con frase=0 -- Continúo hasta el lenght del "texto" (osea continúo 2 veces porque el lenght es 2. sson 2 arrays) -- le sumo uno a "frase", asi pasa de frase 0 a frase 1.*/ 
+                         document.getElementById("mensaje_frase"+frase).innerHTML=texto[frase][idioma];
+                         }
+                        }
+                    function modificaIdioma(){
+                    idioma++;
+                    if (idioma < 0 || idioma > 1) idioma = 0;
+                    eligeIdioma();
+                    }   			
+    		
+	
+	
+
+</script>	
+
+	
+</head>
+
+	
+<style>
+	
+	
+	body{
+	background:url("../imagenes/Folklore/mtr2.jpg"); /*La foto*/
+	background-repeat:repeat-y;	
+	background-position:600px 0%;
+	}	
+
+	
+.hover_img a { position:relative; }
+.hover_img a span { position:absolute; display:none; z-index:99; }
+.hover_img a:hover span { display:block; }
+
+.img{
+    top:50px;
+    left:-100px;
+
+}	
+
+	
+
+    #mensaje_frase0{
+		position: fixed;  /*queda en donde lo pusimos aunque cambiemos de posicion con la barra de desplazamiento*/
+		left: 615px;
+		top: 25px;   /*el espacio entre el cuadro y el tope VISIBLE de arriba*/
+		width: 345px;  /*el ancho del cuadro. (el texto se acomoda adentro)*/
+		height: 535px;
+		background-color: #D7CFDA;
+		font-size: 20px;
+		padding: 15px 20px 20px 350px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+        box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}
+
+
+	#mensaje_frase1{
+		position: fixed;  /*o absolute?*/
+		left: 630px;
+		top: 20px;   /*originalmente tenia 392px*/
+		width: 650px;
+		height: 550px;
+		background-color: #D7CFDA;
+		font-size: 19px;
+		padding: 15px;
+		padding: 30px 20px 0px 20px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+
+
+</style>	
+	
+<body>
+	
+
+<div id="mensaje_frase0"></div>
+<div id="mensaje_frase1"></div>	
+	
+
+	<div class="contenido">	
+
+		<div class="izq">
+		
+			<div class="home">	
+				<button id="IDidioma" onclick="modificaIdioma()"></button>
+				<button class="HomeButton" onclick="location.href='../index.html';">
+					<span>Home</span>
+					<svg>
+						<rect x="0" y="0" fill="none"></rect>
+					</svg>
+					
+					</button>	
+			</div>
+	
+	
+			<div class=previousnext>	
+				<button id="PreviousButton" onclick="location.href='../paginas/exile.html';" class="float-left submit-button" >←Previous track</button>		
+				<button id="NextButton" onclick="location.href='../paginas/mirrorball.html';" class="float-left submit-button" >Next track →</button>		
+			</div>	
+
+	
+			<span class="hover_img" id="frase0">
+				<a class="titulo" href="#">5. My Tears Ricochet<span><img src="../imagenes/fotosINFO/marriagestory.jpg" alt="image2"  style="position: fixed; left:630px; top:80px" />    
+				</span></a></span>
+
+
+
+<div class="song">
+
+
+
+<p>We gather here, we line up<br>
+Weepin' in a sunlit room, and<br>
+If I'm on fire, you'll be made of ashes too<br>
+Even on my worst day, did I deserve, babe<br>
+All the hell you gave me?<br>
+'Cause I loved you, I swear I loved you<br>
+'Til my dying day</p>
+
+<p>I didn't have it in myself to go with grace<br>
+And you're the hero flying around, saving face<br>
+And if I'm dead to you, why are you at the wake?<br>
+Cursing my name, wishing I stayed<br>
+Look at how my tears ricochet</p>
+
+<p>We gather stones, never knowing what they'll mean<br>
+Some to throw, some to make a diamond ring<br>
+You know I didn't want to have to haunt you<br>
+But what a ghostly scene<br>
+You wear the same jewels that I gave you<br>
+As you bury me</p>
+
+<p>I didn't have it in myself to go with grace<br>
+'Cause when I'd fight, you used to tell me I was brave<br>
+And if I'm dead to you, why are you at the wake?<br>
+Cursing my name, wishing I stayed<br>
+Look at how my tears ricochet</p>
+
+<span>And I can go anywhere I want<br>
+Anywhere I want, just not home<br>
+And you can aim for my heart, go for blood<br>
+But you would still miss me in your bones<br>
+And I still talk to you (when I'm screaming at the sky)<br></span>
+<span class="hover_img" id="frase1">
+	<a href="#">And when you can't sleep at night (you hear my stolen lullabies)<span><img src="../imagenes/fotosINFO/stolenlullabies.jpg" alt="image2"  style="position: fixed; left:780px; top:350px" />    
+	</span></a></span>
+
+<p>I didn't have it in myself to go with grace<br>
+And so the battleships will sink beneath the waves<br>
+You had to kill me, but it killed you just the same<br>
+Cursing my name, wishing I stayed<br>
+You turned into your worst fears</p>
+
+<p>And you're tossing out blame, drunk on this pain<br>
+Crossing out the good years<br>
+And you're cursing my name, wishing I stayed<br>
+Look at how my tears ricochet</p>
+	
+</div>
+
+<div id="div2">
+&nbsp;
+</div>
+		
+</div>
+
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script src="jQueryAssets/jquery-1.11.1.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rochester&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">		
+<link rel="stylesheet" href="cssspeaknow.css"/>
+
+
+<script>
+
+
+
+	$(document).ready(function(){   
+				$("#mensaje_frase0").hide();
+				$("#frase0").hover(mensaje_on0, mensaje_off0);
+				eligeIdioma();
+			});
+		
+			
+			function mensaje_on0(){
+				$("#mensaje_frase0").show();    
+			}
+			
+			function mensaje_off0(){
+				$("#mensaje_frase0").hide();
+			}   
+	
+	
+	
+	
+			$(document).ready(function(){   
+				$("#mensaje_frase1").hide();
+				$("#frase1").hover(mensaje_on1, mensaje_off1);
+				
+			});
+		
+			
+			function mensaje_on1(){
+				$("#mensaje_frase1").show();    
+			}
+			
+			function mensaje_off1(){
+				$("#mensaje_frase1").hide();
+			}   
+	
+	
+			
+	
+			/* Idioma */
+			var idioma = 0 ; // 0=es, 1=en, ...
+			var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+			var texto = [  
+						 ["",""],
+						 ["Desde el comienzo de su carrera Taylor Swift incluye mensajes secretos en cada canción, lo cual dejó de hacer en su álbum Reputation.<br><br><hr><br> Para su album Speak Now las letras de las canciones en los booklets (libritos) estan en minusculas, y cada letra del mensaje secreto esta en mayuscula.",
+							"Taylor Swift includes hidden messages in each song, which stopped at Reputation.<br><br><hr><br> For her album Speak Now the lyrics of the songs in the booklets are in lowerecased letters, and each letter of the hidden message is capitalized."
+						 ]
+						];
+						function eligeIdioma(){
+						 IDidioma.innerHTML=idiomas[idioma];
+		
+							 for (let frase=0; frase<texto.length; frase++){         /*inicio con frase=0 -- Continúo hasta el lenght del "texto" (osea continúo 2 veces porque el lenght es 2. sson 2 arrays) -- le sumo uno a "frase", asi pasa de frase 0 a frase 1.*/ 
+							 document.getElementById("mensaje_frase"+frase).innerHTML=texto[frase][idioma];
+							 }
+							}
+						function modificaIdioma(){
+						idioma++;
+						if (idioma < 0 || idioma > 1) idioma = 0;
+						eligeIdioma();
+						}	
+
+
+
+</script>
+
+
+</head>
+	
+<style>	
+	
+body
+{
+	background:url("../imagenes/speaknow/mine2.jpg"); /*La foto*/
+	background-repeat:repeat-y;
+	background-position:600px 0%;
+		
+}	
+
+
+#frase1{
+    
+    font-size: 25px;
+    padding: 10px 10px 10px, 15px;
+    font-style: italic;
+    margin-left: 20px;
+    margin-top: 1px;
+}
+
+
+#mensaje_frase1{
+		position: fixed;  /*queda en donde lo pusimos aunque cambiemos de posicion con la barra de desplazamiento*/
+		left: 730px;
+		top: 100px;   /*el espacio entre el cuadro y el tope VISIBLE de arriba*/
+		width: 450px;  /*el ancho del cuadro. (el texto se acomoda adentro)*/
+		height: 310px;
+		background-color: #D7CFDA;
+		font-size: 22px;
+		padding: 45px 40px 20px 40px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+        box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+	
+	
+</style>	
+	
+
+<body>
+	
+
+<div id="mensaje_frase0"></div>
+<div id="mensaje_frase1"></div>   
+
+
+	<div class="contenido">	
+
+		<div class="izq">
+		
+			<div class="home">	
+				<button id="IDidioma" onclick="modificaIdioma()"></button>	
+				<button class="HomeButton" onclick="location.href='../index.html';">
+					<span>Home</span>
+					<svg>
+						<rect x="0" y="0" fill="none"></rect>
+					</svg>
+					
+					</button>		
+			</div>
+	
+	
+			<div class="previousnext">
+				<button id="NextButton" onclick="location.href='../paginas/sparksfly.html';" class="float-left submit-button" >Next track →</button>		
+			</div>
+	
+
+
+			<span class="titulo" id="frase0">1. Mine</span>
+	
+
+<div class="song">
+
+
+<p>Oh, oh, oh<br>
+Oh, oh, oh</p>
+	
+<p>You were in college, working part-time, waiting tables<br>
+Left a small town, never looked back<br>
+I was a flight risk, with a fear of fallin'<br>
+Wondering why we bother with love, if it never lasts</p>
+	
+<p>I say, "Can you believe it?"<br>
+As we're lyin' on the couch<br>
+The moment, I can see it<br>
+Yes, yes, I can see it now</p>
+	
+<p>Do you remember, we were sittin', there by the water?<br>
+You put your arm around me for the first time<br>
+You made a rebel of a careless man's careful daughter<br>
+You are the best thing, that's ever been mine</p>
+
+<p>Flash forward, and we're takin' on the world together<br>
+And there's a drawer of my things at your place<br>
+You learn my secrets and you figure out why I'm guarded<br>
+You say we'll never make my parents' mistakes</p>
+	
+<p>And we got bills to pay<br>
+We got nothin' figured out<br>
+When it was hard to take<br>
+Yes, yes<br>
+This is what I thought about</p>
+	
+<p>Do you remember, we were sittin' there, by the water?<br>
+You put your arm around me, for the first time<br>
+You made a rebel of a careless man's careful daughter<br>
+You are the best thing, that's ever been mine</p>
+	
+<p>Do you remember all the city lights on the water?<br>
+You saw me start to believe, for the first time<br>
+You made a rebel of a careless man's careful daughter<br>
+You are the best thing, that's ever been mine</p>
+	
+<p>Oh, oh, oh, oh</p>
+	
+<p>And I remember that fight, two-thirty am<br>
+'Cause everything was slipping right out of our hands<br>
+I ran out, crying, and you followed me out into the street</p>
+	
+<p>Braced myself for the goodbye,<br>
+'Cause that's all I've ever known<br>
+Then, you took me by surprise<br>
+You said, "I'll never leave you alone"</p>
+	
+<p>You said, "I remember how we felt, sitting by the water<br>
+And every time I look at you, it's like the first time<br>
+I fell in love with a careless man's careful daughter<br>
+She is the best thing that's ever been mine"</p>
+
+<p>You made a rebel of a careless man's careful daughter<br>
+You are the best thing, that's ever been mine</p>
+	
+<p>Do you believe it?<br>
+We're gonna make it now<br>
+And I can see it</p>
+
+</div>
+<div id="frase1"><a href="#">
+    <ul style="list-style-image:url(../imagenes/fotosINFO/purpledress.jpg);">
+     <li><pre><h3>Mensaje Secreto:</h3>                  "Toby"</pre></li> 
+    </ul>
+</a></div>			
+</div> 
+
+</body>
+</html>

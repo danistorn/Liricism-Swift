@@ -1,0 +1,257 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script src="jQueryAssets/jquery-1.11.1.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IM+Fell+DW+Pica:ital@1&family=Rochester&family=Sacramento&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="cssdebut.css"/>
+
+<script>
+
+
+
+	$(document).ready(function(){   
+				$("#mensaje_frase0").hide();
+				$("#frase0").hover(mensaje_on0, mensaje_off0);
+				eligeIdioma();
+			});
+		
+			
+			function mensaje_on0(){
+				$("#mensaje_frase0").show();    
+			}
+			
+			function mensaje_off0(){
+				$("#mensaje_frase0").hide();
+			}   
+	
+	
+	
+	
+			$(document).ready(function(){   
+				$("#mensaje_frase1").hide();
+				$("#frase1").hover(mensaje_on1, mensaje_off1);
+				
+			});
+		
+			
+			function mensaje_on1(){
+				$("#mensaje_frase1").show();    
+			}
+			
+			function mensaje_off1(){
+				$("#mensaje_frase1").hide();
+			}   
+	
+	
+			
+	
+			/* Idioma */
+			var idioma = 0 ; // 0=es, 1=en, ...
+			var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+			var texto = [  
+						 ["La canción fue inspirada por un novio que tuvo Taylor en la secundaria llamado Sam Armstrong, quien la engañó con otra chica.",
+						  "The song have been inspired by Taylor’s high school boyfriend, Sam Armstrong, who cheated on her with another girl."
+						 ],
+						 ["Desde el comienzo de su carrera Taylor Swift incluye mensajes secretos en cada canción, lo cual dejó de hacer en su álbum Reputation.<br><br><hr><br> Para su album debut las letras de las canciones en los booklets (libritos) estan en minusculas, y cada letra del mensaje secreto esta en mayuscula.",
+							"Taylor Swift includes hidden messages in each song, which stopped at Reputation.<br><br><hr><br> For her debut album the lyrics of the songs in the booklets are in lowerecased letters, and each letter of the hidden message is capitalized."
+						 ]
+						];
+						function eligeIdioma(){
+						 IDidioma.innerHTML=idiomas[idioma];
+		
+							 for (let frase=0; frase<texto.length; frase++){         /*inicio con frase=0 -- Continúo hasta el lenght del "texto" (osea continúo 2 veces porque el lenght es 2. sson 2 arrays) -- le sumo uno a "frase", asi pasa de frase 0 a frase 1.*/ 
+							 document.getElementById("mensaje_frase"+frase).innerHTML=texto[frase][idioma];
+							 }
+							}
+						function modificaIdioma(){
+						idioma++;
+						if (idioma < 0 || idioma > 1) idioma = 0;
+						eligeIdioma();
+						}	
+
+
+
+</script>
+
+
+
+</head>
+	
+<style>	
+	
+body
+{
+	background:url("../imagenes/debut/shouldve.jpg"); /*La foto*/
+	background-repeat:repeat-y;
+	background-position:600px 0%;
+		
+}	
+
+
+.hover_img a { position:relative; }
+.hover_img a span { position:absolute; display:none; z-index:99; }
+.hover_img a:hover span { display:block; }
+
+.img{
+    top:50px;
+    left:-100px;
+
+}
+
+#frase1{
+    
+    font-size: 25px;
+    padding: 10px 10px 10px, 15px;
+    font-style: italic;
+    margin-left: 30px;
+    margin-top: 1px;
+}
+
+
+
+#mensaje_frase0{
+		position: fixed;  /*queda en donde lo pusimos aunque cambiemos de posicion con la barra de desplazamiento*/
+		left: 730px;
+		top: 220px;   /*el espacio entre el cuadro y el tope VISIBLE de arriba*/
+		width: 450px;  /*el ancho del cuadro. (el texto se acomoda adentro)*/
+		height: 125px;
+		background-color: #D7CFDA;
+		font-size: 22px;
+		padding: 45px 40px 20px 40px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+        box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+
+
+#mensaje_frase1{
+		position: fixed;  /*queda en donde lo pusimos aunque cambiemos de posicion con la barra de desplazamiento*/
+		left: 730px;
+		top: 100px;   /*el espacio entre el cuadro y el tope VISIBLE de arriba*/
+		width: 450px;  /*el ancho del cuadro. (el texto se acomoda adentro)*/
+		height: 310px;
+		background-color: #D7CFDA;
+		font-size: 22px;
+		padding: 45px 40px 20px 40px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+        box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+
+
+
+
+	
+</style>	
+
+<body>
+	
+
+	<div id="mensaje_frase0"></div>
+	<div id="mensaje_frase1"></div> 
+	
+
+
+	<div class="contenido">	
+
+		<div class="izq">
+		
+			<div class="home">	
+				<button id="IDidioma" onclick="modificaIdioma()"></button>
+				<button class="HomeButton" onclick="location.href='../index.html';">
+					<span>Home</span>
+					<svg>
+						<rect x="0" y="0" fill="none"></rect>
+					</svg>
+					
+					</button>	
+			</div>
+
+
+			<div class=previousnext>	
+				<button id="PreviousButton" onclick="location.href='../paginas/staybeautiful.html';" class="float-left submit-button" >←Previous track</button>		
+				<button id="NextButton" onclick="location.href='../paginas/maryssong.html';" class="float-left submit-button" >Next track →</button>		
+			</div>		
+
+	
+			<span class="titulo" id="frase0"><a href="#">9. Should've Said No</a></span>
+
+<div class="song">
+	
+<p>It's strange to think the songs we used to sing<br>
+The smiles, the flowers, everything is gone<br>
+Yesterday I found out about you<br>
+Even now just looking at you<br>
+Feels wrong<br>
+You say that you'd take it all back<br>
+Given one chance, it was a moment of weakness<br>
+And you said, "Yes"</p>
+	
+<p>You should've said, "No"<br>
+You should've gone home<br>
+You should've thought twice 'fore you let it all go<br>
+You should've known that word 'bout what you did with her<br>
+Get back to me (get back to me)<br>
+And I should've been there<br>
+In the back of your mind<br>
+I shouldn't be asking myself, "Why?"<br>
+You shouldn't be beggin' for forgiveness at my feet<br>
+You should've said, "No"<br>
+Baby, and you might still have me</p>
+	
+<p>You can see that I've been cryin'<br>
+Baby, you know all the right things<br>
+To say<br>
+But do you honestly expect me to believe<br>
+We could ever be the same?<br>
+You say that the past is the past<br>
+You need one chance, it was a moment of weakness<br>
+And you said, "Yes"</p>
+	
+<p>You should've said, "No"<br>
+You should've gone home<br>
+You should've thought twice 'fore you let it all go<br>
+You should've known that word 'bout what you did with her<br>
+Get back to me (get back to me)<br>
+And I should've been there<br>
+In the back of your mind<br>
+I shouldn't be asking myself, "Why?"<br>
+You shouldn't be beggin' for forgiveness at my feet<br>
+You should've said, "No"<br>
+Baby, and you might still have me, oh-whoa</p>
+	
+<p>I can't resist<br>
+Before you go, tell me this<br>
+Was it worth it?<br>
+Was she worth this?</p>
+	
+<p>No, no, no, no, no, no</p>
+	
+<p>You should've said, "No"<br>
+You should've gone home<br>
+You should've thought twice 'fore you let it all go<br>
+You should've known that word 'bout what you did with her<br>
+Get back to me (get back to me)<br>
+And I should've been there<br>
+In the back of your mind<br>
+I shouldn't be asking myself, "Why?"<br>
+You shouldn't be beggin' for forgiveness at my feet<br>
+You should've said, "No"<br>
+Baby, and you might still have me</p>
+	
+</div>
+<div id="frase1"><a href="#">
+    <ul style="list-style-image:url(../imagenes/fotosINFO/cowboyboots.png);">
+     <li><pre><h3>Mensaje Secreto:</h3>	"Sam Sam Sam Sam Sam Sam"</pre></li> 
+    </ul>
+</a></div>			
+</div> 	
+
+</body>
+</html>

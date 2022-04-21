@@ -1,0 +1,371 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script src="jQueryAssets/jquery-1.11.1.min.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="cssred.css"/>
+<script src="jQueryAssets/jquery-1.11.1.min.js"></script>
+
+<script>
+
+    $(document).ready(function(){   
+            $("#mensaje_frase0").hide();
+            $("#frase0").hover(mensaje_on0, mensaje_off0);
+            eligeIdioma();
+        });
+    
+        
+        function mensaje_on0(){
+            $("#mensaje_frase0").show();    
+        }
+        
+        function mensaje_off0(){
+            $("#mensaje_frase0").hide();
+        }   
+
+
+
+
+	$(document).ready(function(){	
+		$("#mensaje_frase1").hide();
+		$("#frase1").hover(mensaje_on1, mensaje_off1);
+		
+	});
+
+	
+	function mensaje_on1(){
+		$("#mensaje_frase1").show();	
+	}
+	
+	function mensaje_off1(){
+		$("#mensaje_frase1").hide();
+	}			
+        
+
+
+	$(document).ready(function(){	
+		$("#mensaje_frase2").hide();
+		$("#frase2").hover(mensaje_on2, mensaje_off2);
+		
+	});
+
+	
+	function mensaje_on2(){
+		$("#mensaje_frase2").show();	
+	}
+	
+	function mensaje_off2(){
+		$("#mensaje_frase2").hide();
+	}	
+
+
+
+
+	$(document).ready(function(){	
+		$("#mensaje_frase3").hide();
+		$("#frase3").hover(mensaje_on3, mensaje_off3);
+		
+	});
+
+	
+	function mensaje_on3(){
+		$("#mensaje_frase3").show();	
+	}
+	
+	function mensaje_off3(){
+		$("#mensaje_frase3").hide();
+	}	
+	
+
+
+
+	$(document).ready(function(){	
+		$("#mensaje_frase4").hide();
+		$("#frase4").hover(mensaje_on4, mensaje_off4);
+		
+	});
+
+	
+	function mensaje_on4(){
+		$("#mensaje_frase4").show();	
+	}
+	
+	function mensaje_off4(){
+		$("#mensaje_frase4").hide();
+	}	
+
+
+        /* Idioma */
+        var idioma = 0 ; // 0=es, 1=en, ...
+        var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+        var texto = [   
+					 ["Ésta anción fue escrita para Jake Gyllenhal. <br><br>Él y Taylor mantuvieron una relación a finales del 2010, cuando la cantante tenía 20 y el actor 29 años.",
+                      "This song was written for Jake Gyllenhaal. <br><br> Him and Taylor had a relationship in late 2010, when the singer had 20 and the actor 29 years old."
+					 ],
+					 ["Taylor relaciona la primera caída de nieve con el final de su relación con Jake Gyllenhaal, ya que la ruptura ocurrió por Diciembre, fines de primavera y comienzos de invierno.<br> Vuelve a hacer referencia a ésto en \"All too well (10 Min Version)\" con la frase \"Cause in this city barren cold, i still remember the first fall of snow, and how it glistened as it fell",
+					  "Taylor relates the first fall of snow with the end of her relationship with Jake Gyllenhaal, given that the breakup happened in December, ends of spring and beginnings of winter.<br> She makes a new reference to this in \"All too well (10 Min Version)\" with the phrase \"Cause in this city barren cold, i still remember the first fall of snow, and how it glistened as it fell"
+					 ],
+					 ["En \"Begin Again\" (track 16) Taylor vuelve a hablar de cómo Jake no la considreraba graciosa con la frase \"I think it's strange that you think I'm funny 'cause he never did\"",
+					  "In \"Begin Again\" (track 16) Taylor talks again about Jake didn't consider her funny with the phrase \"I think it's strange that you think I'm funny 'cause he never did\""
+					 ],
+					 ["Taylor canta también sobre ésto en su canción \"We are never ever going back together\" con la frase \"We hadn't seen each other in a month when you said you needed space\"",
+					  "Taylor sings again about this in her song \"We are never ever going back together\" with the line \"We hadn't seen each other in a month when you said you needed space\""],
+					 ["Taylor vuelve a hacer mención de cómo Jake no se tomaba su música en serio, y cómo la comparaba (menospreciandola) con el género indie, en su canción \"We are never ever getting back together\" (track 8) con la frase \"And you would hide away and find your peace of mind, with some indie record that's much cooler than mine\"",
+					  "Taylor mentions again how Jake didn't take her music seriously, and how he would compare it (bellitling it) with the indie genre, in her song \"We are never ever getting back together\" (track 8)                                                                   "]
+
+                    ];
+					function eligeIdioma(){
+						 IDidioma.innerHTML=idiomas[idioma];
+		
+							 for (let frase=0; frase<texto.length; frase++){         /*inicio con frase=0 -- Continúo hasta el lenght del "texto" (osea continúo 2 veces porque el lenght es 2. sson 2 arrays) -- le sumo uno a "frase", asi pasa de frase 0 a frase 1.*/ 
+							 document.getElementById("mensaje_frase"+frase).innerHTML=texto[frase][idioma];
+							 }
+							}
+						function modificaIdioma(){
+						idioma++;
+						if (idioma < 0 || idioma > 1) idioma = 0;
+						eligeIdioma();
+						}	
+ 
+    
+    </script>
+
+
+
+</head>
+	
+<style>	
+
+
+body
+{
+	background:url("../imagenes/red/ibytam.jpg"); /*La foto*/
+	background-repeat:repeat-y;
+	background-position:600px 0%;
+		
+}	
+	
+
+.hover_img a { position:relative; }
+.hover_img a span { position:absolute; display:none; z-index:99; }
+.hover_img a:hover span { display:block; }
+
+.img{
+    top:50px;
+    left:-100px;
+
+}
+
+a{  /* Para sacarle el subrayado y el color azul, así no se ve como un link */
+    text-decoration: none;
+    color:red;
+}
+
+#titulo{
+	font-size: 35px;
+
+}
+
+
+#mensaje_frase0{
+		position: fixed;  /*queda en donde lo pusimos aunque cambiemos de posicion con la barra de desplazamiento*/
+		left: 1020px;
+		top: 50px;   /*el espacio entre el cuadro y el tope VISIBLE de arriba*/
+		width: 250px;  /*el ancho del cuadro. (el texto se acomoda adentro)*/
+		height: 380px;
+		background-color: #D7CFDA;
+		font-size: 23px;
+		padding: 140px 25px 25px 25px;   /*El margen entre el texto y los bordes del cuadro*/
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+	
+
+
+	#mensaje_frase1{
+		position: fixed;  /*o absolute?*/
+		left: 700px;
+		top: 130px;   /*originalmente tenia 392px*/
+		width: 500px;
+		height: 290px;
+		background-color: #D7CFDA;
+		font-size: 24px;
+		padding: 50px 25px 25px 25px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}
+
+
+
+	#mensaje_frase2{
+		position: fixed;  /*o absolute?*/
+		left: 700px;
+		top: 170px;   /*originalmente tenia 392px*/
+		width: 500px;
+		height: 170px;
+		background-color: #D7CFDA;
+		font-size: 24px;
+		padding: 60px 25px 25px 25px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+
+
+#mensaje_frase3{
+		position: fixed;  /*o absolute?*/
+		left: 700px;
+		top: 180px;   /*originalmente tenia 392px*/
+		width: 500px;
+		height: 180px;
+		background-color: #D7CFDA;
+		font-size: 24px;
+		padding: 60px 25px 20px 25px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+
+
+	#mensaje_frase4{
+		position: fixed;  /*o absolute?*/
+		left: 700px;
+		top: 150px;   /*originalmente tenia 392px*/
+		width: 550px;
+		height: 260px;
+		background-color: #D7CFDA;
+		font-size: 24px;
+		padding: 50px 25px 25px 25px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}
+
+
+</style>	
+
+<body>
+
+<div id="mensaje_frase0"></div>
+<div id="mensaje_frase1"></div>
+<div id="mensaje_frase2"></div>
+<div id="mensaje_frase3"></div>
+<div id="mensaje_frase4"></div>
+
+
+
+<div class="contenido">	
+
+	<div class="izq">
+	
+		<div class="home">	
+			<button id="IDidioma" onclick="modificaIdioma()"></button>
+			<button class="HomeButton" onclick="location.href='../index.html';">
+				<span>Home</span>
+				<svg>
+					<rect x="0" y="0" fill="none"></rect>
+				</svg>
+				
+				</button>			
+		</div>
+
+
+		<div class=previousnext>	
+			<button id="PreviousButton" onclick="location.href='../paginas/run.html';" class="float-left submit-button" >←Previous track</button>		
+			<button id="NextButton" onclick="location.href='../paginas/betterman.html';" class="float-left submit-button" >Next track →</button>		
+		</div>	
+
+
+	
+        <span class="hover_img" id="frase0">
+			<a class="titulo" href="#">24. I bet you think about me<span><img src="../imagenes/fotosINFO/jake.jpg" alt="image0"  style="position: fixed; left:620px; top:50px" />    
+			</span></a></span>
+
+<span class="titulo">(from the vault)</span>			
+	
+<div class="song">
+ 
+
+    <p>3 a.m. and I'm still awake, I'll bet you're just fine<br>
+    Fast asleep in your city that's better than mine<br>
+    And the girl in your bed has a fine pedigree<br>
+    And I'll bet your friends tell you she's better than me, huh</p>
+
+    <p>Well, I tried to fit in with your upper-crust circles<br>
+    Yeah, they let me sit in back when we were in love<br>
+    Oh, they sit around talkin' 'bout the meaning of life<br>
+    And the book that just saved 'em that I hadn't heard of</p>
+
+    <p>But now that we're done and it's over<br>
+    I bet you couldn't believe<br>
+    When you realized I'm harder to forget, than I was to leave<br>
+    And I bet you think about me</p>
+
+    <p>You grew up in a silver-spoon gated community<br>
+    Glamorous, shiny, bright Beverly Hills<br>
+    I was raised on a farm, no, it wasn't a mansion<br>
+    Just livin' room dancin' and kitchen table bills</p>
+
+    <span>But you know what they say, you can't help who you fall for<br></span>
+    	<span class="hover_img" id="frase1">
+			<a href="#">And you and I fell like an early spring snow<br></a></span> 
+    <span>But reality crept in, you said we're too different<br></span>
+    <span class="hover_img" id="frase2">
+		<a href="#">You laughed at my dreams, rolled your eyes at my jokes<br><br></a></span> 
+
+    <span>Mr. Superior-Thinkin'<br></span>
+		<span class="hover_img" id="frase3">
+			<a href="#">Do you have all the space that you need?<br></a></span>    
+    <span>I don't have to be your shrink to know that you'll never be happy<br>
+    And I bet you think about me</span>
+
+    <p>I bet you think about me, yes<br>
+    I bet you think about me</p>
+
+    <p>Ooh, block it all out<br>
+    The voices so loud sayin', "Why did you let her go?"<br>
+    Does it make you feel sad<br>
+    That the love that you're lookin' for<br>
+    Is the love that you had?</p>
+
+    <p>Now you're out in the world, searchin' for your soul<br>
+    Scared not to be hip, scared to get old<br>
+    Chasing make-believe status, last time you felt free<br>
+    Was when none of that shit mattered 'cause you were with me</p>
+
+    <p>But now that we're done and it's over<br>
+    I bet it's hard to believe<br>
+    But it turned out I'm harder to forget than I was to leave<br>
+    Then, yeah, I bet you think about me</p>
+
+    <p>I bet you think about me, yes<br>
+    I bet you think about me</p>
+
+    <p>I bet you think about me when you're out<br>
+    	<span class="hover_img" id="frase4">
+			<a href="#">At your cool indie music concerts every week<br></a></span>  
+    I bet you think about me in your house<br>
+    With your organic shoes and your million-dollar couch<br>
+    I bet you think about me when you say<br>
+    "Oh my god, she's insane, she wrote a song about me"<br>
+    I bet you think about me</p>
+
+
+</div>
+<div id="div2">
+	&nbsp;
+</div>			
+</div> 
+
+</body>
+</html>

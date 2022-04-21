@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Documento sin título</title>
+<script src="jQueryAssets/jquery-1.11.1.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IM+Fell+DW+Pica:ital@1&family=Rochester&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="cssevermore.css"/>	
+
+<script>
+
+    $(document).ready(function(){   
+            $("#mensaje_frase0").hide();
+            $("#frase0").hover(mensaje_on0, mensaje_off0);
+            eligeIdioma();
+        });
+    
+        
+        function mensaje_on0(){
+            $("#mensaje_frase0").show();    
+        }
+        
+        function mensaje_off0(){
+            $("#mensaje_frase0").hide();
+        }   
+
+        
+        /* Idioma */
+        var idioma = 0 ; // 0=es, 1=en, ...
+        var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+        var texto = [   "",
+                        ""
+                    ];
+        function eligeIdioma(){
+            IDidioma.innerHTML=idiomas[idioma];
+            mensaje_frase0.innerHTML=texto[idioma];
+        }
+        function modificaIdioma(){
+            idioma++;
+            if (idioma < 0 || idioma > 1) idioma = 0;
+            eligeIdioma();
+        }
+    
+    
+    
+    </script>
+
+</head>
+
+	
+<style>	
+body
+{
+	background:url("../imagenes/evermore/nobody.jpg"); /*La foto*/
+	background-repeat:repeat-y;
+	background-position:600px 0%;
+		
+}	
+</style>	
+	
+	
+<body>
+
+
+	<div class="contenido">	
+
+		<div class="izq">
+		
+			<div class="home">	
+				<button id="IDidioma" onclick="modificaIdioma()"></button>
+				<button class="HomeButton" onclick="location.href='../index.html';">
+                    <span>Home</span>
+                    <svg>
+                        <rect x="0" y="0" fill="none"></rect>
+                    </svg>
+                    
+                    </button>	
+			</div>
+	
+	
+			<div class=previousnext>	
+				<button id="PreviousButton" onclick="location.href='../paginas/tolerate it.html';" class="float-left submit-button" >←Previous track</button>		
+				<button id="NextButton" onclick="location.href='../paginas/happiness.html';" class="float-left submit-button" >Next track →</button>		
+			</div>		
+	
+
+			<span class="titulo" id="frase0">6. No body, no crime</span>
+
+<div class="song">
+			
+<p>He did it<br>
+He did it</p>
+	
+<p>Este's a friend of mine<br>
+We meet up every Tuesday night for dinner and a glass of wine<br>
+Este's been losing sleep<br>
+Her husband's acting different and it smells like infidelity<br>
+She says, "That ain't my merlot on his mouth"<br>
+"That ain't my jewelry on our joint account"<br>
+No, there ain't no doubt<br>
+I think I'm gonna call him out<br>
+She says</p>
+
+<p>"I think he did it but I just can't prove it"<br>
+I think he did it but I just can't prove it<br>
+I think he did it but I just can't prove it<br>
+No, no body, no crime<br>
+But I ain't letting up until the day I die<br>
+No, no<br>
+I think he did it<br>
+No, no<br>
+He did it</p>
+
+<p>Este wasn't there<br>
+Tuesday night at Olive Garden, at her job, or anywhere<br>
+He reports his missing wife<br>
+And I noticed when I passed his house his truck has got some brand new tires<br>
+And his mistress moved in<br>
+Sleeps in Este's bed and everything<br>
+No, there ain't no doubt<br>
+Somebody's gotta catch him out<br>
+'Cause</p>
+
+<p>I think he did it but I just can't prove it (he did it)<br>
+I think he did it but I just can't prove it (he did it)<br>
+I think he did it but I just can't prove it<br>
+No, no body, no crime<br>
+But I ain't letting up until the day I die<br>
+No, no<br>
+I think he did it<br>
+No, no<br>
+He did it</p>
+
+<p>Good thing my daddy made me get a boating license when I was fifteen<br>
+And I've cleaned enough houses to know how to cover up a scene<br>
+Good thing Este's sister's gonna swear she was with me ("She was with me dude")<br>
+Good thing his mistress took out a big life insurance policy</p>
+
+<p>They think she did it but they just can't prove it<br>
+They think she did it but they just can't prove it<br>
+She thinks I did it but she just can't prove it<br>
+No, no body, no crime<br>
+I wasn't letting up until the day he<br>
+No, no body, no crime<br>
+I wasn't letting up until the day he<br>
+No, no body, no crime<br>
+I wasn't letting up until the day he died</p>	
+
+</div>
+
+<div id="div2">
+&nbsp;
+</div>
+		
+</div>
+
+</body>
+</html>

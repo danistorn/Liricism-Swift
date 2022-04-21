@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script src="jQueryAssets/jquery-1.11.1.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IM+Fell+DW+Pica:ital@1&family=Rochester&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="cssevermore.css"/>		
+
+
+<script>
+
+	$(document).ready(function(){   
+			$("#mensaje_frase0").hide();
+			$("#frase0").hover(mensaje_on0, mensaje_off0);
+			eligeIdioma();
+		});
+	
+		
+		function mensaje_on0(){
+			$("#mensaje_frase0").show();    
+		}
+		
+		function mensaje_off0(){
+			$("#mensaje_frase0").hide();
+		}   
+
+		
+		/* Idioma */
+		var idioma = 0 ; // 0=es, 1=en, ...
+		var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+		var texto = [   "",
+						""
+					];
+		function eligeIdioma(){
+			IDidioma.innerHTML=idiomas[idioma];
+			mensaje_frase0.innerHTML=texto[idioma];
+		}
+		function modificaIdioma(){
+			idioma++;
+			if (idioma < 0 || idioma > 1) idioma = 0;
+			eligeIdioma();
+		}
+	
+	
+	
+	</script>
+
+</head>
+	
+<style>
+	
+	body{
+	background:url("../imagenes/evermore/coney.jpg"); /*La foto*/
+	background-repeat:repeat-y;	
+	background-position:600px 0%;
+	}		
+	
+</style>		
+
+<body>
+
+	<div class="contenido">	
+
+		<div class="izq">
+		
+			<div class="home">	
+				<button id="IDidioma" onclick="modificaIdioma()"></button>
+				<button class="HomeButton" onclick="location.href='../index.html';">
+					<span>Home</span>
+					<svg>
+						<rect x="0" y="0" fill="none"></rect>
+					</svg>
+					
+					</button>	
+			</div>
+	
+	
+			<div class=previousnext>	
+				<button id="PreviousButton" onclick="location.href='../paginas/dorothea.html';" class="float-left submit-button" >←Previous track</button>		
+				<button id="NextButton" onclick="location.href='../paginas/ivy.html';" class="float-left submit-button" >Next track →</button>		
+			</div>			
+	
+
+
+			<span class="titulo" id="frase0">9. Coney Island</span>	
+	
+
+<div class="song">
+
+<p>Break my soul in two<br>
+Looking for you but you're right here<br>
+If I can't relate to you anymore<br>
+Then who am I related to?<br>
+And if this is the long haul<br>
+How'd we get here so soon?<br>
+Did I close my fist around something delicate?<br>
+Did I shatter you?</p>
+
+<p>And I'm sitting on a bench in Coney Island wondering where did my baby go?<br>
+The fast times, the bright lights, the merry go<br>
+Sorry for not making you my centerfold</p>
+
+<p>Over and over<br>
+Lost again with no surprises<br>
+Disappointments, close your eyes<br>
+And it gets colder and colder<br>
+When the sun goes down</p>
+
+<p>The question pounds my head<br>
+"What's a lifetime of achievement?"<br>
+If I pushed you to the edge<br>
+But you were too polite to leave me<br>
+And do you miss the rogue<br>
+Who coaxed you into paradise and left you there?<br>
+Will you forgive my soul<br>
+When you're too wise to trust me and too old to care?<br>
+'Cause we were like the mall before the Internet<br>
+It was the one place to be<br>
+The mischief, the gift wrapped suburban dreams<br>
+Sorry for not winning you an arcade ring</p>
+
+<p>Over and over<br>
+Lost again with no surprises<br>
+Disappointments, close your eyes<br>
+And it gets colder and colder<br>
+When the sun goes down</p>
+
+<p>Were you waiting at our old spot<br>
+In the tree line by the gold clock<br>
+Did I leave you hanging every single day?<br>
+Were you standing in the hallway<br>
+With a big cake, happy birthday<br>
+Did I paint your bluest skies the darkest gray?<br>
+A universe away<br>
+And when I got into the accident<br>
+The sight that flashed before me was your face<br>
+But when I walked up to the podium<br>
+I think that I forgot to say your name</p>
+
+<p>I'm on a bench in Coney Island wondering where did my baby go?<br>
+The fast times, the bright lights, the merry go<br>
+Sorry for not making you my centerfold<br>
+Over and over</p>
+
+<p>Lost again with no surprises<br>
+Disappointments, close your eyes<br>
+And it gets colder and colder<br>
+When the sun goes down<br>
+When the sun goes down</p>
+
+<p>The sight that flashed before me was your face<br>
+When the sun goes down<br>
+But I think that I forgot to say your name<br>
+Over and over<br>
+Sorry for not making you my<br>
+Making you my<br>
+Making you my centerfold</p>
+
+
+</div>
+
+<div id="div2">
+&nbsp;
+</div>
+		
+</div>
+	
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!doctype html>
+<html><head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="cssreputation.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<script>
+	
+    $(document).ready(function(){   
+            $("#mensaje_frase0").hide();
+            $("#frase0").hover(mensaje_on0, mensaje_off0);
+            eligeIdioma(); 	 /*Para que apenas entre a la pág, ya se vea el "ENGLISH" en el botón*/
+        });
+    
+        
+        function mensaje_on0(){
+            $("#mensaje_frase0").show();    
+        }
+        
+        function mensaje_off0(){
+            $("#mensaje_frase0").hide();
+        }   
+
+	
+
+
+
+        /* Idioma */
+        var idioma = 0 ; // 0=es, 1=en, ...
+        var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+        var texto = [   "Taylor le contó a un fan en su \"Sesión Secreta de Londres\" que ésta canción la escribió cuando fue vista por los paparazzi por primera vez luego de los meses que no se dejó ver. Taylor había ganado un poco de peso luego de recuperarse de un desorden alimenticio y fue vista yendo al gimnacio en Los Angeles, donde los paparazzis comenzaron a gritarle cosas horribles sobre su cuerpo.<br><br> Luego de ésto Taylor fue al estudio de grabación donde lloró por el suceso y escribió la canción sobre cómo no quería hacer pasar a Joe (su novio) por el acoso que ella sufría por los medios y el miedo que tenía de que ésto arruinara su relación.",
+                        "Taylor told a fan at the \London Secret Session\" that this song was written when she was seen by the paparazzi for the first time after all those years when she disappeared from the press and the public. Taylor had gained weight after recovering from an eating disorder and was seen going to the gym in LA, where paps shouted all kinds of things at her including comments about her weight.<br><br> After this, Taylor went to the recording studio where she cried about it and wrote the song about how she didn't want Joe (her boyfriend) to go through all this harassment she suffered by the media, and about the fear she had that this would ruin their relationship."
+                    ];
+        function eligeIdioma(){
+            IDidioma.innerHTML=idiomas[idioma];
+            mensaje_frase0.innerHTML=texto[idioma];
+        }
+        function modificaIdioma(){
+            idioma++;
+            if (idioma < 0 || idioma > 1) idioma = 0;
+            eligeIdioma();
+        }
+
+
+</script>
+
+
+
+</head>
+	
+	
+	
+<style>
+	
+	
+	body{
+	background:url("../imagenes/Reputation/dancing.jpg"); /*La foto*/
+	background-repeat:repeat-y;	
+	background-position:600px 0px;
+	}
+	
+
+.hover_img a { position:relative; }
+.hover_img a span { position:absolute; display:none; z-index:99; }
+.hover_img a:hover span { display:block; }
+
+.img{
+    top:50px;
+    left:-100px;
+
+}
+
+a{  /* Para sacarle el subrayado y el color azul, así no se ve como un link */
+    text-decoration: none;
+    color:red;
+}
+
+
+	
+	#mensaje_frase0{
+		position: fixed;  /*o absolute?*/
+		left: 610px;
+		top: 23px;   /*originalmente tenia 392px*/
+		width: 345px;
+		height: 552px;
+		background-color: #D7CFDA;
+		font-size: 20px;
+		padding: 20px 15px 5px 360px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}		
+
+
+</style>
+
+
+</style>	
+	
+
+<body>
+
+	<div id="mensaje_frase0"></div>
+	
+	
+
+	<div class="contenido">	
+
+		<div class="izq">
+		
+			<div class="home">	
+				<button id="IDidioma" onclick="modificaIdioma()"></button>
+				<button class="HomeButton" onclick="location.href='../index.html';">
+					<span>Home</span>
+					<svg>
+						<rect x="0" y="0" fill="none"></rect>
+					</svg>
+					
+					</button>			
+			</div>
+
+
+			<div class="previousnext">
+				<button id="PreviousButton" onclick="location.href='../paginas/komh.html';" class="float-left submit-button" >←Previous track</button>	
+				<button id="NextButton" onclick="location.href='../paginas/dress.html';" class="float-left submit-button" >Next track →</button>		
+			</div>	
+				
+
+<span class="hover_img" id="frase0">
+	<a class="titulo" href="#">11. Dancing with out hands tied<span><img src="../imagenes/fotosINFO/gym.jpg" alt="image0"  style="position: fixed; left:625px; top:75px" />    
+	</span></a></span>
+	
+<div class="song">
+
+
+<p>I, I loved you in secret<br>
+First sight, yeah, we love without reason<br>
+Oh, twenty-five years old<br>
+Oh, how were you to know, and<br>
+My, my love had been frozen<br>
+Deep blue, but you painted me golden<br>
+Oh, and you held me close<br>
+Oh, how was I to know that</p>
+	
+<p>I could've spent forever with your hands in my pockets<br>
+Picture of your face in an invisible locket<br>
+You said there was nothing in the world that could stop it<br>
+I had a bad feeling<br>
+And darling, you had turned my bed into a sacred oasis<br>
+People started talking, putting us through our paces<br>
+I knew there was no one in the world who could take it<br>
+I had a bad feeling</p>
+	
+<p>But we were dancing<br>
+Dancing with our hands tied, hands tied<br>
+Yeah, we were dancing<br>
+Like it was the first time, first time<br>
+Yeah, we were dancing<br>
+Dancing with our hands tied, hands tied<br>
+Yeah, we were dancing<br>
+And I had a bad feeling<br>
+But we were dancing</p>
+	
+<p>I, I loved you in spite of<br>
+Deep fears that the world would divide us<br>
+So, baby, can we dance<br>
+Oh, through an avalanche?<br>
+And say, say that we got it<br>
+I'm a mess, but I'm the mess that you wanted<br>
+Oh, 'cause it's gravity<br>
+Oh, keeping you with me</p>
+	
+<p>I could've spent forever with your hands in my pockets<br>
+Picture of your face in an invisible locket<br>
+You said there was nothing in the world that could stop it<br>
+I had a bad feeling</p>
+	
+<p>But we were dancing<br>
+Dancing with our hands tied, hands tied<br>
+Yeah, we were dancing<br>
+Like it was the first time, first time<br>
+Yeah, we were dancing<br>
+Dancing with our hands tied, hands tied<br>
+Yeah, we were dancing<br>
+(Ooh, we had our hands tied)<br>
+And I had a bad feeling<br>
+But we were dancing</p>
+	
+<p>I'd kiss you as the lights went out<br>
+Swaying as the room burned down<br>
+I'd hold you as the water rushes in<br>
+If I could dance with you again<br>
+I'd kiss you as the lights went out<br>
+Swaying as the room burned down<br>
+I'd hold you as the water rushes in<br>
+If I could dance with you again</p>
+	
+<p>Dancing with our hands tied, hands tied<br>
+Yeah, we were dancing<br>
+Like it was the first time, first time<br>
+Yeah, we were dancing<br>
+Dancing with our hands tied, hands tied<br>
+Yeah, we were dancing<br>
+And I had a bad feeling<br>
+But we were dancing<br>
+Hands tied, hands tied</p>
+
+
+</div>
+
+
+<div id="div2">
+	&nbsp;
+</div>			
+
+
+</div> 
+			
+</body>
+</html>

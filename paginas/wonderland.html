@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script src="jQueryAssets/jquery-1.11.1.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css1989.css"/>			
+<script type="text/javascipt" src="custom.js"></script>	
+
+<script>
+
+    $(document).ready(function(){   
+            $("#mensaje_frase0").hide();
+            $("#frase0").hover(mensaje_on0, mensaje_off0);
+            eligeIdioma();
+        });
+    
+        
+        function mensaje_on0(){
+            $("#mensaje_frase0").show();    
+        }
+        
+        function mensaje_off0(){
+            $("#mensaje_frase0").hide();
+        }   
+
+        
+        /* Idioma */
+        var idioma = 0 ; // 0=es, 1=en, ...
+        var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+        var texto = [   "",
+                        ""
+                    ];
+        function eligeIdioma(){
+            IDidioma.innerHTML=idiomas[idioma];
+            mensaje_frase0.innerHTML=texto[idioma];
+        }
+        function modificaIdioma(){
+            idioma++;
+            if (idioma < 0 || idioma > 1) idioma = 0;
+            eligeIdioma();
+        }
+    
+    
+    </script>
+
+
+</head>
+	
+	
+<style>
+	
+	body{
+	background:url("../imagenes/1989/wonder2.png"); /*La foto*/
+	background-repeat:repeat-y;	
+	background-position:600px 0%;
+	}	
+	
+</style>	
+
+<body>
+
+	<div class="contenido">	
+
+		<div class="izq">
+		
+			<div class="home">	
+				<button id="IDidioma" onclick="modificaIdioma()"></button>	
+				<button class="HomeButton" onclick="location.href='../index.html';">
+                    <span>Home</span>
+                    <svg>
+                        <rect x="0" y="0" fill="none"></rect>
+                    </svg>
+                    
+                    </button>			
+			</div>
+	
+	
+			<div class=previousnext>	
+				<button id="PreviousButton" onclick="location.href='../paginas/clean.html';" class="float-left submit-button" >←Previous track</button>		
+				<button id="NextButton" onclick="location.href='../paginas/yail.html';" class="float-left submit-button" >Next track →</button>		
+			</div>	
+	
+
+
+			<span class="titulo">14. Wonderland</span>
+	
+
+<div class="song">
+
+<p>Flashing lights and we<br>
+Took a wrong turn and we<br>
+Fell down a rabbit hole<br>
+You held on tight to me<br>
+'Cause nothing's as it seems<br>
+And spinning out of control<br>
+Didn't they tell us don't rush into things?<br>
+Didn't you flash your green eyes at me?<br>
+Haven't you heard what becomes of curious minds?<br>
+Ooh, didn't it all seem new and exciting?<br>
+I felt your arms twisting around me<br>
+I should've slept with one eye open at night</p>
+	
+<p>We found Wonderland<br>
+You and I got lost in it<br>
+And we pretended it could last forever, eh, eh<br>
+We found Wonderland<br>
+You and I got lost in it<br>
+And life was never worse but never better, eh, eh<br>
+(Eh, eh, eh, eh, eh) in Wonderland<br>
+(Eh, eh, eh, eh, eh) in Wonderland<br>
+(Eh, eh, eh, eh, eh) in Wonderland<br>
+(Eh, eh, eh, eh, eh) in Wonderland</p>
+	
+<p>So we went on our way<br>
+Too in love to think straight<br>
+All alone, or so it seemed<br>
+But there were strangers watching<br>
+And whispers turned to talking<br>
+And talking turned to screams, oh</p>
+	
+<p>Didn't they tell us don't rush into things?<br>
+Didn't you flash your green eyes at me?<br>
+Didn't you call my fears with a Cheshire Cat smile?<br>
+Ooh, didn't it all seem new and exciting?<br>
+I felt your arms twisting around me<br>
+It's all fun and games 'til somebody loses their mind</p>
+	
+<p>Oh, darling, we found Wonderland<br>
+You and I got lost in it<br>
+And we pretended it could last forever, eh, eh<br>
+We found Wonderland<br>
+You and I got lost in it<br>
+And life was never worse but never better, eh, eh<br>
+(Eh, eh, eh, eh, eh) in Wonderland<br>
+(Eh, eh, eh, eh, eh) in Wonderland<br>
+(Eh, eh, eh, eh, eh) in Wonderland<br>
+(Eh, eh, eh, eh, eh) in Wonderland</p>
+	
+<p>I reached for you<br>
+But you were gone<br>
+I knew I had to go back home<br>
+You search the world for something else<br>
+To make you feel like what we had<br>
+And in the end, in Wonderland, we both went mad</p>
+	
+<p>Oh, we found Wonderland<br>
+You and I got lost in it<br>
+And we pretended it could last forever, eh, eh (last forever)<br>
+We found Wonderland<br>
+You and I got lost in it (got lost in it)<br>
+And life was never worse but never better, eh, eh (never better)<br>
+We found Wonderland (eh, eh, eh, eh, eh)<br>
+You and I got lost in it (in Wonderland)<br>
+And we pretended it (eh, eh, eh, eh, eh)<br>
+Could last forever (in Wonderland)<br>
+We found Wonderland (eh, eh, eh, eh, eh)<br>
+You and I got lost in it (in Wonderland)<br>
+And life was never worse but never better (eh, eh, eh, eh, eh)<br>
+In Wonderland</p>
+	
+
+</div>
+<div id="div2">
+	&nbsp;
+</div>			
+</div>
+
+</body>
+</html>

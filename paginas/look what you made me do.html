@@ -1,0 +1,427 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="cssreputation.css"/>		
+<script type="text/javascipt" src="custom.js"></script>	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>	
+
+
+<script>
+
+    $(document).ready(function(){   
+            $("#mensaje_frase0").hide();
+            $("#frase0").hover(mensaje_on0, mensaje_off0);
+            eligeIdioma();
+        });
+    
+        
+        function mensaje_on0(){
+            $("#mensaje_frase0").show();    
+        }
+        
+        function mensaje_off0(){
+            $("#mensaje_frase0").hide();
+        }   
+
+
+		
+
+	
+		$(document).ready(function(){	
+		$("#mensaje_frase1").hide();
+		$("#frase1").hover(mensaje_on1, mensaje_off1);
+		
+	});
+
+	
+	function mensaje_on1(){
+		$("#mensaje_frase1").show();	
+	}
+	
+	function mensaje_off1(){
+		$("#mensaje_frase1").hide();
+	}	
+	
+	
+
+	
+	$(document).ready(function(){	
+		$("#mensaje_frase2").hide();
+		$("#frase2").hover(mensaje_on2, mensaje_off2);
+		
+	});	
+	
+		
+	function mensaje_on2(){
+		$("#mensaje_frase2").show();
+	}
+	
+	function mensaje_off2(){
+		$("#mensaje_frase2").hide();
+	}	
+
+
+
+
+
+	
+	$(document).ready(function(){	
+		$("#mensaje_frase3").hide();
+		$("#frase3").hover(mensaje_on3, mensaje_off3);
+		
+	});	
+	
+		
+	function mensaje_on3(){
+		$("#mensaje_frase3").show();
+	}
+	
+	function mensaje_off3(){
+		$("#mensaje_frase3").hide();
+	}	
+
+
+
+
+	$(document).ready(function(){	
+		$("#mensaje_frase4").hide();
+		$("#frase4").hover(mensaje_on4, mensaje_off4);
+		
+	});	
+	
+		
+	function mensaje_on4(){
+		$("#mensaje_frase4").show();
+	}
+	
+	function mensaje_off4(){
+		$("#mensaje_frase4").hide();
+	}	
+
+
+
+
+		        /* Idioma */
+				var idioma = 0 ; // 0=es, 1=en, ...
+        var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+        var texto = [                                           /*El largo de "texto" es dos. ya que hay 2 arrays dentro*/
+                    	["Taylor reveló que la canción vendría a ser su propia versión de la \"lista de muertes\" de Arya Stark (Juego de Tronos)",
+                        "Taylor revealed that the song would be her own version of the \"kill list\" of Arya Stark (Game of Thrones) " 
+                    ],
+                    [ "Hace referencia al \"escenario inclinado\" que utilizó Kanye West en su Saint Pablo Tour, en el cual cantó la canción \"Famous\" (en la que insulta a Taylor) e incitó a sus fans a insultarla.",
+                      "This is a reference to the \"tilted stage\" that Kanye West used in his Saint Pablo Tour. There he sang the song \"Famous\" (in which he insults Taylor) and where he incited his fans to insult her."
+                    ],
+					[ "El Septiembre el 2014, Taylor y Katy Perry estaban peleadas y Katy escribe éste tweet acusando a Taylor de ser como el personaje de Regina George, de la película \"Chicas Pesadas\" (Mean Girls). En este momento de la canción Taylor utiliza la batería de la canción que sonaba en la película, el momento en que el personaje aparece vestido para Halloween.",
+					  "On September of 2014, Tayor and Katy Perry were at odds with each other and Katy writes this tweet accusing Taylor of being just like the character of Regina George, from the movie \"Mean Girls\". At this moment of the song Taylor uses the drums of the song that sounds in the movie, the moment the character appears dressed for Halloween." 
+					],
+					["En esta parte se puede escuchar de fondo el coro de la canción \"Innocent\" (album Speak Now) que Taylor escribió luego de perdonar a Kanye por intentar humillarla en los VMA de 2009.",
+					 "In this part you can hear on the background the vocals of the song \"Innocent\" (Speak Now album) that Taylor wrote after forgiving Kanye for try and humiliate her in the VMA of 2009."
+					],
+					[ "Con este puente, Taylor Swift y Jack Antonoff quisieron reflejar la llamada telefónica que Taylor<br> tuvo con Kanye West ",
+					  "With this bridge, Taylor Swift and Jack Antonoff wanted to reflex the call phone that Taylor<br> had with Kanye West." 
+					]
+                      ];         
+                                              
+                      
+                      function eligeIdioma(){
+                     IDidioma.innerHTML=idiomas[idioma];
+    
+                         for (let frase=0; frase<texto.length; frase++){         /*inicio con frase=0 -- Continúo hasta el lenght del "texto" (osea continúo 2 veces porque el lenght es 2. sson 2 arrays) -- le sumo uno a "frase", asi pasa de frase 0 a frase 1.*/ 
+                         document.getElementById("mensaje_frase"+frase).innerHTML=texto[frase][idioma];
+                         }
+                        }
+                    function modificaIdioma(){
+                    idioma++;
+                    if (idioma < 0 || idioma > 1) idioma = 0;
+                    eligeIdioma();
+                    }   		
+		
+    
+    
+    </script>
+		
+
+	
+	
+</head>
+	
+	
+
+<style>
+
+	
+body{
+background:url("../imagenes/Reputation/lwymmd3.jpg"); /*La foto*/
+background-repeat:repeat-y;	
+background-position:600px 0%;
+}		
+	
+
+.hover_img a { position:relative; }
+.hover_img a span { position:absolute; display:none; z-index:99; }
+.hover_img a:hover span { display:block; }
+
+.img{
+    top:50px;
+    left:-100px;
+
+}
+
+a{  /* Para sacarle el subrayado y el color azul, así no se ve como un link */
+    text-decoration: none;
+    color:red;
+}
+
+
+#mensaje_frase0{
+		position: fixed;  /*o absolute?*/
+		left: 670px;
+		top: 40px;   /*originalmente tenia 392px*/
+		width: 250px;
+		height: 400px;
+		background-color: #D7CFDA;
+		font-size: 30px;
+		padding: 130px 20px 20px 380px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+
+	
+	#mensaje_frase1{
+		position: fixed;  /*o absolute?*/
+		left: 670px;
+		top: 50px;   /*originalmente tenia 392px*/
+		width: 565px;
+		height: 500px;
+		background-color: #D7CFDA;
+		font-size: 24px;
+		padding: 20px 15px 15px 20px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}		
+
+
+	#mensaje_frase2{
+		position: fixed;  /*o absolute?*/
+		left: 610px;
+		top: 50px;   /*originalmente tenia 392px*/
+		width: 390px;
+		height: 460px;
+		background-color: #D7CFDA;
+		font-size: 20px;
+		padding: 20px 15px 15px 330px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+
+
+	
+        #imagen_mostrar {
+            position: absolute;
+            top: 5%;
+            right: -166%;
+        }	
+
+			
+	
+
+	#mensaje_frase3{
+		position: fixed;  /*queda en donde lo pusimos aunque cambiemos de posicion con la barra de desplazamiento*/
+		left: 705px;
+		top: 30px;   /*el espacio entre el cuadro y el tope VISIBLE de arriba*/
+		width: 500px;  /*el ancho del cuadro. (el texto se acomoda adentro)*/
+		height: 520px;
+		background-color: #D7CFDA;
+		font-size: 23px;
+		padding: 30px 25px 25px 25px;   /*El margen entre el texto y los bordes del cuadro*/
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+	
+
+
+	#mensaje_frase4{
+		position: fixed;  /*queda en donde lo pusimos aunque cambiemos de posicion con la barra de desplazamiento*/
+		left: 650px;
+		top: 90px;   /*el espacio entre el cuadro y el tope VISIBLE de arriba*/
+		width: 600px;  /*el ancho del cuadro. (el texto se acomoda adentro)*/
+		height: 405px;
+		background-color: #D7CFDA;
+		font-size: 25px;
+		padding: 32px 25px 25px 25px;   /*El margen entre el texto y los bordes del cuadro*/
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+	
+
+		
+</style>
+	
+<body>
+
+<div id="mensaje_frase0"> Taylor reveló que la canción vendría a ser su propia versión de la "lista de muertes" de Arya Stark (Juego de Tronos) </div>
+
+<div id="mensaje_frase1">Hace referencia al "escenario inclinado " que utilizó Kanye West en su Saint Pablo Tour,
+	en el cual cantó la canción "Famous" (en la que insulta a Taylor) e incitó a sus fans a insultarla. </div>
+
+<div id="mensaje_frase2">El Septiembre el 2014, Taylor y Katy Perry estaban peleadas y Katy escribe éste tweet acusando a Taylor de ser como el personaje de Regina George, de la pelíicula \"Chicas Pesadas\" (Mean Girls). Taylor utiliza la batería de la canción que sonaba en la película, el momento en que el personaje aparece vestido para Halloween.</div>	
+
+<div id="mensaje_frase3"></div>
+
+<div id="mensaje_frase4">Con este puente, Taylor Swift y Jack Antonoff quisieron reflejar la llamada 
+	telefónica que Taylor tuvo con Kanye West </div>	
+	
+	
+	
+	<div class="contenido">	
+
+		<div class="izq">
+		
+			<div class="home">	
+				<button id="IDidioma" onclick="modificaIdioma()"></button>
+				<button class="HomeButton" onclick="location.href='../index.html';">
+					<span>Home</span>
+					<svg>
+						<rect x="0" y="0" fill="none"></rect>
+					</svg>
+					
+					</button>	
+			</div>
+
+	
+		<div class="previousnext">	
+			<button id="PreviousButton" onclick="location.href='../paginas/delicate.html';" class="float-left submit-button" >←Previous track</button>	
+			<button id="NextButton" onclick="location.href='../paginas/so it goes.html';" class="float-left submit-button" >Next track →</button>	
+		</div>		
+
+
+<span class="hover_img" id="frase0">
+	<a class="titulo" href="#">6. Look what you made me do<span><img src="../imagenes/fotosINFO/aryakilllist.jpg" alt="image2"  style="position: fixed; left:710px; top:80px" />    
+	</span></a></span>
+	
+
+<div class="song">
+
+<p>I don't like your little games<br>
+	<span class="hover_img" id="frase1">
+		<a href="#">
+Don't like your tilted stage<br>
+<span><img src="../imagenes/fotosINFO/tiltedstage.jpg" alt="image1"  style="position: fixed; left:710px; top:230px" />    
+</span></a></span>
+The role you made me play of the fool<br>
+No, I don't like you</p>
+
+<span class="hover_img" id="frase2">
+	<a href="#">
+I don't like your perfect crime<br>
+How you laugh when you lie<br>
+You said the gun was mine<br>
+Isn't cool, no, I don't like you
+<span><img src="../imagenes/fotosINFO/reginageorge2.png" alt="image2"  style="position: fixed; left:620px; top:120px" /><img src="../imagenes/fotosINFO/reginasheep.jpg" alt="image2.2"  style="position: fixed; left:925px; top:321px" />    
+</span></a></span>							
+	
+<p>But I got smarter, I got harder in the nick of time<br>
+Honey, I rose up from the dead, I do it all the time<br>
+I got a list of names, and yours is in red, underlined<br>
+I check it once, then I check it twice, oh!</p>
+	
+<p>Ooh, look what you made me do<br>
+Look what you made me do<br>
+Look what you just made me d<br>
+Look what you just made me-</p>
+	
+<p>Ooh, look what you made me do<br>
+Look what you made me do<br>
+Look what you just made me do<br>
+Look what you just made me do</p>
+	
+<p>I don't like your kingdom keys<br>
+They once belonged to me<br>
+You asked me for a place to sleep<br>
+Locked me out and threw a feast (what?)</p>
+	
+<p>The world moves on, another day, another drama, drama<br>
+But not for me, not for me, all I think about is karma<br>
+And then the world moves on, but one thing's for sure<br>
+Maybe I got mine, but you'll all get yours</p>
+	
+<p>But I got smarter<br>
+I got harder in the nick of time (nick of time)<br>
+Honey, I rose up from the dead<br>
+I do it all the time (I do it all the time)<br>
+I got a list of names, and yours is in red, underlined<br>
+I check it once, then I check it twice, oh!</p>
+	
+<p>Ooh, look what you made me do<br>
+Look what you made me do<br>
+Look what you just made me do<br>
+Look what you just made me-</p>
+	
+<p>Ooh, look what you made me do<br>
+Look what you made me do<br>
+Look what you just made me do<br>
+Look what you just made me do</p>
+	
+<p>I don't trust nobody and nobody trusts me<br>
+I'll be the actress starring in your bad dreams<br>
+I don't trust nobody and nobody trusts me<br>
+I'll be the actress starring in your bad dreams<br>
+<span class="hover_img" id="frase3"><a href="#">
+I don't trust nobody and nobody trusts me<br>
+I'll be the actress starring in your bad dreams<br>
+I don't trust nobody and nobody trusts me<br>
+I'll be the actress starring in your bad dreams<span><img src="../imagenes/fotosINFO/forgives.jpg" alt="image3"  style="position: fixed; left:750px; top:215px" />    
+</span></a></span></p>
+	
+<p><span class="hover_img" id="frase4"><a href="#">I'm sorry<br>
+But the old Taylor can't come to the phone right now<br>
+Why? Oh, 'cause she's dead (oh)<span><img src="../imagenes/fotosINFO/phonecallvideo.png" alt="image2"  style="position: fixed; left:670px; top:235px" />    
+</span></a></span>	</p>
+	
+<p>Ooh, look what you made me do<br>
+Look what you made me do<br>
+Look what you just made me do<br>
+Look what you just made me-</p>
+	
+<p>Ooh, look what you made me do<br>
+Look what you made me do<br>
+Look what you just made me do<br>
+Look what you just made me do</p>
+	
+<p>Ooh, look what you made me do<br>
+Look what you made me do<br>
+Look what you just made me do<br>
+Look what you just made me-</p>
+	
+<p>Ooh, look what you made me do<br>
+Look what you made me do<br>
+Look what you just made me do<br>
+Look what you just made me do</p>
+	
+</div>
+
+
+<div id="div2">
+	&nbsp;
+</div>			
+
+
+</div> 	
+
+</body>
+</html>

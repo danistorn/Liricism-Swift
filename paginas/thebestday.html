@@ -1,0 +1,225 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script src="jQueryAssets/jquery-1.11.1.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@200&family=Bebas+Neue&family=IM+Fell+DW+Pica:ital@1&family=Montserrat:wght@200&family=Rochester&family=Sacramento&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="cssfearless.css"/>	
+
+<script>
+
+    $(document).ready(function(){   
+            $("#mensaje_frase0").hide();
+            $("#frase0").hover(mensaje_on0, mensaje_off0);
+            eligeIdioma();
+        });
+    
+        
+        function mensaje_on0(){
+            $("#mensaje_frase0").show();    
+        }
+        
+        function mensaje_off0(){
+            $("#mensaje_frase0").hide();
+        }   
+
+
+
+
+        $(document).ready(function(){   
+				$("#mensaje_frase1").hide();
+				$("#frase1").hover(mensaje_on1, mensaje_off1);
+				
+			});
+		
+			
+			function mensaje_on1(){
+				$("#mensaje_frase1").show();    
+			}
+			
+			function mensaje_off1(){
+				$("#mensaje_frase1").hide();
+			}   
+
+        
+        /* Idioma */
+        var idioma = 0 ; // 0=es, 1=en, ...
+        var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+        var texto = [   
+                     ["",""],
+					 ["Desde el comienzo de su carrera Taylor Swift incluye mensajes secretos en cada canción, lo cual dejó de hacer en su álbum Reputation.<br><br><hr><br> Para su album Fearless las letras de las canciones en los booklets (libritos) estan en minusculas, y cada letra del mensaje secreto esta en mayuscula.",
+					  "Taylor Swift includes hidden messages in each song, which stopped at Reputation.<br><br><hr><br> For her album Fearless the lyrics of the songs in the booklets are in lowerecased letters, and each letter of the hidden message is capitalized."
+					 ]
+                    ];
+                    function eligeIdioma(){
+						 IDidioma.innerHTML=idiomas[idioma];
+		
+							 for (let frase=0; frase<texto.length; frase++){         /*inicio con frase=0 -- Continúo hasta el lenght del "texto" (osea continúo 2 veces porque el lenght es 2. sson 2 arrays) -- le sumo uno a "frase", asi pasa de frase 0 a frase 1.*/ 
+							 document.getElementById("mensaje_frase"+frase).innerHTML=texto[frase][idioma];
+							 }
+							}
+						function modificaIdioma(){
+						idioma++;
+						if (idioma < 0 || idioma > 1) idioma = 0;
+						eligeIdioma();
+						}    
+    
+    
+    
+    </script>
+
+
+</head>
+	
+<style>	
+	
+body
+{
+	background:url("../imagenes/fearless/mom3.jpg"); /*La foto*/
+	background-repeat:repeat-y;
+	background-position:600px 0%;
+		
+}	
+
+
+#frase1{
+    
+    font-size: 25px;
+    padding: 10px 10px 10px, 15px;
+    font-style: italic;
+    margin-left: 20px;
+    margin-top: 1px;
+}
+
+
+#mensaje_frase1{
+		position: fixed;  /*queda en donde lo pusimos aunque cambiemos de posicion con la barra de desplazamiento*/
+		left: 730px;
+		top: 100px;   /*el espacio entre el cuadro y el tope VISIBLE de arriba*/
+		width: 450px;  /*el ancho del cuadro. (el texto se acomoda adentro)*/
+		height: 310px;
+		background-color: #D7CFDA;
+		font-size: 22px;
+		padding: 45px 40px 20px 40px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+        box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}
+
+
+
+	
+</style>	
+
+<body>	
+
+<div id="mensaje_frase0"></div>    
+<div id="mensaje_frase1"></div>     
+
+
+	<div class="contenido">	
+
+		<div class="izq">
+		
+			<div class="home">	
+				<button id="IDidioma" onclick="modificaIdioma()"></button>
+				<button class="HomeButton" onclick="location.href='../index.html';">
+					<span>Home</span>
+					<svg>
+						<rect x="0" y="0" fill="none"></rect>
+					</svg>
+					
+					</button>			
+			</div>
+	
+	
+			<div class=previousnext>	
+				<button id="PreviousButton" onclick="location.href='../paginas/foreverandalways.html';" class="float-left submit-button" >←Previous track</button>		
+				<button id="NextButton" onclick="location.href='../paginas/change.html';" class="float-left submit-button" >Next track →</button>		
+			</div>	
+
+	
+			<span class="titulo" id="frase0">12. The Best Day</span>
+	
+<div class="song">
+
+
+<p>I'm five years old<br>
+It's getting cold<br>
+I've got my big coat on</p>
+	
+<p>I hear your laugh<br>
+And look up smiling at you<br>
+I run and run<br>
+Past the pumpkin patch<br>
+And the tractor rides<br>
+Look now, the sky is gold<br>
+I hug your legs<br>
+And fall asleep on the way home</p>
+	
+<p>I don't know why all the trees change in the fall<br>
+But I know you're not scared of anything at all<br>
+Don't know if Snow White's house is near or far away<br>
+But I know I had the best day with you today</p>
+	
+<p>I'm thirteen now<br>
+And don't know how<br>
+My friends could be so mean<br>
+I come home crying<br>
+And you hold me tight<br>
+And grab the keys</p>
+	
+<p>And we drive and drive<br>
+Until we found a town far enough away<br>
+And we talk and window shop<br>
+'Till I forgotten all their names</p>
+	
+<p>I don't know who I'm gonna talk to now at school<br>
+But I know I'm laughing<br>
+On the car ride home with you<br>
+Don't know how long it's gonna take to feel okay<br>
+But I know I had the best day with you today</p>
+	
+<p>I have an excellent father<br>
+His strength is making me stronger<br>
+God smiles on my little brother<br>
+Inside and out he's better than I am<br>
+I grew up in a pretty house<br>
+And I had space to run and I<br>
+had the best days with you</p>
+	
+<p>There is a video I found<br>
+From back when I was three<br>
+You set up a paint set in the kitchen<br>
+And you're talking to me<br>
+It's the age of princesses and pirate ships<br>
+And the seven dwarfs<br>
+And Daddy's smart<br>
+And you're the prettiest lady in the whole wide world</p>
+	
+<p>And now I know why the all the trees change in the fall<br>
+I know you were on my side<br>
+Even when I was wrong<br>
+And I love you for giving me your eyes<br>
+Staying back and watching me shine and<p>
+
+<p>I didn't know if you knew<br>
+So I'm taking this chance to say<br>
+That I had the best day with you today</p>
+	
+
+</div>
+<div id="frase1"><a href="#">
+    <ul style="list-style-image:url(../imagenes/fotosINFO/sparks.png);">
+     <li><pre><h3>Mensaje Secreto:</h3>     "God bless Andrea Swift"</pre></li> 
+    </ul>
+</a></div>			
+</div> 	
+
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>	
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+	
+
+
+<script>
+
+	
+	$(document).ready(function(){	
+		$("#mensaje_frase3").hide();
+		$("#frase3").hover(mensaje_on0, mensaje_off0);
+		
+	});	
+	
+		
+	function mensaje_on0(){
+		$("#mensaje_frase3").show();
+	}
+	
+	function mensaje_off0(){
+		$("#mensaje_frase3").hide();
+	}		
+	
+	
+	</script>	
+
+
+
+
+	
+<style>
+
+p {font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	font:bold;
+	font-size:16px;
+}
+	
+	span{
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	font:bold;
+	font-size:16px;
+		
+	}	
+	
+	#mensaje_frase3{
+		position: fixed;  /*queda en donde lo pusimos aunque cambiemos de posicion con la barra de desplazamiento*/
+		left: 625px;
+		top: 170px;   /*el espacio entre el cuadro y el tope VISIBLE de arriba*/
+		width: 450px;  /*el ancho del cuadro. (el texto se acomoda adentro)*/
+		height: 180px;
+		background-color: #D7CFDA;
+		font-size: 19px;
+		padding: 9px;   /*El margen entre el texto y los bordes del cuadro*/
+		padding-top: 29px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+	}	
+		
+	
+</style>	
+	
+	
+	<script type="text/javascript">
+    	function mostrar(id,tipo)
+    	{
+        	if (tipo==1) 
+        	{
+            	$("#"+id).show("slow");
+        	}
+        	if(tipo==2)
+        	{
+            	$("#"+id).hide("slow");
+        	}
+    	}
+	</script>	
+	
+
+
+
+	
+
+
+</head>
+	
+<body>
+
+<div id="mensaje_frase3">En Septiembre de 2014, Taylor y Katy Perry estaban peleadas y Katy escribe éste tweet acusando a Taylor de ser como el personaje de Regina George, de la película "Mean Girls". Taylor utiliza la batería de la canción que sonaba en la película en el momento en que el personaje aparece vestido para Halloween.</div>	
+	
+	
+	
+    <section>
+		
+		
+<p>AAAAAAAAAAAAAAAAAAAAAAAAAAAAA</p>		
+		
+    <div class="container hovring">     
+                <ul>
+                    <li>
+                        <span id="mostrar" onmouseover="mostrar('imagen_mostrar',1);" onmouseout="mostrar('imagen_mostrar',2);">SOME TEXT</span>
+                            <br>
+                                <label id="imagen_mostrar" style="display:none;"><img src="../imagenes/fotosINFO/hair.jpg" alt=""></label>
+                    </li>
+                </ul>
+    </div>
+		
+<p>ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ</p>
+		
+
+<p>BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB</p>		
+		
+    <div class="container hovring">     
+
+                     <span id="mostrar2" onmouseover="mostrar('imagen_mostrar',1);" onmouseout="mostrar('imagen_mostrar',2);">OTHER THING</span>
+                            <br>
+                                <label id="imagen_mostrar2" style="display:none;"><img src="../imagenes/fotosINFO/hair.jpg" alt=""></label>
+
+    </div>
+		
+<p>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>		
+		
+    </section>
+	
+	
+	
+<p><span id="frase3">rvabllaaaaaaaaaaaaaaallllllll<br>
+	vvvvvvvvvvvvvvvvvvvvvvv<br>
+	ggggggggggggggggggggggggg<br>
+	ssssssssssssssssssssss<br>
+	hhhhhhhhhhhhhhhhhhhhhh</span></p>	
+
+
+
+	
+</body>
+</html>

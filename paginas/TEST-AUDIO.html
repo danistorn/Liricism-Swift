@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IM+Fell+DW+Pica:ital@1&family=Rochester&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="cssfolklore.css"/>	 
+<script src="jQueryAssets/jquery-1.11.1.min.js"></script>	
+
+<script>	
+	
+	$(document).ready(function(){	
+		$("#mensaje_frase0").hide();
+		$("#frase0").hover(mensaje_on0, mensaje_off0);
+		
+	});	
+	
+		
+	function mensaje_on0(){
+		$("#mensaje_frase0").show();
+	}
+	
+	function mensaje_off0(){
+		$("#mensaje_frase0").hide();
+	}
+	
+</script>
+
+
+</head>
+
+
+<style>
+
+body
+{
+	background:url("../imagenes/folklore/rebekah.jpg"); /*La foto*/
+	background-repeat:repeat-y;
+	background-position:600px 0%;
+		
+}	
+
+.hover_img a { position:relative; }
+.hover_img a span { position:absolute; display:none; z-index:99; }
+.hover_img a:hover span { display:block; }
+
+.img{
+    top:50px;
+    left:-100px;
+
+}
+
+a{  /* Para sacarle el subrayado y el color azul, así no se ve como un link */
+    text-decoration: none;
+    color:red;
+}
+
+#mensaje_frase0{
+		position: fixed;  /*queda en donde lo pusimos aunque cambiemos de posicion con la barra de desplazamiento*/
+		left: 610px;
+		top: 10px;   /*el espacio entre el cuadro y el tope VISIBLE de arriba*/
+		width: 700px;  /*el ancho del cuadro. (el texto se acomoda adentro)*/
+		height: 580px;
+		background-color: #D7CFDA;
+		font-size: 20px;
+		padding: 15px;   /*El margen entre el texto y los bordes del cuadro*/
+		padding-top: 15px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+	}	
+
+</style>
+
+
+<body>
+
+<div id="mensaje_frase0">La canción trata sobre la vida de Rebekah Harkness, una compositora, escultora, mecenas y filántropa estadounidense que fundó el Ballet Harkness. Rebekah se casó con William Hale "Bill" Harkness, abogado y heredero de la fortuna Standard Oil. Ambos compraron una casa en Rhode Island, situada en un acantilado, a la que llamaron "Holiday House" o "Casa de Vacaciones". La canción habla de su vida y de las fiestas escandalosas que organizó allí tras morir su esposo, 7 años después de la boda. <br><br> Taylor compró esa misma casa en 2013. Al igual que Rebekah Harkness, los residentes locales desprecian a Taylor Swift por alterar la paz del vecindario.</div>	
+ 
+
+    <div class="contenido">	
+
+
+        <div class="izq"> 
+
+    <div class="home">	
+        <button id="HomeButton" onclick="location.href='../index.html';" class="float-left submit-button" >Home!</button>		
+
+            
+        <audio controls>
+
+            <source src="../canciones/the last great american dynasty.mp3" type="audio/mp3">
+            
+            Éste es un elemento de audio no soportado por tu navegador
+        
+        </audio>	
+
+    </div>
+
+    <div class=previousnext>	
+        <button id="PreviousButton" onclick="location.href='../paginas/cardigan.html';" class="float-left submit-button" >←Previous track</button>		
+        <button id="NextButton" onclick="location.href='../paginas/exile.html';" class="float-left submit-button" >Next track →</button>		
+    </div>	
+
+    <span class="hover_img" id="frase0">
+        <a class="titulo" href="#">3. The last great American dynasty<span><img src="../imagenes/fotosINFO/dynasty.jpg" alt="image2"  style="position: fixed; left:760px; top:305px" />    
+        </span></a></span>  
+
+<div class="song">			
+	
+        <p>Rebekah rode up on the afternoon train, it was sunny<br>
+        Her saltbox house on the coast took her mind off St. Louis<br>
+        Bill was the heir to the Standard Oil name, and money<br>
+        And the town said "How did a middle class divorcée do it?"</p>
+
+        <p>The wedding was charming, if a little gauche<br>
+            There's only so far new money goes<br>
+            They picked out a home and called it "Holiday House"<br>
+            Their parties were tasteful, if a little loud<br>
+            The doctor had told him to settle down<br>
+            It must have been her fault his heart gave out</p>
+            
+            <p>And they said "There goes the last great American dynasty"<br>
+            Who knows, if she never showed up what could've been<br>
+            There goes the maddest woman this town has ever seen<br>
+            She had a marvelous time ruining everything</p>
+            
+            <p>Rebekah gave up on the Rhode Island set forever<br>
+            Flew in all the Bitch Pack friends from the city<br>
+            Filled the pool with champagne and swam with the big names<br>
+            And blew through the money on the boys and the ballet<br>
+            And losing on card game bets with Dalí</p>
+            
+            <p>And they said "There goes the last great American dynasty"<br>
+            Who knows, if she never showed up, what could've been<br>
+            There goes the most shameless woman this town has ever seen<br>
+            She had a marvelous time ruining everything</p>
+            
+            <p>They say she was seen on occasion<br>
+            Pacing the rocks staring out at the midnight sea<br>
+            And in a feud with her neighbor<br>
+            She stole his dog and dyed it key lime green<br>
+            Fifty years is a long time<br>
+            Holiday House sat quietly on that beach<br>
+            Free of women with madness<br>
+            Their men and bad habits, and then it was bought by me</p>
+            
+            <p>Who knows, if I never showed up what could've been<br>
+            There goes the loudest woman this town has ever seen<br>
+            I had a marvelous time ruining everything<br>
+            I had a marvelous time<br>
+            Ruining everything<br>
+            A marvelous time<br>
+            Ruining everything<br>
+            A marvelous time<br>
+            I had a marvelous time</p>	
+                
+
+</div>
+
+<div id="div2">
+
+	
+
+	&nbsp;
+</div>
+		
+</div>
+
+</body>
+
+</html>

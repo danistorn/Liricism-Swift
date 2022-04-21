@@ -1,0 +1,180 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script src="jQueryAssets/jquery-1.11.1.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Beth+Ellen&family=Dancing+Script:wght@500&family=Mea+Culpa&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="csslover.css"/>
+
+<script>
+
+    $(document).ready(function(){   
+            $("#mensaje_frase0").hide();
+            $("#frase0").hover(mensaje_on0, mensaje_off0);
+            eligeIdioma();
+        });
+    
+        
+        function mensaje_on0(){
+            $("#mensaje_frase0").show();    
+        }
+        
+        function mensaje_off0(){
+            $("#mensaje_frase0").hide();
+        }   
+
+        
+        /* Idioma */
+        var idioma = 0 ; // 0=es, 1=en, ...
+        var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+        var texto = [   "",
+                        ""
+                    ];
+        function eligeIdioma(){
+            IDidioma.innerHTML=idiomas[idioma];
+            mensaje_frase0.innerHTML=texto[idioma];
+        }
+        function modificaIdioma(){
+            idioma++;
+            if (idioma < 0 || idioma > 1) idioma = 0;
+            eligeIdioma();
+        }
+    
+    
+    
+    </script>
+
+</head>
+
+<style>
+	
+	body{
+	background:url("../imagenes/lover/ithk.jpg"); /*La foto*/
+	background-repeat:repeat-y;	
+	background-position:600px 0%;
+	}		
+	
+</style>	
+	
+<body>
+	
+	<div class="contenido">	
+
+		<div class="izq">
+		
+			<div class="home">	
+				<button id="IDidioma" onclick="modificaIdioma()"></button>
+				<button class="HomeButton" onclick="location.href='../index.html';">
+					<span>Home</span>
+					<svg>
+						<rect x="0" y="0" fill="none"></rect>
+					</svg>
+					
+					</button>			
+			</div>
+	
+	
+			<div class=previousnext>	
+				<button id="PreviousButton" onclick="location.href='../paginas/thearcher.html';" class="float-left submit-button" >←Previous track</button>		
+				<button id="NextButton" onclick="location.href='../paginas/ma&thbp.html';" class="float-left submit-button" >Next track →</button>		
+			</div>	
+		
+	
+			<span class="titulo">6. I Think He Knows</span>
+	
+<div class="song">
+
+
+<p>I think he knows his footprints<br>
+On the sidewalk<br>
+Lead to where I can't stop<br>
+Go there every night</p>
+	
+<p>I think he knows his hands around<br>
+A cold glass<br>
+Make me wanna know that body<br>
+Like it's mine</p>
+	
+<p>He got that boyish look that I like in a man<br>
+I am an architect, I'm drawing up the plans<br>
+It's like I'm seventeen, nobody understands<br>
+No one understands</p>
+	
+<p>He got my heartbeat<br>
+Skipping down 16th Avenue<br>
+Got that, oh! I mean<br>
+Wanna see what's under that attitude<br>
+Like, I want you, bless my soul<br>
+And I ain't gotta tell him<br>
+I think he knows<br>
+I think he knows</p>
+	
+<p>I think he knows<br>
+When we get all alone<br>
+I'll make myself at home<br>
+And he'll want me to stay<br>
+I think he knows<br>
+He better lock it down<br>
+Or I won't stick around<br>
+'Cause good ones never wait</p>
+	
+<p>He got that boyish look that I like in a man<br>
+I am an architect, I'm drawing up the plans<br>
+He's so obsessed with me, and boy I understand<br>
+Boy I understand</p>
+	
+<p>He got my heartbeat<br>
+Skipping down 16th Avenue<br>
+Got that, oh! I mean<br>
+Wanna see what's under that attitude<br>
+Like, I want you, bless my soul<br>
+And I ain't gotta tell him<br>
+I think he knows<br>
+I think he knows</p>
+	
+<p>I want you, bless my<br>
+I want you, bless my<br>
+I want you, bless my<br>
+I want you, bless my soul</p>
+	
+<p>Lyrical smile, indigo eyes, hand on my thigh<br>
+We can follow the sparks, I'll drive<br>
+Lyrical smile, indigo eyes, hand on my thigh<br>
+We can follow the sparks, I'll drive</p>
+	
+<p>So where we gonna go?<br>
+I whisper in the dark<br>
+Where we gonna go?<br>
+I think he knows</p>
+	
+<p>He got my heartbeat<br>
+Skipping down 16th Avenue<br>
+Got that, oh! I mean<br>
+Wanna see what's under that attitude<br>
+Like, I want you, bless my soul<br>
+And I ain't gotta tell him<br>
+I think he knows<br>
+I think he knows</p>
+	
+<p>I want you, bless my<br>
+I want you, bless my<br>
+I want you, bless my<br>
+I want you, bless my soul</p>
+	
+<p>I want you, bless my<br>
+I want you, bless my<br>
+I want you, bless my soul<br>
+I ain't gotta tell him<br>
+I think he knows</p>
+
+</div>
+<div id="div2">
+	&nbsp;
+</div>
+</div>	
+	
+</body>
+</html>

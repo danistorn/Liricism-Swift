@@ -1,0 +1,248 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script src="jQueryAssets/jquery-1.11.1.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css1989.css"/>		
+<script type="text/javascipt" src="custom.js"></script>		
+
+<script>
+
+    $(document).ready(function(){   
+            $("#mensaje_frase0").hide();
+            $("#frase0").hover(mensaje_on0, mensaje_off0);
+            eligeIdioma();
+        });
+    
+        
+        function mensaje_on0(){
+            $("#mensaje_frase0").show();    
+        }
+        
+        function mensaje_off0(){
+            $("#mensaje_frase0").hide();
+        }   
+
+
+
+
+
+        $(document).ready(function(){   
+            $("#mensaje_frase1").hide();
+            $("#frase1").hover(mensaje_on1, mensaje_off1);
+            
+        });
+    
+        
+        function mensaje_on1(){
+            $("#mensaje_frase1").show();    
+        }
+        
+        function mensaje_off1(){
+            $("#mensaje_frase1").hide();
+        }   
+    
+        
+
+        /* Idioma */
+        var idioma = 0 ; // 0=es, 1=en, ...
+        var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+        var texto = [  
+                     ["",""],
+                     ["Desde el comienzo de su carrera Taylor Swift incluye mensajes secretos en cada canción, lo cual dejó de hacer en su álbum Reputation.<br><br><hr><br> Para 1989 las letras de las canciones en los booklets (libritos) estan en mayusculas, y cada letra del mensaje secreto esta en minúsculas.",
+                      "Taylor Swift includes hidden messages in each song, which stopped at Reputation.<br><br><hr><br> For 1989 the lyrics of the songs in the booklets are capitalized, and each letter of the hidden message is in lowercased letters."]
+                    ];
+					function eligeIdioma(){
+                     IDidioma.innerHTML=idiomas[idioma];
+    
+                         for (let frase=0; frase<texto.length; frase++){         /*inicio con frase=0 -- Continúo hasta el lenght del "texto" (osea continúo 2 veces porque el lenght es 2. sson 2 arrays) -- le sumo uno a "frase", asi pasa de frase 0 a frase 1.*/ 
+                         document.getElementById("mensaje_frase"+frase).innerHTML=texto[frase][idioma];
+                         }
+                        }
+                    function modificaIdioma(){
+                    idioma++;
+                    if (idioma < 0 || idioma > 1) idioma = 0;
+                    eligeIdioma();
+                    }	
+
+    
+    
+    </script>
+
+
+</head>
+	
+	
+<style>
+	
+	body{
+	background:url("../imagenes/1989/bad.jpg"); /*La foto*/
+	background-repeat:repeat-y;	
+	background-position:580px 0%;
+	}	
+
+
+
+    a{  /* Para sacarle el subrayado y el color azul, así no se ve como un link */
+    text-decoration: none;
+    color:red;
+}    
+
+	
+    #frase1{
+    
+    font-size: 25px;
+    padding: 10px 10px 10px, 15px;
+    font-style: italic;
+    margin-left: 15px;
+    margin-top: 1px;
+}
+
+
+#mensaje_frase1{
+		position: fixed;  /*queda en donde lo pusimos aunque cambiemos de posicion con la barra de desplazamiento*/
+		left: 700px;
+		top: 100px;   /*el espacio entre el cuadro y el tope VISIBLE de arriba*/
+		width: 450px;  /*el ancho del cuadro. (el texto se acomoda adentro)*/
+		height: 300px;
+		background-color: #D7CFDA;
+		font-size: 22px;
+		padding: 45px 40px 20px 40px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+        box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+
+
+	
+</style>	
+
+<body>
+
+
+<div id="mensaje_frase0"></div>
+<div id="mensaje_frase1"></div>   
+   
+	
+	<div class="contenido">	
+
+		<div class="izq">
+		
+			<div class="home">	
+				<button id="IDidioma" onclick="modificaIdioma()"></button>
+				<button class="HomeButton" onclick="location.href='../index.html';">
+                    <span>Home</span>
+                    <svg>
+                        <rect x="0" y="0" fill="none"></rect>
+                    </svg>
+                    
+                    </button>			
+			</div>
+	
+	
+			<div class=previousnext>	
+				<button id="PreviousButton" onclick="location.href='../paginas/iwyw.html';" class="float-left submit-button" >←Previous track</button>		
+				<button id="NextButton" onclick="location.href='../paginas/wildestdreams.html';" class="float-left submit-button" >Next track →</button>		
+			</div>	
+
+
+			<span class="titulo" id="frase0">8. Bad Blood</span>
+
+
+<div class="song">
+
+<p>'Cause baby now we got bad blood<br>
+You know it used to be mad love<br>
+So take a look at what you've done<br>
+'Cause baby now we got bad blood (hey!)</p>
+	
+<p>Now we got problems<br>
+And I don't think we can solve them<br>
+You made a really deep cut<br>
+And baby now we got bad blood (hey!)</p>
+	
+<p>Did you have to do this?<br>
+I was thinking that you could be trusted<br>
+Did you have to ruin what was shining now it's all rusted<br>
+Did you have to hit me where<br>
+I'm weak, baby, I couldn't breathe<br>
+I rubbed it in so deep<br>
+Salt in the wound like you're laughing right at me</p>
+	
+<p>Oh, it's so sad to think about the good times<br>
+You and I</p>
+	
+<p>'Cause baby now we got bad blood<br>
+You know it used to be mad love<br>
+So take a look at what you've done<br>
+'Cause baby now we got bad blood (hey!)</p>
+	
+<p>Now we got problems<br>
+And I don't think we can solve them<br>
+You made a really deep cut<br>
+And baby now we got bad blood (hey!)</p>
+	
+<p>Did you think we'd be fine?<br>
+Still got scars on my back from your knife<br>
+So don't think it's in the past<br>
+These kind of wounds they last and they last<br>
+Now did you think it all through?<br>
+All these things will catch up to you<br>
+And time can heal but this won't<br>
+So if you come in my way, just don't</p>
+	
+<p>Oh, it's so sad to think about the good times<br>
+You and I</p>
+	
+<p>'Cause baby now we got bad blood<br>
+You know it used to be mad love<br>
+So take a look at what you've done<br>
+'Cause baby now we got bad blood (hey!)</p>
+	
+<p>Now we got problems<br>
+And I don't think we can solve them<br>
+You made a really deep cut<br>
+And baby now we got bad blood (hey!)</p>
+	
+<p>Band-aids don't fix bullet holes<br>
+You say sorry just for show<br>
+You live like that, you live with ghosts (ghosts, ghosts)<br>
+Band-aids don't fix bullet holes (hey!)<br>
+You say sorry just for show (hey!)<br>
+You live like that, you live with ghosts (hey!)<br>
+Hm, if you love like that blood runs</p>
+	
+<p>'Cause baby now we got bad blood<br>
+You know it used to be mad love<br>
+So take a look at what you've done<br>
+'Cause baby now we got bad blood (bad)</p>
+	
+<p>Now we got problems<br>
+And I don't think we can solve them (think we can solve them)<br>
+You made a really deep cut<br>
+And baby now we got bad blood<br>
+'Cause baby now we got bad blood</p>
+	
+<p>You know it used to be mad love<br>
+So take a look at what you've done (look at what you've done)<br>
+'Cause baby now we got bad blood (woah)<br>
+Now we got problems<br>
+And I don't think we can solve them<br>
+You made a really deep cut<br>
+And baby now we got bad blood (hey!)</p>
+	
+</div>
+<div id="frase1"><a href="#">
+    <ul style="list-style-image:url(../imagenes/fotosINFO/paperplane.jpg);">
+     <li><pre><h3>Mensaje Secreto:</h3>  "She made friends and enemies"</pre></li> 
+    </ul>
+</a></div>			
+</div> 	
+
+</body>
+</html>

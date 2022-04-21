@@ -1,0 +1,332 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+/*Para que el menú me lleve de forma smooth a cada disco*/
+html{
+	scroll-behavior: smooth;
+}
+
+
+
+.hero{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: calc(100vh - 100px); /* vh= view x hight (el alto del dispositivo)*/
+}
+ 
+.hero h1{
+	font-size: 80px;
+
+}
+
+.hero p{
+	font-size: 30px;
+	text-transform: uppercase;
+	color:rgb(153, 127, 160);
+}
+
+
+
+/*///////////////MENU DE CADA DISCO///////////////*/
+
+
+
+.menu{
+	height: 90px;
+	box-shadow: 0px 8px 24px 0px saddlebrown;
+	display: flex; /*para que todos los elementos se pongan uno al lado del otro. Preparacion para usar flexbox*/
+	position: sticky;
+	width: 100%; /* Para centrarlo en todo lo ancho (se salía cuando ponía el position fixed*/
+	left: 0; /*Para que este fijado con respecto a la izq y al tope. Ésto por si le pusiese un margen al contenido, para que no le cambie el margen tmbn al header */
+	top: 0; 
+	z-index:100; /* Para que las imagenes no pasen por delante del menú que esta "pegado" siguiendo el scroll */
+}
+
+nav a{  /*  accedo a cada uno de los enlaces (a) que estan dentro de nav*/
+	flex: 1; /*me aseguro de que todos tengan el mismo tamaño*/
+	height: 100%;
+	width: auto;
+	background-color: sandybrown;
+	text-decoration: none;
+	display: flex; /*quiero trabajar con flexbox en este enlace tmbn*/
+	align-items: center; /*alinea el texto de forma horizontal*/
+	justify-content: center; /*alinea el texto de forma vertical*/
+	text-align: center; /*si hay 2 renglones y achico la pagina, el contenido de ambos renglones van a quedar centrados*/ 
+	color: #000;
+	transition: .2s ease-in-out all;
+	font-weight: 600;
+}
+
+
+nav a:hover{
+	background: #f0f0f0;
+}
+
+
+
+nav .indicador{
+	width: 0px; /*NO pongo un num en concreto. quiero calcular cual va a ser el tamaño (del nombre de cada disco)*/
+	height: 7px;  /*un ejemplo*/
+	background:rgb(153, 127, 160);
+	position: absolute;
+	bottom: 0; /*para posicionarlo en la parte de abajo del menú*/
+	transition: .3s ease-out all;
+	transform: translate(-500px);
+}
+
+
+
+
+body
+{
+	text-align: center
+}
+
+h1[name="titulo_principal"] /*el "[name:"titulo_principal"]" es para que al unico h1 que afecte este cc sea a este. al del titulo. (En la pagina html lo marqué de esa menera*/
+	{text-align:center;
+	font-family:Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif"; 
+	margin: 0;
+    padding: 0;	
+	text-shadow:#998 3px 3px 5px;
+	color: rgb(26, 26, 31);
+}
+
+h3{font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif"; 
+	font-size:25px;
+}
+
+
+
+
+p {font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	font:bold;
+	font-size:16px;
+}
+
+ol{
+	margin: 0;
+    padding: 0;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	font:bold;
+	font-size:15px;
+	line-height: 30px;
+	max-height: 440;
+
+}
+
+ul{
+	margin: 0; /* To remove default bottom margin */ 
+    padding: 0; /* To remove default left padding */
+}
+
+
+span{
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	font:bold;
+	font-size:16px;
+
+	}
+
+
+header{
+	font-size: 30px;
+}
+
+
+/*LINK DE LA CANCION DE CADA ALBUM*/
+
+.album a{				/* con el .album especifico que estoy hablando solo de los 'a' que estan adentro del class "album", y no de otros 'a'*/
+	text-decoration:none;
+	display:inline-block;
+	color:rgb(97, 10, 85);
+	font-weight: 500;
+}
+
+.album a:after{
+	content: '';
+	display: block;
+	width:0;
+	height: 2px;
+	background: #fff7fdc7;
+	/*background: rgb(153, 127, 160);*/
+	transition: width .3s;
+	
+}
+
+.album a:hover::after{  /*Cómo se va a ver el titulo de la canción cuando pongo el mouse arriba*/
+	width: 105%; /*cuán largo el subrayado*/
+	transition: width .3s;
+	
+}
+
+
+
+
+
+
+/*FOTO DE CADA ALBUM*/
+
+figure img{
+	padding:4px;  /* el bordecito que rodea la imagen*/
+	background:#666;
+	border-radius:20px;  /* cuán redondeada estan los bosdes de la imagen dentro de se bordesito*/
+	box-shadow:#7E7E7E 5px 5px 10px;
+	width: 230px;
+}
+
+figure img:hover{
+	-webkit-transition:-webkit-transform 0.3s ease-in-out 0.1s;
+	-ms-transition:-ms-transform 0.3s ease-in-out 0.1s;
+	-webkit-transform:scale(1.1);
+
+}
+
+
+
+.figure {
+	position: relative;
+	width: 230px; /* can be omitted for a regular non-lazy image */
+	max-width: 100%;
+}
+
+
+.figure img.image-hover {
+  position: absolute;  /* para que las imagenes (disco nuevo y disco viejo del mismo disco) esten hubicadas en el mismo lugar y no una abajo de otra */
+  top: 0; /*top-right-bottom-left tmbn se usan para que ambas imajenes esten positionadas en el mismo lugar*/
+  right: 0;
+  left: 0;
+  bottom: 0;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity .5s;  /* si quito esta linea, se irá agrandando como las otras imagenes, aunque sin la transicion entre imagenes*/
+
+}
+.figure:hover img.image-hover {
+  opacity: 1;
+
+}
+
+
+.card figure{		/*MOVI LOS DISCOS A LA IZQUIERDAAA*/
+	display: flex;
+	align-items: left;
+	justify-content: left;
+}
+
+
+
+
+.Taylor_Swift{
+	display:grid;
+	grid-template-rows: repeat(9, 1fr);
+}
+
+
+
+.album{
+	height: 900px; /*el largo de la tarjeta*/
+	width: 68%;
+
+	padding-top: 113px;
+	padding-left: 165px;  /*el espacio entre la tarjeta card y la izquierda*/
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+
+}
+
+.reputation{
+	height: 1010px;
+}
+
+
+.album .card{
+	background: #fff;
+	height: 99%;  /*Cuanto espacio deja el menu sticky entre el card y el menú de arriba*/
+	width: 1290px;
+	padding-top: 5px;
+	padding-left: 20px; /*el titulo del disco con la tarjeta*/
+	padding-bottom: 20px;
+	border-radius: 6px;
+	box-shadow: rgba(56, 55, 55, 0.8) 8px 8px 23px;
+	display: flex;
+	gap: 20px;
+}
+
+
+
+
+.lista{
+	max-height: 450px ;
+	width: 600px;
+}
+
+.lista2{
+	width: 450px;
+}
+
+#debut{
+	background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);
+}
+
+#fearless{
+	background-image: linear-gradient(to top, #feffd1 0%, rgb(245, 234, 87)  100%);
+}
+
+#speaknow{
+	background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+}
+
+
+#red{
+	background-image: linear-gradient(-20deg, #e2c3c3 0%, rgb(248, 9, 9) 100%);
+}
+
+
+#milnueve{
+	background-image: linear-gradient(to top, #a8edea 0%, #7b7de9 100%);
+}
+
+
+#reputation{
+	background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+ background-blend-mode: multiply,multiply;
+}
+
+
+#lover{
+	background-image: linear-gradient(to top, #ace0f9 0%,  #f5bbe8 100%);
+}
+
+#folklore{
+	background-image: linear-gradient(to top, #e9e9e7   0%, #efeeec 1%, #eeeeec 31%,   #c0bfbc 75%, #8d8c8a 100%);
+}
+
+#evermore{
+	background-image: linear-gradient(to right, #e4afcb 0%, #b8cbb8 0%, #b8cbb8 0%, #e2c58b 30%, #c2ce9c 64%, #c6cccc 100%);
+}
+
+
+.contenedor-album{
+	width: 25%;
+	flex-basis: 15%;
+}
+
+.masinfo{
+	width:20%;
+	padding-right: 40px;
+	flex-basis: 50%;
+}
+
+
+
+footer{
+	clear:both; /*para que el pie de pag quede abajo y no al lado de las fotos*/
+	padding-top:100px; /*lo alejo de las imagenes*/
+}
+

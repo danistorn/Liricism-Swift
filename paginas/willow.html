@@ -1,0 +1,180 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script src="jQueryAssets/jquery-1.11.1.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IM+Fell+DW+Pica:ital@1&family=Rochester&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="cssevermore.css"/>	
+
+<script>
+
+    $(document).ready(function(){   
+            $("#mensaje_frase0").hide();
+            $("#frase0").hover(mensaje_on0, mensaje_off0);
+            eligeIdioma();
+        });
+    
+        
+        function mensaje_on0(){
+            $("#mensaje_frase0").show();    
+        }
+        
+        function mensaje_off0(){
+            $("#mensaje_frase0").hide();
+        }   
+
+        
+        /* Idioma */
+        var idioma = 0 ; // 0=es, 1=en, ...
+        var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+        var texto = [   "",
+                        ""
+                    ];
+        function eligeIdioma(){
+            IDidioma.innerHTML=idiomas[idioma];
+            mensaje_frase0.innerHTML=texto[idioma];
+        }
+        function modificaIdioma(){
+            idioma++;
+            if (idioma < 0 || idioma > 1) idioma = 0;
+            eligeIdioma();
+        }
+    
+    
+    
+    </script>
+
+
+</head>
+
+<style>
+	
+	body{
+	background:url("../imagenes/evermore/willow2.jpg"); /*La foto*/
+	background-repeat:repeat-y;	
+	background-position:600px 0%;
+	}		
+	
+</style>	
+	
+<body>
+	
+	<div class="contenido">	
+
+		<div class="izq">
+		
+			<div class="home">	
+				<button id="IDidioma" onclick="modificaIdioma()"></button>
+				<button class="HomeButton" onclick="location.href='../index.html';">
+					<span>Home</span>
+					<svg>
+						<rect x="0" y="0" fill="none"></rect>
+					</svg>
+					
+					</button>	
+			</div>
+	
+	
+			<div class=previousnext>	
+				<button id="NextButton" onclick="location.href='../paginas/Champagne Problems.html';" class="float-left submit-button" >Next track →</button>		
+			</div>	
+	
+		
+		<span class="titulo" id="frase0">1. Willow</span>	
+
+	
+<div class="song">		
+	
+<p>I'm like the water when your ship rolled in that night<br>
+Rough on the surface but you cut through like a knife<br>
+And if it was an open-shut case<br>
+I never would've known from that look on your face<br>
+Lost in your current like a priceless wine<br>
+The more that you say<br>
+The less I know<br>
+Wherever you stray<br>
+I follow<br>
+I'm begging for you to take my hand<br>
+Wreck my plans<br>
+That's my man</p>
+	
+<p>Life was a willow and it bent right to your wind (oh)<br>
+Head on the pillow, I could feel you sneaking in<br>
+As if you were a mythical thing<br>
+Like you were a trophy or a champion ring<br>
+And there was one prize I'd cheat to win<br>
+The more that you say<br>
+The less I know<br>
+Wherever you stray<br>
+I follow<br>
+I'm begging for you to take my hand<br>
+Wreck my plans<br>
+That's my man<br>
+You know that my train could take you home<br>
+Anywhere else is hollow<br>
+I'm begging for you to take my hand<br>
+Wreck my plans<br>
+That's my man</p>
+	
+<p>Life was a willow and it bent right to your wind (oh)<br>
+They count me out time and time again<br>
+Life was a willow and it bent right to your wind (oh)<br>
+But I come back stronger than a 90's trend</p>
+	
+<p>Wait for the signal and I'll meet you after dark<br>
+Show me the places where the others gave you scars<br>
+Now this is an open-shut case<br>
+Guess I should've known from the look on your face<br>
+Every bait and switch was a work of art</p>
+	
+<p>The more that you say<br>
+The less I know<br>
+Wherever you stray<br>
+I follow<br>
+I'm begging for you to take my hand<br>
+Wreck my plans<br>
+That's my man<br>
+You know that my train could take you home<br>
+Anywhere else is hollow<br>
+I'm begging for you to take my hand<br>
+Wreck my plans<br>
+That's my man</p>
+
+<p>The more that you say<br>
+The less I know<br>
+Wherever you stray<br>
+I follow<br>
+Begging for you to take my hand<br>
+Wreck my plans<br>
+That's my man<br>
+You know that my train could take you home<br>
+Anywhere else is hollow<br>
+Begging for you to take my hand<br>
+Wreck my plans<br>
+That's my man</p>
+	
+<p>Hey, that's my man<br>
+That's my man<br>
+Yeah, that's my man<br>
+Every bait and switch was a work of art<br>
+That's my man<br>
+Hey, that's my man<br>
+I'm begging for you to take my hand<br>
+Wreck my plans<br>
+That's my man</p>
+	
+</div>
+
+<div id="div2">
+&nbsp;
+</div>
+		
+</div>	
+	
+	
+	
+</body>
+</html>

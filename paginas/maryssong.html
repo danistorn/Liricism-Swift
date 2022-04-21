@@ -1,0 +1,225 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script src="jQueryAssets/jquery-1.11.1.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IM+Fell+DW+Pica:ital@1&family=Rochester&family=Sacramento&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="cssdebut.css"/>	
+
+
+<script>
+
+    $(document).ready(function(){   
+            $("#mensaje_frase0").hide();
+            $("#frase0").hover(mensaje_on0, mensaje_off0);
+            eligeIdioma();
+        });
+    
+        
+        function mensaje_on0(){
+            $("#mensaje_frase0").show();    
+        }
+        
+        function mensaje_off0(){
+            $("#mensaje_frase0").hide();
+        }   
+
+
+
+
+        $(document).ready(function(){   
+            $("#mensaje_frase1").hide();
+            $("#frase1").hover(mensaje_on1, mensaje_off1);
+            
+        });
+    
+        
+        function mensaje_on1(){
+            $("#mensaje_frase1").show();    
+        }
+        
+        function mensaje_off1(){
+            $("#mensaje_frase1").hide();
+        }   
+
+
+        
+
+        /* Idioma */
+        var idioma = 0 ; // 0=es, 1=en, ...
+        var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+        var texto = [  
+                     ["Taylor reveló que una vieja pareja de vecinos, que vivía justo al lado de su casa, inspiró ésta canción. Una vez la pareja fue a cenar a su casa y compartió la historia de cómo habían estado enamorados desde niños y habían estado casados por tanto tiempo.<br> Contó luego que aunque le resultaba más fácil encontrar ejemplos de canciónes o historias reales sobre rompimientos y engaños, le confortaba haber encontrado un ejemplo viviente de \"amor eterno\" justo al lado de su casa.",
+                      "Taylor revealed an old couple who happened to be her next-door neighbors inspired “Mary’s Song”. The couple once visited her home for dinner and shared the story of how they’ve been in love since they were young kids and been married for such a long time.<br> She further stated that though it was easier for her to find many songs and real-life examples about breakups and cheating, she was comforted she had found a living example of \“forever love\” right next to her home."
+                     ],
+                     ["Desde el comienzo de su carrera Taylor Swift incluye mensajes secretos en cada canción, lo cual dejó de hacer en su álbum Reputation.<br><br><hr><br> Para 1989 las letras de las canciones en los booklets (libritos) estan en mayusculas, y cada letra del mensaje secreto esta en minúsculas.",
+                      "Taylor Swift includes hidden messages in each song, which stopped at Reputation.<br><br><hr><br> For 1989 the lyrics of the songs in the booklets are capitalized, and each letter of the hidden message is in lowercased letters."
+                     ]
+                    ];
+					function eligeIdioma(){
+                     IDidioma.innerHTML=idiomas[idioma];
+    
+                         for (let frase=0; frase<texto.length; frase++){         /*inicio con frase=0 -- Continúo hasta el lenght del "texto" (osea continúo 2 veces porque el lenght es 2. sson 2 arrays) -- le sumo uno a "frase", asi pasa de frase 0 a frase 1.*/ 
+                         document.getElementById("mensaje_frase"+frase).innerHTML=texto[frase][idioma];
+                         }
+                        }
+                    function modificaIdioma(){
+                    idioma++;
+                    if (idioma < 0 || idioma > 1) idioma = 0;
+                    eligeIdioma();
+                    }	
+
+
+    
+    
+    </script>
+
+
+
+</head>
+	
+<style>	
+	
+body
+{
+	background:url("../imagenes/debut/mary.jpg"); /*La foto*/
+	background-repeat:repeat-y;
+	background-position:600px 0%;
+		
+}	
+
+
+#frase1{
+    
+    font-size: 25px;
+    padding: 10px 10px 10px, 15px;
+    font-style: italic;
+    margin-left: 30px;
+    margin-top: 1px;
+}
+
+
+
+#mensaje_frase0{
+		position: fixed;  /*queda en donde lo pusimos aunque cambiemos de posicion con la barra de desplazamiento*/
+		left: 700px;
+		top: 80px;   /*el espacio entre el cuadro y el tope VISIBLE de arriba*/
+		width: 500px;  /*el ancho del cuadro. (el texto se acomoda adentro)*/
+		height: 380px;
+		background-color: #D7CFDA;
+		font-size: 22px;
+		padding: 45px 40px 20px 40px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+        box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+
+
+#mensaje_frase1{
+		position: fixed;  /*queda en donde lo pusimos aunque cambiemos de posicion con la barra de desplazamiento*/
+		left: 730px;
+		top: 100px;   /*el espacio entre el cuadro y el tope VISIBLE de arriba*/
+		width: 450px;  /*el ancho del cuadro. (el texto se acomoda adentro)*/
+		height: 310px;
+		background-color: #D7CFDA;
+		font-size: 22px;
+		padding: 45px 40px 20px 40px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+        box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+	
+</style>	
+
+<body>
+
+<div id="mensaje_frase0"></div>
+<div id="mensaje_frase1"></div> 		
+
+
+	<div class="contenido">	
+
+		<div class="izq">
+		
+			<div class="home">	
+				<button id="IDidioma" onclick="modificaIdioma()"></button>
+				<button class="HomeButton" onclick="location.href='../index.html';">
+					<span>Home</span>
+					<svg>
+						<rect x="0" y="0" fill="none"></rect>
+					</svg>
+					
+					</button>		
+			</div>
+
+
+			<div class=previousnext>	
+				<button id="PreviousButton" onclick="location.href='../paginas/svsn.html';" class="float-left submit-button" >←Previous track</button>		
+				<button id="NextButton" onclick="location.href='../paginas/oursong.html';" class="float-left submit-button" >Next track →</button>		
+			</div>	
+
+	
+            <span class="titulo" id="frase0"><a href="#">10. Mary's Song</a></span>
+
+<div class="song">           
+	
+<p>She said, I was seven and you were nine<br>
+I looked at you like the stars that shine<br>
+In the sky, the pretty lights<br>
+And our daddies used to joke about the two of us<br>
+Growing up and falling in love and our mamas smiled<br>
+And rolled their eyes and said oh my my my</p>
+	
+<p>Take me back to the house in the backyard tree<br>
+Said you'd beat me up, you were bigger than me<br>
+You never did, you never did<br>
+Take me back when our world was one block wide<br>
+I dared you to kiss me and ran when you tried<br>
+Just two kids, you and I<br>
+Oh my my my my</p>
+	
+<p>Well, I was sixteen when suddenly<br>
+I wasn't that little girl you used to see<br>
+But your eyes still shined like pretty lights<br>
+And our daddies used to joke about the two of us<br>
+They never believed we'd really fall in love<br>
+And our mamas smiled and rolled their eyes<br>
+And said oh my my my</p>
+	
+<p>Take me back to the creek beds we turned up<br>
+Two A.M. riding in your truck and all I need is you next to me<br>
+Take me back to the time we had our very first fight<br>
+The slamming of doors instead of kissing goodnight<br>
+You stayed outside till the morning light<br>
+Oh my my my my</p>
+	
+<p>A few years had gone and come around<br>
+We were sitting at our favorite spot in town<br>
+And you looked at me, got down on one knee</p>
+	
+<p>Take me back to the time when we walked down the aisle<br>
+Our whole town came and our mamas cried<br>
+You said I do and I did too<br>
+Take me home where we met so many years before<br>
+We'll rock our babies on that very front porch<br>
+After all this time, you and I</p>
+	
+<p>I'll be eighty-seven; you'll be eighty-nine<br>
+I'll still look at you like the stars that shine<br>
+In the sky, oh my my my</p>
+
+</div>
+<div id="frase1"><a href="#">
+    <ul style="list-style-image:url(../imagenes/fotosINFO/cowboyboots.png);">
+     <li><pre><h3>Mensaje Secreto:</h3>	"Sometimes love is forever"</pre></li> 
+    </ul>
+</a></div>			
+</div> 	
+
+</body>
+</html>

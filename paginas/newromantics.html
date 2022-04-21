@@ -1,0 +1,198 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script src="jQueryAssets/jquery-1.11.1.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css1989.css"/>		
+<script type="text/javascipt" src="custom.js"></script>	
+
+
+
+<script>
+
+    $(document).ready(function(){   
+            $("#mensaje_frase0").hide();
+            $("#frase0").hover(mensaje_on0, mensaje_off0);
+            eligeIdioma();
+        });
+    
+        
+        function mensaje_on0(){
+            $("#mensaje_frase0").show();    
+        }
+        
+        function mensaje_off0(){
+            $("#mensaje_frase0").hide();
+        }   
+
+        
+        /* Idioma */
+        var idioma = 0 ; // 0=es, 1=en, ...
+        var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+        var texto = [   "",
+                        ""
+                    ];
+        function eligeIdioma(){
+            IDidioma.innerHTML=idiomas[idioma];
+            mensaje_frase0.innerHTML=texto[idioma];
+        }
+        function modificaIdioma(){
+            idioma++;
+            if (idioma < 0 || idioma > 1) idioma = 0;
+            eligeIdioma();
+        }
+    
+    
+    </script>
+
+</head>
+
+<style>
+	
+	body{
+	background:url("../imagenes/1989/romantics.jpg"); /*La foto*/
+	background-repeat:repeat-y;	
+	background-position:600px 0%;
+	}	
+	
+#div1 {
+  	width: 50%;
+	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	text-align:center;
+	justify-content: 25px;
+	width:500px; 
+	margin:0 auto;
+}		
+	
+</style>	
+	
+<body>
+	
+	<div class="contenido">	
+
+		<div class="izq">
+		
+			<div class="home">
+				<button id="IDidioma" onclick="modificaIdioma()"></button>		
+				<button class="HomeButton" onclick="location.href='../index.html';">
+                    <span>Home</span>
+                    <svg>
+                        <rect x="0" y="0" fill="none"></rect>
+                    </svg>
+                    
+                    </button>		
+			</div>
+	
+	
+			<div class=previousnext>	
+				<button id="PreviousButton" onclick="location.href='../paginas/yail.html';" class="float-left submit-button" >←Previous track</button>	
+			</div>	
+
+	
+			<span class="titulo">16. New Romantics</span>
+	
+<div class="song">
+
+
+<p>We're all bored<br>
+We're all so tired of everything<br>
+We wait for trains that just aren't coming<br>
+We show off our different scarlet letters<br>
+Trust me, mine is better</p>
+	
+<p>We're so young<br>
+But we're on the road to ruin<br>
+We play dumb but we know exactly what we're doin'<br>
+We cry tears of mascara in the bathroom<br>
+Honey, life is just a classroom<br>
+(Ah-ah-ah-ah-ah-ah)</p>
+	
+<p>'Cause baby, I could build a castle<br>
+Out of all the bricks they threw at me<br>
+And every day is like a battle<br>
+But every night with us is like a dream</p>
+	
+<p>Baby, we're the new romantics<br>
+Come on, come along with me<br>
+Heartbreak is the national anthem<br>
+We sing it proudly<br>
+We are too busy dancing<br>
+To get knocked off our feet<br>
+Baby, we're the new romantics<br>
+The best people in life are free</p>
+	
+<p>We're all here<br>
+The lights and noise are blinding<br>
+We hang back<br>
+It's all in the timing<br>
+It's poker<br>
+He can't see it in my face<br>
+But I'm about to play my Ace (ah)</p>
+	
+<p>We need love<br>
+But all we want is danger<br>
+We team up<br>
+Then switch sides like a record changer<br>
+The rumors are terrible and cruel<br>
+But honey, most of them are true<br>
+(Ah-ah-ah-ah-ah-ah)</p>
+
+<p>'Cause baby, I could build a castle<br>
+Out of all the bricks they threw at me<br>
+And every day is like a battle<br>
+But every night with us is like a dream</p>
+	
+<p>Baby, we're the new romantics<br>
+Come on, come along with me<br>
+Heartbreak is the national anthem<br>
+We sing it proudly<br>
+We are too busy dancing<br>
+To get knocked off our feet<br>
+Baby, we're the new romantics<br>
+The best people in life are free</p>
+	
+<p>Oh-oh<br>
+(Oh, oh, oh-oh, oh)<br>
+So, come on, come along with me<br>
+(Oh, oh, oh-oh, oh)<br>
+The best people in life are free<br>
+(Oh, oh, oh-oh, oh)</p>
+	
+<p>Please take my hand and<br>
+Please take me dancing, and<br>
+Please leave me stranded<br>
+It's so romantic (it's so romantic)<br>
+(Ah-ah-ah-ah-ah-ah)</p>
+	
+<p>Oh, 'cause baby, I could build a castle<br>
+Out of all the bricks they threw at me<br>
+And every day is like a battle (oh-oh)<br>
+But every night with us is like a dream</p>
+	
+<p>'Cause baby, I could build a castle (castle)<br>
+Out of all the bricks they threw at me<br>
+And every day is like a battle<br>
+But every night with us is like a dream</p>
+	
+<p>Baby, we're the new romantics<br>
+Come on, come along with me<br>
+Heartbreak is the national anthem<br>
+We sing it proudly<br>
+We are too busy dancing<br>
+To get knocked off our feet<br>
+Baby, we're the new romantics<br>
+The best people in life are free</p>	
+
+
+</div>
+<div id="div2">
+	&nbsp;
+</div>			
+</div>
+	
+</body>
+</html>

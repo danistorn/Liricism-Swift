@@ -1,0 +1,264 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script src="jQueryAssets/jquery-1.11.1.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Beth+Ellen&family=Dancing+Script:wght@500&family=Mea+Culpa&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="csslover.css"/>
+<script type="text/javascipt" src="custom.js"></script>		
+	
+	
+<script>	
+	
+	$(document).ready(function(){	
+		$("#mensaje_frase0").hide();
+		$("#frase0").hover(mensaje_on0, mensaje_off0);
+		eligeIdioma();
+	});	
+	
+		
+	function mensaje_on0(){
+		$("#mensaje_frase0").show();
+	}
+	
+	function mensaje_off0(){
+		$("#mensaje_frase0").hide();
+	}
+
+
+        /* Idioma */
+        var idioma = 0 ; // 0=es, 1=en, ...
+        var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+        var texto = [ 
+						["La canción trata sobre la desilusión que generan la política y la desigualdad del mundo, ambientada metafóricamente en una escuela secundaria.<p></p>Taylor la escribió luego de las elecciónes de EEUU del 2016 en las que Donald Trump le ganó a Hillary Clinton.",
+						 "In Taylor words, this song is about disillusionment with our crazy world of politics and inequality, set in a metaphorical high school.<p></p> Taylor wrote it after the US elections of 2016, when Donald Trump won Hillary Clinton."
+						]
+                    ];
+                      
+					function eligeIdioma(){
+                     IDidioma.innerHTML=idiomas[idioma];
+    
+                         for (let frase=0; frase<texto.length; frase++){         /*inicio con frase=0 -- Continúo hasta el lenght del "texto" (osea continúo 2 veces porque el lenght es 2. sson 2 arrays) -- le sumo uno a "frase", asi pasa de frase 0 a frase 1.*/ 
+                         document.getElementById("mensaje_frase"+frase).innerHTML=texto[frase][idioma];
+                         }
+                        }
+                    function modificaIdioma(){
+                    idioma++;
+                    if (idioma < 0 || idioma > 1) idioma = 0;
+                    eligeIdioma();
+                    }	
+	
+</script>
+
+	
+</head>
+
+<style>
+	
+	body{
+	background:url("../imagenes/lover/ma2.jpg"); /*La foto*/
+	background-repeat:repeat-y;	
+	background-position:600px 0%;
+	}
+
+
+.hover_img a { position:relative; }
+.hover_img a span { position:absolute; display:none; z-index:99; }
+.hover_img a:hover span { display:block; }
+
+
+.img{
+    top:50px;
+    left:-100px;
+
+}
+
+a{  /* Para sacarle el subrayado y el color azul, así no se ve como un link */
+    text-decoration: none;
+    color:red;
+}	
+	
+	
+	#mensaje_frase0{
+		position: fixed;  /*queda en donde lo pusimos aunque cambiemos de posicion con la barra de desplazamiento*/
+		left: 620px;
+		top: 25px;   /*el espacio entre el cuadro y el tope VISIBLE de arriba*/
+		width: 660px;  /*el ancho del cuadro. (el texto se acomoda adentro)*/
+		height: 520px;
+		background-color: #D7CFDA;
+		font-size: 23px;
+		padding: 25px 25px 25px 25px;   /*El margen entre el texto y los bordes del cuadro*/
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+	
+</style>
+	
+
+	
+<body>
+	
+<div id="mensaje_frase0"></div>		
+	
+
+<div class="contenido">	
+
+	<div class="izq">
+	
+		<div class="home">	
+			<button id="IDidioma" onclick="modificaIdioma()"></button>
+			<button class="HomeButton" onclick="location.href='../index.html';">
+				<span>Home</span>
+				<svg>
+					<rect x="0" y="0" fill="none"></rect>
+				</svg>
+				
+				</button>	
+		</div>
+
+
+		<div class=previousnext>	
+			<button id="PreviousButton" onclick="location.href='../paginas/ithinkheknows.html';" class="float-left submit-button" >←Previous track</button>		
+			<button id="NextButton" onclick="location.href='../paginas/paper rings.html';" class="float-left submit-button" >Next track →</button>		
+		</div>
+	
+
+
+		<span class="hover_img" id="frase0">
+			<a class="titulo" href="#">7. Miss Americana & the Heartbreak prince<span><img src="../imagenes/fotosINFO/vote2.jpg" alt="image0"  style="position: fixed; left:650px; top:250px"/></span></a></span>
+
+<div class="song">
+
+<p>You know I adore you<br>
+I'm crazier for you<br>
+Then I was at sixteen<br>
+Lost in a film scene<br>
+Waving homecoming queens<br>
+Marching band playing<br>
+I'm lost in the lights</p>
+
+<p>American glory<br>
+Faded before me<br>
+Now I'm feeling hopeless<br>
+Ripped up my prom dress<br>
+Running through rose thorns<br>
+I saw the scoreboard<br>
+And ran for my life</p>
+
+<p>Ah, ah, ah<br>
+No cameras catch my pageant smile<br>
+I counted days, I counted miles<br>
+To see you there<br>
+To see you there<br>
+It's been a long time coming but</p>
+
+<p>It's you and me<br>
+That's my whole world<br>
+They whisper in the hallway, "she's a bad, bad girl" (okay!)<br>
+The whole school is rolling fake dice<br>
+You play stupid games, you win stupid prizes<br>
+It's you and me<br>
+There's nothing like this<br>
+Miss Americana and The Heartbreak Prince (okay!)<br>
+We're so sad, we paint the town blue<br>
+Voted most likely to run away<br>
+With you</p>
+
+<p>My team is losing<br>
+Battered and bruising<br>
+I see the high fives<br>
+Between the bad guys<br>
+Leave with my head hung<br>
+You are the only one<br>
+Who seems to care</p>
+
+<p>American stories<br>
+Burning before me<br>
+I'm feeling helpless<br>
+The damsels are depressed<br>
+Boys will be boys, then<br>
+Where are the wise men?<br>
+Darling, I'm scared</p>
+
+<p>Ah, ah, ah<br>
+No cameras catch my muffled cries<br>
+I counted days, I counted miles<br>
+To see you there<br>
+To see you there<br>
+And now the storm is coming, but</p>
+
+<p>It's you and me<br>
+That's my whole world<br>
+They whisper in the hallway, "she's a bad, bad girl" (okay!)<br>
+The whole school is rolling fake dice<br>
+You play stupid games, you win stupid prizes<br>
+It's you and me<br>
+There's nothing like this<br>
+Miss Americana and The Heartbreak Prince (okay!)<br>
+We're so sad, we paint the town blue<br>
+Voted most likely to run away<br>
+With you</p>
+
+<p>And I don't want you to (go)<br>
+I don't really wanna (fight)<br>
+'Cause nobody's gonna (win)<br>
+I think you should come home</p>
+
+<p>And I don't want you to (go)<br>
+I don't really wanna (fight)<br>
+'Cause nobody's gonna (win)<br>
+I think you should come home</p>
+
+<p>And I don't want you to (go)<br>
+I don't really wanna (fight)<br>
+'Cause nobody's gonna (win)<br>
+I just thought you should know</p>
+
+<p>And I'll never let you (go)<br>
+'Cause I know this is a (fight)<br>
+That someday we're gonna (win)</p>
+
+<p>It's you and me<br>
+That's my whole world<br>
+They whisper in the hallway, "she's a bad, bad girl"<br>
+Oh, I just thought you should know</p>
+
+<p>You should know<br>
+It's you and me<br>
+There's nothing like this<br>
+Miss Americana and The Heartbreak Prince (okay!)<br>
+We're so sad, we paint the town blue (paint it blue)<br>
+Voted most likely to run away<br>
+With you</p>
+
+<p>I don't really wanna (fight)<br>
+'Cause nobody's gonna (win)<br>
+I think you should come home</p>
+
+<p>And I'll never let you (go)<br>
+'Cause I know this is a (fight)<br>
+That someday we're gonna (win)<br>
+Just thought you should know</p>
+
+<p>You and me<br>
+That's my whole world<br>
+They whisper in the hallway, "she's a bad, bad girl"<br>
+"She's a bad, bad girl"</p>
+
+	
+Taylor canta "Then i was at sixteen" en el minuto 0:16	
+	
+
+</div>
+<div id="div2">
+	&nbsp;
+</div>
+</div>	
+
+</body>
+</html>

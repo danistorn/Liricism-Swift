@@ -1,0 +1,206 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script src="jQueryAssets/jquery-1.11.1.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="cssred.css"/>
+
+
+<script>
+
+
+
+	$(document).ready(function(){   
+				$("#mensaje_frase0").hide();
+				$("#frase0").hover(mensaje_on0, mensaje_off0);
+				eligeIdioma();
+			});
+		
+			
+			function mensaje_on0(){
+				$("#mensaje_frase0").show();    
+			}
+			
+			function mensaje_off0(){
+				$("#mensaje_frase0").hide();
+			}   
+	
+	
+	
+	
+			$(document).ready(function(){   
+				$("#mensaje_frase1").hide();
+				$("#frase1").hover(mensaje_on1, mensaje_off1);
+				
+			});
+		
+			
+			function mensaje_on1(){
+				$("#mensaje_frase1").show();    
+			}
+			
+			function mensaje_off1(){
+				$("#mensaje_frase1").hide();
+			}   
+	
+	
+			
+	
+			/* Idioma */
+			var idioma = 0 ; // 0=es, 1=en, ...
+			var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+			var texto = [  
+						 ["",""],
+						 ["Desde el comienzo de su carrera Taylor Swift incluye mensajes secretos en cada canción, lo cual dejó de hacer en su álbum Reputation.<br><br><hr><br> Para su album RED las letras de las canciones en los booklets (libritos) estan en minusculas, y cada letra del mensaje secreto esta en mayuscula.",
+						  "Taylor Swift includes hidden messages in each song, which stopped at Reputation.<br><br><hr><br> For her album RED the lyrics of the songs in the booklets are in lowerecased letters, and each letter of the hidden message is capitalized."
+						 ]
+						];
+						function eligeIdioma(){
+						 IDidioma.innerHTML=idiomas[idioma];
+		
+							 for (let frase=0; frase<texto.length; frase++){         /*inicio con frase=0 -- Continúo hasta el lenght del "texto" (osea continúo 2 veces porque el lenght es 2. sson 2 arrays) -- le sumo uno a "frase", asi pasa de frase 0 a frase 1.*/ 
+							 document.getElementById("mensaje_frase"+frase).innerHTML=texto[frase][idioma];
+							 }
+							}
+						function modificaIdioma(){
+						idioma++;
+						if (idioma < 0 || idioma > 1) idioma = 0;
+						eligeIdioma();
+						}	
+
+
+
+</script>
+
+
+</head>
+	
+<style>	
+	
+body
+{
+	background:url("../imagenes/red/tragedy.jpg"); /*La foto*/
+	background-repeat:repeat-y;
+	background-position:600px 0%;
+		
+}	
+
+#frase1{
+    
+    font-size: 25px;
+    padding: 10px 10px 10px, 15px;
+    font-style: italic;
+    margin-left: 30px;
+    margin-top: 1px;
+}
+
+
+#mensaje_frase1{
+		position: fixed;  /*queda en donde lo pusimos aunque cambiemos de posicion con la barra de desplazamiento*/
+		left: 730px;
+		top: 100px;   /*el espacio entre el cuadro y el tope VISIBLE de arriba*/
+		width: 450px;  /*el ancho del cuadro. (el texto se acomoda adentro)*/
+		height: 310px;
+		background-color: #D7CFDA;
+		font-size: 22px;
+		padding: 45px 40px 20px 40px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+        box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+
+
+
+</style>	
+
+<body>
+
+<div id="mensaje_frase0"></div>
+<div id="mensaje_frase1"></div>
+
+
+
+	<div class="contenido">	
+
+		<div class="izq">
+		
+			<div class="home">	
+				<button id="IDidioma" onclick="modificaIdioma()"></button>
+				<button class="HomeButton" onclick="location.href='../index.html';">
+					<span>Home</span>
+					<svg>
+						<rect x="0" y="0" fill="none"></rect>
+					</svg>
+					
+					</button>			
+			</div>
+	
+	
+			<div class=previousnext>	
+				<button id="PreviousButton" onclick="location.href='../paginas/holyground.html';" class="float-left submit-button" >←Previous track</button>		
+				<button id="NextButton" onclick="location.href='../paginas/theluckyone.html';" class="float-left submit-button" >Next track →</button>		
+			</div>		
+	
+	
+			<span class="titulo" id="frase0">12. Sad Beautiful Tragic</span>
+
+<div class="song">			
+
+<p>Long handwritten note<br>
+Deep in your pocket<br>
+Words, how little they mean<br>
+When you're a little too late<br>
+I stood right by the tracks<br>
+Your face in a locket<br>
+Good girls, hopeful they'll be and long they will wait</p>
+	
+<p>We had a beautiful magic love there<br>
+What a sad beautiful tragic love affair</p>
+	
+<p>In dreams<br>
+I meet you in warm conversation<br>
+We both wake<br>
+In lonely beds<br>
+In different cities<br>
+And time<br>
+Is taking its sweet time erasing you<br>
+And you've got your demons<br>
+And darlin' they all look like me</p>
+	
+<p>'Cause we had a beautiful magic love there<br>
+What a sad beautiful tragic love affair</p>
+	
+<p>Distance, timing<br>
+Breakdown, fighting<br>
+Silence, the train runs off its tracks<br>
+Kiss me, try to fix it<br>
+Could you just try to listen?<br>
+Hang up, give up<br>
+For the life of us we can't get back</p>
+	
+<p>A beautiful magic love there<br>
+What a sad<br>
+Beautiful tragic<br>
+Beautiful tragic<br>
+Beautiful</p>
+	
+<p>What we had a beautiful magic love there (uh-uh)<br>
+What a sad beautiful tragic love affair<br>
+We had a beautiful magic love there<br>
+What a sad beautiful tragic love affair</p>
+
+</div>
+<div id="frase1"><a href="#">
+    <ul style="list-style-image:url(../imagenes/fotosINFO/autumnleaves.png);">
+     <li><pre><h3>Mensaje Secreto:</h3>     "While you were on a train"</pre></li> 
+    </ul>
+</a></div>			
+</div> 	
+
+</body>
+</html>

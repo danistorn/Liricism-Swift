@@ -1,0 +1,240 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script src="jQueryAssets/jquery-1.11.1.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rochester&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">		
+<link rel="stylesheet" href="cssspeaknow.css"/>	
+
+
+
+<script>
+
+    $(document).ready(function(){   
+                    $("#mensaje_frase0").hide();
+                    $("#frase0").hover(mensaje_on0, mensaje_off0);
+                    eligeIdioma();
+                });
+            
+                
+                function mensaje_on0(){
+                    $("#mensaje_frase0").show();    
+                }
+                
+                function mensaje_off0(){
+                    $("#mensaje_frase0").hide();
+                }   
+        
+        
+        
+        
+                $(document).ready(function(){   
+                    $("#mensaje_frase1").hide();
+                    $("#frase1").hover(mensaje_on1, mensaje_off1);
+                    
+                });
+            
+                
+                function mensaje_on1(){
+                    $("#mensaje_frase1").show();    
+                }
+                
+                function mensaje_off1(){
+                    $("#mensaje_frase1").hide();
+                }   
+        
+        
+                
+        
+                /* Idioma */
+                var idioma = 0 ; // 0=es, 1=en, ...
+                var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+                var texto = [  
+                             ["",""],
+                             ["Desde el comienzo de su carrera Taylor Swift incluye mensajes secretos en cada canción, lo cual dejó de hacer en su álbum Reputation.<br><br><hr><br> Para su album Speak Now las letras de las canciones en los booklets (libritos) estan en minusculas, y cada letra del mensaje secreto esta en mayuscula.",
+                                "Taylor Swift includes hidden messages in each song, which stopped at Reputation.<br><br><hr><br> For her album Speak Now the lyrics of the songs in the booklets are in lowerecased letters, and each letter of the hidden message is capitalized."
+                             ]
+                            ];
+                            function eligeIdioma(){
+                             IDidioma.innerHTML=idiomas[idioma];
+            
+                                 for (let frase=0; frase<texto.length; frase++){         /*inicio con frase=0 -- Continúo hasta el lenght del "texto" (osea continúo 2 veces porque el lenght es 2. sson 2 arrays) -- le sumo uno a "frase", asi pasa de frase 0 a frase 1.*/ 
+                                 document.getElementById("mensaje_frase"+frase).innerHTML=texto[frase][idioma];
+                                 }
+                                }
+                            function modificaIdioma(){
+                            idioma++;
+                            if (idioma < 0 || idioma > 1) idioma = 0;
+                            eligeIdioma();
+                            }	
+    
+    
+    
+        
+        
+    </script>
+
+
+
+</head>
+	
+<style>	
+	
+body
+{
+	background:url("../imagenes/speaknow/nevergrowup.jpg"); /*La foto*/
+	background-repeat:repeat-y;
+	background-position:600px 0%;
+		
+}	
+
+
+#frase1{
+    
+    font-size: 25px;
+    padding: 10px 10px 10px, 15px;
+    font-style: italic;
+    margin-left: 20px;
+    margin-top: 1px;
+}
+
+
+#mensaje_frase1{
+		position: fixed;  /*queda en donde lo pusimos aunque cambiemos de posicion con la barra de desplazamiento*/
+		left: 730px;
+		top: 100px;   /*el espacio entre el cuadro y el tope VISIBLE de arriba*/
+		width: 450px;  /*el ancho del cuadro. (el texto se acomoda adentro)*/
+		height: 310px;
+		background-color: #D7CFDA;
+		font-size: 22px;
+		padding: 45px 40px 20px 40px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+        box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+	
+	
+</style>	
+
+<div id="mensaje_frase0"></div>
+<div id="mensaje_frase1"></div>
+
+<body>
+	
+	<div class="contenido">	
+
+		<div class="izq">
+		
+			<div class="home">	
+				<button id="IDidioma" onclick="modificaIdioma()"></button>	
+				<button class="HomeButton" onclick="location.href='../index.html';">
+					<span>Home</span>
+					<svg>
+						<rect x="0" y="0" fill="none"></rect>
+					</svg>
+					
+					</button>	
+			</div>
+	
+	
+			<div class="previousnext">
+				<button id="PreviousButton" onclick="location.href='../paginas/tsou.html';" class="float-left submit-button" >←Previous track</button>	
+				<button id="NextButton" onclick="location.href='../paginas/enchanted.html';" class="float-left submit-button" >Next track →</button>		
+			</div>
+	
+
+			<span class="titulo" id="frase0">8. Never Grow Up</span>
+
+<div class="song">
+
+
+<p>Your little hand's wrapped around my finger<br>
+And it's so quiet in the world tonight<br>
+Your little eyelids flutter 'cause you're dreamin'<br>
+So I tuck you in, turn on your favorite night light<br>
+To you, everything's funny<br>
+You got nothing to regret<br>
+I'd give all I have honey<br>
+If you could stay like that</p>
+	
+<p>Oh, darlin', don't you ever grow up<br>
+Don't you ever grow up<br>
+Just stay this little<br>
+Oh, darlin', don't you ever grow up<br>
+Don't you ever grow up<br>
+It could stay this simple<br>
+I won't let nobody hurt you<br>
+Won't let no one break your heart<br>
+And no one will desert you<br>
+Just try to never grow up<br>
+Never grow up</p>
+	
+<p>You're in the car on the way to the movies<br>
+And you're mortified your mom's droppin' you off<br>
+At fourteen, there's just so much you can't do<br>
+And you can't wait to move out someday and call your own shots<br>
+But don't make her drop you off around the block<br>
+Remember that she's gettin' older too<br>
+And don't lose the way that you dance<br>
+Around in your PJs getting ready for school</p>
+	
+<p>Oh, darlin', don't you ever grow up<br>
+Don't you ever grow up<br>
+Just stay this little<br>
+Oh, darlin', don't you ever grow up<br>
+Don't you ever grow up<br>
+It could stay this simple<br>
+And no one's ever burned you<br>
+Nothing's ever left you scarred<br>
+And even though you want to<br>
+Just try to never grow up</p>
+	
+<p>Take pictures in your mind of your childhood room<br>
+Memorize what it sounded like when your dad gets home<br>
+Remember the footsteps, remember the words said<br>
+And all your little brother's favorite songs<br>
+I just realized everything I have is someday gonna be gone</p>
+	
+<p>So here I am in my new apartment<br>
+In a big city, they just dropped me off<br>
+It's so much colder than I thought it would be<br>
+So I tuck myself in and turn my nightlight on</p>
+	
+<p>Wish I'd never grown up<br>
+I wish I'd never grown up</p>
+	
+<p>Oh, I don't wanna grow up<br>
+Wish I'd never grown up<br>
+Could still be little<br>
+Oh, I don't wanna grow up<br>
+Wish I'd never grown up<br>
+It could still be simple<br>
+Oh, darlin', don't you ever grow up<br>
+Don't you ever grow up<br>
+Just stay this little<br>
+Oh, darlin', don't you ever grow up<br>
+Don't you ever grow up<br>
+It could stay this simple<br>
+I won't let nobody hurt you<br>
+Won't let no one break your heart<br>
+And even though you want to<br>
+Please try to never grow up<br>
+Oh, oh<br>
+Don't you ever grow up<br>
+Oh (never grow up)<br>
+Just never grow up</p>
+	
+</div>
+<div id="frase1"><a href="#">
+    <ul style="list-style-image:url(../imagenes/fotosINFO/purpledress.jpg);">
+     <li><pre><h3>Mensaje Secreto:</h3>	    "I moved out in July"</pre></li> 
+    </ul>
+</a></div>			
+</div> 
+
+</body>
+</html>

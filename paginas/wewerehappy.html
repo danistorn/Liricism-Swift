@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script src="jQueryAssets/jquery-1.11.1.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@200&family=Bebas+Neue&family=IM+Fell+DW+Pica:ital@1&family=Montserrat:wght@200&family=Rochester&family=Sacramento&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="cssfearless.css"/>	
+
+<script>
+
+    $(document).ready(function(){   
+            $("#mensaje_frase0").hide();
+            $("#frase0").hover(mensaje_on0, mensaje_off0);
+            eligeIdioma();
+        });
+    
+        
+        function mensaje_on0(){
+            $("#mensaje_frase0").show();    
+        }
+        
+        function mensaje_off0(){
+            $("#mensaje_frase0").hide();
+        }   
+
+        
+        /* Idioma */
+        var idioma = 0 ; // 0=es, 1=en, ...
+        var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+        var texto = [   "",
+                        ""
+                    ];
+        function eligeIdioma(){
+            IDidioma.innerHTML=idiomas[idioma];
+            mensaje_frase0.innerHTML=texto[idioma];
+        }
+        function modificaIdioma(){
+            idioma++;
+            if (idioma < 0 || idioma > 1) idioma = 0;
+            eligeIdioma();
+        }
+    
+    
+    
+    </script>
+
+
+</head>
+	
+<style>	
+	
+body
+{
+	background:url("../imagenes/fearless/were.jpg"); /*La foto*/
+	background-repeat:repeat-y;
+	background-position:600px 0%;
+		
+}	
+	
+</style>	
+
+<body>	
+	
+	<div class="contenido">	
+
+		<div class="izq">
+		
+			<div class="home">	
+                <button id="IDidioma" onclick="modificaIdioma()"></button>
+				<button class="HomeButton" onclick="location.href='../index.html';">
+					<span>Home</span>
+					<svg>
+						<rect x="0" y="0" fill="none"></rect>
+					</svg>
+					
+					</button>		
+			</div>
+	
+	
+			<div class=previousnext>	
+				<button id="PreviousButton" onclick="location.href='../paginas/thatswhen.html';" class="float-left submit-button" >←Previous track</button>		
+				<button id="NextButton" onclick="location.href='../paginas/dontyou.html';" class="float-left submit-button" >Next track →</button>		
+			</div>	
+
+	
+			<span class="titulo">17. We Were Happy<br>(From The Vault)</span>
+	
+<div class="song">
+
+
+    <p>We used to walk along the streets <br>
+    When the porch lights were shinin' bright<br>
+    Before I had somewhere to be<br>
+    Back when we had all night<br>
+    And we were happy<br>
+    I do recall a good while back<br>
+    We snuck into the circus<br>
+    You threw your arms around my neck<br>
+    Back when I deserved it<br>
+    And we were happy</p>
+
+    <p>When it was good, baby, it was good, baby<br>
+    We showed 'em all up<br>
+    No one could touch the way we laughed in the dark<br>
+    Talkin' 'bout your daddy's farm we were gonna buy someday<br>
+    And we were happy</p>
+
+    <p>We used to watch the sun go down<br>
+    On the boats in the water<br>
+    That's sorta how I feel right now<br>
+    And goodbye's so much harder<br>
+    'Cause we were happy</p>
+
+    <p>When it was good, baby, it was good, baby<br>
+    We showed 'em all up<br>
+    No one could touch the way we laughed in the dark<br>
+    Talkin' 'bout your daddy's farm we were gonna buy someday<br>
+    And we were happy<br>
+    We were happy</p>
+
+    <p>Oh, I hate those voices<br>
+    Tellin' me I'm not in love anymore<br>
+    But they don't give me choices<br>
+    And that's what these tears are for<br>
+    'Cause we were happy<br>
+    We were happy</p>
+
+    <p>When it was good, baby, it was good, baby<br>
+    We showed 'em all up<br>
+    No one could touch the way we laughed in the dark<br>
+    Talkin' 'bout your daddy's farm<br>
+    And you were gonna marry me<br>
+    And we were happy<br>
+    We were happy<br>
+    Oh<br>
+    We were happy</p>
+
+
+</div>
+<div id="div2">
+	&nbsp;
+</div>
+</div>	
+
+</body>
+</html>

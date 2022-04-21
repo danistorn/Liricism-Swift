@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Document</title>
+<script src="jQueryAssets/jquery-1.11.1.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IM+Fell+DW+Pica:ital@1&family=Rochester&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="cssevermore.css"/>	
+
+<script>
+
+    $(document).ready(function(){   
+            $("#mensaje_frase0").hide();
+            $("#frase0").hover(mensaje_on0, mensaje_off0);
+            eligeIdioma();
+        });
+    
+        
+        function mensaje_on0(){
+            $("#mensaje_frase0").show();    
+        }
+        
+        function mensaje_off0(){
+            $("#mensaje_frase0").hide();
+        }   
+
+        
+        /* Idioma */
+        var idioma = 0 ; // 0=es, 1=en, ...
+        var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+        var texto = [   "",
+                        ""
+                    ];
+        function eligeIdioma(){
+            IDidioma.innerHTML=idiomas[idioma];
+            mensaje_frase0.innerHTML=texto[idioma];
+        }
+        function modificaIdioma(){
+            idioma++;
+            if (idioma < 0 || idioma > 1) idioma = 0;
+            eligeIdioma();
+        }
+    
+    
+    
+    </script>
+
+
+</head>
+
+<style>
+	
+	body{
+	background:url("../imagenes/evermore/right.jpg"); /*La foto*/
+	background-repeat:repeat-y;	
+	background-position:600px 0%;
+	}		
+	
+</style>
+
+<body>
+
+	<div class="contenido">	
+
+		<div class="izq">
+		
+			<div class="home">	
+                <button id="IDidioma" onclick="modificaIdioma()"></button>
+				<button class="HomeButton" onclick="location.href='../index.html';">
+                    <span>Home</span>
+                    <svg>
+                        <rect x="0" y="0" fill="none"></rect>
+                    </svg>
+                    
+                    </button>	
+			</div>
+	
+	
+			<div class=previousnext>	
+				<button id="PreviousButton" onclick="location.href='../paginas/evermore.html';" class="float-left submit-button" >←Previous track</button>		
+				<button id="NextButton" onclick="location.href='../paginas/its time to go.html';" class="float-left submit-button" >Next track →</button>		
+			</div>	
+
+
+
+            <span class="titulo" id="frase0">16. Right where you left me</span>
+
+    <div class="song">        
+
+    <p>Friends break up, friends get married<br>
+    Strangers get born, strangers get buried<br>
+    Trends change, rumors fly through new skies<br>
+    But I'm right where you left me<br>
+    Matches burn after the other<br>
+    Pages turn and stick to each other<br>
+    Wages earned and lessons learned<br>
+    But I, I'm right where you left me</p>
+    
+    <p>Help, I'm still at the restaurant<br>
+    Still sitting in a corner I haunt<br>
+    Cross-legged in the dim light<br>
+    They say, "What a sad sight"<br>
+    I, I swear you could hear a hair pin drop<br>
+    Right when I felt the moment stop<br>
+    Glass shattered on the white cloth<br>
+    Everybody moved on<br>
+    I, I stayed there<br>
+    Dust collected on my pinned-up hair<br>
+    They expected me to find somewhere<br>
+    Some perspective, but I sat and stared</p>
+    
+    <p>Right where you left me<br>
+    You left me no, oh, you left me no<br>
+    You left me no choice but to stay here forever<br>
+    You left me, you left me no, oh, you left me no<br>
+    You left me no choice but to stay here forever</p>
+    
+    <p>Did you ever hear about the girl who got frozen?<br>
+    Time went on for everybody else, she won't know it<br>
+    She's still 23 inside her fantasy<br>
+    How it was supposed to be<br>
+    Did you hear about the girl who lives in delusion?<br>
+    Break-ups happen every day, you don't have to lose it<br>
+    She's still 23 inside her fantasy<br>
+    And you're sitting in front of me</p>
+    
+    <p>At the restaurant, when I was still the one you want<br>
+    Cross-legged in the dim light, everything was just right<br>
+    I, I could feel the mascara run<br>
+    You told me that you met someone<br>
+    Glass shattered on the white cloth<br>
+    Everybody moved on</p>
+    
+    <p>Help, I'm still at the restaurant<br>
+    Still sitting in a corner I haunt<br>
+    Cross-legged in the dim light<br>
+    They say, "What a sad sight"<br>
+    I, I stayed there<br>
+    Dust collected on my pinned-up hair<br>
+    I'm sure that you got a wife out there<br>
+    Kids and Christmas, but I'm unaware<br>
+    'Cause I'm right where<br>
+    I cause no harm, mind my business<br>
+    If our love died young, I can't bear witness<br>
+    And it's been so long<br>
+    But if you ever think you got it wrong<br>
+    I'm right where you left me<br>
+    You left me no, oh, you left me no<br>
+    You left me no choice but to stay here forever<br>
+    You left me<br>
+    You left me no, oh, you left me no<br>
+    You left me no choice but to stay here forever</p>    
+
+
+    
+</div>
+
+<div id="div2">
+&nbsp;
+</div>
+		
+</div>
+
+</body>
+</html>

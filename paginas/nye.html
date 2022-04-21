@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script src="jQueryAssets/jquery-1.11.1.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="cssreputation.css"/>
+
+
+<script>
+
+    $(document).ready(function(){   
+            $("#mensaje_frase0").hide();
+            $("#frase0").hover(mensaje_on0, mensaje_off0);
+            eligeIdioma();
+        });
+    
+        
+        function mensaje_on0(){
+            $("#mensaje_frase0").show();    
+        }
+        
+        function mensaje_off0(){
+            $("#mensaje_frase0").hide();
+        }   
+
+        
+        /* Idioma */
+        var idioma = 0 ; // 0=es, 1=en, ...
+        var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+        var texto = [   "",
+                        ""
+                    ];
+        function eligeIdioma(){
+            IDidioma.innerHTML=idiomas[idioma];
+            mensaje_frase0.innerHTML=texto[idioma];
+        }
+        function modificaIdioma(){
+            idioma++;
+            if (idioma < 0 || idioma > 1) idioma = 0;
+            eligeIdioma();
+        }
+    
+    
+    
+    </script>
+
+
+
+
+</head>
+	
+<style>
+	
+
+	
+	body{
+	background:url("../imagenes/Reputation/year.jpg"); /*La foto*/
+	background-repeat:repeat-y;	
+	background-position:600px 0%;
+	}
+
+
+
+</style>	
+
+<body>
+
+	<div class="contenido">	
+
+		<div class="izq">
+		
+			<div class="home">
+				<button id="IDidioma" onclick="modificaIdioma()"></button>	
+				<button class="HomeButton" onclick="location.href='../index.html';">
+					<span>Home</span>
+					<svg>
+						<rect x="0" y="0" fill="none"></rect>
+					</svg>
+					
+					</button>			
+			</div>
+	
+
+			<div class="previousnext">
+				<button id="myButton" onclick="location.href='../paginas/Call it what you want.html';" class="float-left submit-button" >←Previous track</button>	
+			</div>	
+
+
+	<span class="titulo">15. New year's eve</span>
+	
+<div class="song">
+
+<p>There's glitter on the floor after the party<br>
+Girls carrying their shoes down in the lobby<br>
+Candle wax and Polaroids on the hardwood floor<br>
+You and me from the night before but</p>
+	
+<p>Don't read the last page<br>
+But I stay when you're lost and I'm scared and you're turning away<br>
+I want your midnights<br>
+But I'll be cleaning up bottles with you on New Year's Day</p>
+	
+<p>You squeeze my hand three times in the back of the taxi<br>
+I can tell that it's going to be a long road<br>
+I'll be there if you're the toast of the town babe<br>
+Or if you strike out and you're crawling home</p>
+	
+<p>Don't read the last page<br>
+But I stay when it's hard or it's wrong or you're making mistakes<br>
+I want your midnights<br>
+But I'll be cleaning up bottles with you on New Year's Day</p>
+	
+<p>Hold on to the memories, they will hold on to you<br>
+Hold on to the memories, they will hold on to you<br>
+Hold on to the memories, they will hold on to you<br>
+And I will hold on to you</p>
+	
+<p>Please don't ever become a stranger whose laugh I could recognize anywhere<br>
+Please don't ever become a stranger whose laugh I could recognize anywhere</p>
+	
+<p>There's glitter on the floor after the party<br>
+Girls carrying their shoes down in the lobby<br>
+Candle wax and Polaroids on the hardwood floor<br>
+You and me forevermore</p>
+	
+<p>Don't read the last page<br>
+But I stay when it's hard or it's wrong or we're making mistakes<br>
+I want your midnights<br>
+But I'll be cleaning up bottles with you on New Year's Day</p>
+	
+<p>Hold on to the memories, they will hold on to you<br>
+Hold on to the memories, they will hold on to you<br>
+Hold on to the memories, they will hold on to you<br>
+And I will hold on to you</p>
+	
+<p>Please don't ever become a stranger whose laugh I could recognize anywhere<br>
+Please don't ever become a stranger whose laugh I could recognize anywhere</p>
+		
+
+</div>
+
+
+<div id="div2">
+	&nbsp;
+</div>			
+
+
+</div> 
+	
+</body>
+</html>

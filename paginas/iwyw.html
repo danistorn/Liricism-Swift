@@ -1,0 +1,306 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script src="jQueryAssets/jquery-1.11.1.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css1989.css"/>			
+<script type="text/javascipt" src="custom.js"></script>	
+
+
+<script>
+
+    $(document).ready(function(){   
+            $("#mensaje_frase0").hide();
+            $("#frase0").hover(mensaje_on0, mensaje_off0);
+            eligeIdioma();
+        });
+    
+        
+        function mensaje_on0(){
+            $("#mensaje_frase0").show();    
+        }
+        
+        function mensaje_off0(){
+            $("#mensaje_frase0").hide();
+        }   
+
+
+
+
+		
+        $(document).ready(function(){   
+            $("#mensaje_frase1").hide();
+            $("#frase1").hover(mensaje_on1, mensaje_off1);
+            
+        });
+    
+        
+        function mensaje_on1(){
+            $("#mensaje_frase1").show();    
+        }
+        
+        function mensaje_off1(){
+            $("#mensaje_frase1").hide();
+        }   
+	
+        
+        /* Idioma */
+        var idioma = 0 ; // 0=es, 1=en, ...
+        var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+        var texto = [   
+					  [
+					    "Un fan que asistió a la \"1989 Secret Session\" dijo que Taylor les contó que ésta canción la escribió unos meses después de que ella y Harry Styles terminaran su relación y decidieran ser amigos. <br> Aparentemente Harry le contó a Taylor que durante ese período en el que no se hablaban, (luego de la ruptura y antes de volverse amigos) él compró una casa a una cuadra de la de ella y solía pasarse con su auto frente a su casa deseando parar y tocar su puerta, pero nunca lo hizo.<br><p><br><br><br><br><br><br><br><br><br><br>En la canción habla sobre cómo, mientras él estaba afuera en su auto tratando de tomar la desición de entrar, ella esperaba en su habitación deseando que él tomara la decisión de tocar su puerta. Taylor comparó la situación con las películas en las que ambas partes quieren lo mismo pero ninguno se atreve a decir nada.",
+                        "A fan who asisted the \"1989 Secret Session\" shared that Taylor told them that she wrote this song a couple of months after she and Harry Styles broke up and decided to stay friends. <br> Apparently Harry told Taylor that during that period where they wouldn't talk, (between the breakup and the friendship) he bought a house a block away from hers y he used to pass by with his car by her house, wishing to stop y knock at her door, but he never did.<br><p><br><br><br><br><br><br><br><br><br> In the song she talks about how, while he was outside in his car, trying to make the decision to go in, she would be in her bedroom wishing him to make the decision to knock the door. Taylor compared the situation with those movies where both parts want the same thing but none of them dare to make a move."
+                      ],
+					  ["Desde el comienzo de su carrera Taylor Swift incluye mensajes secretos en cada canción, lo cual dejó de hacer en su álbum Reputation.<br><br><hr><br> Para 1989 las letras de las canciones en los booklets (libritos) estan en mayusculas, y cada letra del mensaje secreto esta en minúsculas.",
+                      "Taylor Swift includes hidden messages in each song, which stopped at Reputation.<br><br><hr><br> For 1989 the lyrics of the songs in the booklets are capitalized, and each letter of the hidden message is in lowercased letters."	
+					  ]
+					];
+					function eligeIdioma(){
+                     IDidioma.innerHTML=idiomas[idioma];
+    
+                         for (let frase=0; frase<texto.length; frase++){         /*inicio con frase=0 -- Continúo hasta el lenght del "texto" (osea continúo 2 veces porque el lenght es 2. sson 2 arrays) -- le sumo uno a "frase", asi pasa de frase 0 a frase 1.*/ 
+                         document.getElementById("mensaje_frase"+frase).innerHTML=texto[frase][idioma];
+                         }
+                        }
+                    function modificaIdioma(){
+                    idioma++;
+                    if (idioma < 0 || idioma > 1) idioma = 0;
+                    eligeIdioma();
+                    }	
+    
+    
+    </script>
+
+
+</head>
+
+<style>
+	
+	body{
+	background:url("../imagenes/1989/iwish.png"); /*La foto*/
+	background-repeat:repeat-y;	
+	background-position:600px 0%;
+	}	
+
+	.hover_img a { position:relative; }
+.hover_img a span { position:absolute; display:none; z-index:99; }
+.hover_img a:hover span { display:block; }
+
+.img{
+    top:50px;
+    left:-100px;
+
+}
+
+a{  /* Para sacarle el subrayado y el color azul, así no se ve como un link */
+    text-decoration: none;
+    color:red;
+}
+
+#titulo{
+	font-size: 35px;
+}
+
+	
+	#mensaje_frase0{
+		position: fixed;  /*o absolute?*/
+		left: 560px;
+		top: 8px;   
+		width: 760px;
+		height: 585px;
+		background-color: #D7CFDA;
+		font-size: 20px;
+		padding: 10px 13px 13px 13px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+	
+	
+	#frase1{
+    
+    font-size: 25px;
+    padding: 10px 10px 10px, 15px;
+    font-style: italic;
+    margin-left: 15px;
+    margin-top: 1px;
+}
+
+
+#mensaje_frase1{
+		position: fixed;  /*queda en donde lo pusimos aunque cambiemos de posicion con la barra de desplazamiento*/
+		left: 700px;
+		top: 100px;   /*el espacio entre el cuadro y el tope VISIBLE de arriba*/
+		width: 450px;  /*el ancho del cuadro. (el texto se acomoda adentro)*/
+		height: 300px;
+		background-color: #D7CFDA;
+		font-size: 22px;
+		padding: 45px 40px 20px 40px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+        box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+
+	
+</style>
+	
+<body>
+
+<div id="mensaje_frase0"></div>		
+<div id="mensaje_frase1"></div>
+
+		
+<div class="contenido">	
+
+	<div class="izq">
+	
+		<div class="home">	
+			<button id="IDidioma" onclick="modificaIdioma()"></button>
+			<button class="HomeButton" onclick="location.href='../index.html';">
+                <span>Home</span>
+                <svg>
+                    <rect x="0" y="0" fill="none"></rect>
+                </svg>
+                
+                </button>	
+		</div>
+
+
+		<div class=previousnext>	
+			<button id="PreviousButton" onclick="location.href='../paginas/shakeitoff.html';" class="float-left submit-button" >←Previous track</button>		
+			<button id="NextButton" onclick="location.href='../paginas/badblood.html';" class="float-left submit-button" >Next track →</button>		
+		</div>	
+
+
+	<span class="hover_img" id="frase0">
+		<a class="titulo" href="#">7. I Wish You Would<span><img src="../imagenes/fotosINFO/wishuwould.jpg" alt="image0"  style="position: fixed; left:750px; top:226px" />    
+		</span></a></span>
+
+<div class="song">
+
+<p>It's 2 A.M. in your car<br>
+Windows down, I pass my street<br>
+The memories start</p>
+	
+<p>You say it's in the past<br>
+And drive straight ahead<br>
+You think I'm gonna hate you now<br>
+'Cause you still don't know what I never said</p>
+	
+<p>I wish you would come back<br>
+Wish I'd never hung up the phone like I did<br>
+I wish you knew that<br>
+I'd never forget you as long as I'd live</p>
+	
+<p>And I wish you were right here, right now<br>
+It's all good<br>
+I wish you would</p>
+	
+<p>It's 2 A.M. in my room<br>
+Headlights pass the window pane<br>
+I think of you</p>
+	
+<p>We're a crooked love<br>
+In a straight line down<br>
+Makes you wanna run and hide<br>
+Then it makes you turn right back around</p>
+	
+<p>I wish you would come back<br>
+Wish I'd never hung up the phone like I did<br>
+I wish you knew that<br>
+I'd never forget you as long as I'd live</p>
+	
+<p>And I wish you were right here, right now<br>
+It's all good<br>
+I wish you would</p>
+	
+<p>I wish we could go back<br>
+And remember what we were fighting for<br>
+Wish you knew that<br>
+I miss you too much to be mad anymore</p>
+	
+<p>And I wish you were right here, right now<br>
+It's all good<br>
+I wish you would</p>
+	
+<p>I I I I, I I I wish, I wish, I<br>
+I I I I, I I I wish, I wish, I<br>
+I I I I, I I I wish, I wish, I</p>
+	
+<p>You always knew how to push my buttons (I I I I, I I I wish, I wish, I)<br>
+You gave me everything and nothing (I I I I, I I I wish, I wish, I)<br>
+This mad, mad love makes you come rushing (I I I I, I I I wish, I wish, I)<br>
+Stand back where you stood (I I I I, I I I wish, I wish, I)<br>
+I wish you would, I wish you would (I I I I, I I I wish, I wish, I)</p>
+	
+<p>I wish you would, I wish you would (I I I I, I I I wish, I wish, I)<br>
+(I wish you would, I wish you would) (I wish, I wish, I)</p>
+	
+<p>2 A.M., here we are<br>
+See your face<br>
+Hear my voice in the dark</p>
+
+<p>We're a crooked love<br>
+In a straight line down<br>
+Guess you wanna run and hide<br>
+But it made us turn right back around</p>
+	
+<p>I wish you would come back<br>
+Wish I'd never hung up the phone like I did<br>
+I wish you knew that<br>
+I'd never forget you as long as I'd live</p>
+	
+<p>And I wish you were right here, right now<br>
+It's all good<br>
+I wish you would</p>
+	
+<p>I wish you would come back<br>
+Wish I'd never hung up the phone like I did<br>
+I wish you knew that<br>
+I'd never forget you as long as I'd live</p>
+	
+<p>And I wish you were right here, right now<br>
+It's all good<br>
+I wish you would</p>
+	
+<p>I wish we could go back<br>
+And remember what we were fighting for<br>
+Wish you knew that<br>
+I miss you too much to be mad anymore</p>
+	
+<p>And I wish you were right here, right now<br>
+It's all good<br>
+I wish you would</p>
+
+<p>You always knew how to push my buttons (I I I I, I I I wish, I wish, I)<br>
+You gave me everything and nothing (I I I I, I I I wish, I wish, I)<br>
+This mad, mad love makes you come rushing (I I I I, I I I wish, I wish, I)<br>
+Stand back where you stood (I I I I, I I I wish, I wish, I)<br>
+I wish you would, I wish you would (I I I I, I I I wish, I wish, I)</p>
+
+<p>I wish you would, I wish you would (I I I I, I I I wish, I wish, I)<br>
+(I wish you would, I wish you would)<br>
+I wish you would, I wish you would (I I I I, I I I wish, I wish, I)<br>
+(I wish you would, I wish you would) (I wish I, I wish I)</p>	
+
+<p>I I I I, I I I wish, I wish, I<br>
+I I I I, I I I wish, I wish, I (I wish you would)</p>
+
+
+</div>
+<div id="frase1"><a href="#">
+    <ul style="list-style-image:url(../imagenes/fotosINFO/paperplane.jpg);">
+     <li><pre><h3>Mensaje Secreto:</h3> "He drove past her street each night"</pre></li> 
+    </ul>
+</a></div>			
+</div> 
+
+</body>
+</html>

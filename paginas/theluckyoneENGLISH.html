@@ -1,0 +1,235 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<link rel="stylesheet" href="cssred.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<script>
+
+    $(document).ready(function(){   
+            $("#mensaje_frase0").hide();
+            $("#frase0").hover(mensaje_on0, mensaje_off0);
+            eligeIdioma();
+        });
+    
+        
+        function mensaje_on0(){
+            $("#mensaje_frase0").show();    
+        }
+        
+        function mensaje_off0(){
+            $("#mensaje_frase0").hide();
+        }   
+
+
+        
+
+        $(document).ready(function(){   
+            $("#mensaje_frase1").hide();
+            $("#frase1").hover(mensaje_on1, mensaje_off1);
+            eligeIdioma();
+        });
+    
+        
+        function mensaje_on1(){
+            $("#mensaje_frase1").show();    
+        }
+        
+        function mensaje_off1(){
+            $("#mensaje_frase1").hide();
+        }   
+
+
+
+
+
+
+
+
+
+        /* Idioma */
+        var idioma = 0 ; // 0=es, 1=en, ...
+        var idiomas=["ENGLISH","ESPAÑOL"];
+        var texto = [                                           /*El largo de "texto" es dos. ya que hay 2 arrays dentro*/
+                        ["TRADUCCIÓN UNO",
+                        "THE NUMBER ONE TRADUCTION" 
+                    ],
+                    [ "OTRA TRADUCCION",
+                        "ANOTHER TRADUCTION"
+                    ]
+                      ];         
+                         
+                      
+                      
+                      
+                      function eligeIdioma(){
+                     IDidioma.innerHTML=idiomas[idioma];
+    
+                         for (let frase=0; frase<texto.length; frase++){         /*inicio con frase=0 -- Continúo hasta el lenght del "texto" (osea continúo 2 veces porque el lenght es 2. sson 2 arrays) -- le sumo uno a "frase", asi pasa de frase 0 a frase 1.*/ 
+                         document.getElementById("mensaje_frase"+frase).innerHTML=texto[frase][idioma];
+                         }
+                        }
+                    function modificaIdioma(){
+                    idioma++;
+                    if (idioma < 0 || idioma > 1) idioma = 0;
+                    eligeIdioma();
+                    }   
+
+
+
+
+
+</script>
+
+
+</head>
+
+
+<style>
+
+body
+{
+    background:url("../imagenes/red/lucky.jpg"); /*La foto*/
+    background-repeat:repeat-y;
+    background-position:600px 0%;
+        
+}   
+
+
+a{  /* Para sacarle el subrayado y el color azul, así no se ve como un link */
+    text-decoration: none;
+    color:red;
+}
+
+#titulo{
+    font-size: 33px;
+}
+
+
+    #mensaje_frase0{
+        position: fixed;  /*o absolute?*/
+        left: 800px;
+        top: 100px;   /*originalmente tenia 392px*/
+        width: 215px;
+        height: 230px;
+        background-color: #D7CFDA;
+        font-size: 20px;
+        padding: 45px 15px 15px 50px;
+        border: 2px #00F;
+        font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+        text-align: center;
+    }
+
+    #mensaje_frase1{
+        position: fixed;  /*o absolute?*/
+        left: 700px;
+        top: 100px;   /*originalmente tenia 392px*/
+        width: 115px;
+        height: 230px;
+        background-color: #D7CFDA;
+        font-size: 20px;
+        padding: 25px 15px 15px 100px;
+        border: 2px #00F;
+        font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+        text-align: center;
+    }
+
+
+</style>
+
+<body>
+    
+<div id="mensaje_frase0"></div>  
+<div id="mensaje_frase1"></div>   
+    
+
+<div class="contenido"> 
+
+    <div class="izq">
+    
+        <div class="home">  
+            <button id="IDidioma" onclick="modificaIdioma()"></button>
+            <button id="HomeButton" onclick="location.href='../index.html';" class="float-left submit-button" >Home!</button>       
+        </div>
+
+
+        <div class=previousnext>    
+            <button id="PreviousButton" onclick="location.href='../paginas/sadbeautifultragic.html';" class="float-left submit-button" >←Previous track</button>        
+            <button id="NextButton" onclick="location.href='../paginas/everythinghaschanged.html';" class="float-left submit-button" >Next track →</button>     
+        </div>  
+        
+
+    <span class="hover_img" id="frase0">
+        <a class="titulo" href="#">13. The Lucky One<br></a></span>
+    
+
+<div class="song">
+
+<p>New to town with a made up name in the angel's city,<br>
+    <span class="hover_img" id="frase1">Chasing fortune and fame.<br></span>
+And the camera flashes<br>
+Make it look like a dream.</p>
+    
+<p>You had it figured out since you were in school<br>
+Everybody loves pretty, everybody loves cool<br>
+So overnight you look like a sixties' queen</p>
+    
+<p>Another name goes up in lights,<br>
+Like diamonds in the sky</p>
+    
+<p>And they'll tell you now, you're the lucky one<br>
+Yeah, they'll tell you now, you're the lucky one<br>
+But can you tell me now, you're the lucky one<br>
+Oh, oh, oh...</p>
+    
+<p>Now it's big black cars, and Riviera views<br>
+And your lover in the foyer doesn't even know you<br>
+And your secrets end up splashed on the news front page</p>
+    
+<p>And they tell you that you're lucky<br>
+But you're so confused,<br>
+'Cause you don't feel pretty, you just feel used.<br>
+And all the young things line up to take your place</p>
+    
+<p>Another name goes up in lights<br>
+You wonder if you'll make it out alive</p>
+    
+<p>And they'll tell you now, you're the lucky one.<br>
+Yeah, they'll tell you now, you're the lucky one.<br>
+Can you tell me now, you're the lucky one<br>
+Oh, oh, oh.</p>
+    
+<p>It was a few years later<br>
+I showed up here<br>
+And they still tell the legend of how you disappeared<br>
+How you took the money and your dignity<br>
+And got the hell out<br>
+They say you bought a bunch of land somewhere<br>
+Chose the Rose Garden over Madison Square<br>
+And it took some time, but I understand it now</p>
+    
+<p>'Cause now my name is up in lights<br>
+But I think you got it right,</p>
+    
+<p>Let me tell you now, you're the lucky one<br>
+Let me tell you now, you're the lucky one<br>
+Let me tell you now, you're the lucky one<br>
+Oh, oh, oh.</p>
+    
+<p>Yeah they'll tell you now, you're the lucky one<br>
+Yeah, they'll tell you now, you're the lucky one<br>
+And they'll tell you now, you're the lucky one<br>
+Oh, oh, oh.<br>
+Oh, whoa, oh, oh</p>
+
+</div>
+<div id="div2">
+    &nbsp;
+</div>          
+</div>  
+
+
+
+</body>

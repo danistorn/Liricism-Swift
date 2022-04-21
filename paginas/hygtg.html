@@ -1,0 +1,227 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script src="jQueryAssets/jquery-1.11.1.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css1989.css"/>		
+<script type="text/javascipt" src="custom.js"></script>	
+
+<script>
+
+    $(document).ready(function(){   
+            $("#mensaje_frase0").hide();
+            $("#frase0").hover(mensaje_on0, mensaje_off0);
+            eligeIdioma();
+        });
+    
+        
+        function mensaje_on0(){
+            $("#mensaje_frase0").show();    
+        }
+        
+        function mensaje_off0(){
+            $("#mensaje_frase0").hide();
+        }   
+
+
+
+
+        $(document).ready(function(){   
+            $("#mensaje_frase1").hide();
+            $("#frase1").hover(mensaje_on1, mensaje_off1);
+            
+        });
+    
+        
+        function mensaje_on1(){
+            $("#mensaje_frase1").show();    
+        }
+        
+        function mensaje_off1(){
+            $("#mensaje_frase1").hide();
+        }   	
+
+        
+        /* Idioma */
+        var idioma = 0 ; // 0=es, 1=en, ...
+        var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+        var texto = [   
+                    ["",""],
+                    ["Desde el comienzo de su carrera Taylor Swift incluye mensajes secretos en cada canción, lo cual dejó de hacer en su álbum Reputation.<br><br><hr><br> Para 1989 las letras de las canciones en los booklets (libritos) estan en mayusculas, y cada letra del mensaje secreto esta en minúsculas.",
+                     "Taylor Swift includes hidden messages in each song, which stopped at Reputation.<br><br><hr><br> For 1989 the lyrics of the songs in the booklets are capitalized, and each letter of the hidden message is in lowercased letters."
+                    ]
+                    ];
+					function eligeIdioma(){
+                     IDidioma.innerHTML=idiomas[idioma];
+    
+                         for (let frase=0; frase<texto.length; frase++){         /*inicio con frase=0 -- Continúo hasta el lenght del "texto" (osea continúo 2 veces porque el lenght es 2. sson 2 arrays) -- le sumo uno a "frase", asi pasa de frase 0 a frase 1.*/ 
+                         document.getElementById("mensaje_frase"+frase).innerHTML=texto[frase][idioma];
+                         }
+                        }
+                    function modificaIdioma(){
+                    idioma++;
+                    if (idioma < 0 || idioma > 1) idioma = 0;
+                    eligeIdioma();
+                    }	  
+    
+    
+    </script>
+
+
+</head>
+	
+<style>
+	
+	body{
+	background:url("../imagenes/1989/thegirl.jpg"); /*La foto*/
+	background-repeat:repeat-y;	
+	background-position:650px 0%;
+	}	
+
+
+
+  #frase1{
+    
+    font-size: 25px;
+    padding: 10px 10px 10px, 15px;
+    font-style: italic;
+    margin-left: 15px;
+    margin-top: 1px;
+    box-shadow: 15px 15px 20px rgb(51, 49, 49);
+}   
+
+
+    #mensaje_frase1{
+		position: fixed;  /*queda en donde lo pusimos aunque cambiemos de posicion con la barra de desplazamiento*/
+		left: 760px;
+		top: 100px;   /*el espacio entre el cuadro y el tope VISIBLE de arriba*/
+		width: 450px;  /*el ancho del cuadro. (el texto se acomoda adentro)*/
+		height: 300px;
+		background-color: #D7CFDA;
+		font-size: 22px;
+		padding: 45px 40px 20px 40px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+        box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+
+
+	
+</style>	
+
+<body>
+
+
+<div id="mensaje_frase0"></div>
+<div id="mensaje_frase1"></div>
+
+	
+	<div class="contenido">	
+
+		<div class="izq">
+		
+			<div class="home">	
+				<button id="IDidioma" onclick="modificaIdioma()"></button>
+				<button class="HomeButton" onclick="location.href='../index.html';">
+                    <span>Home</span>
+                    <svg>
+                        <rect x="0" y="0" fill="none"></rect>
+                    </svg>
+                    
+                    </button>			
+			</div>
+	
+	
+			<div class=previousnext>	
+				<button id="PreviousButton" onclick="location.href='../paginas/wildestdreams.html';" class="float-left submit-button" >←Previous track</button>		
+				<button id="NextButton" onclick="location.href='../paginas/thislove.html';" class="float-left submit-button" >Next track →</button>		
+			</div>		
+	
+
+
+			<span class="titulo">10. How You Get The Girl</span>
+
+
+<div class="song">
+
+<p>Stand there like a ghost<br>
+Shaking come the rain, rain<br>
+She'll open up the door<br>
+And say, are you insane, -ane?</p>
+	
+<p>Say it's been a long six months (oh oh oh, oh oh oh, oh oh, oh oh)<br>
+And you were too afraid to tell her what you want, want (oh oh oh, oh oh oh, oh oh, oh oh)</p>
+	
+<p>And that's how it works<br>
+That's how you get the girl</p>
+	
+<p>And then you say<br>
+I want you for worse or for better<br>
+I would wait for ever and ever<br>
+Broke your heart, I'll put it back together<br>
+I would wait for ever and ever</p>
+	
+<p>And that's how it works<br>
+That's how you get the girl, girl, oh<br>
+And that's how it works<br>
+That's how you get the girl, girl</p>
+	
+<p>Remind her how it used to be, be<br>
+Yeah, with pictures in frames of kisses on cheeks, cheeks<br>
+Tell her how you must've lost your mind (oh oh oh, oh oh oh, oh oh, oh oh)<br>
+When you left her all alone and never told her why, why (oh oh oh, oh oh oh, oh oh, oh oh)</p>
+	
+<p>And that's how it works<br>
+That's how you lost the girl</p>
+	
+<p>And now you say<br>
+I want you for worse or for better<br>
+I would wait for ever and ever (ever and ever)<br>
+Broke your heart, I'll put it back together<br>
+I would wait for ever and ever</p>
+	
+<p>And that's how it works<br>
+That's how you get the girl, girl, oh<br>
+And that's how it works<br>
+That's how you get the girl, girl, yeah</p>
+	
+<p>And you could know, oh<br>
+That I don't want you to go</p>
+	
+<p>Remind me how it used to be<br>
+Pictures in frames of kisses on cheeks<br>
+And say you want me, yeah, yeah<br>
+And then you say I want you for worse or for better (worse or for better)<br>
+I would wait for ever and ever (ever and ever)<br>
+Broke your heart, I'll put it back together<br>
+I would wait for ever and ever (I want you for ever and ever)</p>
+
+<p>And that's how it works<br>
+That's how you get the girl, girl, oh<br>
+(That's how it works) and that's how it works<br>
+That's how you get the girl, girl, oh (get the girl)</p>
+
+<p>and that's how it works<br>
+That's how you get the girl, girl, oh<br>
+And that's how it works<br>
+That's how you get the girl, girl, oh</p>
+
+<p>And that's how it works<br>
+That's how you got the girl</p>	
+	
+
+</div>
+<div id="frase1"><a href="#">
+    <ul style="list-style-image:url(../imagenes/fotosINFO/paperplane.jpg);">
+     <li><pre><h3>Mensaje Secreto:</h3>     "Then one day he came back"</pre></li> 
+    </ul>
+</a></div>			
+</div> 	
+	
+</body>
+</html>
