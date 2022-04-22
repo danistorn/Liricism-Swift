@@ -1,3 +1,4 @@
+
 @charset "utf-8";
 /* CSS Document */
 
@@ -80,94 +81,41 @@ nav .indicador{
 
 
 
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
-body
-{
-	text-align: center
-}
 
-h1[name="titulo_principal"] /*el "[name:"titulo_principal"]" es para que al unico h1 que afecte este cc sea a este. al del titulo. (En la pagina html lo marqué de esa menera*/
-	{text-align:center;
-	font-family:Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif"; 
-	margin: 0;
-    padding: 0;	
-	text-shadow:#998 3px 3px 5px;
-	color: rgb(26, 26, 31);
-}
-
-h3{font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif"; 
-	font-size:25px;
+.CARDS-CONTAINER{
+	display:grid;
+	grid-template-rows: repeat(9, 1fr);
 }
 
 
 
-
-p {font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
-	font:bold;
-	font-size:16px;
-}
-
-ol{
-	margin: 0;
-    padding: 0;
-	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
-	font:bold;
-	font-size:15px;
-	line-height: 30px;
-	max-height: 440;
-}
-
-ul{
-	margin: 0; /* To remove default bottom margin */ 
-    padding: 0; /* To remove default left padding */
-}
-
-
-span{
-	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
-	font:bold;
-	font-size:16px;
-
-	}
-
-
-header{
-	font-size: 30px;
-}
-
-
-/*LINK DE LA CANCION DE CADA ALBUM*/
-
-.album a{				/* con el .album especifico que estoy hablando solo de los 'a' que estan adentro del class "album", y no de otros 'a'*/
-	text-decoration:none;
-	display:inline-block;
-	color:rgb(97, 10, 85);
-	font-weight: 500;
-}
-
-.album a:after{
-	content: '';
-	display: block;
-	width:0;
-	height: 2px;
-	background: #fff7fdc7;
-	/*background: rgb(153, 127, 160);*/
-	transition: width .3s;
-	
-}
-
-.album a:hover::after{  /*Cómo se va a ver el titulo de la canción cuando pongo el mouse arriba*/
-	width: 105%; /*cuán largo el subrayado*/
-	transition: width .3s;
-	
+.card-debut{
+    display: inline-grid;
+    grid-template-columns: auto;
+    background: #fff; 
+	width: 1290px;
+	padding-top: 5px;
+	padding-left: 20px; /*el titulo del disco con la tarjeta*/
+	padding-bottom: 20px;
+	border-radius: 6px;
+	box-shadow: rgba(56, 55, 55, 0.8) 8px 8px 23px;
+	gap: 20px;
 }
 
 
 
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 
+.portada{
+    display: flex;
+	width: 25%;
+	flex-basis: 15%;
+}
 
-/*FOTO DE CADA ALBUM*/
+
 
 figure img{
 	padding:4px;  /* el bordecito que rodea la imagen*/
@@ -190,9 +138,6 @@ figure img:hover{
 	position: relative;
 	width: 230px; /* can be omitted for a regular non-lazy image */
 	max-width: 100%;
-	display: flex;		/*MOVI LOS DISCOS A LA IZQUIERDAAA*/
-	align-items: left;
-	justify-content: left;
 }
 
 
@@ -212,62 +157,78 @@ figure img:hover{
 
 }
 
-
-.card figure{		
-
+.portadas span{
+    display: inline-flex;
+    flex-direction: column;
 }
 
 
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 
-
-
-
-.album{
-	height: 900px; /*el largo de la tarjeta*/
-	width: 68%;
-
-	padding-top: 113px;
-	padding-left: 165px;  /*el espacio entre la tarjeta card y la izquierda*/
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-
-
+.listas{
+    width: 25%;
+    flex-basis: 15%;
 }
 
 
-
-
-.reputation{
-	height: 1010px;
+.listas a{				/* con el .album especifico que estoy hablando solo de los 'a' que estan adentro del class "album", y no de otros 'a'*/
+	text-decoration:none;
+	display:inline-grid;
+	color:rgb(97, 10, 85);
+	font-weight: 500;
 }
 
 
-.album .card{
-	background: #fff;
-	height: 99%;  /*Cuanto espacio deja el menu sticky entre el card y el menú de arriba*/
-	width: 1290px;
-	padding-top: 5px;
-	padding-left: 20px; /*el titulo del disco con la tarjeta*/
-	padding-bottom: 20px;
-	border-radius: 6px;
-	box-shadow: rgba(56, 55, 55, 0.8) 8px 8px 23px;
-	display: flex;
-	gap: 20px;
+.listas a:after{
+	content: '';
+	display: inline-grid;
+	width:0;
+	height: 2px;
+	background: #fff7fdc7;
+	/*background: rgb(153, 127, 160);*/
+	transition: width .3s;
+	
 }
 
 
+.listas a:hover::after{  /*Cómo se va a ver el titulo de la canción cuando pongo el mouse arriba*/
+	width: 105%; /*cuán largo el subrayado*/
+	transition: width .3s;
+	
+}
 
-
-.lista{
+.canciones{
 	max-height: 450px ;
 	width: 600px;
 }
 
-.lista2{
-	width: 450px;
+
+.canciones ol{
+    margin: 0;
+    padding: 0;
+    font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+    font:bold;
+    font-size:15px;
+    line-height: 30px;
+    max-height: 440;
 }
+
+
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.prologo{
+	width:20%;
+	padding-right: 40px;
+	flex-basis: 50%;
+}
+
+
+
+
+/* --------------------------------------------     COLORES    ---------------------------------------------------*/
+
 
 #debut{
 	background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);
@@ -309,30 +270,3 @@ figure img:hover{
 #evermore{
 	background-image: linear-gradient(to right, #e4afcb 0%, #b8cbb8 0%, #b8cbb8 0%, #e2c58b 30%, #c2ce9c 64%, #c6cccc 100%);
 }
-
-
-.contenedor-album{
-	width: 25%;
-	flex-basis: 15%;
-}
-
-.masinfo{
-	width:20%;
-	padding-right: 40px;
-	flex-basis: 50%;
-}
-
-
-
-footer{
-	clear:both; /*para que el pie de pag quede abajo y no al lado de las fotos*/
-	padding-top:100px; /*lo alejo de las imagenes*/
-}
-
-
-
-
-
-
-/* ////////////////////////   LA NUEVA ESTRUCTURA   /////////////////// */
-
