@@ -85,25 +85,38 @@ nav .indicador{
 
 
 .CARDS-CONTAINER{
-	display:grid;
-	grid-template-rows: repeat(9, 1fr);
+	/* display:grid;
+	grid-template-rows: repeat(9, 1fr); */
 }
 
 
 
-.card-debut{
-    display: inline-grid;
-    grid-template-columns: auto;
+.cards {
+	
+	width: 98%;
+	/* max-width: */
+	height: 900px;
+	margin: auto;
+    border-radius: 6px;
+    box-shadow: rgba(56, 55, 55, 0.8) 8px 8px 23px;
+	gap: 20px;
+	/* grid-template-columns: auto;
     background: #fff; 
 	width: 1290px;
 	padding-top: 5px;
-	padding-left: 20px; /*el titulo del disco con la tarjeta*/
+	padding-left: 20px; 
 	padding-bottom: 20px;
-	border-radius: 6px;
-	box-shadow: rgba(56, 55, 55, 0.8) 8px 8px 23px;
-	gap: 20px;
+	
+	
+	gap: 20px; */
 }
 
+
+.contenedores {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	padding: auto;	/*Contenido de la card / borde de la card*/
+}
 
 
 /*////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -111,13 +124,12 @@ nav .indicador{
 
 .portada{
     display: flex;
-	width: 25%;
-	flex-basis: 15%;
+	-ms-flex-align: center;
 }
 
 
 
-figure img{
+.portadas img{
 	padding:4px;  /* el bordecito que rodea la imagen*/
 	background:#666;
 	border-radius:20px;  /* cuán redondeada estan los bosdes de la imagen dentro de se bordesito*/
@@ -125,7 +137,7 @@ figure img{
 	width: 230px;
 }
 
-figure img:hover{
+.portadas img:hover{
 	-webkit-transition:-webkit-transform 0.3s ease-in-out 0.1s;
 	-ms-transition:-ms-transform 0.3s ease-in-out 0.1s;
 	-webkit-transform:scale(1.1);
@@ -134,14 +146,13 @@ figure img:hover{
 
 
 
-.figure {
+.portadas {
 	position: relative;
-	width: 230px; /* can be omitted for a regular non-lazy image */
 	max-width: 100%;
 }
 
 
-.figure img.image-hover {
+.portadas img.image-hover {
   position: absolute;  /* para que las imagenes (disco nuevo y disco viejo del mismo disco) esten hubicadas en el mismo lugar y no una abajo de otra */
   top: 0; /*top-right-bottom-left tmbn se usan para que ambas imajenes esten positionadas en el mismo lugar*/
   right: 0;
@@ -152,10 +163,10 @@ figure img:hover{
   transition: opacity .5s;  /* si quito esta linea, se irá agrandando como las otras imagenes, aunque sin la transicion entre imagenes*/
 
 }
-.figure:hover img.image-hover {
+.portadas:hover img.image-hover {
   opacity: 1;
-
 }
+
 
 .portadas span{
     display: inline-flex;
@@ -167,10 +178,16 @@ figure img:hover{
 
 
 .listas{
-    width: 25%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+    width: 100%;
     flex-basis: 15%;
 }
 
+
+.listas-debut{
+	grid-template-columns: 1fr;
+}
 
 .listas a{				/* con el .album especifico que estoy hablando solo de los 'a' que estan adentro del class "album", y no de otros 'a'*/
 	text-decoration:none;
@@ -200,7 +217,7 @@ figure img:hover{
 
 .canciones{
 	max-height: 450px ;
-	width: 600px;
+	
 }
 
 
@@ -219,9 +236,15 @@ figure img:hover{
 /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 .prologo{
-	width:20%;
+	display: flex;
+	-ms-flex-align: center;
 	padding-right: 40px;
-	flex-basis: 50%;
+}
+
+.prologo aside{
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	font:bold;
+	font-size:16px;
 }
 
 
