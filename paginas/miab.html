@@ -5,7 +5,7 @@
 <title>Documento sin título</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="cssred.css"/>
+<link rel="stylesheet" href="../CSS/cssred.css"/>
 <script src="jQueryAssets/jquery-1.11.1.min.js"></script>
 
 
@@ -111,14 +111,15 @@
 	
 <style>	
 
-
-body
-{
+.contenido .der{
 	background:url("../imagenes/red/message.jpg"); /*La foto*/
 	background-repeat:repeat-y;
-	background-position:600px 0%;
-		
-}	
+}
+
+.letra{
+    padding-bottom: 50px;
+}
+
 	
 
 .hover_img a { position:relative; }
@@ -200,7 +201,7 @@ a{  /* Para sacarle el subrayado y el color azul, así no se ve como un link */
 
 	<div class="izq">
 	
-		<div class="home">
+		<div class="botones-idioma-home">
 			<button id="IDidioma" onclick="modificaIdioma()"></button>	
             <button class="HomeButton" onclick="location.href='../index.html';">
 				<span>Home</span>
@@ -218,12 +219,14 @@ a{  /* Para sacarle el subrayado y el color azul, así no se ve como un link */
 		</div>	
 
 
-
 	
-        <span class="titulo">26. Message in a bottle<br>(from the vault)</span>
+        
 	
 <div class="song">
 
+	<span class="titulo">26. Message in a bottle<br>(from the vault)</span>
+
+	<div class="letra">
 
     <p>I know that you like me<br>
     And it's kinda frightenin'<br>
@@ -290,11 +293,18 @@ a{  /* Para sacarle el subrayado y el color azul, así no se ve como un link */
     And now I'm standin' here, hopin' this gets to you</p>
 
 
+	</div> 	
+
 </div>
-<div id="div2">
-	&nbsp;
-</div>			
-</div> 
+
+</div>
+
+
+<div class="der">
+</div>
+
+</div>  	
+
 
 </body>
 </html>

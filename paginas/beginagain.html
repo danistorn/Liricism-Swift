@@ -6,7 +6,7 @@
 <script src="jQueryAssets/jquery-1.11.1.min.js"></script>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="cssred.css"/>
+<link rel="stylesheet" href="../CSS/cssred.css"/>
 <script src="jQueryAssets/jquery-1.11.1.min.js"></script>
 
 
@@ -126,15 +126,10 @@
 	
 <style>	
 
-
-body
-{
+.contenido .der{
 	background:url("../imagenes/red/beginagain.jpg"); /*La foto*/
 	background-repeat:repeat-y;
-	background-position:600px 0%;
-		
-}	
-	
+}
 
 .hover_img a { position:relative; }
 .hover_img a span { position:absolute; display:none; z-index:99; }
@@ -202,16 +197,6 @@ a{  /* Para sacarle el subrayado y el color azul, así no se ve como un link */
 	}
 
 
-#frase3{
-    
-    font-size: 25px;
-    padding: 10px 10px 10px, 15px;
-    font-style: italic;
-    margin-left: 30px;
-    margin-top: 1px;
-}
-
-
 #mensaje_frase3{
 		position: fixed;  /*queda en donde lo pusimos aunque cambiemos de posicion con la barra de desplazamiento*/
 		left: 730px;
@@ -247,7 +232,7 @@ Conor Kennedy es el sobrino del presidente de EEUU, JFK. Ambos salieron durante 
 
 	<div class="izq">
 	
-		<div class="home">	
+		<div class="botones-idioma-home">	
 			<button id="IDidioma" onclick="modificaIdioma()"></button>
 			<button class="HomeButton" onclick="location.href='../index.html';">
 				<span>Home</span>
@@ -255,7 +240,7 @@ Conor Kennedy es el sobrino del presidente de EEUU, JFK. Ambos salieron durante 
 					<rect x="0" y="0" fill="none"></rect>
 				</svg>
 				
-				</button>		
+			</button>		
 		</div>
 
 
@@ -267,71 +252,89 @@ Conor Kennedy es el sobrino del presidente de EEUU, JFK. Ambos salieron durante 
 
 
 	
+	
+	
+<div class="song">
+
 	<span class="hover_img" id="frase0">
 		<a class="titulo" href="#">16. Begin Again
 			<span><img src="../imagenes/fotosINFO/conor.jpg" alt="image2"  style="position: fixed; left:592px; top:130px" />    
 			</span></a></span>
-	
-<div class="song">
+
+	<div class="letra">		
 
 
-<p>Took a deep breath in the mirror<br>
-He didn't like it when I wore high heels, but I do<br>
-Turned the lock and put my headphones on<br>
-He always said he didn't get this song but I do, I do</p>
-	
-<p>Walked in expecting you'd be late<br>
-But you got here early and you stand and wait<br>
-I walk to you<br>
-You pull my chair out and help me in<br>
-And you don't know how nice that is, but I do</p>
-	
-<p>And you throw your head back laughing like a little kid<br>
-	<span class="hover_img" id="frase1">
-		<a href="#">I think it's strange that you think I'm funny 'cause he never did<br><span><img src="../imagenes/fotosINFO/ibytam.jpg" alt=""  style="position: fixed; left:710px; top:260px" />    
-		</span></a></span>
-I've been spending the last eight months thinking all love ever does<br>
-Is break and burn and end<br>
-But on a Wednesday in a café I watched it begin again</p>
-	
-<p>You said you never met one girl who<br>
-Had as many James Taylor records as you, but I do<br>
-We tell stories and you don't know why<br>
-I'm coming off a little shy, but I do</p>
-	
-<p>But you throw your head back laughing like a little kid<br>
-I think it's strange that you think I'm funny 'cause he never did<br>
-<span class="hover_img" id="frase2">
-	<a href="#">I've been spending the last eight months thinking all love ever does<br>
-Is break and burn and end<br><span><img src="../imagenes/fotosINFO/conorbeach.jpg" alt=""  style="position: fixed; left:720px; top:255px" />    
-</span></a></span>
-But on a wednesday in a café I watched it begin again</p>
-	
-<p>And we walk down the block to my car<br>
-And I almost brought him up<br>
-But you start to talk about the movies<br>
-That your family watches<br>
-Every single Christmas and I won't<br>
-Talk about that<br>
-And for the first time<br>
-What's past is past</p>
-	
-<p>'Cause you throw your head back laughing like a little kid<br>
-I think it's strange that you think I'm funny 'cause he never did<br>
-I've been spending the last eight months thinking all love ever does<br>
-Is break and burn and end<br>
-Then on a wednesday in a café I watched it begin again</p>
-	
-<p>Then on a wednesday in a café I watched it begin again</p>
+	<p>Took a deep breath in the mirror<br>
+	He didn't like it when I wore high heels, but I do<br>
+	Turned the lock and put my headphones on<br>
+	He always said he didn't get this song but I do, I do</p>
+		
+	<p>Walked in expecting you'd be late<br>
+	But you got here early and you stand and wait<br>
+	I walk to you<br>
+	You pull my chair out and help me in<br>
+	And you don't know how nice that is, but I do</p>
+		
+	<p>And you throw your head back laughing like a little kid<br>
+		<span class="hover_img" id="frase1">
+			<a href="#">I think it's strange that you think I'm funny 'cause he never did<br><span><img src="../imagenes/fotosINFO/ibytam.jpg" alt=""  style="position: fixed; left:710px; top:260px" />    
+			</span></a></span>
+	I've been spending the last eight months thinking all love ever does<br>
+	Is break and burn and end<br>
+	But on a Wednesday in a café I watched it begin again</p>
+		
+	<p>You said you never met one girl who<br>
+	Had as many James Taylor records as you, but I do<br>
+	We tell stories and you don't know why<br>
+	I'm coming off a little shy, but I do</p>
+		
+	<p>But you throw your head back laughing like a little kid<br>
+	I think it's strange that you think I'm funny 'cause he never did<br>
+	<span class="hover_img" id="frase2">
+		<a href="#">I've been spending the last eight months thinking all love ever does<br>
+	Is break and burn and end<br><span><img src="../imagenes/fotosINFO/conorbeach.jpg" alt=""  style="position: fixed; left:720px; top:255px" />    
+	</span></a></span>
+	But on a wednesday in a café I watched it begin again</p>
+		
+	<p>And we walk down the block to my car<br>
+	And I almost brought him up<br>
+	But you start to talk about the movies<br>
+	That your family watches<br>
+	Every single Christmas and I won't<br>
+	Talk about that<br>
+	And for the first time<br>
+	What's past is past</p>
+		
+	<p>'Cause you throw your head back laughing like a little kid<br>
+	I think it's strange that you think I'm funny 'cause he never did<br>
+	I've been spending the last eight months thinking all love ever does<br>
+	Is break and burn and end<br>
+	Then on a wednesday in a café I watched it begin again</p>
+		
+	<p>Then on a wednesday in a café I watched it begin again</p>
 
+	</div>
 
 </div>
-<div id="frase3"><a href="#">
+
+
+<div class="MS" id="frase3"><a href="#">
     <ul style="list-style-image:url(../imagenes/fotosINFO/autumnleaves.png);">
      <li><pre><h3>Mensaje Secreto:</h3>             "I wear heels now"</pre></li> 
     </ul>
 </a></div>			
+
+
+
+
 </div> 	
+
+<div class="der">
+</div>
+
+</div>
+
+
 
 </body>
 </html>

@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="cssred.css"/>
+<link rel="stylesheet" href="../CSS/cssred.css"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 
@@ -103,13 +103,12 @@ $(document).ready(function(){
 
 <style>	
 	
-body
-{
+
+.contenido .der {
 	background:url("../imagenes/red/grace.jpg"); /*La foto*/
 	background-repeat:repeat-y;
-	background-position:600px 0%;
-		
 }	
+
 
 .hover_img a { position:relative; }
 .hover_img a span { position:absolute; display:none; z-index:99; }
@@ -146,14 +145,6 @@ a{  /* Para sacarle el subrayado y el color azul, así no se ve como un link */
 
 
 
-	#frase2{
-    
-    font-size: 25px;
-    padding: 10px 10px 10px, 15px;
-    font-style: italic;
-    margin-left: 30px;
-    margin-top: 1px;
-}
 
 
 #mensaje_frase2{
@@ -188,7 +179,8 @@ a{  /* Para sacarle el subrayado y el color azul, así no se ve como un link */
 
 	<div class="izq">
 	
-		<div class="home">	
+		<div class="botones-idioma-home">
+		
 			<button id="IDidioma" onclick="modificaIdioma()"></button>
 			<button class="HomeButton" onclick="location.href='../index.html';">
 				<span>Home</span>
@@ -204,72 +196,88 @@ a{  /* Para sacarle el subrayado y el color azul, así no se ve como un link */
 			<button id="NextButton" onclick="location.href='../paginas/red.html';" class="float-left submit-button" >Next track →</button>		
 		</div>	
 
-		<span class="titulo" id="frase0">1. State of Grace</span>
+		
 	
 <div class="song">
 
-<p>I'm walking fast through the traffic lights<br>
-Busy streets and busy lives<br>
-And all we know is touch and go<br>
-We are alone with our changing minds<br>
-We fall in love 'til it hurts or bleeds, or fades in time</p>
-	
-<p>And I never saw you coming</p>
-	
-<p>And I'll never be the same</p>
-	
-<span>You come around and the armor falls<br>
-Pierce the room like a cannon ball<br>
-Now all we know is don't let go<br>
-We are alone, just you and me<br>
-Up in your room and our slates are clean<br>
-Just</span><span class="hover_img" id="frase1">
-		<a href="#"> twin fire signs, four blue eyes<span><img src="../imagenes/fotosINFO/firesigns.jpg" alt="image2"  style="position: fixed; left:660px; top:180px" />    
-	</span></a></span>
-	
-<p>So you were never a saint<br>
-And I've loved in shades of wrong<br>
-We learn to live with the pain<br>
-Mosaic broken hearts<br>
-But this love is brave and wild</p>
-	
-<p>And I never (never) saw you coming<br>
-And I'll never (never) be the same</p>
-	
-<p>This is a state of grace<br>
-This is the worthwhile fight<br>
-Love is a ruthless game<br>
-Unless you play it good and right<br>
-These are the hands of fate<br>
-You're my Achilles heel<br>
-This is the golden age of something good<br>
-And right and real</p>
-	
-<p>And I never (never) saw you coming<br>
-And I'll never be the same<br>
-And I never (never) saw you coming<br>
-And I'll never<br>
-(So you were never a saint<br>
-And I've loved in shades of wrong)<br>
-Be the same<br>
-(We learn to live with the pain<br>
-Mosaic broken hearts<br>
-But this love is brave and wild)</p>
-	
-<p>This is a state of grace<br>
-This is the worthwhile fight<br>
-Love is a ruthless game<br>
-Unless you play it good and right</p>
-	
+	<span class="titulo" id="frase0">1. State of Grace</span>
+		
+
+	<div class="letra">
+
+
+	p>I'm walking fast through the traffic lights<br>
+	Busy streets and busy lives<br>
+	And all we know is touch and go<br>
+	We are alone with our changing minds<br>
+	We fall in love 'til it hurts or bleeds, or fades in time</p>
+		
+	<p>And I never saw you coming</p>
+		
+	<p>And I'll never be the same</p>
+		
+	<span>You come around and the armor falls<br>
+	Pierce the room like a cannon ball<br>
+	Now all we know is don't let go<br>
+	We are alone, just you and me<br>
+	Up in your room and our slates are clean<br>
+	Just</span><span class="hover_img" id="frase1">
+			<a href="#"> twin fire signs, four blue eyes<span><img src="../imagenes/fotosINFO/firesigns.jpg" alt="image2"  style="position: fixed; left:660px; top:180px" />    
+		</span></a></span>
+		
+	<p>So you were never a saint<br>
+	And I've loved in shades of wrong<br>
+	We learn to live with the pain<br>
+	Mosaic broken hearts<br>
+	But this love is brave and wild</p>
+		
+	<p>And I never (never) saw you coming<br>
+	And I'll never (never) be the same</p>
+		
+	<p>This is a state of grace<br>
+	This is the worthwhile fight<br>
+	Love is a ruthless game<br>
+	Unless you play it good and right<br>
+	These are the hands of fate<br>
+	You're my Achilles heel<br>
+	This is the golden age of something good<br>
+	And right and real</p>
+		
+	<p>And I never (never) saw you coming<br>
+	And I'll never be the same<br>
+	And I never (never) saw you coming<br>
+	And I'll never<br>
+	(So you were never a saint<br>
+	And I've loved in shades of wrong)<br>
+	Be the same<br>
+	(We learn to live with the pain<br>
+	Mosaic broken hearts<br>
+	But this love is brave and wild)</p>
+		
+	<p>This is a state of grace<br>
+	This is the worthwhile fight<br>
+	Love is a ruthless game<br>
+	Unless you play it good and right</p>
+		
+
+	</div>
+
+
+	</div>
+	<div class="MS" id="frase2"><a href="#">
+		<ul style="list-style-image:url(../imagenes/fotosINFO/autumnleaves.png);">
+		<li><pre><h3>Mensaje Secreto:</h3> "I love you doesn't 
+		count after goodbye"</pre></li> 
+		</ul>
+	</a></div>
+
+
+</div> 	
+
+<div class="der">
+</div>
 
 </div>
-<div id="frase2"><a href="#">
-    <ul style="list-style-image:url(../imagenes/fotosINFO/autumnleaves.png);">
-     <li><pre><h3>Mensaje Secreto:</h3> "I love you doesn't 
- 	count after goodbye"</pre></li> 
-    </ul>
-</a></div>			
-</div> 	
 
 </body>
 </html>

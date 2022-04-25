@@ -6,7 +6,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="cssred.css"/>	
+<link rel="stylesheet" href="../CSS/cssred.css"/>	
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 
@@ -131,14 +131,11 @@
 </head>
 	
 <style>	
-	
-body
-{
+
+.contenido .der{
 	background:url("../imagenes/red/iknew.jpg"); /*La foto*/
 	background-repeat:repeat-y;
-	background-position:600px 0%;
-		
-}	
+}
 
 
 .hover_img a { position:relative; }
@@ -161,6 +158,9 @@ a{  /* Para sacarle el subrayado y el color azul, así no se ve como un link */
 
 }
 
+.letra {
+	padding-bottom:50px;
+}
 
 
 #mensaje_frase0{
@@ -244,7 +244,7 @@ a{  /* Para sacarle el subrayado y el color azul, así no se ve como un link */
 
 		<div class="izq">
 		
-			<div class="home">	
+			<div class="botones-idioma-home">	
 				<button id="IDidioma" onclick="modificaIdioma()"></button>
 				<button class="HomeButton" onclick="location.href='../index.html';">
 					<span>Home</span>
@@ -261,12 +261,16 @@ a{  /* Para sacarle el subrayado y el color azul, así no se ve como un link */
 				<button id="NextButton" onclick="location.href='../paginas/comebackbehere.html';" class="float-left submit-button" >Next track →</button>		
 			</div>	
 	
-            <span class="hover_img" id="frase0">
-                <a class="titulo" tytle href="#">17. The moment i knew<br><span><img src="../imagenes/fotosINFO/jakeg.jpg" alt=""  style="position: fixed; left:870px; top:178px;" />    
-                </span></a></span>
+           
 
 <div class="song">			
 	
+	<span class="hover_img" id="frase0">
+		<a class="titulo" tytle href="#">17. The moment i knew<br><span><img src="../imagenes/fotosINFO/jakeg.jpg" alt=""  style="position: fixed; left:870px; top:178px;" />    
+		</span></a></span>
+
+	<div class="letra">
+
     <p>You should've been there<br>
     Should've burst through the door<br>
     With that "Baby, I'm right here" smile<br>
@@ -338,11 +342,16 @@ a{  /* Para sacarle el subrayado y el color azul, así no se ve como un link */
     And I said, "I'm sorry too"<br>
     And that was the moment I knew</p>
 
+	</div>
 </div>
-<div id="div2">
-	&nbsp;
-</div>			
+
 </div> 	
+
+<div class="der">
+</div>
+
+</div>
+
 	
 </body>
 </html>

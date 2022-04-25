@@ -1,9 +1,13 @@
  
- *{              /*Para eliminar los paddings y marigins que vienen por default, xej, en los div. Para que xej la imagen quede pegada a los margenes del viewport.*/
+ * {              /*Para eliminar los paddings y marigins que vienen por default, xej, en los div. Para que xej la imagen quede pegada a los margenes del viewport.*/
      margin:0;
      padding:0;
  }
- 
+
+ .letra p {
+    margin: 1em 0 1em 0; 
+ }
+
  .contenido{
     display: grid;
     grid-template-columns: 1fr 1.5fr;
@@ -88,9 +92,14 @@
 
 
 .previousnext {
-    margin:15px;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1rem;
+    
+    /* margin:15px;
     padding-left: 10px;
-    text-align:center;
+    text-align:center; */
 }
 
 
@@ -98,17 +107,14 @@
 
 .song .titulo  {
 	display: flex;
-    justify-content: center;
-    
+    justify-content: center;  /*Deja pargenes parejos a los lados del cuadro donde se encuentra el titulo. Dentro de este div izq*/
+    text-align: center;         /* Dentro del cuadro del titulo, centra cada linea */
     font-size: 47px;
 	font-family: 'Bebas Neue', cursive;
     
     margin: 1rem 0 1rem 0rem;  /*Espacio arriba y abajo del titulo*/
 
 }
-
-
-
 
 
 
@@ -127,3 +133,10 @@ a{  /* Para sacarle el subrayado y el color azul, así no se ve como un link */
     text-decoration: none;
     color:red;
 }	
+
+
+.MS{    
+    font-size: 24px;
+    font-style: italic;
+    margin: 1rem 0 2.5rem 5rem;
+}

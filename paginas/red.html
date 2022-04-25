@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="cssred.css"/>	
+<link rel="stylesheet" href="../CSS/cssred.css"/>	
 
 
 <script>
@@ -80,25 +80,12 @@
 </head>
 	
 <style>	
-	
-body
-{
+
+.contenido .der {
 	background:url("../imagenes/red/red.jpg"); /*La foto*/
 	background-repeat:repeat-y;
-	background-position:600px 0%;
-		
 }	
 
-
-
-#frase1{
-    
-    font-size: 25px;
-    padding: 10px 10px 10px, 15px;
-    font-style: italic;
-    margin-left: 30px;
-    margin-top: 1px;
-}
 
 
 #mensaje_frase1{
@@ -128,9 +115,10 @@ body
 	
 	<div class="contenido">	
 
-		<div class="izq">
+<div class="izq">
 		
-			<div class="home">	
+			<div class="botones-idioma-home">
+
 				<button id="IDidioma" onclick="modificaIdioma()"></button>
 				<button class="HomeButton" onclick="location.href='../index.html';">
 					<span>Home</span>
@@ -138,7 +126,7 @@ body
 						<rect x="0" y="0" fill="none"></rect>
 					</svg>
 					
-					</button>		
+				</button>		
 			</div>
 	
 	
@@ -147,68 +135,83 @@ body
 				<button id="NextButton" onclick="location.href='../paginas/treacherous.html';" class="float-left submit-button" >Next track →</button>		
 			</div>	
 	
-			<span class="titulo" id="frase0">2. Red</span>
+			
 
-<div class="song">			
+<div class="song">		
 	
-<p>Loving him is like driving a new Maserati down a dead end street<br>
-Faster than the wind, passionate as sin, ending so suddenly<br>
-Loving him is like trying to change your mind<br>
-Once you're already flying through the free fall<br>
-Like the colors in autumn, so bright, just before they lose it all</p>
+	<span class="titulo" id="frase0">2. Red</span>
+
 	
-<p>Losing him was blue, like I'd never known<br>
-Missing him was dark gray, all alone<br>
-Forgetting him was like trying to know<br>
-Somebody you never met<br>
-But loving him was red<br>
-Loving him was red</p>
-	
-<p>Touching him was like realizing all you ever wanted<br>
-Was right there in front of you<br>
-Memorizing him was as easy as knowing all the words<br>
-To your old favorite song<br>
-Fighting with him was like trying to solve a crossword<br>
-And realizing there's no right answer<br>
-Regretting him was like wishing you never found out<br>
-That love could be that strong</p>
-	
-<p>Losing him was blue, like I'd never known<br>
-Missing him was dark gray, all alone<br>
-Forgetting him was like trying to know<br>
-Somebody you never met<br>
-But loving him was red<br>
-Oh, red<br>
-Burning red</p>
-	
-<p>Remembering him comes in flashbacks and echoes<br>
-Tell myself it's time now gotta let go<br>
-But moving on from him is impossible<br>
-When I still see it all in my head<br>
-In burning red<br>
-Burning, it was red</p>
-	
-<p>Oh, losing him was blue, like I'd never known<br>
-Missing him was dark gray, all alone<br>
-Forgetting him was like trying to know<br>
-Somebody you never met<br>
-'Cause loving him was red<br>
-Yeah, yeah, red<br>
-Burning red</p>
-	
-<p>And that's why he's spinning 'round in my head<br>
-Comes back to me, burning red<br>
-Yeah, yeah<br>
-His love was like driving a new Maserati down a dead end street</p>
+	<div class="letra">
+
+		<p>Loving him is like driving a new Maserati down a dead end street<br>
+		Faster than the wind, passionate as sin, ending so suddenly<br>
+		Loving him is like trying to change your mind<br>
+		Once you're already flying through the free fall<br>
+		Like the colors in autumn, so bright, just before they lose it all</p>
+			
+		<p>Losing him was blue, like I'd never known<br>
+		Missing him was dark gray, all alone<br>
+		Forgetting him was like trying to know<br>
+		Somebody you never met<br>
+		But loving him was red<br>
+		Loving him was red</p>
+			
+		<p>Touching him was like realizing all you ever wanted<br>
+		Was right there in front of you<br>
+		Memorizing him was as easy as knowing all the words<br>
+		To your old favorite song<br>
+		Fighting with him was like trying to solve a crossword<br>
+		And realizing there's no right answer<br>
+		Regretting him was like wishing you never found out<br>
+		That love could be that strong</p>
+			
+		<p>Losing him was blue, like I'd never known<br>
+		Missing him was dark gray, all alone<br>
+		Forgetting him was like trying to know<br>
+		Somebody you never met<br>
+		But loving him was red<br>
+		Oh, red<br>
+		Burning red</p>
+			
+		<p>Remembering him comes in flashbacks and echoes<br>
+		Tell myself it's time now gotta let go<br>
+		But moving on from him is impossible<br>
+		When I still see it all in my head<br>
+		In burning red<br>
+		Burning, it was red</p>
+			
+		<p>Oh, losing him was blue, like I'd never known<br>
+		Missing him was dark gray, all alone<br>
+		Forgetting him was like trying to know<br>
+		Somebody you never met<br>
+		'Cause loving him was red<br>
+		Yeah, yeah, red<br>
+		Burning red</p>
+			
+		<p>And that's why he's spinning 'round in my head<br>
+		Comes back to me, burning red<br>
+		Yeah, yeah<br>
+		His love was like driving a new Maserati down a dead end street</p>
+
+	</div>
 
 </div>
-<div id="frase1"><a href="#">
+
+
+<div class="MS" id="frase1"><a href="#">
     <ul style="list-style-image:url(../imagenes/fotosINFO/autumnleaves.png);">
      <li><pre><h3>Mensaje Secreto:</h3>                     "SAG"</pre></li> 
     </ul>
-</a></div>			
+</a></div>	
+
+
 </div> 	
-	
+
+<div class="der">
+</div>
+
+</div>
 	
 </body>
 </html>
