@@ -1,154 +1,134 @@
 @charset "utf-8";
 /* CSS Document */
 
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    }
+ 
+* {              /*Para eliminar los paddings y marigins que vienen por default, xej, en los div. Para que xej la imagen quede pegada a los margenes del viewport.*/
+    margin:0;
+    padding:0;
+}
 
-.contenido{
+
+.letra p {
+    margin: 1em 0 1em 0; 
+ }
+
+ .contenido{
     display: grid;
-    grid-template-columns: 44% 56%;
+    grid-template-columns: 1fr 1.5fr;
 }
 
-.contenido .foto {
-    margin-top: -10px;
-    
-}
-
-
-.izq{
+.contenido .izq{
     width: 590px;
     display: grid;
-    grid-template-rows: 150px auto;
+    grid-template-rows: repeat(4, auto)
 }
 
 
 
-.botones{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-}
-  
+/* ///////////////////////////////////////////////////////////////////////////  */
 
-.izq .botones .botones-centro{
-    display: grid;
-    grid-template-rows: 80px 80px;
-    
-    margin-top: 15px;
-
-}
-
-.izq .botones .botones-centro .previousnext{
+.botones-idioma-home{
     display: flex;
-    justify-content: center;
-    width: 20em;
-    height: 25px;
-    gap: 5px;
-}
-
-
-
-.home{
-    display:flex;
-    justify-content: center;
+    /* grid-gap: 10.2rem;  Pero utilicé FLEX, no "grid" .... */
+    gap: 19%;
+    margin: 1rem 1rem 1rem 1rem;
+    /* display:grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 100px);
+    margin:15px;
+    padding-left: 10px;
+    text-align:left; */
+ }
+ 
+ 
+ 
+ .HomeButton{ 
+    position:relative;
+    display: inline-block;
     margin-top: 20px;
-}
+    text-decoration: none;
+    letter-spacing: 2px;
+    padding: 10px 50px;
+    font-size: 16px;
+    transition: 0.5s;
+    cursor: pointer;
+    background: white;
+    border-radius: 1px;
+ }
+ 
+ 
+ .HomeButton:hover{
+    background: black;
+    color: white;
+ }
+ 
+ 
 
 #IDidioma{
-    /* margin-left: 10px; */
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    height: 3.5em;
-    width: 7em;
-    margin: 13px 0px 0px 35px;
     font-weight: 500;
     border-radius: 5px;
     border-color: rgb(231, 112, 27);
     border-width: thick;
-
-}
-
-
-#language{
-    background-color: gainsboro;
-    
-}
-    
-
-.HomeButton{ 
-    margin: auto;
-    
-    background: none;
-    color:black;
-    font-family:  Arial, Helvetica, sans-serif;
-    font-size: larger;
-	cursor: pointer;
-    border-color: transparent;
+    cursor: pointer;
+    padding: 0.2em;
+    width: 100px;
 }
 
 
 
-.HomeButton svg {
-    width: 12%;
-    height: 8%;
+/* /////////////////////////////////////////////////////////////////////////  */
+
+.previousnext {
     display: flex;
-    margin: 15px 0px 10px 230px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    fill: none;
-}
-
-
-.HomeButton rect {
-    width: 100%;
-    height: 100%;
-    stroke: black;
-    stroke-width: 5px;
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    transition: .9s ease all;
-}
-
-
-.HomeButton:hover rect{
-	stroke-dashoffset: 0;
-}
-
-
-
-
-
-
-
-
-.contenido .previousnext {
-    margin:15px;
-    padding-left: 10px;
-    text-align:center;
-}
-
-
-.contenido .titulo  {
-    width: 600px;
-	font-size: 47px;
-	font-family: 'IM Fell DW Pica', serif;
-    text-align: center;
-    display: flex;
-    align-items: center;
     justify-content: center;
-    padding-top: 20px;    
+    gap: 0.5rem;
+    margin: 1rem;
+    
+    
+    /* margin:15px;
+    padding-left: 10px;
+    text-align:center; */
+ }
+ 
+ #PreviousButton, #NextButton {
+    padding: 0.2rem;
+    cursor: pointer;
+    background: whitesmoke;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgb(161, 187, 243);
+    transition: 0.8s;
+ }
+ 
+ 
+ #PreviousButton:hover, #NextButton:hover {
+    background: rgb(135, 154, 207);
+ } 
+ 
+
+/* //////////////////////////////////////////////////////////////////////////  */
+
+
+.song .titulo  {
+	display: flex;
+    justify-content: center;  /*Deja pargenes parejos a los lados del cuadro donde se encuentra el titulo. Dentro de este div izq*/
+    text-align: center;         /* Dentro del cuadro del titulo, centra cada linea */
+    font-size: 47px;
+	font-family: 'IM Fell DW Pica', serif;
+    margin: 1rem 0 1rem 0rem;  /*Espacio arriba y abajo del titulo*/
+
 }
 
-.contenido .izq .song{   /*importante el espacio entre "contenido" y ".song"*/ 
+
+.letra{  
     font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
     text-align: center;
 }
 
 
+
+
 p span {color:red;   /*a estos me falta ponerles el div y la explicacion de la letra*/
-	
 	position: relative;
 }
 
@@ -157,6 +137,13 @@ a{  /* Para sacarle el subrayado y el color azul, así no se ve como un link */
     color:red;
 }	
 
+
+
+.MS{    
+    font-size: 24px;
+    font-style: italic;
+    margin: 1rem 0 2.5rem 5rem;
+}
 
 
 
