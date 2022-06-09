@@ -1,0 +1,236 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script src="../jQueryAssets/jquery-1.11.1.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../CSS/cssred.css "/>
+
+<script>
+
+
+
+	$(document).ready(function(){   
+				$("#mensaje_frase0").hide();
+				$("#frase0").hover(mensaje_on0, mensaje_off0);
+				eligeIdioma();
+			});
+		
+			
+			function mensaje_on0(){
+				$("#mensaje_frase0").show();    
+			}
+			
+			function mensaje_off0(){
+				$("#mensaje_frase0").hide();
+			}   
+	
+	
+	
+	
+			$(document).ready(function(){   
+				$("#mensaje_frase1").hide();
+				$("#frase1").hover(mensaje_on1, mensaje_off1);
+				
+			});
+		
+			
+			function mensaje_on1(){
+				$("#mensaje_frase1").show();    
+			}
+			
+			function mensaje_off1(){
+				$("#mensaje_frase1").hide();
+			}   
+	
+	
+			
+	
+			/* Idioma */
+			var idioma = 0 ; // 0=es, 1=en, ...
+			var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+			var texto = [  
+						 ["",""],
+						 ["Desde el comienzo de su carrera Taylor Swift incluye mensajes secretos en cada canción, lo cual dejó de hacer en su álbum Reputation.<br><br><hr><br> Para su album RED las letras de las canciones en los booklets (libritos) estan en minusculas, y cada letra del mensaje secreto esta en mayuscula.",
+						  "Taylor Swift includes hidden messages in each song, which stopped at Reputation.<br><br><hr><br> For her album RED the lyrics of the songs in the booklets are in lowerecased letters, and each letter of the hidden message is capitalized."
+						 ]
+						];
+						function eligeIdioma(){
+						 IDidioma.innerHTML=idiomas[idioma];
+		
+							 for (let frase=0; frase<texto.length; frase++){         /*inicio con frase=0 -- Continúo hasta el lenght del "texto" (osea continúo 2 veces porque el lenght es 2. sson 2 arrays) -- le sumo uno a "frase", asi pasa de frase 0 a frase 1.*/ 
+							 document.getElementById("mensaje_frase"+frase).innerHTML=texto[frase][idioma];
+							 }
+							}
+						function modificaIdioma(){
+						idioma++;
+						if (idioma < 0 || idioma > 1) idioma = 0;
+						eligeIdioma();
+						}	
+
+
+
+</script>
+
+
+
+</head>	
+	
+<style>	
+
+.contenido .der{
+	background:url("../../imagenes/red/changed.jpg"); /*La foto*/
+	background-repeat:repeat-y;
+}
+
+
+
+#mensaje_frase1{
+		position: fixed;  /*queda en donde lo pusimos aunque cambiemos de posicion con la barra de desplazamiento*/
+		left: 730px;
+		top: 100px;   /*el espacio entre el cuadro y el tope VISIBLE de arriba*/
+		width: 450px;  /*el ancho del cuadro. (el texto se acomoda adentro)*/
+		height: 310px;
+		background-color: #D7CFDA;
+		font-size: 22px;
+		padding: 45px 40px 20px 40px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+        box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+
+
+
+</style>	
+	
+<body>
+	
+<div id="mensaje_frase0"></div>
+<div id="mensaje_frase1"></div>
+
+
+	<div class="contenido">	
+
+		<div class="izq">
+		
+			<div class="botones-idioma-home">	
+				<button id="IDidioma" onclick="modificaIdioma()"></button>	
+				<button class="HomeButton" onclick="location.href='../../index.html';">
+					<span>Home</span>	
+				</button>			
+			</div>
+	
+	
+			<div class=previousnext>	
+				<button id="PreviousButton" onclick="location.href='./heluckyone.html';" class="float-left submit-button" >←Previous track</button>		
+				<button id="NextButton" onclick="location.href='./starlight.html';" class="float-left submit-button" >Next track →</button>		
+			</div>	
+
+	
+			
+	
+<div class="song">
+
+
+	<span id="frase0" class="titulo">14. Everything Has Changed</span>
+
+	<div class="letra">
+
+	<p>You good to go?</p>
+		
+	<p>All I knew<br>
+	This morning when I woke<br>
+	Is I know something now<br>
+	Know something now I didn't before<br>
+	And all I've seen<br>
+	Since eighteen hours ago<br>
+	Is green eyes and freckles and your smile<br>
+	In the back of my mind making me feel like</p>
+		
+	<p>I just wanna know you better, know you better, know you better now<br>
+	I just wanna know you better, know you better, know you better now<br>
+	I just wanna know you better, know you better, know you better now<br>
+	I just wanna know you, know you, know you</p>
+		
+	<p>'Cause all I know is we said, "Hello"<br>
+	And your eyes look like comin' home<br>
+	All I know is a simple name<br>
+	And everything has changed<br>
+	All I know is you held the door<br>
+	You'll be mine and I'll be yours<br>
+	All I know since yesterday<br>
+	Is everything has changed</p>
+		
+	<p>And all my walls<br>
+	Stood tall painted blue<br>
+	But I'll take 'em down, take 'em down<br>
+	And open up the door for you<br>
+	And all I feel<br>
+	In my stomach is butterflies<br>
+	The beautiful kind, makin' up for lost time<br>
+	Takin' flight, makin' me feel like</p>
+		
+	<p>I just wanna know you better, know you better, know you better now<br>
+	I just wanna know you better, know you better, know you better now<br>
+	I just wanna know you better, know you better, know you better now<br>
+	I just wanna know you, know you, know you</p>
+		
+	<p>'Cause all I know is we said, "Hello"<br>
+	And your eyes look like comin' home<br>
+	All I know is a simple name<br>
+	Everything has changed<br>
+	All I know is you held the door<br>
+	And you'll be mine and I'll be yours<br>
+	All I know since yesterday<br>
+	Is everything has changed</p>
+		
+	<p>Come back and tell me why<br>
+	I'm feelin' like I've missed you all this time<br>
+	And meet me there tonight<br>
+	And let me know that it's not all in my mind<br>
+	I just wanna know you better, know you better, know you better now<br>
+	I just wanna know you, know you, know you</p>
+
+	<p>All I know is we said, "Hello"<br>
+	Your eyes look like comin' home<br>
+	All I know is a simple name<br>
+	And everything has changed<br>
+	All I know is you held the door<br>
+	You'll be mine and I'll be yours<br>
+	All I know since yesterday<br>
+	Is everything has changed</p>
+
+	<p>All I know is we said, "Hello"<br>
+	So dust off your highest hopes<br>
+	All I know is pouring rain<br>
+	And everything has changed<br>
+	All I know is a new found grace<br>
+	All my days, I'll know your face<br>
+	All I know since yesterday<br>
+	Is everything has changed</p>	
+
+
+	</div>
+
+</div>
+
+<div class="MS" id="frase1"><a href="#">
+    <ul style="list-style-image:url(../../imagenes/iconos/leafs.png);">
+     <li><pre><h3>Mensaje Secreto:</h3>             "Hyannis Port"</pre></li> 
+    </ul>
+</a></div>			
+
+
+</div> 	
+
+<div class="der">
+</div>
+
+</div>
+
+</body>
+</html>

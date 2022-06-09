@@ -1,0 +1,261 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script src="../jQueryAssets/jquery-1.11.1.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@200&family=Bebas+Neue&family=IM+Fell+DW+Pica:ital@1&family=Montserrat:wght@200&family=Rochester&family=Sacramento&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../CSS/cssfearless.css"/>		
+
+
+<script>
+
+    $(document).ready(function(){   
+            $("#mensaje_frase0").hide();
+            $("#frase0").hover(mensaje_on0, mensaje_off0);
+            eligeIdioma();
+        });
+    
+        
+        function mensaje_on0(){
+            $("#mensaje_frase0").show();    
+        }
+        
+        function mensaje_off0(){
+            $("#mensaje_frase0").hide();
+        }   
+
+
+
+
+        $(document).ready(function(){   
+				$("#mensaje_frase1").hide();
+				$("#frase1").hover(mensaje_on1, mensaje_off1);
+				
+			});
+		
+			
+			function mensaje_on1(){
+				$("#mensaje_frase1").show();    
+			}
+			
+			function mensaje_off1(){
+				$("#mensaje_frase1").hide();
+			}   
+
+
+
+        /* Idioma */
+        var idioma = 0 ; // 0=es, 1=en, ...
+        var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+        var texto = [   
+                     ["La canción trata sobre lo doloroso de tener que decirle adiós a una amistad, no porque alguien haya hecho algo malo, sino porque las partes han seguido su curso por distintos caminos. Ambos han evolucionado y cambiado internamente, y fueron separandose en el transcurso de la vida.",
+					  "The song talks about the pain of having to say goodbye to a friend, not because someone has made something wrong, but just because the union has run its course. Both parties involved have internally evolved from when it was first initiated and grew appart with the passage of time."
+					 ],
+					 ["Desde el comienzo de su carrera Taylor Swift incluye mensajes secretos en cada canción, lo cual dejó de hacer en su álbum Reputation.<br><br><hr><br> Para su album Fearless las letras de las canciones en los booklets (libritos) estan en minusculas, y cada letra del mensaje secreto esta en mayuscula.",
+					  "Taylor Swift includes hidden messages in each song, which stopped at Reputation.<br><br><hr><br> For her album Fearless the lyrics of the songs in the booklets are in lowerecased letters, and each letter of the hidden message is capitalized."
+					 ]
+                    ];
+                    function eligeIdioma(){
+						 IDidioma.innerHTML=idiomas[idioma];
+		
+							 for (let frase=0; frase<texto.length; frase++){         /*inicio con frase=0 -- Continúo hasta el lenght del "texto" (osea continúo 2 veces porque el lenght es 2. sson 2 arrays) -- le sumo uno a "frase", asi pasa de frase 0 a frase 1.*/ 
+							 document.getElementById("mensaje_frase"+frase).innerHTML=texto[frase][idioma];
+							 }
+							}
+						function modificaIdioma(){
+						idioma++;
+						if (idioma < 0 || idioma > 1) idioma = 0;
+						eligeIdioma();
+						}    
+    
+    
+    </script>
+
+
+
+</head>
+	
+<style>	
+	
+body
+{
+	background:url("../../imagenes/fearless/breathe.jpg"); /*La foto*/
+	background-repeat:repeat-y;
+	background-position:600px 0%;
+		
+}	
+	
+
+#mensaje_frase0{
+		position: fixed;  /*queda en donde lo pusimos aunque cambiemos de posicion con la barra de desplazamiento*/
+		left: 730px;
+		top: 140px;   /*el espacio entre el cuadro y el tope VISIBLE de arriba*/
+		width: 450px;  /*el ancho del cuadro. (el texto se acomoda adentro)*/
+		height: 250px;
+		background-color: #D7CFDA;
+		font-size: 22px;
+		padding: 45px 40px 20px 40px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+        box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}
+
+
+	.titulo{  /* Para sacarle el subrayado y el color azul, así no se ve como un link */
+    text-decoration: none;
+    color:red;
+}    
+
+#frase1{
+    font-size: 25px;
+    padding: 10px 10px 10px, 15px;
+    font-style: italic;
+}
+
+
+#mensaje_frase1{
+		position: fixed;  /*queda en donde lo pusimos aunque cambiemos de posicion con la barra de desplazamiento*/
+		left: 730px;
+		top: 100px;   /*el espacio entre el cuadro y el tope VISIBLE de arriba*/
+		width: 450px;  /*el ancho del cuadro. (el texto se acomoda adentro)*/
+		height: 310px;
+		background-color: #D7CFDA;
+		font-size: 22px;
+		padding: 45px 40px 20px 40px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+        box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}
+
+
+
+</style>		
+
+<body>
+
+<div id="mensaje_frase0"></div>    
+<div id="mensaje_frase1"></div> 
+
+	
+	<div class="contenido">	
+
+		<div class="izq">
+		
+			<div class="botones-idioma-home">	
+				<button id="IDidioma" onclick="modificaIdioma()"></button>
+				<button class="HomeButton" onclick="location.href='../../index.html';">
+					<span>Home</span>
+				</button>			
+			</div>
+	
+	
+			<div class=previousnext>	
+				<button id="PreviousButton" onclick="location.href='./ybwm.html';" class="float-left submit-button" >←Previous track</button>		
+				<button id="NextButton" onclick="location.href='./tellmewhy.html';" class="float-left submit-button" >Next track →</button>		
+			</div>		
+
+
+	<div class="song">			
+
+
+		<span class="titulo" id="frase0">7. Breathe</span>
+					
+		<div class="letra">
+
+
+		<p>I see your face in my mind as I drive away,<br>
+		'Cause none of us thought it was gonna end that way<br>
+		People are people,<br>
+		And sometimes we change our minds<br>
+		But it's killing me to see you go after all this time</p>
+			
+		<p>Music starts playin' like the end of a sad movie,<br>
+		It's the kinda ending you don't really wanna see<br>
+		'Cause it's tragedy and it'll only bring you down,<br>
+		Now I don't know what to be without you around</p>
+			
+		<p>And we know it's never simple,<br>
+		Never easy<br>
+		Never a clean break, no one here to save me<br>
+		You're the only thing I know like the back of my hand,</p>
+			
+		<p>And I can't,<br>
+		Breathe,<br>
+		Without you,<br>
+		But I have to,<br>
+		Breathe,<br>
+		Without you,<br>
+		But I have to</p>
+			
+		<p>Never wanted this, never wanna see you hurt<br>
+		Every little bump in the road I tried to swerve<br>
+		People are people,<br>
+		And sometimes it doesn't work out,<br>
+		Nothing we say is gonna save us from the fall out</p>
+			
+		<p>And we know it's never simple,<br>
+		Never easy<br>
+		Never a clean break, no one here to save me<br>
+		You're the only thing I know like the back of my hand,</p>
+			
+		<p>And I can't,<br>
+		Breathe,<br>
+		Without you,<br>
+		But I have to,<br>
+		Breathe,<br>
+		Without you,<br>
+		But I have to<br>
+		It's two am<br>
+		Feelin' like I just lost a friend<br>
+		Hope you know it's not easy,<br>
+		Easy for me</p>
+			
+		<p>It's two am<br>
+		Feelin' like I just lost a friend<br>
+		Hope you know this ain't easy,<br>
+		Easy for me</p>
+			
+		<p>And we know it's never simple,<br>
+		Never easy<br>
+		Never a clean break, no one here to save me</p>
+
+		<p>I can't,<br>
+		Breathe,<br>
+		Without you,<br>
+		But I have to,<br>
+		Breathe,<br>
+		Without you,<br>
+		But I have to</p>
+			
+		<p>Breathe,<br>
+		Without you,<br>
+		But I have to</p>
+			
+		<p>Sorry (oh) sorry<br>
+		Sorry sorry<br>
+		Sorry sorry</p>
+			
+			
+		</div>
+	</div>
+
+
+	<div class="MS" id="frase1"><a href="#">
+		<ul style="list-style-image:url(../../imagenes/fotosINFO/sparks.png);">
+		<li><pre><h3>Mensaje Secreto:</h3> "I'm sorry I'm sorry I'm sorry"</pre></li> 
+		</ul></a>
+	</div>			
+
+	<div class="der">
+	</div>
+
+</div> 	 	
+	
+
+</body>
+</html>

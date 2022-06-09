@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script src="../jQueryAssets/jquery-1.11.1.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@200&family=Bebas+Neue&family=IM+Fell+DW+Pica:ital@1&family=Montserrat:wght@200&family=Rochester&family=Sacramento&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../CSS/cssfearless.css"/>	
+
+<script>
+
+    $(document).ready(function(){   
+            $("#mensaje_frase0").hide();
+            $("#frase0").hover(mensaje_on0, mensaje_off0);
+            eligeIdioma();
+        });
+    
+        
+        function mensaje_on0(){
+            $("#mensaje_frase0").show();    
+        }
+        
+        function mensaje_off0(){
+            $("#mensaje_frase0").hide();
+        }   
+
+        
+        /* Idioma */
+        var idioma = 0 ; // 0=es, 1=en, ...
+        var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+        var texto = [   "",
+                        ""
+                    ];
+        function eligeIdioma(){
+            IDidioma.innerHTML=idiomas[idioma];
+            mensaje_frase0.innerHTML=texto[idioma];
+        }
+        function modificaIdioma(){
+            idioma++;
+            if (idioma < 0 || idioma > 1) idioma = 0;
+            eligeIdioma();
+        }
+    
+    
+    
+    </script>
+
+</head>
+	
+<style>	
+	
+body
+{
+	background:url("../../imagenes/fearless/flower2.jpg"); /*La foto*/
+	background-repeat:repeat-y;
+	background-position:600px 0%;
+		
+}	
+	
+</style>	
+
+<body>	
+	
+	<div class="contenido">	
+
+		<div class="izq">
+		
+			<div class="botones-idioma-home">
+                <button id="IDidioma" onclick="modificaIdioma()"></button>	
+				<button class="HomeButton" onclick="location.href='../../index.html';">
+					<span>Home</span>
+				</button>		
+			</div>
+	
+	
+			<div class=previousnext>	
+				<button id="PreviousButton" onclick="location.href='./dontyou.html';" class="float-left submit-button" >←Previous track</button>
+			</div>	
+
+	
+<div class="song">
+
+            
+        <span class="titulo">19. Bye Bye Baby<br>(From The Vault)</span>
+            
+        <div class="letra">
+
+
+            <p>It wasn't just like a movie<br>
+            The rain didn't soak through my clothes, down to my skin<br>
+            I'm driving away and I, I guess you could say<br>
+            This is the last time I'll drive this way again<br>
+            Lost in the gray and I try to grab at the fray<br>
+            'Cause I, I still love you but I can't</p>
+
+            <p>Bye, bye, to everything I thought was on my side<br>
+            Bye, bye, baby<br>
+            I want you bad but it's come down to nothing<br>
+            And all I have is your sympathy<br>
+            'Cause you took me home but you just couldn't keep me<br>
+            Bye, bye, baby<br>
+            Bye, bye, baby</p>
+
+            <p>The picture frame is empty<br>
+            On the dresser, vacant just like me<br>
+            I see your writing on the dash<br>
+            Then back to your hesitation<br>
+            I was so sure of everything<br>
+            Everything I thought we'd always have<br>
+            Guess I never doubted it<br>
+            Then the here and the now floods in<br>
+            Feels like I'm becoming a part of your past</p>
+
+            <p>Bye, bye, to everything I thought was on my side<br>
+            Bye, bye, baby<br>
+            I want you bad but it's come down to nothing<br>
+            And all I have is your sympathy<br>
+            'Cause you took me home but you just couldn't keep me<br>
+            Bye, bye, baby</p>
+
+            <p>There's so much that I can't touch<br>
+            You're all I want but it's not enough this time<br>
+            And all the pages are just slipping through my hands<br>
+            And I'm so scared of how this ends</p>
+            
+            <p>Bye, bye, to everything I thought was on my side<br>
+            Bye, bye, baby<br>
+            I want you bad but it's come down to nothing<br>
+            And all I have is your sympathy<br>
+            'Cause you took me home but you just couldn't keep me</p>
+            
+            <p>Bye, bye, to everything I thought was on my side<br>
+            Bye, bye, baby<br>
+            I want you bad but it's come down to nothing<br>
+            And all I have is your sympathy<br>
+            'Cause you took me home but you just couldn't keep me<br>
+            Oh, you took me home, I thought you were gonna keep me<br>
+            Bye, bye, baby<br>
+            Bye, bye, baby</p>
+            
+
+            </div>
+       </div>
+
+        <div class="der">
+        </div>
+    
+    </div> 
+
+
+</body>
+</html>

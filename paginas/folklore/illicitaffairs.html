@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script src="../jQueryAssets/jquery-1.11.1.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IM+Fell+DW+Pica:ital@1&family=Rochester&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../CSS/cssfolklore.css"/>	
+
+<script>
+
+    $(document).ready(function(){   
+            $("#mensaje_frase0").hide();
+            $("#frase0").hover(mensaje_on0, mensaje_off0);
+            eligeIdioma();
+        });
+    
+        
+        function mensaje_on0(){
+            $("#mensaje_frase0").show();    
+        }
+        
+        function mensaje_off0(){
+            $("#mensaje_frase0").hide();
+        }   
+
+        
+        /* Idioma */
+        var idioma = 0 ; // 0=es, 1=en, ...
+        var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+        var texto = [   "",
+                        ""
+                    ];
+        function eligeIdioma(){
+            IDidioma.innerHTML=idiomas[idioma];
+            mensaje_frase0.innerHTML=texto[idioma];
+        }
+        function modificaIdioma(){
+            idioma++;
+            if (idioma < 0 || idioma > 1) idioma = 0;
+            eligeIdioma();
+        }
+    
+    
+    
+    </script>
+
+
+
+</head>
+	
+	
+<style>
+	
+	body{
+	background:url("../../imagenes/folklore/ia.jpg"); /*La foto*/
+	background-repeat:repeat-y;	
+	background-position:600px 0%;
+	}
+	
+</style>	
+	
+
+<body>
+	
+
+	<div class="contenido">	
+
+		<div class="izq">
+		
+			<div class="botones-idioma-home">	
+				<button id="IDidioma" onclick="modificaIdioma()"></button>
+				<button class="HomeButton" onclick="location.href='../../index.html';">
+					<span>Home</span>
+				</button>		
+			</div>
+	
+	
+			<div class=previousnext>	
+				<button id="PreviousButton" onclick="location.href='./this is me trying.html';" class="float-left submit-button" >←Previous track</button>		
+				<button id="NextButton" onclick="location.href='./invisible string.html';" class="float-left submit-button" >Next track →</button>		
+			</div>	
+
+
+
+    <div class="song">
+
+
+        <span class="titulo" id="frase0">10. Illicit Affairs</span>
+            
+        <div class="letra">
+
+        <p>Make sure nobody sees you leave<br>
+        Hood over your head, keep your eyes down<br>
+        Tell your friends you're out for a run<br>
+        You'll be flushed when you return<br>
+        Take the road less traveled by<br>
+        Tell yourself you can always stop<br>
+        What started in beautiful rooms<br>
+        Ends with meetings in parking lots</p>
+            
+        <p>And that's the thing about illicit affairs<br>
+        And clandestine meetings and longing stares<br>
+        It's born from just one single glance<br>
+        But it dies, and it dies, and it dies<br>
+        A million little times</p>
+
+        <p>Leave the perfume on the shelf<br>
+        That you picked out just for him<br>
+        So you leave no trace behind<br>
+        Like you don't even exist<br>
+        Take the words for what they are</p>
+            
+        <p>A dwindling, mercurial high<br>
+        A drug that only worked<br>
+        The first few hundred times</p>
+            
+        <p>And that's the thing about illicit affairs<br>
+        And clandestine meetings and stolen stares<br>
+        They show their truth one single time<br>
+        But they lie, and they lie, and they lie<br>
+        A million little times</p>
+            
+        <p>And you wanna scream<br>
+        Don't call me "kid"<br>
+        Don't call me "baby"<br>
+        Look at this godforsaken mess that you made me<br>
+        You showed me colors<br>
+        You know I can't see with anyone else</p>
+            
+        <p>Don't call me "kid"<br>
+        Don't call me "baby"<br>
+        Look at this idiotic fool that you made me<br>
+        You taught me a secret language<br>
+        I can't speak with anyone else</p>
+            
+        <p>And you know damn well<br>
+        For you I would ruin myself<br>
+        A million little times</p>
+            
+        </div>
+    </div>
+
+    
+	<div class="der">
+    </div>
+
+</div> 
+
+</body>
+</html>

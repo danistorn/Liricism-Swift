@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<script src="../jQueryAssets/jquery-1.11.1.min.js"></script>    
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IM+Fell+DW+Pica:ital@1&family=Rochester&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../CSS/cssfolklore.css"/>	   
+
+<script>
+
+    $(document).ready(function(){   
+            $("#mensaje_frase0").hide();
+            $("#frase0").hover(mensaje_on0, mensaje_off0);
+            eligeIdioma();
+        });
+    
+        
+        function mensaje_on0(){
+            $("#mensaje_frase0").show();    
+        }
+        
+        function mensaje_off0(){
+            $("#mensaje_frase0").hide();
+        }   
+
+        
+        /* Idioma */
+        var idioma = 0 ; // 0=es, 1=en, ...
+        var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+        var texto = [   "",
+                        ""
+                    ];
+        function eligeIdioma(){
+            IDidioma.innerHTML=idiomas[idioma];
+            mensaje_frase0.innerHTML=texto[idioma];
+        }
+        function modificaIdioma(){
+            idioma++;
+            if (idioma < 0 || idioma > 1) idioma = 0;
+            eligeIdioma();
+        }
+    
+    
+    
+    </script>
+
+
+</head>
+
+
+<style>
+	
+	body{
+	background:url("../../imagenes/Folklore/the1.jpg"); /*La foto*/
+	background-repeat:repeat-y;	
+	background-position:600px 0%;
+	}		
+	
+</style>
+
+<body>
+
+
+    <div class="contenido">	
+
+        <div class="izq">
+        
+            <div class="botones-idioma-home">	
+                <button id="IDidioma" onclick="modificaIdioma()"></button>
+                <button class="HomeButton" onclick="location.href='../../index.html';">
+					<span>Home</span>					
+				</button>	
+            </div>
+    
+    
+            <div class=previousnext>	
+                <button id="NextButton" onclick="location.href='./cardigan.html';" class="float-left submit-button" >Next track →</button>		
+            </div>	
+
+
+
+    <div class="song">       
+
+        
+        <span class="titulo">1. The 1</span>
+
+        <div class="letra">
+
+        <p>I'm doing good, I'm on some new shit<br>
+        Been saying "yes" instead of "no"<br>
+        I thought I saw you at the bus stop, I didn't though<br>
+        I hit the ground running each night<br>
+        I hit the Sunday matinée<br>
+        You know the greatest films of all time were never made</p>
+        
+        <p>I guess you never know, never know<br>
+        And if you wanted me, you really should've showed<br>
+        And if you never bleed, you're never gonna grow<br>
+        And it's alright now</p>
+        
+        <p>But we were something, don't you think so?<br>
+        Roaring 20s, tossing pennies in the pool<br>
+        And if my wishes came true<br>
+        It would've been you<br>
+        In my defense, I have none<br>
+        For never leaving well enough alone<br>
+        But it would've been fun<br>
+        If you would've been the one<br>
+        (Ooh)</p>
+        
+        <p>I have this dream you're doing cool shit<br>
+        Having adventures on your own<br>
+        You meet some woman on the internet and take her home<br>
+        We never painted by the numbers, baby<br>
+        But we were making it count<br>
+        You know the greatest loves of all time are over now</p>
+        
+        <p>I guess you never know, never know<br>
+        And it's another day waking up alone</p>
+        
+        <p>But we were something, don't you think so?<br>
+        Roaring 20s, tossing pennies in the pool<br>
+        And if my wishes came true<br>
+        It would've been you<br>
+        In my defense, I have none<br>
+        For never leaving well enough alone<br>
+        But it would've been fun<br>
+        If you would've been the one</p>
+        
+        <p>I, I, I persist and resist the temptation to ask you<br>
+        If one thing had been different<br>
+        Would everything be different today?</p>
+        
+        <p>We were something, don't you think so?<br>
+        Rosé flowing with your chosen family<br>
+        And it would've been sweet<br>
+        If it could've been me<br>
+        In my defense, I have none<br>
+        For digging up the grave another time<br>
+        But it would've been fun<br>
+        If you would've been the one<br>
+        (Ooh)</p>
+
+        </div>
+    </div>
+
+
+    <div class="der">
+    </div>
+
+</div> 	    
+	    
+
+
+</body>
+</html>

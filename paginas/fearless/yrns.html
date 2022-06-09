@@ -1,0 +1,216 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script src="../jQueryAssets/jquery-1.11.1.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@200&family=Bebas+Neue&family=IM+Fell+DW+Pica:ital@1&family=Montserrat:wght@200&family=Rochester&family=Sacramento&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../CSS/cssfearless.css"/>		
+
+<script>
+
+    $(document).ready(function(){   
+            $("#mensaje_frase0").hide();
+            $("#frase0").hover(mensaje_on0, mensaje_off0);
+            eligeIdioma();
+        });
+    
+        
+        function mensaje_on0(){
+            $("#mensaje_frase0").show();    
+        }
+        
+        function mensaje_off0(){
+            $("#mensaje_frase0").hide();
+        }   
+
+
+
+
+        $(document).ready(function(){   
+				$("#mensaje_frase1").hide();
+				$("#frase1").hover(mensaje_on1, mensaje_off1);
+				
+			});
+		
+			
+			function mensaje_on1(){
+				$("#mensaje_frase1").show();    
+			}
+			
+			function mensaje_off1(){
+				$("#mensaje_frase1").hide();
+			}   
+
+        
+        /* Idioma */
+        var idioma = 0 ; // 0=es, 1=en, ...
+        var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+        var texto = [   
+                     ["",""],
+					 ["Desde el comienzo de su carrera Taylor Swift incluye mensajes secretos en cada canción, lo cual dejó de hacer en su álbum Reputation.<br><br><hr><br> Para su album Fearless las letras de las canciones en los booklets (libritos) estan en minusculas, y cada letra del mensaje secreto esta en mayuscula.",
+					  "Taylor Swift includes hidden messages in each song, which stopped at Reputation.<br><br><hr><br> For her album Fearless the lyrics of the songs in the booklets are in lowerecased letters, and each letter of the hidden message is capitalized."
+					 ]
+                    ];
+                    function eligeIdioma(){
+						 IDidioma.innerHTML=idiomas[idioma];
+		
+							 for (let frase=0; frase<texto.length; frase++){         /*inicio con frase=0 -- Continúo hasta el lenght del "texto" (osea continúo 2 veces porque el lenght es 2. sson 2 arrays) -- le sumo uno a "frase", asi pasa de frase 0 a frase 1.*/ 
+							 document.getElementById("mensaje_frase"+frase).innerHTML=texto[frase][idioma];
+							 }
+							}
+						function modificaIdioma(){
+						idioma++;
+						if (idioma < 0 || idioma > 1) idioma = 0;
+						eligeIdioma();
+						}    
+    
+    
+    
+    </script>
+
+</head>
+	
+<style>	
+	
+body
+{
+	background:url("../../imagenes/fearless/not.jpg"); /*La foto*/
+	background-repeat:repeat-y;
+	background-position:600px 0%;
+		
+}	
+
+	
+
+#frase1{
+    font-size: 25px;
+    padding: 10px 10px 10px, 15px;
+    font-style: italic;
+}
+
+
+#mensaje_frase1{
+		position: fixed;  /*queda en donde lo pusimos aunque cambiemos de posicion con la barra de desplazamiento*/
+		left: 730px;
+		top: 100px;   /*el espacio entre el cuadro y el tope VISIBLE de arriba*/
+		width: 450px;  /*el ancho del cuadro. (el texto se acomoda adentro)*/
+		height: 310px;
+		background-color: #D7CFDA;
+		font-size: 22px;
+		padding: 45px 40px 20px 40px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+        box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}
+
+
+	
+</style>	
+
+<body>
+	
+<div id="mensaje_frase0"></div>    
+<div id="mensaje_frase1"></div> 
+    
+	
+	<div class="contenido">	
+
+		<div class="izq">
+		
+			<div class="botones-idioma-home">	
+				<button id="IDidioma" onclick="modificaIdioma()"></button>
+				<button class="HomeButton" onclick="location.href='../../index.html';">
+					<span>Home</span>
+				</button>		
+			</div>
+	
+	
+			<div class=previousnext>	
+				<button id="PreviousButton" onclick="location.href='./tellmewhy.html';" class="float-left submit-button" >←Previous track</button>		
+				<button id="NextButton" onclick="location.href='./twily.html';" class="float-left submit-button" >Next track →</button>		
+			</div>	
+
+
+	<div class="song">			
+	
+
+		<span class="titulo" id="frase0">9. You're Not Sorry</span>
+
+		<div class="letra">
+			
+
+		<p>All this time I was wasting<br>
+		Hoping you would come around<br>
+		I've been giving out chances every time<br>
+		And all you do is let me down<br>
+		And it's taking me this long<br>
+		Baby but I figured you out<br>
+		And you're thinking we'll be fine again<br>
+		But not this time around</p>
+			
+		<p>You don't have to call anymore<br>
+		I won't pick up the phone<br>
+		This is the last straw<br>
+		Don't wanna hurt anymore<br>
+		And you can tell me that you're sorry<br>
+		But I don't believe you baby<br>
+		Like I did before<br>
+		You're not sorry, no no, no no</p>
+			
+		<p>Looking so innocent<br>
+		I might believe you if I didn't know<br>
+		Could've loved you all my life<br>
+		If you hadn't left me waiting in the cold<br>
+		And you got your share of secrets<br>
+		And I'm tired of being last to know<br>
+		And now you're asking me to listen<br>
+		Cause it's worked each time before</p>
+			
+		<p>But you don't have to call anymore<br>
+		I won't pick up the phone<br>
+		This is the last straw<br>
+		Don't wanna hurt anymore<br>
+		And you can tell me that you're sorry<br>
+		But I don't believe you baby<br>
+		Like I did before<br>
+		You're not sorry, no no</p>
+			
+		<p>You're not sorry, no no</p>
+			
+		<p>You had me crawling for you honey<br>
+		And it never would've gone away, no<br>
+		You used to shine so bright<br>
+		But I watched all of it fade</p>
+			
+		<p>You don't have to call anymore<br>
+		I won't pick up the phone<br>
+		This is the last straw there's nothing left to beg for<br>
+		And you can tell me that you're sorry<br>
+		But I don't believe you baby<br>
+		Like I did before you're not sorry<br>
+		No, no, no</p>
+			
+		<p>You're not sorry, no no (no)</p>
+
+
+		</div>
+	</div>
+
+	<div class="MS" id="frase1"><a href="#">
+		<ul style="list-style-image:url(../../imagenes/fotosINFO/sparks.png);">
+		<li><pre><h3>Mensaje Secreto:</h3>         "She can have you"</pre></li> 
+		</ul></a>
+	</div>			
+
+	<div class="der">
+	</div>
+
+</div> 	 
+	
+	
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@200&family=Bebas+Neue&family=IM+Fell+DW+Pica:ital@1&family=Montserrat:wght@200&family=Rochester&family=Sacramento&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../CSS/cssfearless.css"/>	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
+<script>
+
+    $(document).ready(function(){   
+            $("#mensaje_frase0").hide();
+            $("#frase0").hover(mensaje_on0, mensaje_off0);
+            eligeIdioma();
+        });
+    
+        
+        function mensaje_on0(){
+            $("#mensaje_frase0").show();    
+        }
+        
+        function mensaje_off0(){
+            $("#mensaje_frase0").hide();
+        }   
+
+
+
+        $(document).ready(function(){   
+				$("#mensaje_frase1").hide();
+				$("#frase1").hover(mensaje_on1, mensaje_off1);
+				
+			});
+		
+			
+			function mensaje_on1(){
+				$("#mensaje_frase1").show();    
+			}
+			
+			function mensaje_off1(){
+				$("#mensaje_frase1").hide();
+			}   
+
+
+
+        /* Idioma */
+        var idioma = 0 ; // 0=es, 1=en, ...
+        var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+        var texto = [ 
+			 			["Taylor escribió ésta canción sobre Joe Jonas, justo después de que él rompiera con ella por telefono en una llamada de 27 segundos.",
+                        "Taylro wrote this song about Joe Jonas, just after he broke up with her through a call phone that lasted 27 seconds."
+						],
+						["Desde el comienzo de su carrera Taylor Swift incluye mensajes secretos en cada canción, lo cual dejó de hacer en su álbum Reputation.<br><br><hr><br> Para su album Fearless las letras de las canciones en los booklets (libritos) estan en minusculas, y cada letra del mensaje secreto esta en mayuscula.",
+					  	"Taylor Swift includes hidden messages in each song, which stopped at Reputation.<br><br><hr><br> For her album Fearless the lyrics of the songs in the booklets are in lowerecased letters, and each letter of the hidden message is capitalized."
+					 	]
+                    ];
+                    function eligeIdioma(){
+						 IDidioma.innerHTML=idiomas[idioma];
+		
+							 for (let frase=0; frase<texto.length; frase++){         /*inicio con frase=0 -- Continúo hasta el lenght del "texto" (osea continúo 2 veces porque el lenght es 2. sson 2 arrays) -- le sumo uno a "frase", asi pasa de frase 0 a frase 1.*/ 
+							 document.getElementById("mensaje_frase"+frase).innerHTML=texto[frase][idioma];
+							 }
+							}
+						function modificaIdioma(){
+						idioma++;
+						if (idioma < 0 || idioma > 1) idioma = 0;
+						eligeIdioma();
+						}    
+    
+    
+    
+    
+    </script>
+
+
+</head>
+	
+<style>	
+	
+body
+{
+	background:url("../../imagenes/fearless/forever.jpg"); /*La foto*/
+	background-repeat:repeat-y;
+	background-position:600px 0%;
+		
+}	
+
+
+
+.hover_img a { position:relative; }
+.hover_img a span { position:absolute; display:none; z-index:99; }
+.hover_img a:hover span { display:block; }
+
+.img{
+    top:50px;
+    left:-100px;
+
+}
+
+a{  /* Para sacarle el subrayado y el color azul, así no se ve como un link */
+    text-decoration: none;
+    color:red;
+}
+
+
+
+	#mensaje_frase0{
+		position: fixed;  /*o absolute?*/
+		left: 720px;
+		top: 90px;   /*originalmente tenia 392px*/
+		width: 490px;
+		height: 440px;
+		background-color: #D7CFDA;
+		font-size: 24px;
+		padding: 25px;
+		padding-top: 30px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+
+
+#frase1{
+    font-size: 25px;
+    padding: 10px 10px 10px, 15px;
+    font-style: italic;
+}
+
+
+#mensaje_frase1{
+		position: fixed;  /*queda en donde lo pusimos aunque cambiemos de posicion con la barra de desplazamiento*/
+		left: 730px;
+		top: 100px;   /*el espacio entre el cuadro y el tope VISIBLE de arriba*/
+		width: 450px;  /*el ancho del cuadro. (el texto se acomoda adentro)*/
+		height: 310px;
+		background-color: #D7CFDA;
+		font-size: 22px;
+		padding: 45px 40px 20px 40px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+        box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}
+
+
+
+	
+</style>	
+
+<body>
+	
+<div id="mensaje_frase0">Taylor escribió ésta canción sobre Joe Jonas, justo después de que él rompiera con ella por telefono en una llamada de 27 segundos.</div>
+<div id="mensaje_frase1"></div>
+
+<div class="contenido">	
+
+	<div class="izq">
+	
+		<div class="botones-idioma-home">	
+			<button id="IDidioma" onclick="modificaIdioma()"></button>
+			<button class="HomeButton" onclick="location.href='../../index.html';">
+				<span>Home</span>	
+			</button>		
+		</div>
+
+
+		<div class=previousnext>	
+			<button id="PreviousButton" onclick="location.href='./twily.html';" class="float-left submit-button" >←Previous track</button>		
+			<button id="NextButton" onclick="location.href='./thebestday.html';" class="float-left submit-button" >Next track →</button>		
+		</div>	
+
+	
+	
+
+	<div class="song">		
+
+		<span class="hover_img" id="frase0">
+		<a class="titulo" href="#">11. Forever & Always<span><img src="../../imagenes/fotosINFO/joejonas.jpg" alt="image2"  style="position: fixed; left:770px; top:245px" />    
+		</span></a></span>
+
+		<div class="letra">
+			
+		<p>Once upon a time, I believe it was a Tuesday when I caught your eye<br>
+		And we caught onto something<br>
+		I hold onto the night, you looked me in the eye and told me you loved me</p>
+			
+		<p>Were you just kidding?<br>
+		'Cause it seems to me, this thing is breaking down<br>
+		We almost never speak<br>
+		I don't feel welcome anymore<br>
+		Baby what happened? Please tell me</p>
+			
+		<p>'Cause one second it was perfect, now you're halfway out the door</p>
+			
+		<p>And I stare at the phone, he still hasn't called<br>
+		And then you feel so low you cant feel nothing at all<br>
+		And you flashback to when he said, "Forever and always"<br>
+		Oh, and it rains in your bedroom<br>
+		Everything is wrong<br>
+		It rains when you're here and it rains when you're gone<br>
+		'Cause I was there when you said, "Forever and always"</p>
+			
+		<p>Was I out of line?<br>
+		Did I say something way too honest, made you run and hide<br>
+		Like a scared little boy<br>
+		I looked into your eyes<br>
+		Thought I knew you for a minute, now I'm not so sure</p>
+			
+		<p>So here's to everything coming down to nothing<br>
+		Here's to silence, that cuts me to the core<br>
+		Where is this going? Thought I knew for a minute, but I don't anymore</p>
+			
+		<p>And I stare at the phone, he still hasn't called<br>
+		And then you feel so low you cant feel nothing at all<br>
+		And you flashback to when he said, "Forever and always"<br>
+		Oh, and it rains in your bedroom<br>
+		Everything is wrong<br>
+		It rains when you're here and it rains when you're gone<br>
+		'Cause I was there when you said, "Forever and always"</p>
+			
+		<p>You didn't mean it baby, I don't think so</p>
+			
+		<p>Oh back up, baby, back up<br>
+		Did you forget everything?<br>
+		Back up, baby, back up<br>
+		Did you forget everything?</p>
+
+		<p>'Cause it rains in your bedroom<br>
+		Everything is wrong<br>
+		It rains when you're here and it rains when you're gone<br>
+		'Cause I was there when you said, "Forever and always"</p>
+			
+		<p>Oh, I stare at the phone, he still hasn't called<br>
+		And then you feel so low you cant feel nothing at all<br>
+		And you flashback to when we said, "Forever and always"</p>
+
+		<p>And it rains in your bedroom<br>
+		Everything is wrong<br>
+		It rains when you're here and it rains when you're gone<br>
+		'Cause I was there when you said, "Forever and always"<br>
+		You didn't mean it baby,<br>
+		You said, "Forever and always", yeah.</p>
+			
+
+		</div>
+	</div>
+
+	<div class="MS" id="frase1"><a href="#">
+		<ul style="list-style-image:url(../../imagenes/fotosINFO/sparks.png);">
+		<li><pre><h3>Mensaje Secreto:</h3>"If you play these games, 
+	we're both going to lose"</pre></li> 
+		</ul></a>
+	</div>			
+
+
+    <div class="der">
+    </div>
+
+</div> 
+
+
+</body>
+</html>

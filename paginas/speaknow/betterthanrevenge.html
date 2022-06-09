@@ -1,0 +1,245 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script src="../jQueryAssets/jquery-1.11.1.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rochester&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">		
+<link rel="stylesheet" href="../../CSS/cssspeaknow.css"/>	
+
+
+
+<script>
+
+$(document).ready(function(){   
+                $("#mensaje_frase0").hide();
+                $("#frase0").hover(mensaje_on0, mensaje_off0);
+                eligeIdioma();
+            });
+        
+            
+            function mensaje_on0(){
+                $("#mensaje_frase0").show();    
+            }
+            
+            function mensaje_off0(){
+                $("#mensaje_frase0").hide();
+            }   
+    
+    
+    
+    
+            $(document).ready(function(){   
+                $("#mensaje_frase1").hide();
+                $("#frase1").hover(mensaje_on1, mensaje_off1);
+                
+            });
+        
+            
+            function mensaje_on1(){
+                $("#mensaje_frase1").show();    
+            }
+            
+            function mensaje_off1(){
+                $("#mensaje_frase1").hide();
+            }   
+    
+    
+            
+    
+            /* Idioma */
+            var idioma = 0 ; // 0=es, 1=en, ...
+            var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+            var texto = [  
+                         ["",""],
+                         ["Desde el comienzo de su carrera Taylor Swift incluye mensajes secretos en cada canción, lo cual dejó de hacer en su álbum Reputation.<br><br><hr><br> Para su album Speak Now las letras de las canciones en los booklets (libritos) estan en minusculas, y cada letra del mensaje secreto esta en mayuscula.",
+                            "Taylor Swift includes hidden messages in each song, which stopped at Reputation.<br><br><hr><br> For her album Speak Now the lyrics of the songs in the booklets are in lowerecased letters, and each letter of the hidden message is capitalized."
+                         ]
+                        ];
+                        function eligeIdioma(){
+                         IDidioma.innerHTML=idiomas[idioma];
+        
+                             for (let frase=0; frase<texto.length; frase++){         /*inicio con frase=0 -- Continúo hasta el lenght del "texto" (osea continúo 2 veces porque el lenght es 2. sson 2 arrays) -- le sumo uno a "frase", asi pasa de frase 0 a frase 1.*/ 
+                             document.getElementById("mensaje_frase"+frase).innerHTML=texto[frase][idioma];
+                             }
+                            }
+                        function modificaIdioma(){
+                        idioma++;
+                        if (idioma < 0 || idioma > 1) idioma = 0;
+                        eligeIdioma();
+                        }	
+
+
+
+    
+    
+</script>
+    
+
+
+</head>
+	
+<style>	
+	
+body
+{
+	background:url("../../imagenes/speaknow/revenge.jpg"); /*La foto*/
+	background-repeat:repeat-y;
+	background-position:600px 0%;
+		
+}	
+	
+
+#frase1{
+    
+    font-size: 25px;
+    padding: 10px 10px 10px, 15px;
+    font-style: italic;
+}
+
+
+#mensaje_frase1{
+		position: fixed;  /*queda en donde lo pusimos aunque cambiemos de posicion con la barra de desplazamiento*/
+		left: 730px;
+		top: 100px;   /*el espacio entre el cuadro y el tope VISIBLE de arriba*/
+		width: 450px;  /*el ancho del cuadro. (el texto se acomoda adentro)*/
+		height: 310px;
+		background-color: #D7CFDA;
+		font-size: 22px;
+		padding: 45px 40px 20px 40px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+        box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+
+</style>	
+
+<body>
+	
+    <div id="mensaje_frase0"></div>
+    <div id="mensaje_frase1"></div>
+
+
+	<div class="contenido">	
+
+		<div class="izq">
+		
+			<div class="botones-idioma-home">
+				<button id="IDidioma" onclick="modificaIdioma()"></button>	
+				<button class="HomeButton" onclick="location.href='../../index.html';">
+					<span>Home</span>
+				</button>		
+			</div>
+	
+	
+			<div class="previousnext">
+				<button id="PreviousButton" onclick="location.href='./enchanted.html';" class="float-left submit-button" >←Previous track</button>	
+				<button id="NextButton" onclick="location.href='./innocent.html';" class="float-left submit-button" >Next track →</button>		
+			</div>
+	
+	
+			
+    <div class="song">			
+
+
+        <span class="titulo" id="frase0">10. Better Than Revenge</span>
+
+
+        <div class="letra">
+
+
+        <p>Now go stand in the corner and think about what you did<br>
+        Ha, time for a little revenge</p>
+            
+        <p>The story starts when it was hot and it was summer<br>
+        And, I had it all I had him right there where I wanted him<br>
+        She came along, got him alone, and let's hear the applause<br>
+        She took him faster than you could say sabotage<br>
+        I never saw it coming, nor would I have suspected it<br>
+        I underestimated just who I was dealing with<br>
+        She had to know the pain was beating on me like a drum<br>
+        She underestimated just who she was stealing from</p>
+            
+        <p>She's not a saint and she's not what you think<br>
+        She's an actress, whoa<br>
+        She's better known for the things that she does<br>
+        On the mattress, whoa<br>
+        Soon she's gonna find<br>
+        Stealing other people's toys on the playground<br>
+        Won't make you many friends<br>
+        She should keep in mind,<br>
+        She should keep in mind<br>
+        There is nothing I do better than revenge, ha</p>
+            
+        <p>She looks at life like it's a party and she's on the list<br>
+        She looks at me like I'm a trend and she's so over it<br>
+        I think her ever present frown is a little troubling<br>
+        And, she thinks I'm psycho<br>
+        'Cause I like to rhyme her name with things, but<br>
+        Sophistication isn't what you wear, or who you know<br>
+        Or pushing people down to get you where you wanna go<br>
+        Oh they didn't teach you that in prep school<br>
+        So it's up to me<br>
+        But no amount of vintage dresses gives you dignity<br>
+        (Think about what you did)</p>
+            
+        <p>She's not a saint and she's not what you think<br>
+        She's an actress, whoa<br>
+        She's better known for the things that she does<br>
+        On the mattress, whoa<br>
+        Soon she's gonna find<br>
+        Stealing other people's toys on the playground<br>
+        Won't make you many friends<br>
+        She should keep in mind,<br>
+        She should keep in mind<br>
+        There is nothing I do better than revenge, ha</p>
+            
+        <p>I'm just another thing for you to roll your eyes at honey<br>
+        You might have him, but haven't you heard<br>
+        I'm just another thing for you to roll your eyes at honey<br>
+        You might have him, but I'll always get the last word<br>
+        Whoa</p>
+            
+        <p>She's not a saint and she's not what you think<br>
+        She's an actress, whoa<br>
+        She's better known for the things that she does<br>
+        On the mattress, whoa<br>
+        Soon she's gonna find<br>
+        Stealing other people's toys on the playground<br>
+        Won't make you many friends<br>
+        She should keep in mind,<br>
+        She should keep in mind<br>
+        There is nothing I do better than revenge, ha</p>
+
+        <p>And do you still feel like you know what you're doing,<br>
+        'Cause I don't think you do, oh<br>
+        Do you still feel like you know what you're doing<br>
+        I don't think you do, I don't think you do<br>
+        Let's hear the applause<br>
+        C'mon show me how much better you are<br>
+        See you deserve some applause<br>
+        'Cause you're so much better<br>
+        She took him faster than you could say sabotage</p>
+    
+        </div>
+
+    </div>
+
+
+    <div class="MS" id="frase1"><a href="#">
+        <ul style="list-style-image:url(../../imagenes/fotosINFO/purpledress.jpg);">
+        <li><pre><h3>Mensaje Secreto:</h3>	   "you thought I would forget"</pre></li> 
+        </ul></a>			
+    </div> 
+
+    <div class="der">
+    </div>
+
+</div> 
+
+
+</body>
+</html>

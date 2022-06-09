@@ -1,0 +1,243 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script src="../jQueryAssets/jquery-1.11.1.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IM+Fell+DW+Pica:ital@1&family=Rochester&family=Sacramento&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../CSS/cssdebut.css"/>
+
+<script>
+
+    $(document).ready(function(){   
+            $("#mensaje_frase0").hide();
+            $("#frase0").hover(mensaje_on0, mensaje_off0);
+            eligeIdioma();
+        });
+    
+        
+        function mensaje_on0(){
+            $("#mensaje_frase0").show();    
+        }
+        
+        function mensaje_off0(){
+            $("#mensaje_frase0").hide();
+        }   
+
+
+
+
+        $(document).ready(function(){   
+            $("#mensaje_frase1").hide();
+            $("#frase1").hover(mensaje_on1, mensaje_off1);
+            
+        });
+    
+        
+        function mensaje_on1(){
+            $("#mensaje_frase1").show();    
+        }
+        
+        function mensaje_off1(){
+            $("#mensaje_frase1").hide();
+        }   
+
+
+        
+
+        /* Idioma */
+        var idioma = 0 ; // 0=es, 1=en, ...
+        var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+        var texto = [  
+                     ["Taylor escribió «Our Song» para el concurso de talentos en su primer año en secundaria, sin intención de incluirla en su álbum debut, pero luego decidió incluirla. La canción que iba a escribir necesitaba ser optimista y relacionable con sus compañeros de clase. Es acerca de un chico con el que estaba saliendo, y como no tenían una canción decidió escribirse una para ellos.",
+                     "Taylor wrote «Our Song» for her high school talent show and not for her album debut, but she decided on a whim to include it. The song she was going to write needed to be optmistic and relatable to her classmates. Its about the guy she was dating at that time, and as they didn't have a song she decided to write one for them."],
+                     ["Desde el comienzo de su carrera Taylor Swift incluye mensajes secretos en cada canción, lo cual dejó de hacer en su álbum Reputation.<br><br><hr><br> Para su album debut las letras de las canciones en los booklets (libritos) estan en minusculas, y cada letra del mensaje secreto esta en mayuscula.",
+					  "Taylor Swift includes hidden messages in each song, which stopped at Reputation.<br><br><hr><br> For her debut album the lyrics of the songs in the booklets are in lowerecased letters, and each letter of the hidden message is capitalized."
+					 ]
+                    ];
+					function eligeIdioma(){
+                     IDidioma.innerHTML=idiomas[idioma];
+    
+                         for (let frase=0; frase<texto.length; frase++){         /*inicio con frase=0 -- Continúo hasta el lenght del "texto" (osea continúo 2 veces porque el lenght es 2. sson 2 arrays) -- le sumo uno a "frase", asi pasa de frase 0 a frase 1.*/ 
+                         document.getElementById("mensaje_frase"+frase).innerHTML=texto[frase][idioma];
+                         }
+                        }
+                    function modificaIdioma(){
+                    idioma++;
+                    if (idioma < 0 || idioma > 1) idioma = 0;
+                    eligeIdioma();
+                    }	
+
+
+    
+    
+    </script>
+
+
+
+</head>
+	
+<style>	
+	
+body
+{
+	background:url("../../imagenes/debut/oursong.jpg"); /*La foto*/
+	background-repeat:repeat-y;
+	background-position:600px 0%;	
+}	
+
+
+
+.hover_img a { position:relative; }
+.hover_img a span { position:absolute; display:none; z-index:99; }
+.hover_img a:hover span { display:block; }
+
+
+
+
+#mensaje_frase0{
+		position: fixed;  /*queda en donde lo pusimos aunque cambiemos de posicion con la barra de desplazamiento*/
+		left: 650px;
+		top: 50px;   /*el espacio entre el cuadro y el tope VISIBLE de arriba*/
+		width: 570px;  /*el ancho del cuadro. (el texto se acomoda adentro)*/
+		height: 520px;
+		background-color: #D7CFDA;
+		font-size: 22px;
+		padding: 1em 2em 0em 2em;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+        box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+	
+
+    #frase1{
+    font-size: 25px;
+    padding: 10px 10px 10px, 15px;
+    font-style: italic;
+}
+
+    #mensaje_frase1{
+		position: fixed;  /*queda en donde lo pusimos aunque cambiemos de posicion con la barra de desplazamiento*/
+		left: 730px;
+		top: 100px;   /*el espacio entre el cuadro y el tope VISIBLE de arriba*/
+		width: 450px;  /*el ancho del cuadro. (el texto se acomoda adentro)*/
+		height: 310px;
+		background-color: #D7CFDA;
+		font-size: 22px;
+		padding: 45px 40px 20px 40px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+        box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+
+
+</style>	
+
+<body>
+
+<div id="mensaje_frase0"></div>
+<div id="mensaje_frase1"></div>
+
+	
+	<div class="contenido">	
+
+		<div class="izq">
+		
+			<div class="botones-idioma-home">	
+				<button id="IDidioma" onclick="modificaIdioma()"></button>
+				<button class="HomeButton" onclick="location.href='../../index.html';">
+					<span>Home</span>
+				</button>		
+			</div>
+
+
+			<div class=previousnext>	
+				<button id="PreviousButton" onclick="location.href='./maryssong.html';" class="float-left submit-button" >←Previous track</button>		
+			</div>
+
+    <div class="song">   			
+
+        <span class="hover_img" id="frase0">
+        <a class="titulo" href="#">11. Our Song<span><img src="../../imagenes/fotosINFO/highschool.jpg" alt="image2"  style="position: fixed; left:750px; top:290px; width:35%;" />    
+		</span></a></span>
+
+        <div class="letra">
+
+
+        <p>I was ridin' shotgun with my hair undone<br>
+        In the front seat of his car<br>
+        He's got a one-hand feel on the steering wheel<br>
+        The other on my heart<br>
+        I look around, turn the radio down<br>
+        He says, "Baby, is something wrong?"<br>
+        I say, "Nothing, I was just thinking how we don't have a song"<br>
+        And he says</p>
+            
+        <p>Our song is the slamming screen door<br>
+        Sneakin' out late, tapping on your window<br>
+        When we're on the phone and you talk real slow<br>
+        'Cause it's late and your mama don't know<br>
+        Our song is the way you laugh<br>
+        The first date; "Man, I didn't kiss her, and I should have"<br>
+        And when I got home, 'fore I said "Amen"<br>
+        Asking God if he could play it again</p>
+            
+        <p>I was walkin' up the front porch steps after everything that day<br>
+        Had gone all wrong and been trampled on<br>
+        And lost and thrown away<br>
+        Got to the hallway, well on my way<br>
+        To my lovin' bed<br>
+        I almost didn't notice all the roses<br>
+        And the note that said</p>
+            
+        <p>Our song is the slamming screen door<br>
+        Sneakin' out late, tapping on your window<br>
+        When we're on the phone and you talk real slow<br>
+        'Cause it's late and your mama don't know<br>
+        Our song is the way you laugh<br>
+        The first date; "Man, I didn't kiss her and I should have"<br>
+        And when I got home, 'fore I said "Amen"<br>
+        Asking God if he could play it again</p>
+            
+        <p>I've heard every album, listened to the radio<br>
+        Waited for something to come along<br>
+        That was as good as our song</p>
+            
+        <p>'Cause our song is the slamming screen door<br>
+        Sneakin' out late, tapping on his window<br>
+        When we're on the phone and he talks real slow<br>
+        'Cause it's late and his mama don't know<br>
+        Our song is the way he laughs<br>
+        The first date; "Man, I didn't kiss him, and I should have"<br>
+        And when I got home, 'fore I said "Amen"<br>
+        Askin' God if he could play it again<br>
+        Play it again<br>
+        Oh yeah<br>
+        Oh, oh yeah</p>
+            
+        <p>I was ridin' shotgun with my hair undone<br>
+        In the front seat of his car<br>
+        I grabbed a pen and an old napkin<br>
+        And I wrote down our song</p>
+
+        </div>
+
+    </div>
+
+    <div class="MS" id="frase1"><a href="#">
+        <ul style="list-style-image:url(../../imagenes/fotosINFO/cowboyboots.png);">
+        <li><pre><h3>Mensaje Secreto:</h3>           "Live in love"</pre></li> 
+        </ul></a>
+    </div>			
+
+    <div class="der">
+    </div>
+    
+</div> 
+
+</body>
+</html>

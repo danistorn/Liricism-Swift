@@ -1,0 +1,222 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script src="../jQueryAssets/jquery-1.11.1.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Beth+Ellen&family=Dancing+Script:wght@500&family=Mea+Culpa&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../CSS/csslover.css"/>	
+
+
+	
+<script>	
+	
+
+
+	$(document).ready(function(){	
+		$("#mensaje_frase1").hide();
+		$("#frase1").hover(mensaje_on1, mensaje_off1);
+		eligeIdioma(); 	 /*Para que apenas entre a la pág, ya se vea el "ENGLISH" en el botón*/		
+	});
+
+	
+	function mensaje_on1(){
+		$("#mensaje_frase1").show();	
+	}
+	
+	function mensaje_off1(){
+		$("#mensaje_frase1").hide();
+	}	
+	
+
+
+
+
+        /* Idioma */
+        var idioma = 0 ; // 0=es, 1=en, ...
+        var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+        var texto = [ 
+						["", ""],	 
+						["Taylor escribió en el prólogo de su 4° álbum RED (en 2012) sobre cómo creía que el amor real o verdadero brilla de un color dorado, y no se desvanece ni combustiona espontáneamente, describiendo a éste último de un color rojo. Expresó también que posiblemente escribiría sobre ese tipo de amor si alguna vez lo encontraba.",
+                         "Taylor wrote in the prologue of her 4° album RED (in 2012) about how she thought real love shines golden like starlight, and doesn't fade or spontaneously combust, describing these last ones as a burning red. She also expressed that maybe she would write a whole album about that kind of love if she ever found it."
+						],
+                    ];
+                      
+					function eligeIdioma(){
+                     IDidioma.innerHTML=idiomas[idioma];
+    
+                         for (let frase=0; frase<texto.length; frase++){         /*inicio con frase=0 -- Continúo hasta el lenght del "texto" (osea continúo 2 veces porque el lenght es 2. sson 2 arrays) -- le sumo uno a "frase", asi pasa de frase 0 a frase 1.*/ 
+                         document.getElementById("mensaje_frase"+frase).innerHTML=texto[frase][idioma];
+                         }
+                        }
+                    function modificaIdioma(){
+                    idioma++;
+                    if (idioma < 0 || idioma > 1) idioma = 0;
+                    eligeIdioma();
+                    }   
+
+	
+	
+	
+</script>
+
+
+</head>
+
+<style>
+	
+	body{
+	background:url("../../imagenes/lover/daylight.jpg"); /*La foto*/
+	background-repeat:repeat-y;	
+	background-position:600px 0%;
+	}
+
+
+	.hover_img a { position:relative; }
+.hover_img a span { position:absolute; display:none; z-index:99; }
+.hover_img a:hover span { display:block; }
+
+.img{
+    top:50px;
+    left:-100px;
+
+}
+
+a{  /* Para sacarle el subrayado y el color azul, así no se ve como un link */
+    text-decoration: none;
+    color:red;
+}	
+
+
+
+#mensaje_frase1{
+		position: fixed;  /*o absolute?*/
+		left: 613px;
+		top: 20px;   /*originalmente tenia 392px*/
+		width: 680px;
+		height: 520px;
+		background-color: #D7CFDA;
+		font-size: 20px;
+		padding: 30px 15px 15px 15px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+
+
+	
+</style>	
+	
+<body>
+
+<div id="mensaje_frase0"></div>
+<div id="mensaje_frase1"></div>
+
+
+
+	<div class="contenido">	
+	
+		<div class="izq">
+		
+			<div class="botones-idioma-home">	
+				<button id="IDidioma" onclick="modificaIdioma()"></button>
+				<button class="HomeButton" onclick="location.href='../../index.html';">
+					<span>Home</span>			
+				</button>		
+			</div>
+	
+	
+			<div class=previousnext>	
+				<button id="PreviousButton" onclick="location.href='./inthaf.html';" class="float-left submit-button" >←Previous track</button>		
+			</div>
+	
+
+			
+
+	<div class="song">
+
+
+		<span class="titulo">18. Daylight</span>
+			
+		<div class="letra">
+
+		<p>My love was as cruel as the cities I lived in<br>
+		Everyone looked worse in the light<br>
+		There are so many lines that I've crossed unforgiven<br>
+		I'll tell you the truth, but never goodbye</p>
+			
+		<p>I don't wanna look at anything else now that I saw you<br>
+		I don't wanna think of anything else now that I thought of you<br>
+		I've been sleeping so long in a 20-year dark night<br>
+		And now I see daylight, I only see daylight</p>
+			
+		<p>Luck of the draw only draws the unlucky<br>
+		And so I became the butt of the joke<br>
+		I wounded the good and I trusted the wicked<br>
+		Clearing the air, I breathed in the smoke<br>
+		Maybe you ran with the wolves and refused to settle down<br>
+		Maybe I've stormed out of every single room in this town<br>
+		Threw out our cloaks and our daggers because it's morning now<br>
+		It's brighter now, now</p>
+			
+		<p>I don't wanna look at anything else now that I saw you<br>
+		(I can never look away)<br>
+		I don't wanna think of anything else now that I thought of you<br>
+		(Things will never be the same)<br>
+		I've been sleeping so long in a 20-year dark night<br>
+		(Now I'm wide awake)<br>
+		And now I see daylight (Daylight), I only see daylight (Daylight)<br>
+		I only see daylight, daylight, daylight, daylight<br>
+		I only see daylight, daylight, daylight, daylight</p>
+			
+		<p>And I can still see it all (In my mind)<br>
+		All of you, all of me (Intertwined)<br>
+		I once believed love would be (Black and white)<br>
+		But it's golden (Golden)<br>
+		And I can still see it all (In my head)<br>
+		Back and forth from New York (Singing in your bed)<br>
+		<span class="hover_img" id="frase1"> 
+			<a href="#">I once believed love would be (Burning red)<br>
+		But it's golden<span><img src="../../imagenes/fotosINFO/redprologue.jpg" alt="image2"  style="position: fixed; left:730px; top:208px" />    
+		</span></a></span><br>
+		Like daylight, like daylight<br>
+		Like daylight, daylight</p>
+			
+		<p>I don't wanna look at anything else now that I saw you<br>
+		(I can never look away)<br>
+		I don't wanna think of anything else now that I thought of you<br>
+		(Things will never be the same)<br>
+		I've been sleeping so long in a 20-year dark night<br>
+		(Now I'm wide awake)<br>
+		And now I see daylight (I see daylight), I only see daylight (Ah)<br>
+		I only see daylight, daylight, daylight, daylight<br>
+		I only see daylight, daylight, daylight, daylight (Ah)<br>
+		I only see daylight, daylight, daylight, daylight<br>
+		I only see daylight, daylight, daylight, daylight</p>
+			
+		<p>Like daylight<br>
+		It's golden like daylight<br>
+		You gotta step into the daylight and let it go<br>
+		Just let it go, let it go</p>
+			
+		<p>I wanna be defined by the things that I love<br>
+		Not the things I hate<br>
+		Not the things that I'm afraid of, I'm afraid of<br>
+		Not the things that haunt me in the middle of the night<br>
+		I, I just think that<br>
+		You are what you love</p>
+
+		</div>
+	</div>
+
+    <div class="der">
+    </div>
+
+</div> 	  
+
+
+</body>
+</html>

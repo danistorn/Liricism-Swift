@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script src="../jQueryAssets/jquery-1.11.1.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IM+Fell+DW+Pica:ital@1&family=Rochester&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../CSS/cssevermore.css"/>		
+
+<script>
+
+    $(document).ready(function(){   
+            $("#mensaje_frase0").hide();
+            $("#frase0").hover(mensaje_on0, mensaje_off0);
+            eligeIdioma();
+        });
+    
+        
+        function mensaje_on0(){
+            $("#mensaje_frase0").show();    
+        }
+        
+        function mensaje_off0(){
+            $("#mensaje_frase0").hide();
+        }   
+
+        
+        /* Idioma */
+        var idioma = 0 ; // 0=es, 1=en, ...
+        var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+        var texto = [   "",
+                        ""
+                    ];
+        function eligeIdioma(){
+            IDidioma.innerHTML=idiomas[idioma];
+            mensaje_frase0.innerHTML=texto[idioma];
+        }
+        function modificaIdioma(){
+            idioma++;
+            if (idioma < 0 || idioma > 1) idioma = 0;
+            eligeIdioma();
+        }
+    
+    
+    
+    </script>
+
+
+</head>
+	
+<style>
+	
+	body{
+	background:url("../../imagenes/evermore/ivy.jpg"); /*La foto*/
+	background-repeat:repeat-y;	
+	background-position:600px 0%;
+	}		
+	
+</style>	
+	
+
+<body>
+	
+	<div class="contenido">	
+
+		<div class="izq">
+		
+			<div class="botones-idioma-home">	
+				<button id="IDidioma" onclick="modificaIdioma()"></button>
+				<button class="HomeButton" onclick="location.href='../../index.html';">
+                    <span>Home</span>
+                </button>		
+			</div>
+	
+	
+			<div class=previousnext>	
+				<button id="PreviousButton" onclick="location.href='./coneyisland.html';" class="float-left submit-button" >←Previous track</button>		
+				<button id="NextButton" onclick="location.href='./cowboylikeme.html';" class="float-left submit-button" >Next track →</button>		
+			</div>	
+
+
+
+    <div class="song">			
+
+        <span class="titulo" id="frase0">10. Ivy</span>
+
+        <div class="letra">
+
+        <p>How's one to know?<br>
+        I'd meet you where the spirit meets the bones<br>
+        In a faith forgotten land<br>
+        In from the snow<br>
+        Your touch brought forth an incandescent glow<br>
+        Tarnished but so grand</p>
+            
+        <p>And the old widow goes to the stone every day<br>
+        But I don't, I just sit here and wait<br>
+        Grieving for the living</p>
+            
+        <p>Oh, goddamn<br>
+        My pain fits in the palm of your freezing hand<br>
+        Taking mine, but it's been promised to another<br>
+        Oh, I can't<br>
+        Stop you putting roots in my dreamland<br>
+        My house of stone, your ivy grows<br>
+        And now I'm covered in you</p>
+            
+        <p>I wish to know<br>
+        The fatal flaw that makes you long to be<br>
+        Magnificently cursed<br>
+        He's in the room<br>
+        Your opal eyes are all I wish to see<br>
+        He wants what's only yours</p>
+            
+        <p>Oh, goddamn<br>
+        My pain fits in the palm of your freezing hand<br>
+        Taking mine, but it's been promised to another<br>
+        Oh, I can't<br>
+        Stop you putting roots in my dreamland<br>
+        My house of stone, your ivy grows<br>
+        And now I'm covered</p>
+            
+        <p>Clover blooms in the fields<br>
+        Spring breaks loose, the time is near<br>
+        What would he do if he found us out?<br>
+        Crescent moon, coast is clear<br>
+        Spring breaks loose, but so does fear<br>
+        He's gonna burn this house to the ground</p>
+            
+        <p>How's one to know?<br>
+        I'd live and die for moments that we stole<br>
+        On begged and borrowed time<br>
+        So tell me to run<br>
+        Or dare to sit and watch what we'll become<br>
+        And drink my husband's wine</p>
+            
+        <p>Oh, goddamn<br>
+        My pain fits in the palm of your freezing hand<br>
+        Taking mine, but it's been promised to another<br>
+        Oh, I can't<br>
+        Stop you putting roots in my dreamland<br>
+        My house of stone, your ivy grows<br>
+        And now I'm covered in you<br>
+        And I'm covered in you</p>
+            
+        <p>So yeah, it's a fire<br>
+        It's a goddamn blaze in the dark<br>
+        And you started it<br>
+        You started it<br>
+        So yeah, it's a war<br>
+        It's the goddamn fight of my life<br>
+        And you started it<br>
+        You started it</p>
+            
+        <p>Oh, I can't<br>
+        Stop you putting roots in my dreamland<br>
+        My house of stone, your ivy grows<br>
+        And now I'm covered<br>
+        In you<br>
+        In you, you<br>
+        Now I'm covered in you<br>
+        In you</p>
+
+        </div>
+    </div>
+
+	
+    <div class="der">
+    </div>
+
+</div> 
+
+</body>
+</html>

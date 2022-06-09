@@ -1,0 +1,389 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script src="../jQueryAssets/jquery-1.11.1.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../CSS/cssred.css "/>		
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>  
+
+
+<script>
+
+    $(document).ready(function(){   
+            $("#mensaje_frase0").hide();
+            $("#frase0").hover(mensaje_on0, mensaje_off0);
+            eligeIdioma();
+        });
+    
+        
+        function mensaje_on0(){
+            $("#mensaje_frase0").show();    
+        }
+        
+        function mensaje_off0(){
+            $("#mensaje_frase0").hide();
+        }   
+
+
+
+		
+		$(document).ready(function(){	
+		$("#mensaje_frase1").hide();
+		$("#frase1").hover(mensaje_on1, mensaje_off1);
+		
+	});
+
+	
+	function mensaje_on1(){
+		$("#mensaje_frase1").show();	
+	}
+	
+	function mensaje_off1(){
+		$("#mensaje_frase1").hide();
+	}	
+
+
+
+
+
+
+	$(document).ready(function(){	
+		$("#mensaje_frase2").hide();
+		$("#frase2").hover(mensaje_on2, mensaje_off2);
+		
+	});
+
+	
+	function mensaje_on2(){
+		$("#mensaje_frase2").show();	
+	}
+	
+	function mensaje_off2(){
+		$("#mensaje_frase2").hide();
+	}	
+
+
+
+
+	$(document).ready(function(){	
+		$("#mensaje_frase3").hide();
+		$("#frase3").hover(mensaje_on3, mensaje_off3);
+		
+	});
+
+	
+	function mensaje_on3(){
+		$("#mensaje_frase3").show();	
+	}
+	
+	function mensaje_off3(){
+		$("#mensaje_frase3").hide();
+	}	
+
+	
+	
+	
+	$(document).ready(function(){	
+		$("#mensaje_frase4").hide();
+		$("#frase4").hover(mensaje_on4, mensaje_off4);
+		
+	});
+
+	
+	function mensaje_on4(){
+		$("#mensaje_frase4").show();	
+	}
+	
+	function mensaje_off4(){
+		$("#mensaje_frase4").hide();
+	}	
+
+
+
+        /* Idioma */
+        var idioma = 0 ; // 0=es, 1=en, ...
+        var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+        var texto = [   
+						["Ésta anción fue escrita para Jake Gyllenhaal.<br> Taylor y él salieron a finales de 2010, cuando ella tenía 20 y él 29",
+                        "This song was written for Jake Gyllenhaal.<br> Taylor and him dated late 2010, when she was 20 and he was 29."
+						],
+						["Vuelve a mencionar el espacio que él le pidió en la canción \"I bet you think about me\", del mismo álbum RED.",
+						 "She mentions again the space that he asked her in the song \"I bet you think about me\", from the same album RED"
+						],
+						["Taylor contó en una entrevista que escribió esta canción un día que se cruzó con un amigo de Jake, y éste le dijo que Jake le había asegurado que en algún momento volverían a estar juntos.",
+						 "Taylor shared in an interview that she wrote this song a day she run into a friend of Jake, and he told her that Jake assured him that eventually they would get back together."						 
+						],
+						["Jake nunca se habría tomado muy en serio su música (género country, pop) y según Taylor solía insultarla sutilmente, alabando en cambio la música indie, un género que consideraba superior, y haciendola sentir que no era lo suficientemente buena y relevante como las bandas hipsters que él escuchaba.<br><br><br><br><br><br><br><br><br><br><br><br> Es por eso que Taylor hizo ésta canción lo más pop posible, para que él la escuchara en la radio y lo molestara.<br> Taylor vuelve a hacer mención de esto en \"I bet you think about me\" una de sus canciónes \"From the Vault\"",
+						"Jake would never take her music too serious (country and pop genre) and according to Taylor he would subtly insult it, praising the indie music instead, a genre he considered superiour, and making her feel like she wasn't good enough or relevant as the hipster bands he used to listen to.<br><br> This is what inspired Taylor to make this song as pop as possible, so he would listen to it in the radio and get annoyed by it.<br> Taylor makes a reference about this again in \"I bet you think about me\""
+						],
+						["Desde el comienzo de su carrera Taylor Swift incluye mensajes secretos en cada canción, lo cual dejó de hacer en su álbum Reputation.<br><br><hr><br> Para su album RED las letras de las canciones en los booklets (libritos) estan en minusculas, y cada letra del mensaje secreto esta en mayuscula.",
+						 "Taylor Swift includes hidden messages in each song, which stopped at Reputation.<br><br><hr><br> For her album RED the lyrics of the songs in the booklets are in lowerecased letters, and each letter of the hidden message is capitalized"
+						]
+						];
+						function eligeIdioma(){
+						 IDidioma.innerHTML=idiomas[idioma];
+		
+							 for (let frase=0; frase<texto.length; frase++){         /*inicio con frase=0 -- Continúo hasta el lenght del "texto" (osea continúo 2 veces porque el lenght es 2. sson 2 arrays) -- le sumo uno a "frase", asi pasa de frase 0 a frase 1.*/ 
+							 document.getElementById("mensaje_frase"+frase).innerHTML=texto[frase][idioma];
+							 }
+							}
+						function modificaIdioma(){
+						idioma++;
+						if (idioma < 0 || idioma > 1) idioma = 0;
+						eligeIdioma();
+						}	
+    
+    
+    </script>
+
+
+</head>
+	
+<style>	
+
+.contenido .der{
+	background:url("../../imagenes/red/never.jpg"); /*La foto*/
+	background-repeat:repeat-y;
+}
+
+	
+	
+.hover_img a { position:relative; }
+.hover_img a span { position:absolute; display:none; z-index:99; }
+.hover_img a:hover span { display:block; }
+
+.img{
+    top:50px;
+    left:-100px;
+
+}
+
+a{  /* Para sacarle el subrayado y el color azul, así no se ve como un link */
+    text-decoration: none;
+    color:red;
+}
+
+
+
+
+
+
+#mensaje_frase0{
+		position: fixed;  /*queda en donde lo pusimos aunque cambiemos de posicion con la barra de desplazamiento*/
+		left: 800px;
+		top: 30px;   /*el espacio entre el cuadro y el tope VISIBLE de arriba*/
+		width: 350px;  /*el ancho del cuadro. (el texto se acomoda adentro)*/
+		height: 540px;
+		background-color: #D7CFDA;
+		font-size: 21px;
+		padding: 20px 25px 25px 25px;   /*El margen entre el texto y los bordes del cuadro*/
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}		
+
+	
+	#mensaje_frase1{
+		position: fixed;  /*queda en donde lo pusimos aunque cambiemos de posicion con la barra de desplazamiento*/
+		left: 635px;
+		top: 80px;   /*el espacio entre el cuadro y el tope VISIBLE de arriba*/
+		width: 630px;  /*el ancho del cuadro. (el texto se acomoda adentro)*/
+		height: 440px;
+		background-color: #D7CFDA;
+		font-size: 23px;
+		padding: 40px 25px 0px 25px;   /*El margen entre el texto y los bordes del cuadro*/
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}			
+	
+
+	#mensaje_frase2{
+		position: fixed;  /*queda en donde lo pusimos aunque cambiemos de posicion con la barra de desplazamiento*/
+		left: 730px;
+		top: 170px;   /*el espacio entre el cuadro y el tope VISIBLE de arriba*/
+		width: 480px;  /*el ancho del cuadro. (el texto se acomoda adentro)*/
+		height: 190px;
+		background-color: #D7CFDA;
+		font-size: 23px;
+		padding: 50px 25px 25px 25px;   /*El margen entre el texto y los bordes del cuadro*/
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+
+	
+	#mensaje_frase3{
+		position: fixed;  /*queda en donde lo pusimos aunque cambiemos de posicion con la barra de desplazamiento*/
+		left: 625px;
+		top: 20px;   /*el espacio entre el cuadro y el tope VISIBLE de arriba*/
+		width: 650px;  /*el ancho del cuadro. (el texto se acomoda adentro)*/
+		height: 545px;
+		background-color: #D7CFDA;
+		font-size: 21px;
+		padding: 18px 25px 25px 25px;   /*El margen entre el texto y los bordes del cuadro*/
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}
+
+
+
+
+
+#mensaje_frase4{
+		position: fixed;  /*queda en donde lo pusimos aunque cambiemos de posicion con la barra de desplazamiento*/
+		left: 730px;
+		top: 100px;   /*el espacio entre el cuadro y el tope VISIBLE de arriba*/
+		width: 450px;  /*el ancho del cuadro. (el texto se acomoda adentro)*/
+		height: 310px;
+		background-color: #D7CFDA;
+		font-size: 22px;
+		padding: 45px 40px 20px 40px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+        box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+
+
+
+</style>	
+
+<body>
+	
+	<div id="mensaje_frase0"></div>
+	<div id="mensaje_frase1"></div>	
+	<div id="mensaje_frase2"></div>
+	<div id="mensaje_frase3"></div>
+	<div id="mensaje_frase4"></div>
+
+	<div class="contenido">	
+
+		<div class="izq">
+		
+			<div class="botones-idioma-home">	
+				<button id="IDidioma" onclick="modificaIdioma()"></button>	
+				<button class="HomeButton" onclick="location.href='../../index.html';">
+					<span>Home</span>	
+				</button>			
+			</div>
+	
+	
+			<div class=previousnext>	
+				<button id="PreviousButton" onclick="location.href='./ialmostdo.html';" class="float-left submit-button" >←Previous track</button>		
+				<button id="NextButton" onclick="location.href='./staystaystay.html';" class="float-left submit-button" >Next track →</button>		
+			</div>		
+	
+
+	
+	
+
+<div class="song">
+
+
+	<div class="hover_img" id="frase0">
+		<a class="titulo" href="#">8. We Are Never Ever Getting <br>Back Together<br><span><img src="../../imagenes/fotosINFO/jakeg.jpg" alt=""  style="position: fixed; left:870px; top:178px;" />    
+		</span></a></div>
+
+	<div class="letra">
+
+	<p>I remember when we broke up, the first time<br>
+	Saying, "this is it, I've had enough"<br>
+	<span class="hover_img" id="frase1">
+		<a href="#">'Cause like, we hadn't seen each other in a month<br>
+	When you said you needed space (what?)<br><span><img src="../../imagenes/fotosINFO/space2.png" alt=""  style="position: fixed; left:705px; top:220px" />    
+	</span></a></span>
+	Then you come around again and say<br>
+	"Baby, I miss you and I swear I'm gonna change, trust me"<br>
+	Remember how that lasted for a day?<br>
+	I say, "I hate you, " we break up, you call me, "I love you"</p>
+		
+	<p>Ooh, ooh, ooh<br>
+	We called it off again last night<br>
+	But ooh, ooh, ooh<br>
+	This time, I'm telling you, I'm telling you</p>
+		
+	<p>We are never ever, ever getting back together<br>
+	We are never ever, ever getting back together<br>
+	<span class="hover_img" id="frase2">
+		<a href="#">You go talk to your friends, talk to my friends, talk to me<br><span><img src="../../imagenes/fotosINFO/.jpg" alt=""  style="position: fixed; left:550px; top:50px" />    
+		</span></a></span>
+	But we are never ever, ever, ever getting back together<br>
+	Like, ever</p>
+		
+	<span>I'm really gonna miss you picking fights<br>
+	And me falling for it, screaming that I'm right<br>
+	And you would hide away and find your peace of mind<br></span>
+	<span class="hover_img" id="frase3">
+		<a href="#">
+	With some indie record that's much cooler than mine<span><img src="../../imagenes/fotosINFO/indieconcerts.png" alt=""  style="position: fixed; left:740px; top:189px" />    
+	</span></a></span>
+		
+	<p>Ooh, ooh, ooh<br>
+	You called me up again tonight<br>
+	But ooh, ooh, ooh<br>
+	This time, I'm telling you, I'm telling you</p>
+		
+	<p>We are never ever, ever getting back together<br>
+	We are never ever, ever getting back together<br>
+	You go talk to your friends<br>
+	Talk to my friends, talk to me (talk to me)<br>
+	But we are never ever, ever, ever getting back together</p>
+		
+	<p>Ooh, ooh, ooh, yeah<br>
+	Ooh, ooh, ooh, yeah<br>
+	Ooh, ooh, ooh, yeah<br>
+	Oh</p>
+		
+	<p>I used to think that we were forever ever, ever<br>
+	And I used to say, "never say never"<br>
+	Ah, so he calls me up and he's like, "I still love you"<br>
+	And I'm like, I'm just, I mean this is exhausting, you know?<br>
+	Like we are never getting back together, like, ever</p>
+		
+	<p>we are never ever, ever getting back together<br>
+	We are never ever, ever getting back together<br>
+	You go talk to your friends, talk to my friends, talk to me<br>
+	But we are never, ever, ever, ever getting back together<br>
+	(We) ooh, ooh, ooh<br>
+	Ooh, ooh, ooh (getting back together)<br>
+	(We) ooh, ooh, ooh<br>
+	Oh (getting back together)</p>
+		
+	<p>You go talk to your friends<br>
+	Talk to my friends, talk to me (talk to me)<br>
+	But we are never ever, ever, ever getting back together</p>
+	
+
+	</div>
+
+</div>
+
+
+<div class="MS" id="frase4"><a href="#">
+    <ul style="list-style-image:url(../../imagenes/iconos/leafs.png);">
+     <li><pre><h3>Mensaje Secreto:</h3>    "When I stopped caring
+		what you thought"</pre></li> 
+    </ul>
+</a></div>			
+
+
+
+</div> 	
+
+<div class="der">
+</div>
+
+</div>
+
+</body>
+</html>

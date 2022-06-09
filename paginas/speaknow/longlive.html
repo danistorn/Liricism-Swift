@@ -1,0 +1,254 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rochester&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">		
+<link rel="stylesheet" href="../../CSS/cssspeaknow.css"/>		
+<script src="../jQueryAssets/jquery-1.11.1.min.js"></script>	
+
+
+<script>
+
+    $(document).ready(function(){   
+            $("#mensaje_frase0").hide();
+            $("#frase0").hover(mensaje_on0, mensaje_off0);
+            eligeIdioma();
+        });
+    
+        
+        function mensaje_on0(){
+            $("#mensaje_frase0").show();    
+        }
+        
+        function mensaje_off0(){
+            $("#mensaje_frase0").hide();
+        }   
+
+
+
+		$(document).ready(function(){   
+                $("#mensaje_frase1").hide();
+                $("#frase1").hover(mensaje_on1, mensaje_off1);
+                
+            });
+        
+            
+            function mensaje_on1(){
+                $("#mensaje_frase1").show();    
+            }
+            
+            function mensaje_off1(){
+                $("#mensaje_frase1").hide();
+            }   
+
+        
+        /* Idioma */
+        var idioma = 0 ; // 0=es, 1=en, ...
+        var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+        var texto = [   ["Taylor escribió esta canción a todas las personas que la apoyaron en su carrera: su banda, su productor, y sus fans. Y habla sobre los momentos de triunfo que pasó junto a ellos.<br> La cantante comentó que es en cierta forma la primera canción de amor que escribió para su equipo.",
+                        "Taylor wrote this song for all those people who supported her in her career: her band, her producer, and her fans\". And it speaks about the moments of triumph that she went throug with them.<br> The singer said that it is, in a way, the first love song she wrote for her team."
+						],
+						["Desde el comienzo de su carrera Taylor Swift incluye mensajes secretos en cada canción, lo cual dejó de hacer en su álbum Reputation.<br><br><hr><br> Para su album Speak Now las letras de las canciones en los booklets (libritos) estan en minusculas, y cada letra del mensaje secreto esta en mayuscula.",
+                          "Taylor Swift includes hidden messages in each song, which stopped at Reputation.<br><br><hr><br> For her album Speak Now the lyrics of the songs in the booklets are in lowerecased letters, and each letter of the hidden message is capitalized."
+                         ]
+					];
+					function eligeIdioma(){
+                         IDidioma.innerHTML=idiomas[idioma];
+        
+                             for (let frase=0; frase<texto.length; frase++){         /*inicio con frase=0 -- Continúo hasta el lenght del "texto" (osea continúo 2 veces porque el lenght es 2. sson 2 arrays) -- le sumo uno a "frase", asi pasa de frase 0 a frase 1.*/ 
+                             document.getElementById("mensaje_frase"+frase).innerHTML=texto[frase][idioma];
+                             }
+                            }
+                        function modificaIdioma(){
+                        idioma++;
+                        if (idioma < 0 || idioma > 1) idioma = 0;
+                        eligeIdioma();
+                        }	 
+    
+    
+    </script>
+
+	
+</head>
+
+<style>	
+	
+body
+{
+	background:url("../../imagenes/speaknow/longlive.jpg"); /*La foto*/
+	background-repeat:repeat-y;
+	background-position:600px 0%;
+		
+}	
+	
+	#mensaje_frase0{
+		position: fixed;  /*queda en donde lo pusimos aunque cambiemos de posicion con la barra de desplazamiento*/
+		left: 725px;
+		top: 170px;   /*el espacio entre el cuadro y el tope VISIBLE de arriba*/
+		width: 500px;  /*el ancho del cuadro. (el texto se acomoda adentro)*/
+		height: 230px;
+		background-color: #D7CFDA;
+		font-size: 23px;
+		padding: 25px;   /*El margen entre el texto y los bordes del cuadro*/
+		padding-top: 40px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+
+
+
+#frase1{
+    font-size: 25px;
+    padding: 10px 10px 10px, 15px;
+    font-style: italic;
+}
+
+
+#mensaje_frase1{
+		position: fixed;  /*queda en donde lo pusimos aunque cambiemos de posicion con la barra de desplazamiento*/
+		left: 730px;
+		top: 100px;   /*el espacio entre el cuadro y el tope VISIBLE de arriba*/
+		width: 450px;  /*el ancho del cuadro. (el texto se acomoda adentro)*/
+		height: 310px;
+		background-color: #D7CFDA;
+		font-size: 22px;
+		padding: 45px 40px 20px 40px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+        box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+
+
+</style>	
+	
+<body>
+	
+<div id="mensaje_frase0">Taylor escribió esta canción a todas las personas que la apoyaron en su carrera: su banda, su productor, y sus fans. Y habla sobre los momentos de triunfo que pasó junto a ellos.<br> La cantante comentó que es en cierta forma la primera canción de amor que escribió para su equipo.</div>
+<div id="mensaje_frase1"></div>	
+
+<div class="contenido">	
+
+	<div class="izq">
+	
+		<div class="botones-idioma-home">
+			<button id="IDidioma" onclick="modificaIdioma()"></button>	
+			<button class="HomeButton" onclick="location.href='../../index.html';">
+                <span>Home</span> 
+           </button>	
+		</div>
+
+
+		<div class="previousnext">
+			<button id="PreviousButton" onclick="location.href='./lastkiss.html';" class="float-left submit-button" >←Previous track</button>		</div>	
+
+	
+    <div class="song">
+
+        <span class="titulo" id="frase0"><a href="#"> 14. Long Live</a></span>
+            
+        <div class="letra">
+
+
+        <p>I said: Remember this moment<br>
+        In the back of my mind<br>
+        The time we stood with our shaking hands<br>
+        The crowds in stands went wild<br>
+        We were the kings and the queens<br>
+        And they read off our names<br>
+        The night you danced like you knew our lives<br>
+        Would never be the same</p>
+
+        <p>You held your head like a hero<br>
+        On a history book page<br>
+        It was the end of a decade<br>
+        But the start of an age</p>
+
+        <p>Long live the walls we crashed through<br>
+        How the kingdom lights shined just for me and you<br>
+        I was screaming: Long live all the magic we made<br>
+        And bring on all the pretenders<br>
+        One day we will be remembered</p>
+
+        <p>I said: Remember this feeling<br>
+        I passed the pictures around<br>
+        Of all the years that we stood there on the sidelines<br>
+        Wishing for right now<br>
+        We are the kings and the queens<br>
+        You traded your baseball cap for a crown<br>
+        When they gave us our trophies<br>
+        And we held them up for our town</p>
+
+        <p>And the cynics were outraged<br>
+        Screaming: This is absurd<br>
+        'Cause for a moment a band of thieves<br>
+        In ripped up jeans got to rule the world</p>
+
+        <p>Long live the walls we crashed through<br>
+        How the kingdom lights shined just for me and you<br>
+        I was screaming: Long live all the magic we made<br>
+        And bring on all the pretenders<br>
+        I'm not afraid</p>
+
+        <p>Long live all the mountains we moved<br>
+        I had the time of my life fighting dragons with you<br>
+        I was screaming: Long live that look on your face<br>
+        And bring on all the pretenders<br>
+        One day we will be remembered</p>
+
+        <p>Hold on to spinning around<br>
+        Confetti falls to the ground<br>
+        May these memories break our fall</p>
+
+        <p>Will you take a moment?<br>
+        Promise me this<br>
+        That you'll stand by me forever<br>
+        But if, God forbid, fate should step in<br>
+        And force us into a goodbye<br>
+        If you have children someday<br>
+        When they point to the pictures<br>
+        Please, tell 'em my name</p>
+
+        <p>Tell 'em how the crowds went wild<br>
+        Tell 'em how I hope they shine</p>
+
+        <p>Long live the walls we crashed through<br>
+        I had the time of my life with you</p>
+
+        <p>Long, long live the walls we crashed through<br>
+        How the kingdom lights shined just for me and you<br>
+        And I was screaming: Long live all the magic we made<br>
+        And bring on all the pretenders<br>
+        I'm not afraid</p>
+
+        <p>Singing: Long live all the mountains we moved<br>
+        I had the time of my life fighting dragons with you<br>
+        And long, long live that look on your face<br>
+        And bring on all the pretenders<br>
+        One day we will be remembered</p>
+
+        </div>
+
+    </div>
+    
+    
+    <div class="MS" id="frase1"><a href="#">
+        <ul style="list-style-image:url(../../imagenes/fotosINFO/purpledress.jpg);">
+        <li><pre><h3>Mensaje Secreto:</h3>           	"For you"</pre></li> 
+        </ul></a>
+    </div>			
+
+
+    <div class="der">
+    </div>
+
+</div> 
+
+
+</body>
+</html>

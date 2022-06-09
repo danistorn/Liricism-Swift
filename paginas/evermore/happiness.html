@@ -1,0 +1,179 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script src="../jQueryAssets/jquery-1.11.1.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IM+Fell+DW+Pica:ital@1&family=Rochester&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../CSS/cssevermore.css"/>	
+
+
+<script>
+
+	$(document).ready(function(){   
+			$("#mensaje_frase0").hide();
+			$("#frase0").hover(mensaje_on0, mensaje_off0);
+			eligeIdioma();
+		});
+	
+		
+		function mensaje_on0(){
+			$("#mensaje_frase0").show();    
+		}
+		
+		function mensaje_off0(){
+			$("#mensaje_frase0").hide();
+		}   
+
+		
+		/* Idioma */
+		var idioma = 0 ; // 0=es, 1=en, ...
+		var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+		var texto = [   "",
+						""
+					];
+		function eligeIdioma(){
+			IDidioma.innerHTML=idiomas[idioma];
+			mensaje_frase0.innerHTML=texto[idioma];
+		}
+		function modificaIdioma(){
+			idioma++;
+			if (idioma < 0 || idioma > 1) idioma = 0;
+			eligeIdioma();
+		}
+	
+	
+	
+	</script>
+
+
+</head>
+	
+<style>
+	
+	body{
+	background:url("../../imagenes/evermore/happiness.png"); /*La foto*/
+	background-repeat:repeat-y;	
+	background-position:600px 0%;
+	}		
+	
+</style>	
+
+<body>
+
+
+	<div class="contenido">	
+
+		<div class="izq">
+		
+			<div class="botones-idioma-home">	
+				<button id="IDidioma" onclick="modificaIdioma()"></button>
+				<button class="HomeButton" onclick="location.href='../../index.html';">
+					<span>Home</span>
+				</button>	
+			</div>
+	
+	
+			<div class=previousnext>	
+				<button id="PreviousButton" onclick="location.href='./No body, no crime.html';" class="float-left submit-button" >←Previous track</button>		
+				<button id="NextButton" onclick="location.href='./Dorothea.html';" class="float-left submit-button" >Next track →</button>		
+			</div>		
+
+
+	
+	<div class="song">
+
+
+		<span class="titulo" id="frase0">7. Happiness</span>	
+
+		<div class="letra">
+
+		<p>Honey, when I'm above the trees<br>
+		I see this for what it is<br>
+		But now I'm right down in it<br>
+		All the years I've given<br>
+		Is just shit we're dividing up<br>
+		Showed you all of my hiding spots<br>
+		I was dancing when the music stopped<br>
+		And in the disbelief<br>
+		I can't face reinvention<br>
+		I haven't met the new me yet</p>
+			
+		<p>There'll be happiness after you<br>
+		But there was happiness because of you<br>
+		Both of these things can be true<br>
+		There is happiness<br>
+		Past the blood and bruise<br>
+		Past the curses and cries<br>
+		Beyond the terror in the nightfall<br>
+		Haunted by the look in my eyes<br>
+		That would've loved you for a lifetime<br>
+		Leave it all behind<br>
+		And there is happiness</p>
+			
+		<p>Tell me, when did your winning smile<br>
+		Begin to look like a smirk?<br>
+		When did all our lessons start to look like weapons pointed at my deepest hurt?<br>
+		I hope she'll be a beautiful fool<br>
+		Who takes my spot next to you<br>
+		No, I didn't mean that<br>
+		Sorry, I can't see facts through all of my fury<br>
+		You haven't met the new me yet</p>
+			
+		<p>There'll be happiness after me<br>
+		But there was happiness because of me<br>
+		Both of these things I believe<br>
+		There is happiness<br>
+		In our history<br>
+		Across our great divide<br>
+		There is a glorious sunrise<br>
+		Dappled with the flickers of light<br>
+		From the dress I wore at midnight<br>
+		Leave it all behind<br>
+		And there is happiness</p>
+			
+		<p>I can't make it go away by making you a villain<br>
+		I guess it's the price I pay for seven years in heaven<br>
+		And I pulled your body into mine every goddamn night now I get fake niceties<br>
+		No one teaches you what to do<br>
+		When a good man hurts you<br>
+		And you know you hurt him too</p>
+			
+		<p>Honey, when I'm above the trees<br>
+		I see it for what it is<br>
+		But now my eyes leak acid rain<br>
+		On the pillow where you used to lay your head<br>
+		After giving you the best I had<br>
+		Tell me what to give after that<br>
+		All you want from me now<br>
+		Is the green light of forgiveness<br>
+		You haven't met the new me yet<br>
+		And I think she'll give you that</p>
+			
+		<p>There'll be happiness after you<br>
+		But there was happiness because of you too<br>
+		Both of these things can be true<br>
+		There is happiness<br>
+		In our history<br>
+		Across our great divide<br>
+		There is a glorious sunrise<br>
+		Dappled with the flickers of light<br>
+		From the dress I wore at midnight<br>
+		Leave it all behind<br>
+		Oh, leave it all behind<br>
+		Leave it all behind<br>
+		And there is happiness</p>
+
+		</div>
+	</div>
+
+
+    <div class="der">
+    </div>
+
+</div> 		
+
+</body>
+</html>

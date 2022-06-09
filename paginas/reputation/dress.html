@@ -1,0 +1,317 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../CSS/cssreputation.css"/>		
+<script src="../jQueryAssets/jquery-1.11.1.min.js"></script>	
+
+	
+<script>	
+	
+
+
+
+	$(document).ready(function(){	
+		$("#mensaje_frase1").hide();
+		$("#frase1").hover(mensaje_on1, mensaje_off1);
+		eligeIdioma(); 	 /*Para que apenas entre a la pág, ya se vea el "ENGLISH" en el botón*/		
+	});
+
+	
+	function mensaje_on1(){
+		$("#mensaje_frase1").show();	
+	}
+	
+	function mensaje_off1(){
+		$("#mensaje_frase1").hide();
+	}	
+	
+
+
+
+
+	$(document).ready(function(){	
+		$("#mensaje_frase2").hide();
+		$("#frase2").hover(mensaje_on2, mensaje_off2);
+		
+	});
+
+	
+	function mensaje_on2(){
+		$("#mensaje_frase2").show();
+	}
+	
+	function mensaje_off2(){
+		$("#mensaje_frase2").hide();
+	}	
+
+
+
+
+	$(document).ready(function(){	
+		$("#mensaje_frase3").hide();
+		$("#frase3").hover(mensaje_on3, mensaje_off3);
+		
+	});
+
+	
+	function mensaje_on3(){
+		$("#mensaje_frase3").show();
+	}
+	
+	function mensaje_off3(){
+		$("#mensaje_frase3").hide();
+	}		
+
+
+
+        /* Idioma */
+        var idioma = 0 ; // 0=es, 1=en, ...
+        var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+        var texto = [ 
+						["", ""],	 
+						["Con ésta frase \"no tienen idea sobre tú y yo\", Taylor hace referencia a la epoca en que ella y Joe Alwyn, su novio, comenzaron a salir y mantuvieron exitosamente su relación en secreto para preservarla y no dejar que los medios la arruinaran. Taylor publico un tiempo después una entrada de su diario del 3 de Enero de 2017 hablando sobre ésto: \"Ya hemos estado juntos por 3 meses y nadie se ha enterado\"",
+						 "With this phrase Taylor makes a reference to the time she and Joe Alwyn, her boyfriend, started dating and successfully mantained their relationship in secret to preserve it and avoiding the media to ruin it. Some time later Taylor published an entrance of her diary from January 3 of 2017 talking about this: \"We have been together and no one found out for 3 months now\""
+						],
+						["Taylor escribió en el prólogo de su 4° álbum RED (en 2012) sobre cómo creía que el amor real o verdadero brilla de un color dorado, y no se desvanece ni combustiona espontáneamente, describiendo a éste último de un color rojo. Expresó también que posiblemente escribiría sobre ese tipo de amor si alguna vez lo encontraba.",
+                         "Taylor wrote in the prologue of her 4° album RED (in 2012) about how she thought real love shines golden like starlight, and doesn't fade or spontaneously combust, describing these last ones as a burning red. She also expressed that maybe she would write a whole album about that kind of love if she ever found it."
+						],
+						["Taylor hace referencia a los estilos de pelo que tenían Joe, su novio, y ella la época en que se conocieron, presuntamente en Abril de 2016: <br><br>El estilo rapado de él y el pelo decolorado de ella",
+						 "Taylor refers to the hairstyles that both Joe, her boyfriend, and she used to have the time they first met, presumably on April of 2016: <br><br> He had a buzzcut and she had bleached her hair."	
+						]
+                    ];
+                      
+					function eligeIdioma(){
+                     IDidioma.innerHTML=idiomas[idioma];
+    
+                         for (let frase=0; frase<texto.length; frase++){         /*inicio con frase=0 -- Continúo hasta el lenght del "texto" (osea continúo 2 veces porque el lenght es 2. sson 2 arrays) -- le sumo uno a "frase", asi pasa de frase 0 a frase 1.*/ 
+                         document.getElementById("mensaje_frase"+frase).innerHTML=texto[frase][idioma];
+                         }
+                        }
+                    function modificaIdioma(){
+                    idioma++;
+                    if (idioma < 0 || idioma > 1) idioma = 0;
+                    eligeIdioma();
+                    }   
+
+	
+	
+	
+</script>	
+	
+</head>
+
+<style>
+	
+	
+	body{
+	background:url("../../imagenes/Reputation/dress2.jpg"); /*La foto*/
+	background-repeat:repeat-y;	
+	background-position:600px 0%;
+	}
+	
+	
+		
+	
+.hover_img a { position:relative; }
+.hover_img a span { position:absolute; display:none; z-index:99; }
+.hover_img a:hover span { display:block; }
+
+.img{
+    top:50px;
+    left:-100px;
+
+}
+
+a{  /* Para sacarle el subrayado y el color azul, así no se ve como un link */
+    text-decoration: none;
+    color:red;
+}	
+
+
+
+#mensaje_frase1{
+		position: fixed;  /*o absolute?*/
+		left: 613px;
+		top: 20px;   /*originalmente tenia 392px*/
+		width: 680px;
+		height: 548px;
+		background-color: #D7CFDA;
+		font-size: 20px;
+		padding: 20px 15px 15px 15px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+
+
+
+
+	#mensaje_frase2{
+		position: fixed;  /*o absolute?*/
+		left: 613px;
+		top: 20px;   /*originalmente tenia 392px*/
+		width: 680px;
+		height: 520px;
+		background-color: #D7CFDA;
+		font-size: 21px;
+		padding: 30px 15px 15px 15px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+
+
+	
+	
+	
+	#mensaje_frase3{
+		position: fixed;
+		left: 680px;
+		top: 50px;  
+		width: 540px;
+		height: 480px;
+		background-color: #D7CFDA;
+		font-size: 24px;
+		padding: 30px 25px 25px 25px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}
+	
+</style>	
+	
+	
+	
+<body>
+	
+<div id="mensaje_frase0"></div>
+<div id="mensaje_frase1"></div>	
+<div id="mensaje_frase2">Taylor escribió en el prólogo de su álbum RED sobre cómo creía que el amor real o verdadero brilla de un color dorado, y no se desvanece ni combustiona espontáneamente, describiendo a éstos últimos de un color rojo. Expresó también que posiblemente escribiría sobre ese tipo de amor si alguna vez lo encontraba.</div>
+	
+<div id="mensaje_frase3">Taylor hace referencia a los estilos de pelo que tenían Joe, su novio, y ella la noche que se conocieron en la MET gala de 2016: <br>El estilo rapado de él y el pelo decolorado de ella</div>
+	
+	
+<div class="contenido">	
+
+	<div class="izq">
+	
+		<div class="botones-idioma-home">	
+			<button id="IDidioma" onclick="modificaIdioma()"></button>
+			<button class="HomeButton" onclick="location.href='../../index.html';">
+				<span>Home</span>
+			</button>		
+		</div>
+
+
+		<div class="previousnext">
+			<button id="PreviousButton" onclick="location.href='./dwoht.html';" class="float-left submit-button" >←Previous track</button>	
+			<button id="NextButton" onclick="location.href='./tiwwchnt.html';" class="float-left submit-button" >Next track →</button>		
+		</div>
+		
+	
+
+
+	<div class="song">	
+	
+
+		<span class="titulo" id="frase0">12. Dress</span>
+
+		<div class="letra">
+
+		<span><br>Our secret moments in your crowded room<br>
+		<span class="hover_img" id="frase1"> 
+		<a href="#">They've got no idea about me and you<br><span><img src="../../imagenes/fotosINFO/secret.jpg" alt="image2"  style="position: fixed; left:730px; top:208px" /></span></a></span>
+		There is an indentation in the shape of you<br></span>
+		<span class="hover_img" id="frase2"> 
+		<a href="#">Made your mark on me, a golden tattoo<span><img src="../../imagenes/fotosINFO/redprologue.jpg" alt="image2"  style="position: fixed; left:730px; top:210px" />    
+		</span></a></span>
+			
+		<p>All of this silence and patience, pining in anticipation<br>
+		My hands are shaking from holding back from you (ah, ah, ah)<br>
+		All of this silence and patience, pining and desperately waiting<br>
+		My hands are shaking from holding back from all this (ha, ha, ha, ha)</p>
+			
+		<p>Say my name and everything just stops<br>
+		I don't want you like a best friend<br>
+		Only bought this dress so you could take it off<br>
+		Take it off (ha, ha, ha)<br>
+		Carve your name into my bedpost<br>
+		'Cause I don't want you like a best friend<br>
+		Only bought this dress so you could take it off<br>
+		Take it off (ha, ha, ha, ha)</p>
+			
+		<p>Inescapable, I'm not even gonna try<br>
+		And if I get burned, at least we were electrified<br>
+		I'm spilling wine in the bathtub, you kiss my face and we're both drunk<br>
+		Everyone thinks that they know us, but they know nothing about</p>
+			
+		<p>All of this silence and patience, pining in anticipation<br>
+		My hands are shaking from holding back from you (ah, ah, ah)<br>
+		All of this silence and patience, pining and desperately waiting<br>
+		My hands are shaking from holding back from all this (ha, ha, ha, ha)</p>
+			
+		<p>Say my name and everything just stops<br>
+		I don't want you like a best friend<br>
+		Only bought this dress so you could take it off<br>
+		Take it off (ha, ha, ha)<br>
+		Carve your name into my bedpost<br>
+		'Cause I don't want you like a best friend<br>
+		Only bought this dress so you could take it off, take it off (ha, ha, ha, ha)<br>
+		Only bought this dress so you could take it off, take it off (ha, ha, ha, ha)<br>
+		Only bought this dress so you could take it off</p>
+			
+				
+
+		<span class="hover_img" id="frase3"> 
+			<a href="#">       
+		Flashback when you met me<br>
+		Your buzzcut and my hair bleached<br>
+		<span><img src="../../imagenes/fotosINFO/hair.jpg" alt="image2"  style="position: fixed; left:750px; top:280px" />    
+		</span></a></span>
+				
+			
+		<span>Even in my worst times, you could see the best of me<br>
+		Flashback to my mistakes<br>
+		My rebounds, my earthquakes<br>
+		Even in my worst lies, you saw the truth of me<br>
+		And I woke up just in time<br>
+		Now I wake up by your side<br>
+		My one and only, my lifeline<br>
+		I woke up just in time<br>
+		Now I wake up by your side<br>
+		My hands shake, I can't explain this (ha, ha, ha, ha)</span>
+				
+		<p>Say my name and everything just stops<br>
+		I don't want you like a best friend<br>
+		Only bought this dress so you could take it off, take it off (ha, ha, ha, ha)<br>
+		Carve your name into my bedpost<br>
+		'Cause I don't want you like a best friend<br>
+		Only bought this dress so you could take it off, take it off (ha, ha, ha, ha)</p>
+			
+		<p>There is an indentation<br>
+		In the shape of you<br>
+		Only bought this dress so you could take it off<br>
+		You made your mark on me, golden tattoo<br>
+		Only bought this dress so you could take it off</p>
+			
+		</div>
+
+
+
+		<div class="der">
+		</div>
+	
+	</div> 
+    	
+	
+	
+</body>
+</html>

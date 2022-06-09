@@ -1,0 +1,344 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<title>Documento sin título</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rochester&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">		
+<link rel="stylesheet" href="../../CSS/cssspeaknow.css"/>	
+<script src="../jQueryAssets/jquery-1.11.1.min.js"></script>
+
+
+
+<script>
+
+
+$(document).ready(function(){	
+		$("#mensaje_frase0").hide();
+		$("#frase0").hover(mensaje_on0, mensaje_off0);
+		eligeIdioma();
+	});
+
+	
+	function mensaje_on0(){
+		$("#mensaje_frase0").show();	
+	}
+	
+	function mensaje_off0(){
+		$("#mensaje_frase0").hide();
+	}	
+	
+
+
+	
+	$(document).ready(function(){	
+		$("#mensaje_frase1").hide();
+		$("#frase1").hover(mensaje_on1, mensaje_off1);
+		
+	});
+
+	
+	function mensaje_on1(){
+		$("#mensaje_frase1").show();	
+	}
+	
+	function mensaje_off1(){
+		$("#mensaje_frase1").hide();
+	}	
+	
+
+
+
+	
+	$(document).ready(function(){	
+		$("#mensaje_frase2").hide();
+		$("#frase2").hover(mensaje_on2, mensaje_off2);
+		
+	});
+
+	
+	function mensaje_on2(){
+		$("#mensaje_frase2").show();	
+	}
+	
+	function mensaje_off2(){
+		$("#mensaje_frase2").hide();
+	}	
+
+
+
+	
+	$(document).ready(function(){	
+		$("#mensaje_frase3").hide();
+		$("#frase3").hover(mensaje_on3, mensaje_off3);
+		
+	});
+
+	
+	function mensaje_on3(){
+		$("#mensaje_frase3").show();	
+	}
+	
+	function mensaje_off3(){
+		$("#mensaje_frase3").hide();
+	}	
+
+
+
+
+		        /* Idioma */
+				var idioma = 0 ; // 0=es, 1=en, ...
+        var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+        var texto = [                                           /*El largo de "texto" es dos. ya que hay 2 arrays dentro*/
+                    	["Canción escrita para John Mayer.<br>(Cantante)<br> Él y Taylor fueron novios desde Noviembre de 2009 a Febrero de 2010",
+                        "Song written for John Mayer.<br>(Singer)<br> Him and Taylor dated between November 2009 and February 2010." 
+                    ],
+                    [ "John Mayer le lleva 13 años a Taylor.<br> Cuando comenzaron a salir <br>Taylor tenía 19 años y él 32",
+                    	"John Mayer is 13 years older than Taylor.<br> When they first started dating <br>Taylor was 19 and he was 32."                                                                             
+                    ],
+					[ "Varias ex parejas de John Mayer lo acusaron de haber tenido comportamientos tóxicos con ellas cuando salían. Especialmente Jessica Simpson detalló en su libro lo insalubre y manipulador que fue en su relación, y cómo la llevó a tener serios problemas de ansiedad y alcoholismo.",
+					  "Several ex coupled of John Mayer have accused him of having toxic traits while dating them. Specially Jessica Simpson specified in her book how unhealthy and manipulator he was in their relationship, and how it lead her into serious anxiety and alcohol problems."
+					],
+					["Desde el comienzo de su carrera Taylor Swift incluye mensajes secretos en cada canción, lo cual dejó de hacer en su álbum Reputation.<br><br><hr><br> Para su album Speak Now las letras de las canciones en los booklets (libritos) estan en minusculas, y cada letra del mensaje secreto esta en mayuscula.",
+							"Taylor Swift includes hidden messages in each song, which stopped at Reputation.<br><br><hr><br> For her album Speak Now the lyrics of the songs in the booklets are in lowerecased letters, and each letter of the hidden message is capitalized."
+						 ]
+                      ];         
+                          
+                      function eligeIdioma(){
+                     IDidioma.innerHTML=idiomas[idioma];
+    
+                         for (let frase=0; frase<texto.length; frase++){         /*inicio con frase=0 -- Continúo hasta el lenght del "texto" (osea continúo 2 veces porque el lenght es 2. sson 2 arrays) -- le sumo uno a "frase", asi pasa de frase 0 a frase 1.*/ 
+                         document.getElementById("mensaje_frase"+frase).innerHTML=texto[frase][idioma];
+                         }
+                        }
+                    function modificaIdioma(){
+                    idioma++;
+                    if (idioma < 0 || idioma > 1) idioma = 0;
+                    eligeIdioma();
+                    }   	
+    
+    
+    </script>
+
+
+
+</head>
+	
+<style>	
+	
+body
+{
+	background:url("../../imagenes/speaknow/dearjohn.jpg"); /*La foto*/
+	background-repeat:repeat-y;
+	background-position:610px 0%;
+		
+}	
+
+
+
+.hover_img a { position:relative; }
+.hover_img a span { position:absolute; display:none; z-index:99; }
+.hover_img a:hover span { display:block; }
+
+.img{
+    top:50px;
+    left:-100px;
+
+}
+
+a{  /* Para sacarle el subrayado y el color azul, así no se ve como un link */
+    text-decoration: none;
+    color:red;
+}
+
+#titulo{
+	font-size: 35px;
+
+}
+
+
+#mensaje_frase0{
+		position: fixed;  /*o absolute?*/
+		left: 725px;
+		top: 50px;   /*originalmente tenia 392px*/
+		width: 500px;
+		height: 490px;
+		background-color: #D7CFDA;
+		font-size: 24px;
+		padding: 30px 25px 25px 25px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+	
+
+#mensaje_frase1{
+		position: fixed;  /*o absolute?*/
+		left: 725px;
+		top: 70px;   /*originalmente tenia 392px*/
+		width: 500px;
+		height: 450px;
+		background-color: #D7CFDA;
+		font-size: 24px;
+		padding: 35px 25px 25px 25px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+
+
+	#mensaje_frase2{
+		position: fixed;  /*o absolute?*/
+		left: 725px;
+		top: 120px;   /*originalmente tenia 392px*/
+		width: 500px;
+		height: 300px;
+		background-color: #D7CFDA;
+		font-size: 25px;
+		padding: 65px 25px 25px 25px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+
+
+#frase3{	/*Ubicacion del Mensaje Secreto*/
+    font-size: 25px;
+    padding: 10px 10px 10px, 15px;
+    font-style: italic;	
+}
+
+
+#mensaje_frase3{
+		position: fixed;  /*queda en donde lo pusimos aunque cambiemos de posicion con la barra de desplazamiento*/
+		left: 730px;
+		top: 100px;   /*el espacio entre el cuadro y el tope VISIBLE de arriba*/
+		width: 450px;  /*el ancho del cuadro. (el texto se acomoda adentro)*/
+		height: 310px;
+		background-color: #D7CFDA;
+		font-size: 22px;
+		padding: 45px 40px 20px 40px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+        box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}		
+
+
+</style>	
+
+<body>
+	
+<div id="mensaje_frase0">Canción escrita para John Mayer.<br>(Cantante)<br> Él y Taylor fueron novios desde Noviembre de 2009 a Febrero de 2010.</div>
+
+<div id="mensaje_frase1">John Mayer le lleva 13 años a Taylor.<br> Cuando comenzaron a salir <br>Taylor tenía 19 años y él 32.</div>
+	
+<div id="mensaje_frase2"> Varias ex parejas de John Mayer lo acusaron de haber tenido comportamientos tóxicos con ellas cuando salían. Especialmente Jessica Simpson detalló en su libro lo insalubre y manipulador que fue en su relación, y cómo la llevó a tener serios problemas de ansiedad y alcoholismo.</div>
+<div id="mensaje_frase3"></div>
+
+
+
+<div class="contenido">	
+
+	<div class="izq">
+	
+		<div class="botones-idioma-home">	
+			<button id="IDidioma" onclick="modificaIdioma()"></button>	
+			<button class="HomeButton" onclick="location.href='../../index.html';">
+				<span>Home</span>	
+			</button>		
+		</div>
+
+
+		<div class="previousnext">
+			<button id="PreviousButton" onclick="location.href='speaknow.html';" class="float-left submit-button" >←Previous track</button>	
+			<button id="NextButton" onclick="location.href='mean.html';" class="float-left submit-button" >Next track →</button>		
+		</div>
+
+
+	
+	<div class="song">
+
+		<span class="hover_img" id="frase0">
+			<a class="titulo" href="#">5. Dear John<span><img src="../../imagenes/fotosINFO/johnm.jpg" alt="image2"  style="position: fixed; left:820px; top:225px" />    
+			</span></a></span>
+		
+		<div class="letra">
+
+		<p>Long were the nights when my days once revolved around you<br>
+		Counting my footsteps,<br>
+		Praying the floor won't fall through, again<br>
+		My mother accused me of losing my mind,<br>
+		But I swore I was fine, you paint me a blue sky<br>
+		And go back and turn it to rain<br>
+		And I lived in your chess game,<br>
+		But you changed the rules every day<br>
+		Wondering which version of you I might get on the phone<br>
+		Tonight, well I stopped picking up, and this song is to let you know why</p>
+			
+		<p>Dear John, I see it all now that you're gone<br>
+		<span class="hover_img" id="frase1">
+		<a href="#">Don't you think I was too young to be messed with?<br>
+		<span><img src="../../imagenes/fotosINFO/johnytay.jpg" alt=""  style="position: fixed; left:770px; top:225px" />    
+		</span></a></span>
+		The girl in the dress, cried the whole way home, I should've known</p>
+			
+		<p>Well maybe it's me and my blind optimism to blame<br>
+		Maybe it's you and your sick need to give love then take it away<br>
+		And you'll add my name to your long list of traitors who don't understand<br>
+		And I'll look back and regret how I ignored when they said "run as fast as you can"</p>
+			
+		<p>Dear John, I see it all now that you're gone<br>
+		Don't you think I was too young to be messed with?<br>
+		The girl in the dress, cried the whole way home</p>
+			
+		<p>Dear John, I see it all, now it was wrong<br>
+		Don't you think nineteen is too young<br>
+		To be played by your dark twisted games, when I loved you so?<br>
+		I should've known</p>
+			
+		<p>You are an expert at sorry,<br>
+		And keeping the lines blurry<br>
+		Never impressed by me acing your tests<br>
+		<span class="hover_img" id="frase2">
+			<a href="#">All the girls that you've run dry<br>
+		Have tired, lifeless eyes<br>
+		'Cause you burned them out<br><span><img src="../../imagenes/fotosINFO/.jpg" alt=""  style="position: fixed; left:820px; top:225px" />    
+		</span></a></span>
+		But I took your matches before fire could catch me,<br>
+		So don't look now, I'm shining like fireworks over your sad, empty town</p>
+			
+		<p>Dear John, I see it all now that you're gone<br>
+		Don't you think I was too young to be messed with?<br>
+		The girl in the dress, cried the whole way home.</p>
+			
+		<p>I see it all now that you're gone<br>
+		Don't you think I was too young to be messed with?<br>
+		The girl in the dress wrote you a song<br>
+		You should've known, you should've known<br>
+		Don't you think I was too young? You should've known</p>
+
+		</div>
+
+	</div>
+
+		<div class="MS" id="frase3"><a href="#">
+			<ul style="list-style-image:url(../../imagenes/fotosINFO/purpledress.jpg);">
+			<li><pre><h3>Mensaje Secreto:</h3>	"Loved you from the<br>		 very first day"</pre></li> 
+			</ul></a>			
+		</div> 
+
+	
+		<div class="der">
+		</div>
+	
+		</div> 
+		
+
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script src="../jQueryAssets/jquery-1.11.1.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Beth+Ellen&family=Dancing+Script:wght@500&family=Mea+Culpa&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../CSS/csslover.css"/>	
+
+
+<script>
+	
+	$(document).ready(function(){	
+		$("#mensaje_frase0").hide();
+		$("#frase0").hover(mensaje_on0, mensaje_off0);
+		eligeIdioma();
+	});
+
+	
+	function mensaje_on0(){
+		$("#mensaje_frase0").show();	
+	}
+	
+	function mensaje_off0(){
+		$("#mensaje_frase0").hide();
+	}	
+
+
+
+	$(document).ready(function(){	
+		$("#mensaje_frase1").hide();
+		$("#frase1").hover(mensaje_on1, mensaje_off1);
+		
+	});	
+	
+		
+	function mensaje_on1(){
+		$("#mensaje_frase1").show();
+	}
+	
+	function mensaje_off1(){
+		$("#mensaje_frase1").hide();
+	}	
+
+
+
+
+	$(document).ready(function(){	
+		$("#mensaje_frase2").hide();
+		$("#frase2").hover(mensaje_on2, mensaje_off2);
+		
+	});	
+	
+		
+	function mensaje_on2(){
+		$("#mensaje_frase2").show();
+	}
+	
+	function mensaje_off2(){
+		$("#mensaje_frase2").hide();
+	}		
+
+
+        /* Idioma */
+        var idioma = 0 ; // 0=es, 1=en, ...
+        var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+        var texto = [ 
+						["La inspiración para el video musical de \"Lover\" vino de la linea \"You two are dancing in a snow globe, 'round and 'round\" (\"Los dos estan bailando en un globo de nieve, dando vueltas y vueltas\") de su canción <br>\"You Are in Love\" de su álbum 1989.",
+						"The inspiration for the music video of \"Lover\" came<br> from the line \"You two are dancing in a snow globe, 'round and 'round\" a lyric from her song<br> \"You Are in Love\" from her album 1989."],
+						[],
+						[]
+
+                    ];
+                      
+					function eligeIdioma(){
+                     IDidioma.innerHTML=idiomas[idioma];
+    
+                         for (let frase=0; frase<texto.length; frase++){         /*inicio con frase=0 -- Continúo hasta el lenght del "texto" (osea continúo 2 veces porque el lenght es 2. sson 2 arrays) -- le sumo uno a "frase", asi pasa de frase 0 a frase 1.*/ 
+                         document.getElementById("mensaje_frase"+frase).innerHTML=texto[frase][idioma];
+                         }
+                        }
+                    function modificaIdioma(){
+                    idioma++;
+                    if (idioma < 0 || idioma > 1) idioma = 0;
+                    eligeIdioma();
+                    }   	
+	
+
+
+</script>
+
+
+
+</head>
+
+<style>
+	
+	body{
+	background:url("../../imagenes/lover/lover2.jpg"); /*La foto*/
+	background-repeat:repeat-y;	
+	background-position:600px 0%;
+	}
+	
+
+
+	.hover_img a { position:relative; }
+.hover_img a span { position:absolute; display:none; z-index:99; }
+.hover_img a:hover span { display:block; }
+
+.img{
+    top:50px;
+    left:-100px;
+
+}
+
+a{  /* Para sacarle el subrayado y el color azul, así no se ve como un link */
+    text-decoration: none;
+    color:red;
+}
+
+
+
+#mensaje_frase0{
+		position: fixed;  /*o absolute?*/
+		left: 660px;
+		top: 30px;   /*originalmente tenia 392px*/
+		width: 580px;
+		height: 525px;
+		background-color: #D7CFDA;
+		font-size: 23px;
+		padding: 25px 25px 25px 25px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}
+
+
+</style>	
+	
+<body>
+
+<div id="mensaje_frase0"></div>
+
+	
+	<div class="contenido">	
+
+		<div class="izq">
+		
+			<div class="botones-idioma-home">	
+				<button id="IDidioma" onclick="modificaIdioma()"></button>
+				<button class="HomeButton" onclick="location.href='../../index.html';">
+					<span>Home</span>
+				</button>			
+			</div>
+
+
+			<div class=previousnext>	
+				<button id="PreviousButton" onclick="location.href='./cruel summer.html';" class="float-left submit-button" >←Previous track</button>		
+				<button id="NextButton" onclick="location.href='./theman.html';" class="float-left submit-button" >Next track →</button>		
+			</div>		
+	
+
+
+	<div class="song">			
+
+
+		<span class="hover_img" id="frase0">
+		<a class="titulo" href="#">3. Lover<span><img src="../../imagenes/fotosINFO/loverhouse.jpg" alt="image2"  style="position: fixed; left:730px; top:240px" />    
+		</span></a></span>
+
+		<div class="letra">
+
+
+		<p>We could leave the Christmas lights up 'til January<br>
+		And this is our place, we make the rules<br>
+		And there's a dazzling haze, a mysterious way about you dear<br>
+		Have I known you 20 seconds or 20 years?</p>
+			
+		<p>Can I go where you go?<br>
+		Can we always be this close forever and ever?<br>
+		And ah, take me out, and take me home<br>
+		You're my, my, my, my<br>
+		Lover</p>
+			
+		<p>We could let our friends crash in the living room<br>
+		This is our place, we make the call<br>
+		And I'm highly suspicious that everyone who sees you wants you<br>
+		I've loved you three summers now, honey, but I want 'em all</p>
+			
+		<p>Can I go where you go?<br>
+		Can we always be this close forever and ever?<br>
+		And ah, take me out, and take me home (forever and ever)<br>
+		You're my, my, my, my<br>
+		Lover</p>
+			
+		<p>Ladies and gentlemen, will you please stand?<br>
+		With every guitar string scar on my hand<br>
+		I take this magnetic force of a man to be my lover<br>
+		My heart's been borrowed and yours has been blue<br>
+		All's well that ends well to end up with you<br>
+		Swear to be overdramatic and true to my lover<br>
+		And you'll save all your dirtiest jokes for me<br>
+		And at every table, I'll save you a seat, lover</p>
+
+		<p>Can I go where you go?<br>
+		Can we always be this close forever and ever?<br>
+		And ah, take me out, and take me home (forever and ever)<br>
+		You're my, my, my, my<br>
+		Oh, you're my, my, my, my<br>
+		Darling, you're my, my, my, my<br>
+		Lover</p>
+				
+		</div>
+	</div>
+
+
+	<div class="der">
+	</div>
+
+</div> 
+	
+</body>
+</html>

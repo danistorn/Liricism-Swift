@@ -1,0 +1,234 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script src="../jQueryAssets/jquery-1.11.1.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../CSS/cssred.css "/>
+
+
+<script>
+
+
+
+	$(document).ready(function(){   
+				$("#mensaje_frase0").hide();
+				$("#frase0").hover(mensaje_on0, mensaje_off0);
+				eligeIdioma();
+			});
+		
+			
+			function mensaje_on0(){
+				$("#mensaje_frase0").show();    
+			}
+			
+			function mensaje_off0(){
+				$("#mensaje_frase0").hide();
+			}   
+	
+	
+	
+	
+			$(document).ready(function(){   
+				$("#mensaje_frase1").hide();
+				$("#frase1").hover(mensaje_on1, mensaje_off1);
+				
+			});
+		
+			
+			function mensaje_on1(){
+				$("#mensaje_frase1").show();    
+			}
+			
+			function mensaje_off1(){
+				$("#mensaje_frase1").hide();
+			}   
+	
+	
+			
+	
+			/* Idioma */
+			var idioma = 0 ; // 0=es, 1=en, ...
+			var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+			var texto = [  
+						 ["",""],
+						 ["Desde el comienzo de su carrera Taylor Swift incluye mensajes secretos en cada canción, lo cual dejó de hacer en su álbum Reputation.<br><br><hr><br> Para su album RED las letras de las canciones en los booklets (libritos) estan en minusculas, y cada letra del mensaje secreto esta en mayuscula.",
+						  "Taylor Swift includes hidden messages in each song, which stopped at Reputation.<br><br><hr><br> For her album RED the lyrics of the songs in the booklets are in lowerecased letters, and each letter of the hidden message is capitalized."
+						 ]
+						];
+						function eligeIdioma(){
+						 IDidioma.innerHTML=idiomas[idioma];
+		
+							 for (let frase=0; frase<texto.length; frase++){         /*inicio con frase=0 -- Continúo hasta el lenght del "texto" (osea continúo 2 veces porque el lenght es 2. sson 2 arrays) -- le sumo uno a "frase", asi pasa de frase 0 a frase 1.*/ 
+							 document.getElementById("mensaje_frase"+frase).innerHTML=texto[frase][idioma];
+							 }
+							}
+						function modificaIdioma(){
+						idioma++;
+						if (idioma < 0 || idioma > 1) idioma = 0;
+						eligeIdioma();
+						}	
+
+
+
+</script>
+
+
+</head>
+	
+	
+<style>	
+
+.contenido .der{
+	background:url("../../imagenes/red/last.jpg"); /*La foto*/
+	background-repeat:repeat-y;
+}
+
+
+#mensaje_frase1{
+		position: fixed;  /*queda en donde lo pusimos aunque cambiemos de posicion con la barra de desplazamiento*/
+		left: 730px;
+		top: 100px;   /*el espacio entre el cuadro y el tope VISIBLE de arriba*/
+		width: 450px;  /*el ancho del cuadro. (el texto se acomoda adentro)*/
+		height: 310px;
+		background-color: #D7CFDA;
+		font-size: 22px;
+		padding: 45px 40px 20px 40px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+        box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+
+
+</style>	
+
+<body>
+
+
+<div id="mensaje_frase0"></div>
+<div id="mensaje_frase1"></div>
+
+
+	<div class="contenido">	
+
+		<div class="izq">
+		
+			<div class="botones-idioma-home">	
+				<button id="IDidioma" onclick="modificaIdioma()"></button>	
+				<button class="HomeButton" onclick="location.href='../../index.html';">
+					<span>Home</span>
+				</button>		
+			</div>
+	
+	
+			<div class=previousnext>	
+				<button id="PreviousButton" onclick="location.href='./staystaystay.html';" class="float-left submit-button" >←Previous track</button>		
+				<button id="NextButton" onclick="location.href='./holyground.html';" class="float-left submit-button" >Next track →</button>		
+			</div>		
+	
+	
+			
+	
+
+<div class="song">
+
+	<span class="titulo" id="frase0">10. The Last Time</span>
+
+	<div class="letra">
+
+	<p>Find myself at your door<br>
+	Just like all those times before<br>
+	I'm not sure how I got there<br>
+	All roads, they lead me here<br>
+	I imagine you are home<br>
+	In your room, all alone<br>
+	And you open your eyes into mine<br>
+	And everything feels better</p>
+		
+	<p>And right before your eyes<br>
+	I'm breaking<br>
+	No past, no reasons why<br>
+	Just you and me</p>
+		
+	<p>This is the last time I'm asking you this<br>
+	Put my name at the top of your list<br>
+	This is the last time I'm asking you why<br>
+	You break my heart in the blink of an eye, eye, eye</p>
+		
+	<p>You find yourself at my door<br>
+	Just like all those times before<br>
+	You wear your best apology<br>
+	But I was there to watch you leave<br>
+	And all the times I let you in<br>
+	Just for you to go again<br>
+	Disappear when you come back<br>
+	Everything is better</p>
+		
+	<p>And right before your eyes<br>
+	I'm aching<br>
+	Run fast, nowhere to hide<br>
+	Just you and me</p>
+		
+	<p>This is the last time I'm asking you this<br>
+	Put my name at the top of your list<br>
+	This is the last time I'm asking you why<br>
+	You break my heart in the blink of an eye, eye, eye</p>
+		
+	<p>This is the last time you tell me I've got it wrong<br>
+	This is the last time I say it's been you all along<br>
+	This is the last time I let you in my door<br>
+	This is the last time, I won't hurt you anymore<br>
+	Oh-oh oh-oh oh-oh oh-oh<br>
+	Oh-oh oh-oh oh-oh oh-oh</p>
+		
+	<p>This is the last time I'm asking you this<br>
+	Put my name at the top of your list<br>
+	This is the last time I'm asking you why<br>
+	You break my heart in the blink of an eye</p>
+		
+	<p>This is the last time I'm asking you this<br>
+	(This is the last time I'm asking you this)<br>
+	Put my name at the top of your list<br>
+	(Put my name at the top of your list)<br>
+	This is the last time I'm asking you why<br>
+	(This is the last time I'm asking you why)<br>
+	You break my heart in the blink of an eye<br>
+	(You break my heart)</p>
+		
+	<p>This is the last time I'm asking you<br>
+	Last time I'm asking you<br>
+	Last time I'm asking you this<br>
+	This is the last time I'm asking you<br>
+	Last time I'm asking you<br>
+	Last time I'm asking you this<br>
+	This is the last time I'm asking you<br>
+	Last time I'm asking you<br>
+	Last time I'm asking you this<br>
+	This is the last time I'm asking you<br>
+	Last time I'm asking you<br>
+	Last time I'm asking you this</p>
+
+	</div>
+
+</div>
+<div class="MS" id="frase1"><a href="#">
+    <ul style="list-style-image:url(../../imagenes/iconos/leafs.png);">
+     <li><pre><h3>Mensaje Secreto:</h3>            "LA on your break"</pre></li> 
+    </ul>
+</a></div>			
+
+
+</div> 	
+
+<div class="der">
+</div>
+
+</div>
+
+
+</body>
+</html>

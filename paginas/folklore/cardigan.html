@@ -1,0 +1,393 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Cardigan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IM+Fell+DW+Pica:ital@1&family=Rochester&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../CSS/cssfolklore.css"/>	
+<script src="../jQueryAssets/jquery-1.11.1.min.js"></script>
+	
+<script type="text/javascipt" src="custom.js"></script>	
+
+<script>	
+	
+	$(document).ready(function(){	
+		$("#mensaje_frase0").hide();
+		$("#frase0").hover(mensaje_on0, mensaje_off0);
+		eligeIdioma();
+	});
+
+	
+	function mensaje_on0(){
+		$("#mensaje_frase0").show();
+	}
+	
+	function mensaje_off0(){
+		$("#mensaje_frase0").hide();
+	}
+	
+
+	
+	
+	
+	$(document).ready(function(){	
+		$("#mensaje_frase1").hide();
+		$("#frase1").hover(mensaje_on1, mensaje_off1);
+		
+	});
+
+	
+	function mensaje_on1(){
+		$("#mensaje_frase1").show();	
+	}
+	
+	function mensaje_off1(){
+		$("#mensaje_frase1").hide();
+	}
+	
+
+	
+	
+	
+	
+	
+	$(document).ready(function(){	
+		$("#mensaje_frase2").hide();
+		$("#frase2").hover(mensaje_on2, mensaje_off2);
+		
+	});
+
+	
+	function mensaje_on2(){
+		$("#mensaje_frase2").show();
+	}
+	
+	function mensaje_off2(){
+		$("#mensaje_frase2").hide();
+	}
+	
+	
+				
+	
+	
+	
+	$(document).ready(function(){	
+		$("#mensaje_frase3").hide();
+		$("#frase3").hover(mensaje_on3, mensaje_off3);
+		
+	});
+
+	
+	function mensaje_on3(){
+		$("#mensaje_frase3").show();
+	}
+	
+	function mensaje_off3(){
+		$("#mensaje_frase3").hide();
+	}
+
+	
+	
+	
+	$(document).ready(function(){	
+		$("#mensaje_frase4").hide();
+		$("#frase4").hover(mensaje_on4, mensaje_off4);
+		
+	});
+
+	
+	function mensaje_on4(){
+		$("#mensaje_frase4").show();
+	}
+	
+	function mensaje_off4(){
+		$("#mensaje_frase4").hide();
+	}
+
+
+
+
+
+			        /* Idioma */
+					var idioma = 0 ; // 0=es, 1=en, ...
+        var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+        var texto = [                                           /*El largo de "texto" es dos. ya que hay 2 arrays dentro*/
+                    ["Cardigan forma parte de una trilogía de canciones que cuentan una misma historia, cada una desde el punto de vista de un personaje diferente.<p>Cardigan: cantada por Betty; <br>Betty: cantada por James; <br>y August: cantada por Augustine.</p>La historia trata de cómo James, que estaba de novio con Betty, la engaña con Augustine durante unas vacaciones de verano. <p>Cronológicamente \"Betty\" ocurre primero, luego \"August\" y luego \"Cardigan\".",
+                     "Cardigan is part of a trilogy of songs that tell the same story, each one from the perspective of a different character.<p> Cardigan: sang by Betty;<br>Betty: sang by James;<br> and August: sang by Augustine.<p> The story is about how James, who was in a relationship with Betty, cheats on her with Augustine during some summer holidays.<p> Chronologically \"Betty\" occurs first, then \"August\" and then \"Cardigan\" (she reminiscences all that happened a couple of years later)" 
+                    ],
+                    [ "Refiriendose a que James estuvo detrás de Betty y Augustine a la vez, y terminó perdiendo a quien realmente quería: Betty",
+                      "Reffering to that James was after Betty and Augustine at the same time, ending up losing who he really loved: Betty"
+                    ],
+					["Sobre esto, James canta <br>\"Standing in your cardigan <br> Kissing in my car again\"<br> en Betty (track 14)",
+					 "About this, James sings <br>\"Standing in your cardigan <br> Kissing in my car again\"<br> in Betty (track 14)"
+					],
+					["En contraposición a la canción 'Betty', cuando James dice <br>\"i'm only 17, i don't know anything\"",
+					 "In contrast to the song 'Betty', when James says <br>\"i'm only 17, i don't know anything\""
+					],
+					["En 'Betty' (track 14) James menciona este momento cuando dice:<br>\"Betty, I'm here on your doorstep<br> And I planned it out for weeks now<br> But it's finally sinking in",
+					 "In 'Betty' (track 14) James mentions this moment when he sings:<br>\"Betty, i'm here on your doorstep<br> And I planned it out for weeks now<br> But it's finally sinking in\""
+					]
+                      ];         
+                         
+                      
+                      
+                      
+                      function eligeIdioma(){
+                     IDidioma.innerHTML=idiomas[idioma];
+    
+                         for (let frase=0; frase<texto.length; frase++){         /*inicio con frase=0 -- Continúo hasta el lenght del "texto" (osea continúo 2 veces porque el lenght es 2. sson 2 arrays) -- le sumo uno a "frase", asi pasa de frase 0 a frase 1.*/ 
+                         document.getElementById("mensaje_frase"+frase).innerHTML=texto[frase][idioma];
+                         }
+                        }
+                    function modificaIdioma(){
+                    idioma++;
+                    if (idioma < 0 || idioma > 1) idioma = 0;
+                    eligeIdioma();
+                    }   			
+    	
+	
+	
+	
+		
+</script>
+	
+	
+</head>
+	
+<style>
+
+	
+body{
+	background:url(../../imagenes/folklore/bettyphotos.jpg); 
+	background-repeat:repeat-y;
+	background-position:600px 0%;
+	}
+
+		
+.hover_img a { position:relative; }
+.hover_img a span { position:absolute; display:none; z-index:99; }
+.hover_img a:hover span { display:block; }
+
+.img{
+    top:50px;
+    left:-100px;
+
+}
+
+a{  /* Para sacarle el subrayado y el color azul, así no se ve como un link */
+    text-decoration: none;
+    color:red;
+}
+
+.titulo{  /* Para sacarle el subrayado y el color azul, así no se ve como un link */
+    text-decoration: none;
+    color:red;
+}
+
+
+	#mensaje_frase0{
+		position: fixed;  /*queda en donde lo pusimos aunque cambiemos de posicion con la barra de desplazamiento*/
+		left: 720px;
+		top: 40px;   /*el espacio entre el cuadro y el tope VISIBLE de arriba*/
+		width: 500px;  /*el ancho del cuadro. (el texto se acomoda adentro)*/
+		height: 430px;
+		background-color: #D7CFDA;
+		font-size: 23px;
+		padding: 60px 25px 20px 25px;   /*El margen entre el texto y los bordes del cuadro*/
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}
+	
+	
+	#mensaje_frase1{
+		position: fixed;  /*o absolute?*/
+		left: 720px;
+		top: 190px;   /*originalmente tenia 392px*/
+		width: 500px;
+		height: 150px;
+		background-color: #D7CFDA;
+		font-size: 24px;
+		padding: 60px 25px 25px 25px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+
+	
+	#mensaje_frase2{
+		position: fixed;
+		left: 720px;
+		top: 190px;  
+		width: 400px;
+		height: 150px;
+		background-color: #D7CFDA;
+		font-size: 24px;
+		padding: 50px 25px 25px 25px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}
+	
+	#mensaje_frase3{
+		position: fixed;
+		left: 710px;
+		top: 190px;  
+		width: 500px;
+		height: 150px;
+		background-color: #D7CFDA;
+		font-size: 24px;
+		padding: 65px 25px 25px 25px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}
+	
+	
+	#mensaje_frase4{
+		position: fixed;
+		left: 710px;
+		top: 190px;  
+		width: 500px;
+		height: 200px;
+		background-color: #D7CFDA;
+		font-size: 24px;
+		padding: 60px 25px 25px 25px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+
+
+	
+
+</style>	
+	
+	
+<body>
+	
+<div id="mensaje_frase0"></div>
+<div id="mensaje_frase1"></div>
+<div id="mensaje_frase2"></div>	
+<div id="mensaje_frase3"></div>
+<div id="mensaje_frase4"></div>
+	
+
+<div class="contenido">	
+
+	<div class="izq">
+		
+	
+		<div class="botones-idioma-home">	
+			<button id="IDidioma" onclick="modificaIdioma()"></button>
+			<button class="HomeButton" onclick="location.href='../../index.html';">
+				<span>Home</span>
+			</button>		
+		</div>
+
+
+		<div class=previousnext>	
+			<button id="PreviousButton" onclick="location.href='./the1.html';" class="float-left submit-button" >←Previous track</button>		
+			<button id="NextButton" onclick="location.href='./tlgad.html';" class="float-left submit-button" >Next track →</button>		
+		</div>	
+
+	
+	
+
+
+	<div class="song">
+
+
+		<span class="titulo" id="frase0">2. Cardigan</span>
+
+		<div class="letra">
+
+		<p>Vintage tee, brand new phone<br>
+		High heels on cobblestones<br>
+		When you are young, they assume you know nothing</p>
+
+		<p>Sequin smile, black lipstick<br>
+		Sensual politics<br>
+		When you are young, they assume you know nothing</p>
+
+		<p>But I knew you<br>
+		Dancin' in your Levi's<br>
+		Drunk under a streetlight, I<br>
+		I knew you<br>
+		Hand under my sweatshirt<br>
+		Baby, kiss it better, I</p>
+
+		<p>And when I felt like I was an old cardigan<br>
+		Under someone's bed<br>
+		You put me on and said I was your favorite</p>
+
+		<p>A friend to all is a friend to none<br>	
+		<span id="frase1">Chase two girls, lose the one</span><br>
+		When you are young, they assume you know nothin'</p>
+
+		<p>But I knew you<br>
+		Playing hide-and-seek and<br>
+		Giving me your weekends, I<br>
+		I knew you<br>
+		Your heartbeat on the High Line<br>
+		Once in 20 lifetimes, I</p>
+
+		<p>And when I felt like I was an old cardigan<br>
+		Under someone's bed<br>
+		You put me on and said I was your favorite</p>
+
+		<p><span id="frase2"> To kiss in cars and downtown bars<br>
+		Was all we needed</span><br>
+		You drew stars around my scars<br>
+		But now I'm bleedin'</p>
+
+		<p>'Cause I knew you<br>
+		Steppin' on the last train<br>
+		Marked me like a bloodstain, I<br>
+		I knew you<br>
+		Tried to change the ending<br>
+		Peter losing Wendy, I<br>
+		I knew you<br>
+		Leavin' like a father<br>
+		Running like water, I<br>
+		And when you are young, they assume you know nothing</p>
+
+		<p>But I knew you'd linger like a tattoo kiss<br>
+		I knew you'd haunt all of my what-ifs<br>
+		The smell of smoke would hang around this long<br>
+		<span id="frase3">'Cause I knew everything when I was young</span><br>
+		I knew I'd curse you for the longest time</p>
+
+		<p>Chasin' shadows in the grocery line<br>
+		I knew you'd miss me once the thrill expired<br>
+		<span id="frase4">And you'd be standin' in my front porch light<br>
+		And I knew you'd come back to me</span>
+		You'd come back to me<br>
+		And you'd come back to me<br>
+		And you'd come back</p>
+
+		<p>And when I felt like I was an old cardigan<br>
+		Under someone's bed<br>
+		You put me on and said I was your favorite</p>
+
+		</div>
+	</div>
+
+	<div class="der">
+    </div>
+
+</div> 	    
+	    
+
+
+	
+</body>
+</html>
+

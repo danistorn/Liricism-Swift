@@ -1,0 +1,277 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script src="../jQueryAssets/jquery-1.11.1.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../CSS/css1989.css"/>		
+<script type="text/javascipt" src="custom.js"></script>		
+
+
+<script>
+
+    $(document).ready(function(){   
+            $("#mensaje_frase0").hide();
+            $("#frase0").hover(mensaje_on0, mensaje_off0);
+            eligeIdioma();
+        });
+    
+        
+        function mensaje_on0(){
+            $("#mensaje_frase0").show();    
+        }
+        
+        function mensaje_off0(){
+            $("#mensaje_frase0").hide();
+        }   
+
+
+
+
+        $(document).ready(function(){   
+            $("#mensaje_frase1").hide();
+            $("#frase1").hover(mensaje_on1, mensaje_off1);
+            
+        });
+    
+        
+        function mensaje_on1(){
+            $("#mensaje_frase1").show();    
+        }
+        
+        function mensaje_off1(){
+            $("#mensaje_frase1").hide();
+        }   	
+
+
+
+        $(document).ready(function(){   
+            $("#mensaje_frase2").hide();
+            $("#frase2").hover(mensaje_on2, mensaje_off2);
+            
+        });
+    
+        
+        function mensaje_on2(){
+            $("#mensaje_frase2").show();    
+        }
+        
+        function mensaje_off2(){
+            $("#mensaje_frase2").hide();
+        }   	
+        
+
+
+        /* Idioma */
+        var idioma = 0 ; // 0=es, 1=en, ...
+        var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+        var texto = [   
+                    ["",
+                     ""
+                    ],
+                     ["Taylor comenzó escribiendo este verso como un poema corto y lo guardó en un cajón. No planeaba escribir una canción con él.<br> Luego le vino a la cabeza ésta melodía acompañando el poema, y terminó decidiendo convertirlo en canción.",
+                      "Taylor started writing this verse as a short poem and put it in a drawer. She didn't plan on writing a song with it. Then a melody came to her mind acompanying the poem, and she ended up deciding on turn it into a song."
+                     ],
+                    ["Desde el comienzo de su carrera Taylor Swift incluye mensajes secretos en cada canción, lo cual dejó de hacer en su álbum Reputation.<br><br><hr><br> Para 1989 las letras de las canciones en los booklets (libritos) estan en mayusculas, y cada letra del mensaje secreto esta en minúsculas.",
+                     "Taylor Swift includes hidden messages in each song, which stopped at Reputation.<br><br><hr><br> For 1989 the lyrics of the songs in the booklets are capitalized, and each letter of the hidden message is in lowercased letters."
+                    ]
+                    ];
+					function eligeIdioma(){
+                     IDidioma.innerHTML=idiomas[idioma];
+    
+                         for (let frase=0; frase<texto.length; frase++){         /*inicio con frase=0 -- Continúo hasta el lenght del "texto" (osea continúo 2 veces porque el lenght es 2. sson 2 arrays) -- le sumo uno a "frase", asi pasa de frase 0 a frase 1.*/ 
+                         document.getElementById("mensaje_frase"+frase).innerHTML=texto[frase][idioma];
+                         }
+                        }
+                    function modificaIdioma(){
+                    idioma++;
+                    if (idioma < 0 || idioma > 1) idioma = 0;
+                    eligeIdioma();
+                    }	  
+    
+    
+    </script>
+
+</head>
+	
+	
+<style>
+	
+	body{
+	background:url("../../imagenes/1989/thislove.jpg"); /*La foto*/
+	background-repeat:repeat-y;	
+	background-position:600px 0%;
+	}	
+
+
+    a{  /* Para sacarle el subrayado y el color azul, así no se ve como un link */
+    text-decoration: none;
+    color:red;
+}
+
+
+
+    #mensaje_frase1{
+		position: fixed;  /*queda en donde lo pusimos aunque cambiemos de posicion con la barra de desplazamiento*/
+		left: 700px;
+		top: 150px;   /*el espacio entre el cuadro y el tope VISIBLE de arriba*/
+		width: 450px;  /*el ancho del cuadro. (el texto se acomoda adentro)*/
+		height: 210px;
+		background-color: #D7CFDA;
+		font-size: 22px;
+		padding: 45px 40px 20px 40px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+        box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+
+
+
+#frase2{
+    font-size: 25px;
+    padding: 10px 10px 10px, 15px;
+    font-style: italic;
+}   
+
+
+    #mensaje_frase2{
+		position: fixed;  /*queda en donde lo pusimos aunque cambiemos de posicion con la barra de desplazamiento*/
+		left: 760px;
+		top: 100px;   /*el espacio entre el cuadro y el tope VISIBLE de arriba*/
+		width: 450px;  /*el ancho del cuadro. (el texto se acomoda adentro)*/
+		height: 300px;
+		background-color: #D7CFDA;
+		font-size: 22px;
+		padding: 45px 40px 20px 40px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+        box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+
+
+
+
+
+
+</style>	
+
+<body>
+
+<div id="mensaje_frase0"></div>
+<div id="mensaje_frase1"></div>
+<div id="mensaje_frase2"></div>
+
+	<div class="contenido">	
+
+		<div class="izq">
+		
+			<div class="botones-idioma-home">	
+				<button id="IDidioma" onclick="modificaIdioma()"></button>
+				<button class="HomeButton" onclick="location.href='../../index.html';">
+                    <span>Home</span>
+                </button>		
+			</div>
+	
+	
+			<div class=previousnext>	
+				<button id="PreviousButton" onclick="location.href='./hygtg.html';" class="float-left submit-button" >←Previous track</button>		
+				<button id="NextButton" onclick="location.href='./iknowplaces.html';" class="float-left submit-button" >Next track →</button>		
+			</div>		
+	
+
+    <div class="song">
+
+        
+        <span class="titulo" id="frase0">11. This Love</span>
+
+        <div class="letra">
+
+        <p>Clear blue water<br>
+        High tide came and brought you in<br>
+        And I could go on and on, on and on, and I will<br>
+        Skies grew darker<br>
+        Currents swept you out again<br>
+        And you were just gone and gone, gone and gone</p>
+            
+        <p>In silent screams<br>
+        In wildest dreams<br>
+        I never dreamed of this</p>
+            
+        <div id="frase1"><a href="#">This love is good<br>
+        This love is bad<br>
+        This love is alive back from the dead, oh, oh, oh<br>
+        These hands had to let it go free, and<br>
+        This love came back to me, oh, oh, oh<br>
+        Ohh<br>
+        Oh, oh, oh</a></div>
+            
+        <p>Tossing, turning<br>
+        Struggled through the night with someone new<br>
+        And I could go on and on, on and on<br>
+        Lantern, burning<br>
+        Flickered in the night, only you<br>
+        But you were still gone, gone, gone</p>
+            
+        <p>In losing grip<br>
+        On sinking ships<br>
+        You showed up just in time</p>
+            
+        <p>This love is good<br>
+        This love is bad<br>
+        This love is alive back from the dead, oh, oh, oh<br>
+        These hands had to let it go free, and<br>
+        This love came back to me, oh, oh, oh<br>
+        This love left a permanent mark<br>
+        This love is glowing in the dark, oh, oh, oh<br>
+        These hands had to let it go free, and<br>
+        This love came back to me, oh, oh, oh</p>
+            
+        <p>Your kiss, my cheek<br>
+        I watched you leave<br>
+        Your smile, my ghost<br>
+        I fell to my knees<br>
+        When you're young, you just run<br>
+        But you come back to what you need</p>
+            
+        <p>This love is good<br>
+        This love is bad<br>
+        This love is alive back from the dead, oh, oh, oh<br>
+        These hands had to let it go free, and<br>
+        This love came back to me, oh, oh, oh<br>
+        This love left a permanent mark<br>
+        This love is glowing in the dark, oh, oh, oh<br>
+        These hands had to let it go free, and<br>
+        This love came back to me, oh, oh, oh</p>
+            
+        <p>This love came back to me, oh, oh, oh</p>
+            
+        </div>
+    </div>
+
+    <div class="MS" id="frase2"><a href="#">
+        <ul style="list-style-image:url(../../imagenes/fotosINFO/paperplane.jpg);">
+        <li><pre><h3>Mensaje Secreto:</h3>     "Timing is a funny thing"</pre></li> 
+        </ul></a>
+    </div>	
+
+
+<div class=previousnext>	
+    <button id="PreviousButton" onclick="location.href='./hygtg.html';" class="float-left submit-button" >←Previous track</button>		
+    <button id="NextButton" onclick="location.href='./iknowplaces.html';" class="float-left submit-button" >Next track →</button>		
+</div>
+
+
+<div class="der">
+</div>
+
+</div>   
+
+
+
+</body>
+</html>

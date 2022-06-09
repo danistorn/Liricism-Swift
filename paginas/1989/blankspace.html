@@ -1,0 +1,393 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script src="../jQueryAssets/jquery-1.11.1.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../CSS/css1989.css"/>	
+<script type="text/javascipt" src="custom.js"></script>	
+
+
+
+<script>
+
+    $(document).ready(function(){   
+            $("#mensaje_frase0").hide();
+            $("#frase0").hover(mensaje_on0, mensaje_off0);
+            eligeIdioma();
+        });
+    
+        
+        function mensaje_on0(){
+            $("#mensaje_frase0").show();    
+        }
+        
+        function mensaje_off0(){
+            $("#mensaje_frase0").hide();
+        }   
+
+        
+
+
+	$(document).ready(function(){	
+		$("#mensaje_frase1").hide();
+		$("#frase1").hover(mensaje_on1, mensaje_off1);
+		
+	});	
+	
+		
+	function mensaje_on1(){
+		$("#mensaje_frase1").show();
+	}
+	
+	function mensaje_off1(){
+		$("#mensaje_frase1").hide();
+	}
+	
+	
+
+
+	
+	$(document).ready(function(){	
+		$("#mensaje_frase2").hide();
+		$("#frase2").hover(mensaje_on2, mensaje_off2);
+		
+	});	
+	
+		
+	function mensaje_on2(){
+		$("#mensaje_frase2").show();
+	}
+	
+	function mensaje_off2(){
+		$("#mensaje_frase2").hide();
+	}
+	
+
+
+
+
+	
+	$(document).ready(function(){	
+		$("#mensaje_frase3").hide();
+		$("#frase3").hover(mensaje_on3, mensaje_off3);
+		
+	});	
+	
+		
+	function mensaje_on3(){
+		$("#mensaje_frase3").show();
+	}
+	
+	function mensaje_off3(){
+		$("#mensaje_frase3").hide();
+	}
+
+
+
+
+		/* Idioma */
+        var idioma = 0 ; // 0=es, 1=en, ...
+        var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+        var texto = [
+					  ["Taylor escribió esta canción como una especie de sátira, en respuesta a los medios de comunicación que, en los últimos años, habían estado vendiendo una imágen de ella de \"psycho serial dater girl\", acusandola de salir con cada hombre que se cruzaba, y advirtiendole a los hombres que se le acercaban que tuvieran cuidado con ella.<br><br> Taylor decidió tomar ese personaje que habían creado y escribir una canción sobre él.",
+					   "Taylor wrote this song as sort of a satire, in response of the media that, in the last couple of years, had been selling an image of her of a \"psycho serial dated girl\", accusing her of going out with every guy that woulld cross her path, and warning those who would go close to her to watch out.<br><br> Taylor decided to take that character they had creater and write a song about her." 
+					  ],
+					  ["El sonido que se escucha justo después de decir \"But i've got a blank space, baby\" alude al sonido de una lapicera haciendo click al abrirla para \"escribir su nombre\"",
+					   "The sound heard right after the line \"But i've got a blank space, baby\" alludes to the sound of a pen clicking when opened to \"write his name\""],
+					   ["El sonido que se escucha justo después de decir \"But i've got a blank space, baby\" alude al sonido de una lapicera haciendo click al abrirla para \"escribir su nombre\"",
+						"The sound heard right after the line \"But i've got a blank space, baby\" alludes to the sound of a pen clicking when opened to \"write his name\""
+					   ], 
+                      ["Desde el comienzo de su carrera Taylor Swift incluye mensajes secretos en cada canción, lo cual dejó de hacer en su álbum Reputation.<br><br><hr><br> Para 1989 las letras de las canciones en los booklets (libritos) estan en mayusculas, y cada letra del mensaje secreto esta en minúsculas.",
+                      "Taylor Swift includes hidden messages in each song, which stopped at Reputation.<br><br><hr><br> For 1989 the lyrics of the songs in the booklets are capitalized, and each letter of the hidden message is in lowercased letters."
+                      ]
+					];
+					function eligeIdioma(){
+                     IDidioma.innerHTML=idiomas[idioma];
+    
+                         for (let frase=0; frase<texto.length; frase++){         /*inicio con frase=0 -- Continúo hasta el lenght del "texto" (osea continúo 2 veces porque el lenght es 2. sson 2 arrays) -- le sumo uno a "frase", asi pasa de frase 0 a frase 1.*/ 
+                         document.getElementById("mensaje_frase"+frase).innerHTML=texto[frase][idioma];
+                         }
+                        }
+                    function modificaIdioma(){
+                    idioma++;
+                    if (idioma < 0 || idioma > 1) idioma = 0;
+                    eligeIdioma();
+                    }	
+
+
+    
+</script>
+
+
+</head>
+	
+<style>
+	
+	body{
+	background:url("../../imagenes/1989/blank.png"); /*La foto*/
+	background-repeat:repeat-y;	
+	background-position:600px 0%;
+	}	
+	
+
+.hover_img a { position:relative; }
+.hover_img a span { position:absolute; display:none; z-index:99; }
+.hover_img a:hover span { display:block; }
+
+
+.img{
+top:50px;
+left:-100px;
+
+}
+
+
+a{  /* Para sacarle el subrayado y el color azul, así no se ve como un link */
+    text-decoration: none;
+    color:red;
+}	
+
+
+
+	
+#frase3{    
+    font-size: 25px;
+    padding: 10px 10px 10px, 15px;
+    font-style: italic;
+}
+
+
+#mensaje_frase0{
+		position: fixed;  /*queda en donde lo pusimos aunque cambiemos de posicion con la barra de desplazamiento*/
+		left: 650px;
+		top: 110px;   /*el espacio entre el cuadro y el tope VISIBLE de arriba*/
+		width: 600px;  /*el ancho del cuadro. (el texto se acomoda adentro)*/
+		height: 360px;
+		background-color: #D7CFDA;
+		font-size: 25px;
+		padding: 50px 25px 25px 25px;   /*El margen entre el texto y los bordes del cuadro*/
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+	
+
+#mensaje_frase1{
+		position: fixed;  /*queda en donde lo pusimos aunque cambiemos de posicion con la barra de desplazamiento*/
+		left: 730px;
+		top: 180px;   /*el espacio entre el cuadro y el tope VISIBLE de arriba*/
+		width: 420px;  /*el ancho del cuadro. (el texto se acomoda adentro)*/
+		height: 180px;
+		background-color: #D7CFDA;
+		font-size: 23px;
+		padding: 50px 25px 25px 25px;   /*El margen entre el texto y los bordes del cuadro*/
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+
+
+	#mensaje_frase2{
+		position: fixed;  /*queda en donde lo pusimos aunque cambiemos de posicion con la barra de desplazamiento*/
+		left: 730px;
+		top: 180px;   /*el espacio entre el cuadro y el tope VISIBLE de arriba*/
+		width: 420px;  /*el ancho del cuadro. (el texto se acomoda adentro)*/
+		height: 180px;
+		background-color: #D7CFDA;
+		font-size: 23px;
+		padding: 50px 25px 25px 25px;   /*El margen entre el texto y los bordes del cuadro*/
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}
+
+
+
+	#mensaje_frase3{
+		position: fixed;  /*queda en donde lo pusimos aunque cambiemos de posicion con la barra de desplazamiento*/
+		left: 700px;
+		top: 100px;   /*el espacio entre el cuadro y el tope VISIBLE de arriba*/
+		width: 450px;  /*el ancho del cuadro. (el texto se acomoda adentro)*/
+		height: 300px;
+		background-color: #D7CFDA;
+		font-size: 22px;
+		padding: 45px 40px 20px 40px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+        box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+
+
+
+
+</style>		
+	
+
+<body>
+
+
+<div id="mensaje_frase0">Taylor escribió esta canción como una especie de sátira, en respuesta a los medios de comunicación que, en los últimos años, habían estado vendiendo
+	 una imágen de ella de "psycho serial dater girl", acusandola de salir con cada hombre que se cruzaba, y advirtiendole a los hombres que se le acercaban que tuvieran cuidado con ella.<br><br> Taylor decidió tomar ese personaje que habían creado y escribir una canción sobre él.</div>
+
+<div id="mensaje_frase1">El sonido que se escuchar justo después de decir "But i've got a blank space, baby" alude al sonido de una lapicera haciendo click al abrirla para "escribir su nombre"</div>
+
+<div id="mensaje_frase2">El sonido que se escuchar justo después de decir "But i've got a blank space, baby" alude al sonido de una lapicera haciendo click al abrirla para "escribir su nombre"</div>
+	
+<div id="mensaje_frase3"></div>
+
+
+
+<div class="contenido">	
+
+	<div class="izq">
+	
+		<div class="botones-idioma-home">
+			<button id="IDidioma" onclick="modificaIdioma()"></button>	
+			<button class="HomeButton" onclick="location.href='../../index.html';">
+                <span>Home</span>
+            </button>		
+		</div>
+
+
+		<div class=previousnext>	
+			<button id="PreviousButton" onclick="location.href='./wtny.html';" class="float-left submit-button" >←Previous track</button>		
+			<button id="NextButton" onclick="location.href='./style.html';" class="float-left submit-button" >Next track →</button>		
+		</div>	
+
+
+	
+	
+
+	<div class="song">
+
+		<span class="hover_img" id="frase0">
+		<a class="titulo" href="#">2. Blank Space<br><span><img src="../../imagenes/fotosINFO/.jpg" alt=""  style="position: fixed; left:550px; top:60px" />    
+		</span></a></span>
+
+		<div class="letra">	
+
+
+		<p>Nice to meet you, where you been?<br>
+		I could show you incredible things<br>
+		Magic, madness, heaven, sin<br>
+		Saw you there and I thought<br>
+		"Oh, my God, look at that face<br>
+		You look like my next mistake<br>
+		Love's a game, wanna play?" Ay</p>
+			
+		<p>New money, suit and tie<br>
+		I can read you like a magazine<br>
+		Ain't it funny rumors fly<br>
+		And I know you heard about me<br>
+		So hey, let's be friends<br>
+		I'm dying to see how this one ends<br>
+		Grab your passport and my hand<br>
+		I can make the bad guys good for a weekend</p>
+			
+		<p>So it's gonna be forever<br>
+		Or it's gonna go down in flames<br>
+		You can tell me when it's over, mmh<br>
+		If the high was worth the pain<br>
+		Got a long list of ex-lovers<br>
+		They'll tell you I'm insane<br>
+		'Cause you know I love the players<br>
+		And you love the game</p>
+			
+		<p>'Cause we're young and we're reckless<br>
+		We'll take this way too far<br>
+		It'll leave you breathless<br>
+		Or with a nasty scar<br>
+		Got a long list of ex-lovers<br>
+		They'll tell you I'm insane<br>
+		But I've got a blank space, baby<br>
+		And I'll write your name</p>
+			
+		<p>Cherry lips, crystal skies<br>
+		I could show you incredible things<br>
+		Stolen kisses, pretty lies<br>
+		You're the King, baby, I'm your Queen<br>
+		Find out what you want<br>
+		Be that girl for a month<br>
+		Wait, the worst is yet to come, oh, no</p>
+			
+		<p>Screaming, crying, perfect storms<br>
+		I can make all the tables turn<br>
+		Rose garden filled with thorns<br>
+		Keep you second guessing like<br>
+		"Oh, my God, who is she?"<br>
+		I get drunk on jealousy<br>
+		But you'll come back each time you leave<br>
+		'Cause, darling, I'm a nightmare dressed like a daydream</p>
+			
+		<p>So it's gonna be forever<br>
+		Or it's gonna go down in flames<br>
+		You can tell me when it's over, mmh<br>
+		If the high was worth the pain<br>
+		Got a long list of ex-lovers<br>
+		They'll tell you I'm insane<br>
+		'Cause you know I love the players<br>
+		And you love the game</p>
+			
+		<p>'Cause we're young and we're reckless (oh)<br>
+		We'll take this way too far<br>
+		It'll leave you breathless (oh)<br>
+		Or with a nasty scar<br>
+		Got a long list of ex-lovers<br>
+		They'll tell you I'm insane (insane)<br>
+		<span class="hover_img" id="frase1">
+			<span id= tytle href="#">But I've got a blank space, baby<br>
+		And I'll write your name<br><span><img src="../../imagenes/fotosINFO/.jpg" alt=""  style="position: fixed; left:550px; top:60px" />    
+		</span></a></span>
+			
+		<p>Boys only want love if it's torture<br>
+		Don't say I didn't say, I didn't warn ya<br>
+		Boys only want love if it's torture<br>
+		Don't say I didn't say, I didn't warn ya</p>
+			
+		<p>So it's gonna be forever<br>
+		Or it's gonna go down in flames<br>
+		You can tell me when it's over (over)<br>
+		If the high was worth the pain<br>
+		Got a long list of ex-lovers<br>
+		They'll tell you I'm insane (I'm insane)<br>
+		'Cause you know I love the players<br>
+		And you love the game</p>
+			
+		<p>'Cause we're young and we're reckless<br>
+		We'll take this way too far (ooh)<br>
+		It'll leave you breathless, mmh<br>
+		Or with a nasty scar (leave a nasty scar)<br>
+		Got a long list of ex-lovers<br>
+		They'll tell you I'm insane<br>
+		<span class="hover_img" id="frase2">
+			<span id= tytle href="#">
+		But I've got a blank space, baby<br>
+		And I'll write your name</p><span><img src="../../imagenes/fotosINFO/.jpg" alt=""  style="position: fixed; left:550px; top:60px" />    
+		</span></a></span>
+
+			
+		</div>
+	</div>	
+
+	<div class="MS" id="frase3"><a href="#">
+		<ul style="list-style-image:url(../../imagenes/fotosINFO/paperplane.jpg);">
+		<li><pre><h3>Mensaje Secreto:</h3>  "There once was a girl 
+    known by everyone and no one."</pre></li> 
+		</ul></a>
+	</div>			
+
+	<div class="der">
+    </div>
+
+</div> 
+
+</body>
+</html>

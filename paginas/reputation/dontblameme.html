@@ -1,0 +1,233 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script src="../jQueryAssets/jquery-1.11.1.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../CSS/cssreputation.css"/>
+
+<script>
+
+    $(document).ready(function(){   
+            $("#mensaje_frase0").hide();
+            $("#frase0").hover(mensaje_on0, mensaje_off0);
+            eligeIdioma();
+        });
+    
+        
+        function mensaje_on0(){
+            $("#mensaje_frase0").show();    
+        }
+        
+        function mensaje_off0(){
+            $("#mensaje_frase0").hide();
+        }   
+
+
+
+
+
+		$(document).ready(function(){	
+		$("#mensaje_frase1").hide();
+		$("#frase1").hover(mensaje_on1, mensaje_off1);
+		
+	});
+
+	
+	function mensaje_on1(){
+		$("#mensaje_frase1").show();	
+	}
+	
+	function mensaje_off1(){
+		$("#mensaje_frase1").hide();
+	}	
+
+
+
+        
+        /* Idioma */
+        var idioma = 0 ; // 0=es, 1=en, ...
+        var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+        var texto = [   
+                     ["La intención de Taylor fue poner juntos en una canción los tres aspectos que según ella pueden realmente cambiar a una persona: amor, drogas y religión.",
+                      "Taylor's intention was to put together in<br> a song the three aspects that according<br> to her can really change someone:<br> love, drugs and religion."],
+                     ["",""]   
+
+                    ];
+                    function eligeIdioma(){
+                     IDidioma.innerHTML=idiomas[idioma];
+    
+                         for (let frase=0; frase<texto.length; frase++){         /*inicio con frase=0 -- Continúo hasta el lenght del "texto" (osea continúo 2 veces porque el lenght es 2. sson 2 arrays) -- le sumo uno a "frase", asi pasa de frase 0 a frase 1.*/ 
+                         document.getElementById("mensaje_frase"+frase).innerHTML=texto[frase][idioma];
+                         }
+                        }
+                    function modificaIdioma(){
+                    idioma++;
+                    if (idioma < 0 || idioma > 1) idioma = 0;
+                    eligeIdioma();
+                    }   		
+		
+    
+    
+    
+    </script>
+
+
+</head>
+	
+<style>
+	
+	body{
+	background:url("../../imagenes/Reputation/crazy2.jpg"); /*La foto*/
+	background-repeat:repeat-y;	
+	background-position:600px 0%;
+	}
+
+
+    .titulo{
+	font-size: 35px;
+    color:red;
+    }
+
+
+
+    #mensaje_frase0{
+		position: fixed;  /*o absolute?*/
+		left: 690px;
+		top: 160px;   /*originalmente tenia 392px*/
+		width: 550px;
+		height: 220px;
+		background-color: #D7CFDA;
+		font-size: 30px;
+		padding: 70px 20px 20px 20px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+        box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+
+
+
+</style>	
+
+<body>
+
+<div id="mensaje_frase0"></div>
+<div id="mensaje_frase1"></div>
+
+
+<div class="contenido">	
+
+<div class="izq">
+
+	<div class="botones-idioma-home">	
+		<button id="IDidioma" onclick="modificaIdioma()"></button>
+		<button class="HomeButton" onclick="location.href='../../index.html';">
+			<span>Home</span>
+		</button>		
+	</div>
+	
+
+	<div class=previousnext>	
+		<button id="PreviousButton" onclick="location.href='./ididsomethingbad.html';" class="float-left submit-button" >←Previous track</button>		
+		<button id="NextButton" onclick="location.href='./delicate.html';" class="float-left submit-button" >Next track →</button>		
+	</div>
+
+
+
+	<div class="song">
+
+
+		<div class="titulo" id="frase0">4. Don't blame me</div>	
+
+		<div class="letra">
+
+			
+		<p>Don't blame me, love made me crazy<br>
+		If it doesn't, you ain't doin' it right<br>
+		Lord, save me, my drug is my baby<br>
+		I'd be usin' for the rest of my life</p>
+			
+		<p>I've been breakin' hearts a long time, and<br>
+		Toyin' with them older guys<br>
+		Just to play things for me to use<br>
+		Something happened for the first time, in<br>
+		The darkest little paradise<br>
+		Shakin, pacin', I just need you</p>
+			
+		<p>For you, I would cross the line<br>
+		I would waste my time<br>
+		I would lose my mind<br>
+		They say she's gone too far this time</p>
+			
+		<p>Don't blame me, love made me crazy<br>
+		If it doesn't, you ain't doin' it right<br>
+		Lord, save me, my drug is my baby<br>
+		I'd be usin' for the rest of my life<br>
+		Don't blame me, love made me crazy<br>
+		If it doesn't, you ain't doin' it right<br>
+		Oh, Lord, save me, my drug is my baby<br>
+		I'd be usin' for the rest of my life</p>
+			
+		<p>My name is whatever you decide<br>
+		And I'm just gonna call you mine<br>
+		I'm insane, but I'm your baby (your baby)<br>
+		Echoes, love your name inside my mind<br>
+		Halo, hiding my obsession<br>
+		I once was poison ivy, but now I'm your daisy</p>
+			
+		<p>And baby, for you, I would fall from grace<br>
+		Just to touch your face<br>
+		If you walk away<br>
+		I'd beg you on my knees to stay</p>
+			
+		<p>Don't blame me, love made me crazy<br>
+		If it doesn't, you ain't doin' it right<br>
+		Lord, save me, my drug is my baby<br>
+		I'd be usin' for the rest of my life<br>
+		Don't blame me, love made me crazy<br>
+		If it doesn't, you ain't doin' it right<br>
+		Oh, Lord, save me, my drug is my baby<br>
+		I'd be usin' for the rest of my life</p>
+			
+		<p>I get so high, oh<br>
+		Every time, yeah every time you're lovin' me<br>
+		You're lovin' me<br>
+		Trip of my life, oh<br>
+		Every time, yeah every time you're touchin' me<br>
+		You're touchin' me</p>
+			
+		<p>Every time, yeah every time you're lovin' me<br>
+		Oh Lord, save me, my drug is my baby<br>
+		I'd be usin' for the rest of my life<br>
+		Usin' for the rest of my life, oh</p>
+			
+		<p>Don't blame me, love made me crazy<br>
+		If it doesn't, you ain't doin' it right (doin' it right, no)<br>
+		Lord, save me, my drug is my baby<br>
+		I'd be usin' for the rest of my life, oh<br>
+		Don't blame me, love made me crazy<br>
+		If it doesn't, you ain't doin' it right (you ain't doin' it)<br>
+		Oh, Lord, save me, my drug is my baby<br>
+		I'd be usin' for the rest of my life (I'll be usin', I'll be usin')</p>
+			
+		<p>I get so high, oh<br>
+		Every time, yeah every time you're lovin' me<br>
+		You're lovin' me<br>
+		Oh, Lord, save me, my drug is my baby<br>
+		I'd be usin' for the rest of my life</p>
+
+
+		</div>
+	</div>
+
+    <div class="der">
+    </div>
+
+</div>   
+
+</body>
+</html>

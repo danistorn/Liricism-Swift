@@ -1,0 +1,200 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IM+Fell+DW+Pica:ital@1&family=Rochester&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../CSS/cssevermore.css"/>	
+<script src="../jQueryAssets/jquery-1.11.1.min.js"></script>	
+	
+	
+<script>	
+	
+
+	$(document).ready(function(){	
+		$("#mensaje_frase0").hide();
+		$("#frase0").hover(mensaje_on0, mensaje_off0);
+		eligeIdioma();
+	});
+
+	
+	function mensaje_on0(){
+		$("#mensaje_frase0").show();
+	}
+	
+	function mensaje_off0(){
+		$("#mensaje_frase0").hide();
+	}
+	
+
+
+
+			        /* Idioma */
+					var idioma = 0 ; // 0=es, 1=en, ...
+        var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+        var texto = [                                           /*El largo de "texto" es dos. ya que hay 2 arrays dentro*/
+                    ["Taylor confirmó que se basó en el libro <cite>\"Rebecca\"</cite>, de Daphne Du Maurier, para escribir esta canción.<br><br> La historia trata sobre una mujer que se casa con un hombre al cual adora, pero él actúa indiferente hacia ella. La mujer pronto se da cuenta de que él sigue enamorado de su ex-esposa fallecida, Rebecca",
+                     "Taylor confirmed that she made based in the book <cite>\"Rebecca\"</cite>, by Daphne Du Maurier, to write this song.<br><br> The story is about a woman that marries a man she adores, but he acts indifferent towards her. The woman soon realizes that he is still in love with his deceased ex-wife, Rebecca." 
+                    ]
+                      ];         
+                         
+                      
+                      
+                      
+                      function eligeIdioma(){
+                     IDidioma.innerHTML=idiomas[idioma];
+    
+                         for (let frase=0; frase<texto.length; frase++){         /*inicio con frase=0 -- Continúo hasta el lenght del "texto" (osea continúo 2 veces porque el lenght es 2. sson 2 arrays) -- le sumo uno a "frase", asi pasa de frase 0 a frase 1.*/ 
+                         document.getElementById("mensaje_frase"+frase).innerHTML=texto[frase][idioma];
+                         }
+                        }
+                    function modificaIdioma(){
+                    idioma++;
+                    if (idioma < 0 || idioma > 1) idioma = 0;
+                    eligeIdioma();
+                    }   			
+    
+
+
+	
+</script>	
+
+<style>
+	
+ #mensaje_frase0{
+		position: fixed;
+		left: 700px;
+		top: 40px;  
+		width: 500px;
+		height: 490px;
+		background-color: #D7CFDA;
+		font-size: 21px;
+		padding: 35px 25px 25px 25px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+
+	
+.hover_img a { position:relative; }
+.hover_img a span { position:absolute; display:none; z-index:99; }
+.hover_img a:hover span { display:block; }
+
+	
+	body{
+	background:url("../../imagenes/evermore/tolerate2.jpg"); /*La foto*/
+	background-repeat:repeat-y;	
+	background-position:600px 0%;
+	}	
+	
+
+	.titulo{  /* Para sacarle el subrayado y el color azul, así no se ve como un link */
+    text-decoration: none;
+    color:red;
+}
+
+
+	
+
+</style>	
+</head>
+
+<body>
+	
+<div id="mensaje_frase0"></div>	
+
+
+<div class="contenido">	
+
+	<div class="izq">
+	
+		<div class="botones-idioma-home">	
+			<button id="IDidioma" onclick="modificaIdioma()"></button>
+			<button class="HomeButton" onclick="location.href='../../index.html';">
+				<span>Home</span>
+			</button>	
+		</div>
+
+
+		<div class=previousnext>	
+			<button id="PreviousButton" onclick="location.href='./ttds.html';" class="float-left submit-button" >←Previous track</button>		
+			<button id="NextButton" onclick="location.href='./no body, no crime.html';" class="float-left submit-button" >Next track →</button>		
+		</div>	
+
+
+
+
+	<div class="song">	
+
+
+		<span class="titulo hover_img" id="frase0"><a href="#">5. Tolerate it<span><img src="../../imagenes/fotosINFO/rebecca.png" alt="image2"  style="position: fixed; left:730px; top:300px" />    
+		</span></a></span>	
+
+		<div class="letra">
+
+		<p>I sit and watch you reading with your<br>
+		Head low<br>
+		I wake and watch you breathing with your<br>
+		Eyes closed<br>
+		I sit and watch you<br>
+		And notice everything you do or don't do<br>
+		You're so much older and wiser and I</p>
+
+		<p>I wait by the door like I'm just a kid<br>
+		Use my best colors for your portrait<br>
+		Lay the table with the fancy shit<br>
+		And watch you tolerate it<br>
+		If it's all in my head tell me now<br>
+		Tell me I've got it wrong somehow<br>
+		I know my love should be celebrated<br>
+		But you tolerate it</p>
+
+		<p>I greet you with a battle hero's welcome<br>
+		I take your indiscretions all in good fun<br>
+		I sit and listen<br>
+		I polish plates until they gleam and glisten<br>
+		You're so much older and wiser and I</p>
+
+		<p>I wait by the door like I'm just a kid<br>
+		Use my best colors for your portrait<br>
+		Lay the table with the fancy shit<br>
+		And watch you tolerate it<br>
+		If it's all in my head tell me now<br>
+		Tell me I've got it wrong somehow<br>
+		I know my love should be celebrated<br>
+		But you tolerate it</p>
+
+		<p>While you were out building other worlds, where was I?<br>
+		Where's that man who'd throw blankets over my barbed wire?<br>
+		I made you my temple, my mural, my sky<br>
+		Now I'm begging for footnotes in the story of your life<br>
+		Drawing hearts in the byline<br>
+		Always taking up too much space or time<br>
+		You assume I'm fine<br>
+		But what would you do if I, I</p>
+
+		<p>Break free and leave us in ruins<br>
+		Took this dagger in me and removed it<br>
+		Gain the weight of you then lose it<br>
+		Believe me, I could do it<br>
+		If it's all in my head tell me now<br>
+		Tell me I've got it wrong somehow<br>
+		I know my love should be celebrated<br>
+		But you tolerate it<br>
+		I sit and watch you</p>
+
+
+		</div>
+	</div>
+
+    <div class="der">
+    </div>
+
+</div> 		
+
+
+</body>
+</html>

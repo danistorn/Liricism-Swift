@@ -1,0 +1,377 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Betty</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IM+Fell+DW+Pica:ital@1&family=Rochester&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../CSS/cssfolklore.css"/>	
+<script src="../jQueryAssets/jquery-1.11.1.min.js"></script>
+	
+<script type="text/javascipt" src="custom.js"></script>	
+
+<script>	
+	
+	$(document).ready(function(){	
+		$("#mensaje_frase0").hide();
+		$("#frase0").hover(mensaje_on0, mensaje_off0);
+		eligeIdioma();		
+	});
+
+	
+	function mensaje_on0(){
+		$("#mensaje_frase0").show();
+	}
+	
+	function mensaje_off0(){
+		$("#mensaje_frase0").hide();
+	}
+	
+	
+	
+	
+	$(document).ready(function(){	
+		$("#mensaje_frase1").hide();
+		$("#frase1").hover(mensaje_on1, mensaje_off1);
+		
+	});
+
+	
+	function mensaje_on1(){
+		$("#mensaje_frase1").show();	
+	}
+	
+	function mensaje_off1(){
+		$("#mensaje_frase1").hide();
+	}
+		
+	
+	
+	
+	$(document).ready(function(){	
+		$("#mensaje_frase2").hide();
+		$("#frase2").hover(mensaje_on2, mensaje_off2);
+		
+	});
+
+	
+	function mensaje_on2(){
+		$("#mensaje_frase2").show();
+	}
+	
+	function mensaje_off2(){
+		$("#mensaje_frase2").hide();
+	}
+	
+	
+
+	
+	$(document).ready(function(){	
+		$("#mensaje_frase3").hide();
+		$("#frase3").hover(mensaje_on3, mensaje_off3);
+		
+	});
+
+	
+	function mensaje_on3(){
+		$("#mensaje_frase3").show();
+	}
+	
+	function mensaje_off3(){
+		$("#mensaje_frase3").hide();
+	}
+	
+	
+
+	$(document).ready(function(){	
+		$("#mensaje_frase4").hide();
+		$("#frase4").hover(mensaje_on4, mensaje_off4);
+		
+	});
+
+	
+	function mensaje_on4(){
+		$("#mensaje_frase4").show();
+	}
+	
+	function mensaje_off4(){
+		$("#mensaje_frase4").hide();
+	}
+	
+
+
+
+				        /* Idioma */
+						var idioma = 0 ; // 0=es, 1=en, ...
+        var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+        var texto = [
+			        ["Betty forma parte de una trilogía de canciones que cuentan una misma historia, cada una desde el punto de vista de un personaje diferente. <p>Cardigan: cantada por Betty; <br>Betty: cantada por James; <br>y August: cantada por Augustine.</p>La historia trata de cómo James, que estaba de novio con Betty, la engaña con Augustine durante unas vacaciones de verano.<p> Cronológicamente \"Betty\" ocurre primero (James vuelve a buscar el perdón de Betty), luego \"August\" y luego \"Cardigan\"",
+					 "Cardigan is part of a trilogy of songs that tell the same story, each one from the perspective of a different character.<p> Cardigan: sang by Betty;<br>Betty: sang by James;<br> and August: sang by Augustine.<p> The story is about how James, who was in a relationship with Betty, cheats on her with Augustine during some summer holidays.<p> Chronologically \"Betty\" occurs first (James comes back to seek Betty's forgiveness), then \"August\" and then \"Cardigan\"."
+					],                                   
+                    ["En contraposición de lo que canta Betty en 'Cardigan' (Track 2) 'Cause i knew everything when i was young' ",
+                     "In contrast to what Betty sings in 'Cardigan' (track 2) 'Cause i knew everything when i was young'" 
+                    ],
+					["En 'August' (Track 8) Augustine habla de este momento cuando dice 'Remember when I pulled up and said 'Get in the car'",
+					 "In 'August' (Track 8) Augustine talks about this moment when she says 'Remember when I pulled up and said 'Get in the car'" 
+					],
+					["Betty habla de este momento en Cardigan (track 2) cuando dice: 'And you'd be standin' in my front porch light, and I knew you'd come back to me",
+					 "Betty talks about this moment in Cardigan (track 2) when she says: 'And you'd be standin' in my front porch light, and I knew you'd come back to me'"
+					],  
+					["Hace mención del cardigan que tiene Betty y con el que ella se compara en cu canción \"Cardigan\". <br>También, en la misma canción, hace mención de los besos en el auto de James: \"To kiss in cars and downtown bars was all we needed\"",
+					 "He mentions the cardigan that belongs to Betty and with which she compared herself in her song \"Cardigan\". <br> Also, in the same song, she mentions the kisses in James's car: \"To kiss in cars and downtown bars was all we needed\""
+					]
+
+                    ];
+                      
+                      
+                      
+                      function eligeIdioma(){
+                     IDidioma.innerHTML=idiomas[idioma];
+    
+                         for (let frase=0; frase<texto.length; frase++){         /*inicio con frase=0 -- Continúo hasta el lenght del "texto" (osea continúo 2 veces porque el lenght es 2. sson 2 arrays) -- le sumo uno a "frase", asi pasa de frase 0 a frase 1.*/ 
+                         document.getElementById("mensaje_frase"+frase).innerHTML=texto[frase][idioma];
+                         }
+                        }
+                    function modificaIdioma(){
+                    idioma++;
+                    if (idioma < 0 || idioma > 1) idioma = 0;
+                    eligeIdioma();
+                    }   
+
+
+	
+</script>	
+	
+	
+</head>
+	
+<style>
+	
+	body{
+	background:url("../../imagenes/folklore/jamesphotos.jpg"); /*La foto*/
+	background-repeat:repeat-y;	
+	background-position:600px 0%;
+	}
+
+	.titulo{
+	text-decoration: none;
+    color:red;
+}
+
+
+	#mensaje_frase0{
+		position: fixed;  /*queda en donde lo pusimos aunque cambiemos de posicion con la barra de desplazamiento*/
+		left: 700px;
+		top: 70px;   /*el espacio entre el cuadro y el tope VISIBLE de arriba*/
+		width: 500px;  /*el ancho del cuadro. (el texto se acomoda adentro)*/
+		height: 460px;
+		background-color: #D7CFDA;
+		font-size: 23px;
+		padding: 50px 25px 0px 25px;   /*El margen entre el texto y los bordes del cuadro*/
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+
+
+	#mensaje_frase1{
+		position: fixed;  /*o absolute?*/
+		left: 700px;
+		top: 190px;   /*originalmente tenia 392px*/
+		width: 500px;
+		height: 150px;
+		background-color: #D7CFDA;
+		font-size: 24px;
+		padding: 60px 25px 25px 25px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+
+	
+	#mensaje_frase2{
+		position: fixed;
+		left: 700px;
+		top: 190px;  
+		width: 400px;
+		height: 150px;
+		background-color: #D7CFDA;
+		font-size: 24px;
+		padding: 50px 25px 25px 25px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+	
+	
+	
+		#mensaje_frase3{
+		position: fixed;
+		left: 700px;
+		top: 190px;  
+		width: 500px;
+		height: 180px;
+		background-color: #D7CFDA;
+		font-size: 24px;
+		padding: 60px 25px 25px 25px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}
+	
+
+	#mensaje_frase4{
+		position: fixed;
+		left: 700px;
+		top: 170px;  
+		width: 500px;
+		height: 230px;
+		background-color: #D7CFDA;
+		font-size: 24px;
+		padding: 50px 25px 25px 25px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}
+		
+		
+</style>	
+
+	
+
+	
+<body>
+	
+
+<div id="mensaje_frase0"></div>	
+<div id="mensaje_frase1"></div>	
+<div id="mensaje_frase2"></div>	
+<div id="mensaje_frase3"></div>	
+<div id="mensaje_frase4"></div>
+
+
+	<div class="contenido">	
+
+		<div class="izq">
+		
+			<div class="botones-idioma-home">	
+				<button id="IDidioma" onclick="modificaIdioma()"></button>
+				<button class="HomeButton" onclick="location.href='../../index.html';">
+					<span>Home</span>
+				</button>	
+			</div>
+	
+	
+			<div class=previousnext>	
+				<button id="PreviousButton" onclick="location.href='./epiphany.html';" class="float-left submit-button" >←Previous track</button>		
+				<button id="NextButton" onclick="location.href='./peace.html';" class="float-left submit-button" >Next track →</button>		
+			</div>	
+	
+	
+
+
+	<div class="song">	
+
+
+		<span class="titulo" id="frase0">14. Betty</span>	
+
+		<div class="letra">
+
+		<p>Betty, I won't make assumptions<br>
+		About why you switched your homeroom<br>
+		But, I think it's 'cause of me<br>
+		Betty, one time I was riding on my skateboard<br>
+		When I passed your house<br>
+		It's like I couldn't breathe</p>
+
+		<p>You heard the rumors from Inez<br>
+		You can't believe a word she says<br>
+		Most times, but this time, it was true<br>
+		The worst thing that I ever did<br>
+		Was what I did to you</p>
+
+		<p>But if I just showed up at your party<br>
+		Would you have me? Would you want me?<br>
+		Would you tell me to go fuck myself<br>
+		Or lead me to the garden?<br>
+		In the garden, would you trust me<br>
+		If I told you it was just a summer thing?<br>
+		<span id="frase1">I'm only 17, I don't know anything</span><br>
+		But you know I miss you</p>
+
+		<p>Betty, I know where it all went wrong<br>
+		Your favourite song was playing<br>
+		From the far side of the gym<br>
+		I was nowhere to be found<br>
+		I hate the crowds, you know that<br>
+		Plus, I saw you dance with him</p>
+
+		<p>You heard the rumors from Inez<br>
+		You can't believe a word she says<br>
+		Most times, but this time, it was true<br>
+		The worst thing that I ever did<br>
+		Was what I did to you</p>
+
+		<p>But if I just showed up at your party<br>
+		Would you have me? Would you want me?<br>
+		Would you tell me to go fuck myself<br>
+		Or lead me to the garden?<br>
+		In the garden, would you trust me<br>
+		If I told you it was just a summer thing?<br>
+		I'm only 17, I don't know anything<br>
+		But I know I miss you</p>
+
+		<p>I was walking home on broken cobblestones<br>
+		Just thinking of you<br>
+		<span id="frase2">When she pulled up<br>
+		Like idment of my worst intentions<br>
+		She said, "James, get in, let's drive"</span><br>
+		Those days turned into nights<br>
+		Slept next to her, but<br>
+		I dreamt of you all summer long</p>
+
+		<p><span id="frase3">Betty, I'm here on your doorstep</span><br>
+		And i planned it out for weeks now<br>
+		But it's finally sinking in<br>
+		Betty, right now is the last time<br>
+		I can dream about what happens<br>
+		When you see my face again<br>
+		The only thing I wanna do<br>
+		Is make it up to you<br>
+		So, I showed up at your party</p>
+
+		<p>Yeah, I showed up at your party</p>
+
+		<p>Yeah, I showed up at your party<br>
+		Will you have me? Will you love me?<br>
+		Will you kiss me on the porch in front of all your stupid friends?<br>
+		If you kiss me, will it be just like I dreamed it?<br>
+		Will it patch your broken wings?<br>
+		I'm only 17, I don't know anything<br>
+		But I know I miss you</p>
+
+		<p><span id="frase4">Standing in your cardigan<br>
+		Kissing in my car again</span><br>
+		Stopped at a streetlight<br>
+		You know I miss you</p>
+
+
+		</div>
+	</div>
+
+
+	<div class="der">
+    </div>
+
+</div> 	
+
+
+	
+</body>
+</html>

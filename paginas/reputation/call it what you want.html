@@ -1,0 +1,295 @@
+<!doctype html>
+<html><head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../CSS/cssreputation.css"/>
+<script src="../jQueryAssets/jquery-1.11.1.min.js"></script>
+
+
+<script>
+	
+	$(document).ready(function(){	
+		$("#mensaje_frase0").hide();
+		$("#frase0").hover(mensaje_on0, mensaje_off0);
+		eligeIdioma();
+	});
+
+	
+	function mensaje_on0(){
+		$("#mensaje_frase0").show();	
+	}
+	
+	function mensaje_off0(){
+		$("#mensaje_frase0").hide();
+	}	
+
+
+
+	$(document).ready(function(){	
+		$("#mensaje_frase1").hide();
+		$("#frase1").hover(mensaje_on1, mensaje_off1);
+		
+	});	
+	
+		
+	function mensaje_on1(){
+		$("#mensaje_frase1").show();
+	}
+	
+	function mensaje_off1(){
+		$("#mensaje_frase1").hide();
+	}	
+
+
+
+
+	$(document).ready(function(){	
+		$("#mensaje_frase2").hide();
+		$("#frase2").hover(mensaje_on2, mensaje_off2);
+		
+	});	
+	
+		
+	function mensaje_on2(){
+		$("#mensaje_frase2").show();
+	}
+	
+	function mensaje_off2(){
+		$("#mensaje_frase2").hide();
+	}		
+
+
+        /* Idioma */
+        var idioma = 0 ; // 0=es, 1=en, ...
+        var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+        var texto = [ 
+						["Canción escrita para Joe Alwyn.<br>(actor británico)<br> Él y Taylor habrían comenzado a salir oficialmente el 28 de Septiembre de 2016",
+						 "Song written for Joe Alwyn.<br>(british actor)<br> Him and Taylor would have started officially dating on September 28, 2016"
+						],
+
+						["Kanye West y Kim Kardashian incriminaron falsamente a Taylor en Julio de 2016, tratandola de mentirosa y perjudicando fuertemente su reputación. A raíz de ésto y de querer preservar su nueva relación con Joe Alwyn, Taylor desapareció del ojo público por mucho tiempo, logrando mantener su relación con Joe en secreto durante varios meses.",
+                         "Kanye West and Kim Kardashian falsely framed Taylor in July 2016, accusing her of being a liar and strongly harming her reputation. As a result of this and wanting to preserve her new relationship with Joe Alwyn, Taylor disappear from the public eye for a long time, keeping her relationhisp with Joe a secret during several months."
+						],
+						["Justo despues de pasar Acción de Gracias con su familia (24 de Noviembre, 2016), Taylor viaja con Joe a Londres donde pasa tiempo con él y su familia, y es con éste viaje que se aleja del ojo público.",
+						 "Just after spending Thanksgiving with her family (November 24, 2016), Taylor spends time with Joe and his family in London, and is with this trip that she takes a step back from the public eye."]
+
+                    ];
+                      
+					function eligeIdioma(){
+                     IDidioma.innerHTML=idiomas[idioma];
+    
+                         for (let frase=0; frase<texto.length; frase++){         /*inicio con frase=0 -- Continúo hasta el lenght del "texto" (osea continúo 2 veces porque el lenght es 2. sson 2 arrays) -- le sumo uno a "frase", asi pasa de frase 0 a frase 1.*/ 
+                         document.getElementById("mensaje_frase"+frase).innerHTML=texto[frase][idioma];
+                         }
+                        }
+                    function modificaIdioma(){
+                    idioma++;
+                    if (idioma < 0 || idioma > 1) idioma = 0;
+                    eligeIdioma();
+                    }   	
+	
+
+
+</script>
+
+</head>
+	
+<style>
+
+	
+	body{
+	background:url("../../imagenes/Reputation/callit.jpg"); /*La foto*/
+	background-repeat:repeat-y;	
+	background-position:600px 0px;
+	}
+	
+
+	.hover_img a { position:relative; }
+.hover_img a span { position:absolute; display:none; z-index:99; }
+.hover_img a:hover span { display:block; }
+
+.img{
+    top:50px;
+    left:-100px;
+
+}
+
+a{  /* Para sacarle el subrayado y el color azul, así no se ve como un link */
+    text-decoration: none;
+    color:red;
+}
+
+
+
+#mensaje_frase0{
+		position: fixed;  /*o absolute?*/
+		left: 650px;
+		top: 50px;   /*originalmente tenia 392px*/
+		width: 580px;
+		height: 490px;
+		background-color: #D7CFDA;
+		font-size: 24px;
+		padding: 35px 25px 25px 25px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}
+
+
+	#mensaje_frase1{
+		position: fixed;  /*o absolute?*/
+		left: 650px;
+		top: 60px;   /*originalmente tenia 392px*/
+		width: 580px;
+		height: 450px;
+		background-color: #D7CFDA;
+		font-size: 24px;
+		padding: 40px 25px 25px 25px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}
+
+
+	#mensaje_frase2{
+		position: fixed;  /*o absolute?*/
+		left: 660px;
+		top: 30px;   /*originalmente tenia 392px*/
+		width: 580px;
+		height: 480px;
+		background-color: #D7CFDA;
+		font-size: 24px;
+		padding: 40px 25px 25px 25px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}
+
+
+
+</style>	
+
+<body>
+	
+<div id="mensaje_frase0"></div>
+<div id="mensaje_frase1"></div>
+<div id="mensaje_frase2"></div>
+
+
+
+<div class="contenido">	
+
+	<div class="izq">
+	
+		<div class="botones-idioma-home">	
+			<button id="IDidioma" onclick="modificaIdioma()"></button>
+			<button class="HomeButton" onclick="location.href='../../index.html';">
+				<span>Home</span>
+			</button>		
+		</div>	
+	
+	
+		<div class="previousnext">
+			<button id="PreviousButton" onclick="location.href='./tiwwchnt.html';" class="float-left submit-button" >←Previous track</button>	
+			<button id="NextButton" onclick="location.href='./nye.html';" class="float-left submit-button" >Next track →</button>	
+		</div>	
+
+
+
+
+	<div class="song">	
+
+
+
+		<span class="hover_img" id="frase0">
+		<a class="titulo" href="#">14. Call it what you want<span><img src="../../imagenes/fotosINFO/joea.jpg" alt="image2"  style="position: fixed; left:710px; top:240px" />    
+		</span></a></span>
+
+		<div class="letra">
+
+		<p><span class="hover_img" id="frase1">
+			<a href="#">My castle crumbled overnight<br>
+		I brought a knife to a gunfight<br>
+		They took the crown, but it's alright<br>
+		All the liars are calling me one<br>
+		Nobody's heard from me for months<br>
+		I'm doing better than I ever was, 'cause<span><img src="../../imagenes/fotosINFO/downfall.jpeg" alt="image2"  style="position: fixed; left:785px; top:350px" />    
+		</span></a></span></p>
+
+		<p>My baby's fit like a daydream<br>
+		Walking with his head down<br>
+		I'm the one he's walking to<br>
+		So call it what you want, yeah, call it what you want to<br>
+		My baby's fly like a jet stream<br>
+		High above the whole scene<br>
+		Loves me like I'm brand new<br>
+		So call it what you want, yeah, call it what you want to</p>
+
+		<p>All my flowers grew back as thorns<br>
+		Windows boarded up after the storm<br>
+		He built a fire just to keep me warm<br>
+		All the drama queens taking swings<br>
+		All the jokers dressin' up as kings<br>
+		They fade to nothing when I look at him<br>
+		And I know I make the same mistakes every time<br>
+		Bridges burn, I never learn, at least I did one thing right<br>
+		I did one thing right<br>
+		I'm laughing with my lover, making forts under covers<br>
+		Trust him like a brother, yeah, you know I did one thing right<br>
+		Starry eyes sparkin' up my darkest night</p>
+
+		<p>My baby's fit like a daydream<br>
+		Walking with his head down<br>
+		I'm the one he's walking to<br>
+		So call it what you want, yeah, call it what you want to<br>
+		My baby's fly like a jet stream<br>
+		High above the whole scene<br>
+		Loves me like I'm brand new<br>
+		(Call it what you want, call it what you want, call it)<br>
+		So call it what you want, yeah, call it what you want to</p>
+
+		<p>I want to wear his initial<br>
+		On a chain round my neck, chain round my neck<br>
+		Not because he owns me<br>
+		But 'cause he really knows me<br>
+		Which is more than they can say, I<br>
+		<span class="hover_img" id="frase2">
+			<a href="#">I recall late November, holdin' my breath<br>
+		Slowly I said, "You don't need to save me<br>
+		But would you run away with me?"<br>
+		Yes (would you run away?)<span><img src="../../imagenes/fotosINFO/away2.jpg" alt="image1"  style="position: fixed; left:730px; top:250px" />    
+		</span></a></span>	</p>
+
+		<p>My baby's fit like a daydream<br>
+		Walking with his head down<br>
+		I'm the one he's walking to<br>
+		(Call it what you want, call it what you want, call it)<br>
+		So call it what you want, yeah, call it what you want to<br>
+		My baby's fly like a jet stream<br>
+		High above the whole scene<br>
+		Loves me like I'm brand new<br>
+		(Call it what you want, call it what you want, call it)<br>
+		So call it what you want, yeah, call it what you want to</p>
+
+		<p>Call it what you want, yeah<br>
+		Call it what you want<br>
+		To</p>
+				
+		</div>
+	</div>
+
+	<div class="der">
+	</div>
+
+</div> 
+	
+
+
+</body>
+</html>

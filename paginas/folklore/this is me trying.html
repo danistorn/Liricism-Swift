@@ -1,0 +1,263 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script src="../jQueryAssets/jquery-1.11.1.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IM+Fell+DW+Pica:ital@1&family=Rochester&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../CSS/cssfolklore.css"/>	
+
+<script>
+
+
+	$(document).ready(function(){	
+			$("#mensaje_frase0").hide();
+			$("#frase0").hover(mensaje_on0, mensaje_off0);
+			eligeIdioma();
+		});
+	
+		
+		function mensaje_on0(){
+			$("#mensaje_frase0").show();	
+		}
+		
+		function mensaje_off0(){
+			$("#mensaje_frase0").hide();
+		}	
+	
+	
+	
+	
+	
+		$(document).ready(function(){	
+			$("#mensaje_frase1").hide();
+			$("#frase1").hover(mensaje_on1, mensaje_off1);
+			
+		});
+	
+		
+		function mensaje_on1(){
+			$("#mensaje_frase1").show();	
+		}
+		
+		function mensaje_off1(){
+			$("#mensaje_frase1").hide();
+		}	
+		
+		
+		
+		
+		$(document).ready(function(){	
+			$("#mensaje_frase2").hide();
+			$("#frase2").hover(mensaje_on2, mensaje_off2);
+			
+		});	
+		
+			
+		function mensaje_on2(){
+			$("#mensaje_frase2").show();
+		}
+		
+		function mensaje_off2(){
+			$("#mensaje_frase2").hide();
+		}	
+		
+	
+	
+			/* Idioma */
+			var idioma = 0 ; // 0=es, 1=en, ...
+			var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+			var texto = [ 
+							["Taylor escribió esta canción pensando en esas personas que viven una lucha diaria todos los días. Aún cuando cada día están luchando activamente contra algo, en general nadie les da crédito por eso. Trata sobre lo difícil que es para ellos llegar al punto donde todos a su alrededor aún lo consideren decepcionante. La idea de dar lo mejor de ellos y que aún no sea suficiente.",
+							"Taylor wrote this song thinking about those people that live an everyday struggle. Even though everyday they are actively fighting something, so many days nobody gives them credit for that. About how hard it is for them to get to the point where everyone around them think is still not enough/shitty.   either people who suffer a mental illness or addiction. The idea of doing their best and its still not good enough"],
+	
+							["El primer verso es sobre alguien que está en una especie de crisis de vida; alguien que estuvo intentando y fallando cada vez, arruinando las cosas con la gente que ama y decepcionandolos, y cómo para él la idea de no tirarse del acantilado ya es un acto de esfuerzo y seguir intentandolo.",
+							 "<br>The first verse is about someone who is in sort of a life crisis, has been trying and failing over and over, messing things up with the people they love, letting everyone down. And how the idea of not driving off the cliff is his act of trying."
+							],
+	
+							["Este verso es sobre alguien que solía pensar que tenía mucho potencial en us vida durante los años escolares (secundaria, universidad), en donde hay muchos mecanismos para destacar y ser felicitado por algo, y luego mucha gente sale de ese período academico y se encuentran con menos habilidades para conseguir estrellas doradas, y mucha gente se siente abrumada por eso. Taylor pensó sobre esta persona que está muy perdida en la vida y comienza a beber, y cada día está intentando no hacerlo.",
+							 "This verse is about someone who thought like they had a lot of potential in their life during school days (high school, college), where there are a lot of mechanisms to excel and to be patted on the back for something, and then a lot of people get out of school and there are less abilities for them to get gold stars, and a lot of people feel swept up in that. Taylor thought about this person who is really lost in life and starts drinking and every second is trying not to. "
+							]
+						];
+						  
+						function eligeIdioma(){
+						 IDidioma.innerHTML=idiomas[idioma];
+		
+							 for (let frase=0; frase<texto.length; frase++){         /*inicio con frase=0 -- Continúo hasta el lenght del "texto" (osea continúo 2 veces porque el lenght es 2. sson 2 arrays) -- le sumo uno a "frase", asi pasa de frase 0 a frase 1.*/ 
+							 document.getElementById("mensaje_frase"+frase).innerHTML=texto[frase][idioma];
+							 }
+							}
+						function modificaIdioma(){
+						idioma++;
+						if (idioma < 0 || idioma > 1) idioma = 0;
+						eligeIdioma();
+						}	
+	
+	
+	
+	
+	
+	
+	</script>	
+
+
+</head>
+
+	
+<style>
+	
+	body{
+	background:url("../../imagenes/Folklore/ceil2.jpg"); /*La foto*/
+	background-repeat:repeat-y;	
+	background-position:600px 0%;
+	}
+	
+
+
+
+#mensaje_frase0{
+		position: fixed;  /*o absolute?*/
+		left: 700px;
+		top: 120px;   /*originalmente tenia 392px*/
+		width: 530px;
+		height: 310px;
+		background-color: #D7CFDA;
+		font-size: 24px;
+		padding: 50px 25px 25px 25px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+
+
+
+#mensaje_frase1{
+		position: fixed;  /*o absolute?*/
+		left: 720px;
+		top: 150px;   /*originalmente tenia 392px*/
+		width: 470px;
+		height: 250px;
+		background-color: #D7CFDA;
+		font-size: 24px;
+		padding: 40px 25px 25px 25px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+	
+
+	
+	#mensaje_frase2{
+		position: fixed;
+		left: 700px;
+		top: 100px;  
+		width: 550px;
+		height: 350px;
+		background-color: #D7CFDA;
+		font-size: 24px;
+		padding: 30px 25px 25px 25px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+	
+	
+
+</style>	
+	
+	
+	
+<body>
+
+
+<div id="mensaje_frase0"></div>
+<div id="mensaje_frase1"></div>
+<div id="mensaje_frase2"></div>
+
+
+	<div class="contenido">	
+
+		<div class="izq">
+		
+			<div class="botones-idioma-home">	
+				<button id="IDidioma" onclick="modificaIdioma()"></button>
+				<button class="HomeButton" onclick="location.href='../../index.html';">
+					<span>Home</span>
+				</button>		
+			</div>
+	
+	
+			<div class=previousnext>	
+				<button id="PreviousButton" onclick="location.href='./august.html';" class="float-left submit-button" >←Previous track</button>		
+				<button id="NextButton" onclick="location.href='./illicitaffairs.html';" class="float-left submit-button" >Next track →</button>		
+			</div>		
+	
+	
+			
+	<div class="song">			
+			
+		<span class="titulo" id="frase0"><a href="#">9. This is me trying</a></span>
+
+		<div class="letra">
+
+		<span class="hover_img" id="frase1">
+			<a href="#">I've been having a hard time adjusting<br>
+		I had the shiniest wheels, now they're rusting<br>
+		I didn't know if you'd care if I came back<br>
+		I have a lot of regrets about that<br>
+		Pulled the car off the road to the lookout<br>
+		Could've followed my fears all the way down<br>
+		And maybe I don't quite know what to say<br>
+		But I'm here in your doorway</a></span>
+			
+		<p>I just wanted you to know<br>
+		That this is me trying<br>
+		I just wanted you to know<br>
+		That this is me trying</p>
+			
+		<span class="hover_img" id="frase2">
+			<a href="#">They told me all of my cages were mental<br>
+		So I got wasted like all my potential<br>
+		And my words shoot to kill when I'm mad<br>
+		I have a lot of regrets about that<br>
+		I was so ahead of the curve, the curve became a sphere<br>
+		Fell behind all my classmates and I ended up here<br>
+		Pourin' out my heart to a stranger<br>
+		But I didn't pour the whiskey</a></span>
+			
+		<p>I just wanted you to know<br>
+		That this is me trying<br>
+		I just wanted you to know</p>
+
+		<p>That this is me trying</p>
+
+		<p>At least I'm trying<br>
+		And it's hard to be at a party<br>
+		When I feel like an open wound<br>
+		It's hard to be anywhere these days<br>
+		When all I want is you<br>
+		You're a flashback in a film reel<br>
+		On the one screen in my town</p>
+
+		<p>And I just wanted you to know<br>
+		That this is me trying (maybe I don't quite know what to say)<br>
+		I just wanted you to know<br>
+		That this is me trying<br>
+		At least I'm trying</p>
+
+		</div>
+	</div>
+
+
+	<div class="der">
+    </div>
+
+</div> 
+
+</body>
+</html>

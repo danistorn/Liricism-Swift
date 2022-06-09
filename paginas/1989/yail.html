@@ -1,0 +1,210 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script src="../jQueryAssets/jquery-1.11.1.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../CSS/css1989.css"/>		
+<script type="text/javascipt" src="custom.js"></script>
+
+
+<script>
+
+    $(document).ready(function(){   
+            $("#mensaje_frase0").hide();
+            $("#frase0").hover(mensaje_on0, mensaje_off0);
+            eligeIdioma();
+        });
+    
+        
+        function mensaje_on0(){
+            $("#mensaje_frase0").show();    
+        }
+        
+        function mensaje_off0(){
+            $("#mensaje_frase0").hide();
+        }   
+
+
+
+        
+        /* Idioma */
+        var idioma = 0 ; // 0=es, 1=en, ...
+        var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+        var texto = [   
+                     ["Taylor escribió esta canción inspirandose en la relacion de Jack Antonoff y Lena Dunham. Jack es un gran amigo de Taylor y ha co-escrito y producido varias canciones con ella.",
+                     "Taylor wrote this song about Jack Antonoff and Lena Dunham. Jack is a huge friend of Taylor, and he has co-written and produced several songs with her."
+                     ],
+                     ["", ""]
+                    ];
+					function eligeIdioma(){
+                     IDidioma.innerHTML=idiomas[idioma];
+    
+                         for (let frase=0; frase<texto.length; frase++){         /*inicio con frase=0 -- Continúo hasta el lenght del "texto" (osea continúo 2 veces porque el lenght es 2. sson 2 arrays) -- le sumo uno a "frase", asi pasa de frase 0 a frase 1.*/ 
+                         document.getElementById("mensaje_frase"+frase).innerHTML=texto[frase][idioma];
+                         }
+                        }
+                    function modificaIdioma(){
+                    idioma++;
+                    if (idioma < 0 || idioma > 1) idioma = 0;
+                    eligeIdioma();
+                    }	  
+    
+    
+    </script>
+
+
+</head>
+	
+<style>
+	
+	body{
+	background:url("../../imagenes/1989/love.jpg"); /*La foto*/
+	background-repeat:repeat-y;	
+	background-position:600px 0%;
+	}	
+	
+
+.hover_img a { position:relative; }
+.hover_img a span { position:absolute; display:none; z-index:99; }
+.hover_img a:hover span { display:block; }
+
+.img{
+    top:50px;
+    left:-100px;
+
+}   
+
+    #mensaje_frase0{
+		position: fixed;  /*queda en donde lo pusimos aunque cambiemos de posicion con la barra de desplazamiento*/
+		left: 650px;
+		top: 50px;   /*el espacio entre el cuadro y el tope VISIBLE de arriba*/
+		width: 210px;  /*el ancho del cuadro. (el texto se acomoda adentro)*/
+		height: 420px;
+		background-color: #D7CFDA;
+		font-size: 25px;
+		padding: 100px 40px 20px 400px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+        box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+ 
+	
+</style>	
+
+<body>
+
+<div id="mensaje_frase0"></div>
+
+
+    <div class="contenido">	
+
+		<div class="izq">
+		
+			<div class="botones-idioma-home">	
+				<button id="IDidioma" onclick="modificaIdioma()"></button>	
+				<button class="HomeButton" onclick="location.href='../../index.html';">
+                    <span>Home</span>
+                </button>			
+			</div>
+	
+	
+			<div class=previousnext>	
+				<button id="PreviousButton" onclick="location.href='./wonderland.html';" class="float-left submit-button" >←Previous track</button>		
+				<button id="NextButton" onclick="location.href='./newromantics.html';" class="float-left submit-button" >Next track →</button>		
+			</div>	
+
+
+	
+
+    <div class="song">
+
+
+        <span class="hover_img" id="frase0"><a class="titulo" href="#">15. You Are In Love<span><img src="../../imagenes/fotosINFO/jackandlena.jpg" alt="image2"  style="position: fixed; left:670px; top:80px" />    
+        </span></a></span>
+
+        <div class="letra">
+
+        <p>One look, dark room<br>
+        Meant just for you<br>
+        Time moved too fast<br>
+        You play it back<br>
+        Buttons on a coat<br>
+        Light-hearted joke<br>
+        No proof, not much<br>
+        But you saw enough<br>
+        Small talk, he drives<br>
+        Coffee at midnight<br>
+        The light reflects<br>
+        The chain on your neck<br>
+        He says, "Look up"<br>
+        And your shoulders brush<br>
+        No proof, one touch<br>
+        But you felt enough</p>
+            
+        <p>You can hear it in the silence, silence, you<br>
+        You can feel it on the way home, way home, you<br>
+        You can see it with the lights out, lights out<br>
+        You are in love, true love<br>
+        You are in love</p>
+            
+        <p>Morning, his place<br>
+        Burnt toast, Sunday<br>
+        You keep his shirt<br>
+        He keeps his word<br>
+        And for once, you let go<br>
+        Of your fears and your ghosts<br>
+        One step, not much<br>
+        But it said enough<br>
+        You kiss on sidewalks<br>
+        You fight and you talk<br>
+        One night he wakes<br>
+        Strange look on his face<br>
+        Pauses, then says<br>
+        You're my best friend<br>
+        And you knew what it was<br>
+        He is in love</p>
+            
+        <p>You can hear it in the silence, silence, you<br>
+        You can feel it on the way home, way home, you<br>
+        You can see it with the lights out, lights out<br>
+        You are in love, true love</p>
+            
+        <p>And so it goes<br>
+        You two are dancing in a snow globe, 'round and 'round<br>
+        And he keeps the picture of you in his office downtown<br>
+        And you understand now why they lost their minds and fought the wars<br>
+        And why I've spent my whole life tryin' to put it into words</p>
+            
+        <p>'Cause you can hear in the silence<br>
+        You can feel it on the way home<br>
+        You can see it with the lights out<br>
+        You are in love, true love<br>
+        You are in love</p>
+            
+        <p>You can hear it in the silence, silence, you<br>
+        You can feel it on the way home, way home, you<br>
+        You can see it with the lights out, lights out<br>
+        You are in love, true love<br>
+        You are in love<br>
+        You can hear it in the silence, silence, you<br>
+        You can feel it on the way home, way home, you<br>
+        You can see it with the lights out, lights out<br>
+        You are in love, true love<br>
+        You are in love</p>
+        </div>
+    </div>
+
+ 
+    <div class="der">
+    </div>
+    
+    </div>   
+
+
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script src="../jQueryAssets/jquery-1.11.1.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rochester&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">		
+<link rel="stylesheet" href="../../CSS/cssspeaknow.css"/>		
+
+
+<script>
+
+    $(document).ready(function(){   
+                    $("#mensaje_frase0").hide();
+                    $("#frase0").hover(mensaje_on0, mensaje_off0);
+                    eligeIdioma();
+                });
+            
+                
+                function mensaje_on0(){
+                    $("#mensaje_frase0").show();    
+                }
+                
+                function mensaje_off0(){
+                    $("#mensaje_frase0").hide();
+                }   
+        
+        
+        
+        
+                $(document).ready(function(){   
+                    $("#mensaje_frase1").hide();
+                    $("#frase1").hover(mensaje_on1, mensaje_off1);
+                    
+                });
+            
+                
+                function mensaje_on1(){
+                    $("#mensaje_frase1").show();    
+                }
+                
+                function mensaje_off1(){
+                    $("#mensaje_frase1").hide();
+                }   
+        
+        
+                
+        
+                /* Idioma */
+                var idioma = 0 ; // 0=es, 1=en, ...
+                var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+                var texto = [  
+                             ["",""],
+                             ["Desde el comienzo de su carrera Taylor Swift incluye mensajes secretos en cada canción, lo cual dejó de hacer en su álbum Reputation.<br><br><hr><br> Para su album Speak Now las letras de las canciones en los booklets (libritos) estan en minusculas, y cada letra del mensaje secreto esta en mayuscula.",
+                                "Taylor Swift includes hidden messages in each song, which stopped at Reputation.<br><br><hr><br> For her album Speak Now the lyrics of the songs in the booklets are in lowerecased letters, and each letter of the hidden message is capitalized."
+                             ]
+                            ];
+                            function eligeIdioma(){
+                             IDidioma.innerHTML=idiomas[idioma];
+            
+                                 for (let frase=0; frase<texto.length; frase++){         /*inicio con frase=0 -- Continúo hasta el lenght del "texto" (osea continúo 2 veces porque el lenght es 2. sson 2 arrays) -- le sumo uno a "frase", asi pasa de frase 0 a frase 1.*/ 
+                                 document.getElementById("mensaje_frase"+frase).innerHTML=texto[frase][idioma];
+                                 }
+                                }
+                            function modificaIdioma(){
+                            idioma++;
+                            if (idioma < 0 || idioma > 1) idioma = 0;
+                            eligeIdioma();
+                            }	
+    
+    
+    
+        
+        
+    </script>
+
+</head>
+	
+<style>	
+	
+body
+{
+	background:url("../../imagenes/speaknow/story.png"); /*La foto*/
+	background-repeat:repeat-y;
+	background-position:600px 0%;
+		
+}	
+
+
+
+#frase1{
+    font-size: 25px;
+    padding: 10px 10px 10px, 15px;
+    font-style: italic;
+}
+
+
+#mensaje_frase1{
+		position: fixed;  /*queda en donde lo pusimos aunque cambiemos de posicion con la barra de desplazamiento*/
+		left: 730px;
+		top: 100px;   /*el espacio entre el cuadro y el tope VISIBLE de arriba*/
+		width: 450px;  /*el ancho del cuadro. (el texto se acomoda adentro)*/
+		height: 310px;
+		background-color: #D7CFDA;
+		font-size: 22px;
+		padding: 45px 40px 20px 40px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+        box-shadow: 15px 15px 20px rgb(51, 49, 49);
+	}	
+	
+</style>		
+
+<body>
+	
+<div id="mensaje_frase0"></div>
+<div id="mensaje_frase1"></div>
+
+
+
+	<div class="contenido">	
+
+		<div class="izq">
+		
+			<div class="botones-idioma-home">
+				<button id="IDidioma" onclick="modificaIdioma()"></button>		
+				<button class="HomeButton" onclick="location.href='../../index.html';">
+					<span>Home</span>
+				</button>	
+			</div>
+	
+	
+			<div class="previousnext">
+				<button id="PreviousButton" onclick="location.href='mean.html';" class="float-left submit-button" >←Previous track</button>	
+				<button id="NextButton" onclick="location.href='nevergrowup.html';" class="float-left submit-button" >Next track →</button>		
+			</div>
+
+	
+    <div class="song">
+
+        <span class="titulo" id="frase0">7. The Story of Us</span>
+
+        <div class="letra">
+
+        <p>I used to think one day we'd tell the story of us<br>
+        How we met, and the sparks flew instantly<br>
+        People would say they're the lucky ones<br>
+        I used to know my place was a spot next to you<br>
+        Now I'm searching the room for an empty seat<br>
+        'Cause lately I don't even know what page you're on</p>
+            
+        <p>Oh, a simple complication<br>
+        Miscommunications lead to fall out<br>
+        So many things that I wish you knew<br>
+        So many walls up, I can't break through</p>
+            
+        <p>Now I'm standing alone in a crowded room<br>
+        And we're not speaking<br>
+        And I'm dying to know<br>
+        Is it killing you like it's killing me? Yeah<br>
+        I don't know what to say<br>
+        Since a twist of fate, when it all broke down<br>
+        And the story of us looks a lot like a tragedy now<br>
+        (Next chapter)</p>
+            
+        <p>How'd we end up this way?<br>
+        See me nervously pulling at my clothes and trying to look busy<br>
+        And you're doing your best to avoid me<br>
+        I'm starting to think, one day, I'll tell the story of us<br>
+        How I was losing my mind when I saw you here<br>
+        But you held your pride like you should've held me</p>
+            
+        <p>Oh, I'm scared to see the ending<br>
+        Why are we pretending this is nothing?<br>
+        I'd tell you I miss you, but I don't know how<br>
+        I never heard silence quite this loud</p>
+            
+        <p>Now I'm standing alone in a crowded room<br>
+        And we're not speaking<br>
+        And I'm dying to know<br>
+        Is it killing you like it's killing me? Yeah<br>
+        I don't know what to say<br>
+        Since a twist of fate, when it all broke down<br>
+        And the story of us looks a lot like a tragedy now</p>
+            
+        <p>This is looking like a contest<br>
+        Of who can act like they care less<br>
+        But I liked it better when you were on my side<br>
+        The battle's in your hands now<br>
+        But I would lay my armor down<br>
+        If you say you'd rather love than fight<br>
+        So many things that you wish I knew<br>
+        But the story of us might be ending soon</p>
+            
+        <p>Now I'm standing alone in a crowded room<br>
+        And we're not speaking<br>
+        And I'm dying to know<br>
+        Is it killing you like it's killing me? Yeah<br>
+        But I don't know what to say<br>
+        Since a twist of fate, when it all broke down<br>
+        And the story of us looks a lot like a tragedy now, now, now</p>
+            
+        <p>And we're not speaking<br>
+        And I'm dying to know<br>
+        Is it killing you like it's killing me? Yeah<br>
+        I don't know what to say<br>
+        Since a twist of fate, 'cause we're going down<br>
+        And the story of us looks a lot like a tragedy now</p>
+
+        </div>
+
+    </div>
+
+
+    <div class="MS" id="frase1"><a href="#">
+        <ul style="list-style-image:url(../../imagenes/fotosINFO/purpledress.jpg);">
+        <li><pre><h3>Mensaje Secreto:</h3>	    "CMT Music Awards"</pre></li> 
+        </ul></a>
+    </div>			
+
+
+	<div class="der">
+	</div>
+
+	</div> 
+
+
+</body>
+</html>

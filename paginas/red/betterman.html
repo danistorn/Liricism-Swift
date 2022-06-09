@@ -1,0 +1,303 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../CSS/cssred.css "/>
+<script src="../jQueryAssets/jquery-1.11.1.min.js"></script>
+
+
+
+<script>
+
+    $(document).ready(function(){   
+            $("#mensaje_frase0").hide();
+            $("#frase0").hover(mensaje_on0, mensaje_off0);
+            eligeIdioma();
+        });
+    
+        
+        function mensaje_on0(){
+            $("#mensaje_frase0").show();    
+        }
+        
+        function mensaje_off0(){
+            $("#mensaje_frase0").hide();
+        }   
+
+        
+        /* Idioma */
+        var idioma = 0 ; // 0=es, 1=en, ...
+        var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+        var texto = [   "",
+                        "" 
+                    ];
+        function eligeIdioma(){
+            IDidioma.innerHTML=idiomas[idioma];
+            mensaje_frase0.innerHTML=texto[idioma];
+        }
+        function modificaIdioma(){
+            idioma++;
+            if (idioma < 0 || idioma > 1) idioma = 0;
+            eligeIdioma();
+        }
+    
+    
+    
+    </script>
+
+<script>
+	
+	$(document).ready(function(){	
+		$("#mensaje_frase0").hide();
+		$("#frase0").hover(mensaje_on0, mensaje_off0);
+		
+	});
+
+	
+	function mensaje_on0(){
+		$("#mensaje_frase0").show();	
+	}
+	
+	function mensaje_off0(){
+		$("#mensaje_frase0").hide();
+	}	
+	
+</script>
+
+
+<script>
+	
+	$(document).ready(function(){	
+		$("#mensaje_frase1").hide();
+		$("#frase1").hover(mensaje_on1, mensaje_off1);
+		
+	});
+
+	
+	function mensaje_on1(){
+		$("#mensaje_frase1").show();	
+	}
+	
+	function mensaje_off1(){
+		$("#mensaje_frase1").hide();
+	}	
+	
+</script>
+
+<script>
+	
+	$(document).ready(function(){	
+		$("#mensaje_frase2").hide();
+		$("#frase2").hover(mensaje_on2, mensaje_off2);
+		
+	});
+
+	
+	function mensaje_on2(){
+		$("#mensaje_frase2").show();	
+	}
+	
+	function mensaje_off2(){
+		$("#mensaje_frase2").hide();
+	}	
+	
+</script>
+
+</head>
+	
+<style>	
+
+.contenido .der{
+	background:url("../../imagenes/red/betterman.jpg"); /*La foto*/
+	background-repeat:repeat-y;
+}
+
+.letra{
+    padding-bottom: 50px;
+}
+
+	
+
+.hover_img a { position:relative; }
+.hover_img a span { position:absolute; display:none; z-index:99; }
+.hover_img a:hover span { display:block; }
+
+.img{
+    top:50px;
+    left:-100px;
+
+}
+
+a{  /* Para sacarle el subrayado y el color azul, así no se ve como un link */
+    text-decoration: none;
+    color:red;
+}
+
+#titulo{
+	font-size: 35px;
+
+}
+
+
+#mensaje_frase0{
+		position: fixed;  /*o absolute?*/
+		left: 581px;
+		top: 95px;   /*originalmente tenia 392px*/
+		width: 373px;
+		height: 380px;
+		background-color: #D7CFDA;
+		font-size: 24px;
+		padding: 15px;
+		padding-left: 380px;
+		padding-top: 30px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+	}	
+	
+
+#mensaje_frase1{
+		position: fixed;  /*o absolute?*/
+		left: 680px;
+		top: 50px;   /*originalmente tenia 392px*/
+		width: 500px;
+		height: 470px;
+		background-color: #D7CFDA;
+		font-size: 24px;
+		padding: 25px;
+		padding-top: 35px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+	}	
+
+
+	#mensaje_frase2{
+		position: fixed;  /*o absolute?*/
+		left: 680px;
+		top: 70px;   /*originalmente tenia 392px*/
+		width: 500px;
+		height: 440px;
+		background-color: #D7CFDA;
+		font-size: 24px;
+		padding: 25px;
+		padding-top: 35px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+	}
+
+</style>	
+
+<body>
+
+
+
+<div class="contenido">	
+
+	<div class="izq">
+	
+		<div class="botones-idioma-home">
+			<button id="IDidioma" onclick="modificaIdioma()"></button>	
+            <button class="HomeButton" onclick="location.href='../../index.html';">
+				<span>Home</span>
+			</button>			
+		</div>
+
+
+		<div class=previousnext>	
+			<button id="PreviousButton" onclick="location.href='./ibytam.html';" class="float-left submit-button" >←Previous track</button>		
+			<button id="NextButton" onclick="location.href='./miab.html';" class="float-left submit-button" >Next track →</button>		
+		</div>	
+
+
+	
+        
+	
+<div class="song">
+ 
+	<span class="titulo">25. Better man<br>(From the vault)</span>
+
+
+	<div class="letra">
+
+
+    <p>I know I'm probably better off on my own<br>
+    Than lovin' a man who didn't know<br>
+    What he had when he had it<br>
+    And I see the permanent damage you did to me<br>
+    Never again, I just wish I could forget when it was magic<br>
+    I wish it wasn't 4am, standing in the mirror<br>
+    Saying to myself, you know you had to do it<br>
+    I know the bravest thing I ever did was run</p>
+    
+    <p>Sometimes, in the middle of the night, I can feel you again<br>
+    But I just miss you, and I just wish you were a better man<br>
+    And I know why we had to say goodbye like the back of my hand<br>
+    But I just miss you, and I just wish you were a better man<br>
+    A better man</p>
+    
+    <p>I know I'm probably better off all alone<br>
+    Than needing a man who could change his mind at any given minute<br>
+    And it was always on your terms<br>
+    I waited on every careless word<br>
+    Hoping it might turn sweet again<br>
+    Like it was in the beginning<br>
+    But your jealousy, oh, I can hear it now<br>
+    You're talking down to me like I'll always be around<br>
+    You push my love away like it was some kind of loaded gun<br>
+    Oh, you never thought I'd run</p>
+    
+    <p>Sometimes, in the middle of the night, I can feel you again<br>
+    But I just miss you, and I just wish you were a better man<br>
+    I know why we had to say goodbye like the back of my hand<br>
+    And I just miss you, and I just wish you were a better man<br>
+    A better man</p>
+    
+    <p>I hold onto this pride because these days it's all I have<br>
+    And I gave to you my best and we both know you can't say that</p>
+    
+    <p>I wish you were a better man<br>
+    I wonder what we would've become<br>
+    If you were a better man<br>
+    We might still be in love<br>
+    If you were a better man<br>
+    You would've been the one<br>
+    If you were a better man<br>
+    Yeah, yeah</p>
+    
+    <p>Sometimes, in the middle of the night, I can feel you again<br>
+    But I just miss you, and I just wish you were a better man<br>
+    I know why we had to say goodbye like the back of my hand<br>
+    But I just miss you and I just wish you were a better man<br>
+    A better man</p>
+    
+    <p>Sometimes, in the middle of the night, I can feel you again<br>
+    (We might still be in love, if you were a better man)<br>
+    But I just miss you, and I just wish you were a better man<br>
+    I know why we had to say goodbye<br>
+    Like the back of my hand<br>
+    But I just miss you and I just wish you were a better man<br>
+    A better man<br>
+    We might still be in love, if you were a better man<br>
+    You would've been the one<br>
+    If you were a better man</p>
+
+	</div> 	
+
+</div>
+
+</div>
+
+
+<div class="der">
+</div>
+
+</div>  	
+
+
+</body>
+</html>

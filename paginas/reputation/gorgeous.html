@@ -1,0 +1,266 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../CSS/cssreputation.css"/>
+<script src="../jQueryAssets/jquery-1.11.1.min.js"></script>	
+<script type="text/javascipt" src="custom.js"></script>		
+
+
+<script>
+
+    $(document).ready(function(){   
+            $("#mensaje_frase0").hide();
+            $("#frase0").hover(mensaje_on0, mensaje_off0);
+            eligeIdioma();
+        });
+    
+        
+        function mensaje_on0(){
+            $("#mensaje_frase0").show();    
+        }
+        
+        function mensaje_off0(){
+            $("#mensaje_frase0").hide();
+        }   
+
+
+
+
+	
+		$(document).ready(function(){	
+		$("#mensaje_frase1").hide();
+		$("#frase1").hover(mensaje_on1, mensaje_off1);
+		
+	});	
+	
+		
+	function mensaje_on1(){
+		$("#mensaje_frase1").show();
+	}
+	
+	function mensaje_off1(){
+		$("#mensaje_frase1").hide();
+	}
+    
+    
+
+		        /* Idioma */
+				var idioma = 0 ; // 0=es, 1=en, ...
+        var idiomas=["change to ENGLISH","cambiar a ESPAÑOL"];
+        var texto = [                                           /*El largo de "texto" es dos. ya que hay 2 arrays dentro*/
+                    ["Canción escrita para Joe Alwyn (actor británico)<br> Si bien tuvo varios cambios de letra, Taylor comenzó a escribir ésta canción el 2 de Septiembre de 2016, pocos días después de la que habría sido su primer noche juntos, en Cornelia Street (departamento que estaba rentando Taylor)",
+                        "Song written for Joe Alwyn.<br>(british actor)<br> Him and Taylor would have started dating at late 2016 o early 2017" 
+                    ],
+                    [ "\"Sunset\" y \"Vine\" son las calles donde se encuentra \"Bowery\", el restopub donde Joe y Taylor se habrían conocido por primera vez. (en el momento el actor britanico se encontraba en la ciudad de NY promocionando una película) Es probable que fueran introducidos por amigos mutuos.<br><br><br><br><br><br><br><br><br><br><br><br>Años después, Joe usaría el seudonimo \"William Bowery\" para escribir canciónes con Taylor para Folklore y Evermore.",
+                      "\"Sunset\" and \"Vine\" are streets where its located the \"Bowery\", a restopub where Joe and Taylor would potentially had met for the first time. (at the time, the british actor was in NYC promoting his new movie) Its probable that they were introduced by mutual friends.<br><br><br><br><br><br><br><br><br><br><br><br> Years later, Joe would use the pseudonym \"William Bowery\" to write songs with Taylor for Folklore and Evermore." 
+                    ]
+                      ];         
+                         
+                      
+                      function eligeIdioma(){
+                     IDidioma.innerHTML=idiomas[idioma];
+    
+                         for (let frase=0; frase<texto.length; frase++){         /*inicio con frase=0 -- Continúo hasta el lenght del "texto" (osea continúo 2 veces porque el lenght es 2. sson 2 arrays) -- le sumo uno a "frase", asi pasa de frase 0 a frase 1.*/ 
+                         document.getElementById("mensaje_frase"+frase).innerHTML=texto[frase][idioma];
+                         }
+                        }
+                    function modificaIdioma(){
+                    idioma++;
+                    if (idioma < 0 || idioma > 1) idioma = 0;
+                    eligeIdioma();
+                    }   
+
+
+    
+    </script>
+
+	
+</head>
+	
+	
+	
+	
+<style>
+	
+
+	body{
+	background:url("../../imagenes/Reputation/gor.jpg"); /*La foto*/
+	background-repeat:repeat-y;	
+	background-position:600px 0px;
+	}
+
+
+
+.hover_img a { position:relative; }
+.hover_img a span { position:absolute; display:none; z-index:99; }
+.hover_img a:hover span { display:block; }
+
+.img{
+    top:50px;
+    left:-100px;
+
+}
+
+a{  /* Para sacarle el subrayado y el color azul, así no se ve como un link */
+    text-decoration: none;
+    color:red;
+}
+
+
+
+#mensaje_frase0{
+		position: fixed;  /*o absolute?*/
+		left: 620px;
+		top: 20px;   /*originalmente tenia 392px*/
+		width: 640px;
+		height: 520px;
+		background-color: #D7CFDA;
+		font-size: 24px;
+		padding: 30px 25px 25px 25px;
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+}
+
+
+#mensaje_frase1{
+		position: fixed;  /*queda en donde lo pusimos aunque cambiemos de posicion con la barra de desplazamiento*/
+		left: 640px;
+		top: 30px;   /*el espacio entre el cuadro y el tope VISIBLE de arriba*/
+		width: 610px;  /*el ancho del cuadro. (el texto se acomoda adentro)*/
+		height: 540px;
+		background-color: #D7CFDA;
+		font-size: 22px;
+		padding: 15px 20px 20px 20px;   /*El margen entre el texto y los bordes del cuadro*/
+		border: 2px #00F;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+		text-align: center;
+		box-shadow: 15px 15px 20px rgb(51, 49, 49);
+}
+
+
+
+</style>		
+	
+	
+<body>
+
+<div id="mensaje_frase0">Canción escrita para Joe Alwyn.<br>(actor británico)<br> Él y Taylor habrían comenzado a salir a finales de 2016 o principios de 2017.</div>		
+<div id="mensaje_frase1">"Sunset" y "Vine" son las calles donde se encuentra "The Hungry Cat", un restaurante de mariscos en el que Taylor y Joe habrían tenido una de sus primeras salidas.</div>		
+
+
+<div class="contenido">	
+
+	<div class="izq">
+	
+		<div class="botones-idioma-home">	
+			<button id="IDidioma" onclick="modificaIdioma()"></button>
+			<button class="HomeButton" onclick="location.href='../../index.html';">
+				<span>Home</span>	
+			</button>		
+		</div>
+
+
+		<div class="previousnext">
+			<button id="PreviousButton" onclick="location.href='./so it goes.html';" class="float-left submit-button" >←Previous track</button>	
+			<button id="NextButton" onclick="location.href='./getaway car.html';" class="float-left submit-button" >Next track →</button>	
+		</div>
+		
+		
+
+
+
+	<div class="song">
+
+		<span class="hover_img" id="frase0">
+		<a class="titulo" href="#">8. Gorgeous<span><img src="../../imagenes/fotosINFO/joea.jpg" alt="image0"  style="position: fixed; left:740px; top:240px"/></span></a></span>
+
+
+		<div class="letra">
+
+		<p>You should take it as a compliment<br>
+		That I got drunk and made fun of the way you talk<br>
+		You should think about the consequence<br>
+		Of your magnetic field being a little too strong<br>
+		And I got a boyfriend, he's older than us<br>
+		He's in the club doing, I don't know what<br>
+		You're so cool, it makes me hate you so much (I hate you so much)</p>
+			
+		<span class="hover_img" id="frase1">
+			<a href="#">
+		Whisky on ice, Sunset and Vine<br>
+		<span><img src="../../imagenes/fotosINFO/bowery.jpg" alt="image1"  style="position: fixed; left:750px; top:208px" />    
+		</span></a></span>		
+		<span>You've ruined my life, by not being mine</span>
+			
+		<p>You're so gorgeous<br>
+		I can't say anything to your face<br>
+		'Cause look at your face<br>
+		And I'm so furious<br>
+		At you for making me feel this way<br>
+		But, what can I say?<br>
+		You're gorgeous</p>
+			
+		<p>You should take it as a compliment<br>
+		That I'm talking to everyone here but you (but you, but you)<br>
+		And you should think about the consequence<br>
+		Of you touching my hand in the darkened room (dark room, dark room)<br>
+		If you've got a girlfriend, I'm jealous of her<br>
+		But if you're single that's honestly worse<br>
+		'Cause you're so gorgeous it actually hurts<br>
+		(Honey, it hurts)</p>
+			
+		<p>Ocean blue eyes looking in mine<br>
+		I feel like I might sink and drown and die</p>
+			
+		<p>You're so gorgeous<br>
+		I can't say anything to your face (to your face)<br>
+		'Cause look at your face (look at your face)<br>
+		And I'm so furious<br>
+		At you for making me feel this way<br>
+		But what can I say?<br>
+		You're gorgeous</p>
+			
+		<p>You make me so happy, it turns back to sad, yeah<br>
+		There's nothing I hate more than what I can't have<br>
+		You are so gorgeous it makes me so mad<br>
+		You make me so happy, it turns back to sad, yeah<br>
+		There's nothing I hate more than what I can't have<br>
+		Guess I'll just stumble on home to my cats<br>
+		Alone, unless you wanna come along, oh<br>
+		You're so gorgeous</p>
+			
+		<p>I can't say anything to your face (to your face)<br>
+		'Cause look at your face (look at your face)<br>
+		And I'm so furious (I'm so furious)<br>
+		At you for making me feel this way (feel this way)<br>
+		But what can I say? (I say)<br>
+		You're gorgeous</p>
+			
+		<p>You make me so happy, it turns back to sad, yeah<br>
+		There's nothing I hate more than what I can't have<br>
+		You are so gorgeous it makes me so mad<br>
+		You're gorgeous<br>
+		You make me so happy, it turns back to sad, yeah<br>
+		There's nothing I hate more than what I can't have<br>
+		You are so gorgeous it makes me so mad<br>
+		You're gorgeous</p>
+			
+
+		</div>
+	</div>
+
+
+	<div class="der">
+	</div>
+
+</div>  
+
+</body>
+</html>
